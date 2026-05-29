@@ -1,5 +1,5 @@
 // BETPREDICT Service Worker — auto-update on deploy
-const VERSION = 'bp-lab-history-v1-20260529-1100';
+const VERSION = 'bp-lab-performance-v1-20260529-1130';
 const CACHE = `betpredict-${VERSION}`;
 
 // App shell — fișiere statice cache-uite
