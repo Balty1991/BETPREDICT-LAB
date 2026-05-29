@@ -69,6 +69,14 @@
   };
 
   const itemKey = (p) => `${p?.event_id || ''}|${p?.market || ''}|${String(p?.published_date || p?.published_at || '').slice(0,10)}`;
+  const APP_TZ = 'Europe/Bucharest';
+  const localDateKey = (raw) => {
+    const d = raw ? new Date(raw) : new Date();
+    if (Number.isNaN(d.getTime())) return '';
+    return new Intl.DateTimeFormat('en-CA', { timeZone:APP_TZ, year:'numeric', month:'2-digit', day:'2-digit' }).format(d);
+  };
+  const isTodayPick = (p) => localDateKey(p?.kickoff || p?.event_date || p?.start_time || p?.date) === localDateKey();
+  const isBadCurrentDayPending = (p) => String(p?.published_date || '').slice(0,10) === localDateKey() && String(p?.status || 'PENDING').toUpperCase() === 'PENDING' && !isTodayPick(p);
 
   function installStyle(){
     if (byId('safe-picks-ui-style')) return;
@@ -372,7 +380,7 @@
 
   function renderSafe(data){
     ensureUI();
-    const picks = Array.isArray(data?.safe_picks) ? data.safe_picks.slice() : [];
+    const picks = (Array.isArray(data?.safe_picks) ? data.safe_picks.slice() : []).filter(isTodayPick);
     picks.sort((a,b) => nr(b.safe_score ?? b.confidence_score) - nr(a.safe_score ?? a.confidence_score));
 
     const body = byId('safe-body');
@@ -498,7 +506,7 @@
 
   function renderHistory(data){
     ensureUI();
-    const rows = Array.isArray(data?.results) ? data.results.slice() : [];
+    const rows = (Array.isArray(data?.results) ? data.results.slice() : []).filter(p => !isBadCurrentDayPending(p));
     rows.sort((a,b) => String(b.published_at || '').localeCompare(String(a.published_at || '')));
 
     const st = historyStats(rows);
@@ -646,6 +654,14 @@
   const fmtUnits = (v) => { const n=Number(v); if(!Number.isFinite(n)) return '—'; return `${n>0?'+':''}${n.toFixed(2)}u`; };
   const fmtTime = (raw) => { if(!raw) return '—'; const d=new Date(raw); if(Number.isNaN(d.getTime())) return String(raw); return d.toLocaleString('ro-RO',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'}); };
   const statusOf = (p) => String(p.status || p.result || 'PENDING').trim().toUpperCase();
+  const APP_TZ = 'Europe/Bucharest';
+  const localDateKey = (raw) => {
+    const d = raw ? new Date(raw) : new Date();
+    if (Number.isNaN(d.getTime())) return '';
+    return new Intl.DateTimeFormat('en-CA', { timeZone:APP_TZ, year:'numeric', month:'2-digit', day:'2-digit' }).format(d);
+  };
+  const isTodayPick = (p) => localDateKey(p?.kickoff || p?.event_date || p?.start_time || p?.date) === localDateKey();
+  const isBadCurrentDayPending = (p) => String(p?.published_date || '').slice(0,10) === localDateKey() && statusOf(p) === 'PENDING' && !isTodayPick(p);
 
   function profitUnits(p){
     const s=statusOf(p);
@@ -705,7 +721,7 @@
   }
   function render(data){
     ensureUI();
-    const rows=Array.isArray(data?.results)?data.results.slice():[];
+    const rows=(Array.isArray(data?.results)?data.results.slice():[]).filter(p=>!isBadCurrentDayPending(p));
     const st=stats(rows);
     const settledRows=rows.filter(p=>['WIN','LOST','LOSS'].includes(statusOf(p)));
     const byMarket=group(settledRows,'market'); const byStrategy=group(settledRows,'strategy');
@@ -744,6 +760,14 @@
   const fmtOdds = (v) => { const n=Number(v); if(!Number.isFinite(n)||n<=0) return '—'; return n.toFixed(2).replace(/\.00$/,''); };
   const fmtTime = (raw) => { if(!raw) return '—'; const d=new Date(raw); if(Number.isNaN(d.getTime())) return String(raw); return d.toLocaleString('ro-RO',{weekday:'short',day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'}); };
   const statusOf = (p) => String(p.status || p.result || 'PENDING').trim().toUpperCase();
+  const APP_TZ = 'Europe/Bucharest';
+  const localDateKey = (raw) => {
+    const d = raw ? new Date(raw) : new Date();
+    if (Number.isNaN(d.getTime())) return '';
+    return new Intl.DateTimeFormat('en-CA', { timeZone:APP_TZ, year:'numeric', month:'2-digit', day:'2-digit' }).format(d);
+  };
+  const isTodayPick = (p) => localDateKey(p?.kickoff || p?.event_date || p?.start_time || p?.date) === localDateKey();
+  const isBadCurrentDayPending = (p) => String(p?.published_date || '').slice(0,10) === localDateKey() && statusOf(p) === 'PENDING' && !isTodayPick(p);
 
   function profitUnits(p){
     const s=statusOf(p);
@@ -845,9 +869,9 @@
     const history=STATE.history || {};
     const monitor=STATE.monitor;
     const health=STATE.health;
-    const picks=Array.isArray(safe.safe_picks)?safe.safe_picks.slice():[];
+    const picks=(Array.isArray(safe.safe_picks)?safe.safe_picks.slice():[]).filter(isTodayPick);
     picks.sort((a,b)=>nr(b.safe_score??b.confidence_score)-nr(a.safe_score??a.confidence_score));
-    const hRows=Array.isArray(history.results)?history.results:[];
+    const hRows=(Array.isArray(history.results)?history.results:[]).filter(p=>!isBadCurrentDayPending(p));
     const hStats=historyStats(hRows);
     const status=engineStatus(monitor,health);
     const body=byId('today-body'), pill=byId('today-status-pill'), count=byId('today-count'), topScore=byId('today-top-score'), roi=byId('today-roi');
