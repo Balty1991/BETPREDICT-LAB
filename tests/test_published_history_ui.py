@@ -43,11 +43,11 @@ class PublishedHistoryUIContractTests(unittest.TestCase):
         safe_keys = {pub_key(x) for x in safe_items}
         journal_keys = {pub_key(x) for x in journal_items}
 
-        self.assertTrue(safe_keys, "published_safe_picks_today.json should contain the visible picks snapshot")
-        self.assertTrue(journal_keys, "selection_journal_published.json should contain the clean published history")
-
-        # Pentru ziua publicată curentă: ce se vede în Predicții Validate trebuie să existe în istoricul curat.
-        self.assertTrue(safe_keys.issubset(journal_keys), f"Missing in published journal: {safe_keys - journal_keys}")
+        # Este valid să existe 0 predicții safe într-o zi. Important este ca atunci
+        # când există picks vizibile, ele să fie prezente și în istoricul curat.
+        if safe_keys:
+            self.assertTrue(journal_keys, "selection_journal_published.json should contain the clean published history")
+            self.assertTrue(safe_keys.issubset(journal_keys), f"Missing in published journal: {safe_keys - journal_keys}")
 
     def test_clean_history_does_not_store_watchlist_or_rejected_items(self):
         journal = load_json("selection_journal_published.json")
