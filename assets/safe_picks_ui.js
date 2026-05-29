@@ -629,3 +629,96 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
   else boot();
 })();
+
+
+/* BETPREDICT LAB — Performanță Publicată UI
+   ROI/win rate/profit are calculated only from data/selection_journal_published.json.
+*/
+(function(){
+  'use strict';
+  const HISTORY_URL = 'data/selection_journal_published.json';
+  const STATE = { loaded:false, data:null, error:null };
+  const escLocal = (v) => String(v ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  const esc = (v) => (typeof window.esc === 'function' ? window.esc(v) : escLocal(v));
+  const byId = (id) => document.getElementById(id);
+  const nr = (v,d=0) => { const n=Number(v); return Number.isFinite(n)?n:d; };
+  const fmtPct = (v) => { const n=Number(v); if(!Number.isFinite(n)) return '—'; return `${n>=0?'+':''}${n.toFixed(Math.abs(n)>=10?0:1)}%`; };
+  const fmtUnits = (v) => { const n=Number(v); if(!Number.isFinite(n)) return '—'; return `${n>0?'+':''}${n.toFixed(2)}u`; };
+  const fmtTime = (raw) => { if(!raw) return '—'; const d=new Date(raw); if(Number.isNaN(d.getTime())) return String(raw); return d.toLocaleString('ro-RO',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'}); };
+  const statusOf = (p) => String(p.status || p.result || 'PENDING').trim().toUpperCase();
+
+  function profitUnits(p){
+    const s=statusOf(p);
+    if(p.profit_units!=null) return nr(p.profit_units);
+    if(p.profit!=null) return nr(p.profit);
+    if(s==='WIN') return nr(p.odds,1)-1;
+    if(s==='LOST'||s==='LOSS') return -1;
+    return 0;
+  }
+  function stats(rows){
+    const total=rows.length;
+    const wins=rows.filter(p=>statusOf(p)==='WIN').length;
+    const losses=rows.filter(p=>['LOST','LOSS'].includes(statusOf(p))).length;
+    const pending=rows.filter(p=>statusOf(p)==='PENDING').length;
+    const settled=rows.filter(p=>['WIN','LOST','LOSS'].includes(statusOf(p)));
+    const profit=settled.reduce((s,p)=>s+profitUnits(p),0);
+    const stake=settled.length;
+    const roi=stake?profit/stake*100:null;
+    const winrate=(wins+losses)?wins/(wins+losses)*100:null;
+    return {total,wins,losses,pending,settled:stake,profit,roi,winrate};
+  }
+  function group(rows, field){
+    const m=new Map();
+    rows.forEach(p=>{const k=String(p[field]||'Necunoscut'); if(!m.has(k))m.set(k,[]); m.get(k).push(p);});
+    return Array.from(m.entries()).map(([name,items])=>({name,...stats(items)})).sort((a,b)=>(b.profit-a.profit)||(b.total-a.total)).slice(0,8);
+  }
+  function cls(v){ if(v==null) return 'warn'; return v>0?'good':v<0?'bad':'warn'; }
+  function installStyle(){
+    if(byId('published-performance-style')) return;
+    const s=document.createElement('style'); s.id='published-performance-style';
+    s.textContent=`
+      .tab[data-t="performance"] .tl{color:#ffb830;font-weight:900}.perf-shell{display:flex;flex-direction:column;gap:10px}
+      .perf-hero{position:relative;overflow:hidden;border:1px solid rgba(255,184,48,.22);background:linear-gradient(145deg,rgba(255,184,48,.12),rgba(74,158,255,.045) 55%,rgba(5,8,15,.92));border-radius:18px;padding:14px 13px;box-shadow:0 16px 44px rgba(0,0,0,.20)}
+      .perf-hero:before{content:'';position:absolute;inset:-80px -50px auto auto;width:155px;height:155px;border-radius:50%;background:radial-gradient(circle,rgba(255,184,48,.22),transparent 65%);pointer-events:none}.perf-hero-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;position:relative;z-index:1}
+      .perf-title{font-family:var(--ff-display);font-size:20px;font-weight:900;letter-spacing:-.04em;color:#f8fafc;line-height:1.05}.perf-sub{font-size:11px;color:#8ea0c4;margin-top:5px;line-height:1.35;max-width:315px}.perf-status{font-family:var(--ff-mono);font-size:9px;font-weight:900;color:#ffb830;background:rgba(255,184,48,.11);border:1px solid rgba(255,184,48,.25);border-radius:999px;padding:6px 8px;white-space:nowrap;text-transform:uppercase;letter-spacing:.45px}
+      .perf-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:12px;position:relative;z-index:1}.perf-stat{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.075);border-radius:13px;padding:9px 6px;text-align:center}.perf-stat-v{font-family:var(--ff-mono);font-size:18px;font-weight:900;color:#f8fafc;line-height:1}.perf-stat-l{font-size:8px;color:#7280a1;text-transform:uppercase;font-weight:800;letter-spacing:.35px;margin-top:4px}
+      .perf-toolbar{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:1px}.perf-toolbar small{font-size:10px;color:#64748b;line-height:1.25}.perf-refresh{border:1px solid rgba(255,184,48,.22);background:rgba(255,184,48,.08);color:#ffb830;border-radius:999px;padding:7px 10px;font-size:11px;font-weight:900;cursor:pointer;white-space:nowrap}
+      .perf-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.perf-box{background:linear-gradient(160deg,rgba(13,19,34,.98),rgba(6,10,20,.98));border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:12px;box-shadow:0 10px 30px rgba(0,0,0,.14)}.perf-box.full{grid-column:1/-1}.perf-box-l{font-size:9px;color:#7280a1;text-transform:uppercase;font-weight:900;letter-spacing:.45px;margin-bottom:5px}.perf-box-v{font-family:var(--ff-mono);font-size:22px;font-weight:900;color:#f8fafc;line-height:1}.perf-box-v.good,.perf-stat-v.good{color:#00e87a}.perf-box-v.bad,.perf-stat-v.bad{color:#ff8da0}.perf-box-v.warn,.perf-stat-v.warn{color:#ffb830}.perf-box-s{font-size:10px;color:#8ea0c4;margin-top:6px;line-height:1.35}
+      .perf-bars{display:flex;flex-direction:column;gap:7px;margin-top:8px}.perf-bar-row{display:grid;grid-template-columns:72px 1fr 48px;align-items:center;gap:8px;font-size:10px;color:#8ea0c4}.perf-bar-track{height:7px;border-radius:999px;background:rgba(255,255,255,.06);overflow:hidden}.perf-bar-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,#4a9eff,#00e87a)}.perf-bar-fill.loss{background:linear-gradient(90deg,#ff3d5a,#ffb830)}
+      .perf-empty,.perf-error{border-radius:18px;padding:18px 14px;text-align:center}.perf-empty{border:1px solid rgba(255,184,48,.20);background:linear-gradient(145deg,rgba(255,184,48,.09),rgba(255,255,255,.025));color:#cbd5e1}.perf-empty-ico{font-size:30px;margin-bottom:8px}.perf-empty-title{font-family:var(--ff-display);font-size:17px;font-weight:900;color:#f8fafc;margin-bottom:5px}.perf-empty-sub{font-size:12px;color:#8ea0c4;line-height:1.45}.perf-error{border:1px solid rgba(255,61,90,.22);background:rgba(255,61,90,.08);color:#fecdd3;font-size:12px;line-height:1.45}.perf-note{font-size:10px;color:#64748b;text-align:center;line-height:1.4;padding:0 8px 6px}
+    `; document.head.appendChild(s);
+  }
+  function sectionHtml(){ return `<section class="section" id="sec-performance"><div class="perf-shell"><div class="perf-hero"><div class="perf-hero-top"><div><div class="perf-title">Performanță Publicată</div><div class="perf-sub">ROI, win rate și profit calculate strict din Istoric Publicat. Nu include API raw, watchlist, rejected sau backtest intern.</div></div><div class="perf-status" id="perf-status-pill">ROI CURAT</div></div><div class="perf-stats"><div class="perf-stat"><div class="perf-stat-v" id="perf-published">—</div><div class="perf-stat-l">Publicate</div></div><div class="perf-stat"><div class="perf-stat-v" id="perf-settled">—</div><div class="perf-stat-l">Validate</div></div><div class="perf-stat"><div class="perf-stat-v" id="perf-pending">—</div><div class="perf-stat-l">Pending</div></div></div></div><div class="perf-toolbar"><small id="perf-updated">Se încarcă performanța publicată...</small><button class="perf-refresh" type="button" onclick="window.BPPublishedPerformanceUI.reload()">↻ Refresh</button></div><div id="perf-body"><div class="loader"><div class="spinner"></div>Se calculează performanța publicată...</div></div><div class="perf-note">Regulă: ROI principal = doar predicțiile publicate în rubrica Predicții Validate.</div></div></section>`; }
+  function tabHtml(){ return `<div class="tab" data-t="performance" role="tab" aria-selected="false" tabindex="-1"><span class="ti"><svg class="ti-svg" viewBox="0 0 44 44"><rect width="44" height="44" rx="10" fill="#1E1607"/><path d="M11 31h22" stroke="white" stroke-width="2" stroke-linecap="round" opacity=".45"/><path d="M14 28V18m8 10V12m8 16v-7" stroke="white" stroke-width="4" stroke-linecap="round"/><path d="M12 14l6 4 7-8 7 5" fill="none" stroke="#ffb830" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="tl">Perf</span></div>`; }
+  function ensureUI(){
+    installStyle();
+    const app=byId('app');
+    if(app && !byId('sec-performance')){ const pub=byId('sec-published'), safe=byId('sec-safe'); if(pub) pub.insertAdjacentHTML('afterend',sectionHtml()); else if(safe) safe.insertAdjacentHTML('afterend',sectionHtml()); else app.insertAdjacentHTML('beforeend',sectionHtml()); }
+    const bar=byId('main-tabbar');
+    if(bar && !bar.querySelector('[data-t="performance"]')){ const pub=bar.querySelector('[data-t="published"]'), safe=bar.querySelector('[data-t="safe"]'); if(pub) pub.insertAdjacentHTML('afterend',tabHtml()); else if(safe) safe.insertAdjacentHTML('afterend',tabHtml()); else bar.insertAdjacentHTML('beforeend',tabHtml()); }
+  }
+  async function fetchJson(url){ const r=await fetch(`${url}?v=${Date.now()}`,{cache:'no-store'}); if(!r.ok) throw new Error(`${url} HTTP ${r.status}`); return r.json(); }
+  function bars(items, metric){
+    if(!items.length) return '<div class="perf-box-s">Nu există date settled pentru segmentare.</div>';
+    const max=Math.max(1,...items.map(x=>Math.abs(metric==='roi'?(x.roi||0):(x.profit||0))));
+    return `<div class="perf-bars">${items.map(x=>{const raw=metric==='roi'?(x.roi||0):(x.profit||0); const width=Math.max(4,Math.min(100,Math.abs(raw)/max*100)); const val=metric==='roi'?(x.roi==null?'—':fmtPct(x.roi)):fmtUnits(x.profit); return `<div class="perf-bar-row"><span>${esc(x.name)}</span><div class="perf-bar-track"><div class="perf-bar-fill ${raw<0?'loss':''}" style="width:${width}%"></div></div><strong>${esc(val)}</strong></div>`;}).join('')}</div>`;
+  }
+  function render(data){
+    ensureUI();
+    const rows=Array.isArray(data?.results)?data.results.slice():[];
+    const st=stats(rows);
+    const settledRows=rows.filter(p=>['WIN','LOST','LOSS'].includes(statusOf(p)));
+    const byMarket=group(settledRows,'market'); const byStrategy=group(settledRows,'strategy');
+    const published=byId('perf-published'), settled=byId('perf-settled'), pending=byId('perf-pending'), updated=byId('perf-updated'), pill=byId('perf-status-pill'), body=byId('perf-body');
+    if(published) published.textContent=String(st.total); if(settled) settled.textContent=String(st.settled); if(pending) pending.textContent=String(st.pending);
+    if(updated) updated.textContent=data?.updated_at?`Calculat din selection_journal_published.json · ${fmtTime(data.updated_at)}`:'Calculat din istoricul publicat';
+    if(pill) pill.textContent=st.settled?`${st.settled} VALIDATE`:'PENDING';
+    if(!body) return;
+    if(!rows.length){ body.innerHTML=`<div class="perf-empty"><div class="perf-empty-ico">📊</div><div class="perf-empty-title">Nu există performanță publicată încă.</div><div class="perf-empty-sub">Performanța apare după ce predicțiile publicate sunt validate ca WIN/LOST.</div></div>`; return; }
+    body.innerHTML=`<div class="perf-grid"><div class="perf-box"><div class="perf-box-l">ROI publicat</div><div class="perf-box-v ${cls(st.roi)}">${st.roi==null?'—':esc(fmtPct(st.roi))}</div><div class="perf-box-s">Calcul pe ${st.settled} predicții settled, miză 1u.</div></div><div class="perf-box"><div class="perf-box-l">Profit unități</div><div class="perf-box-v ${cls(st.profit)}">${esc(fmtUnits(st.profit))}</div><div class="perf-box-s">Doar predicții publicate, fără raw API.</div></div><div class="perf-box"><div class="perf-box-l">Win rate</div><div class="perf-box-v ${cls(st.winrate==null?null:st.winrate-50)}">${st.winrate==null?'—':`${st.winrate.toFixed(0)}%`}</div><div class="perf-box-s">${st.wins} WIN · ${st.losses} LOST.</div></div><div class="perf-box"><div class="perf-box-l">Pending</div><div class="perf-box-v warn">${st.pending}</div><div class="perf-box-s">Așteaptă validarea rezultatului.</div></div><div class="perf-box full"><div class="perf-box-l">Performanță pe market</div>${bars(byMarket,'roi')}</div><div class="perf-box full"><div class="perf-box-l">Performanță pe strategie</div>${bars(byStrategy,'roi')}</div></div>`;
+  }
+  async function load(){ ensureUI(); const body=byId('perf-body'); if(body) body.innerHTML='<div class="loader"><div class="spinner"></div>Se calculează performanța publicată...</div>'; try{ const data=await fetchJson(HISTORY_URL); STATE.data=data; STATE.error=null; render(data); STATE.loaded=true; }catch(err){ STATE.error=err; if(body) body.innerHTML='<div class="perf-error">⚠ Nu pot calcula Performanța Publicată. Verifică <strong>data/selection_journal_published.json</strong>.</div>'; console.warn('[PublishedPerformanceUI] load failed',err); } }
+  function patchNavigation(){ if(patchNavigation.done) return; patchNavigation.done=true; const originalGo=window.go; if(typeof originalGo==='function'){ window.go=function(tab){ originalGo(tab); if(tab==='performance') load(); }; } }
+  function boot(){ ensureUI(); patchNavigation(); window.BPPublishedPerformanceUI={load,reload:load,render,state:STATE}; }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',boot); else boot();
+})();
