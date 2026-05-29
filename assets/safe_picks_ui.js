@@ -722,3 +722,169 @@
   function boot(){ ensureUI(); patchNavigation(); window.BPPublishedPerformanceUI={load,reload:load,render,state:STATE}; }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',boot); else boot();
 })();
+
+
+/* BETPREDICT LAB — Pagina Azi / Decizie Rapidă
+   Reads only published safe picks + clean history for user-facing summary.
+*/
+(function(){
+  'use strict';
+  const SAFE_URL = 'data/published_safe_picks_today.json';
+  const HISTORY_URL = 'data/selection_journal_published.json';
+  const MONITOR_URL = 'data/platform_monitor.json';
+  const HEALTH_URL = 'data/v6_health.json';
+  const STATE = { loaded:false, safe:null, history:null, monitor:null, health:null, error:null };
+
+  const escLocal = (v) => String(v ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  const esc = (v) => (typeof window.esc === 'function' ? window.esc(v) : escLocal(v));
+  const byId = (id) => document.getElementById(id);
+  const nr = (v,d=0) => { const n=Number(v); return Number.isFinite(n)?n:d; };
+  const fmtPct = (v) => { const n=Number(v); if(!Number.isFinite(n)) return '—'; return `${n>=0?'+':''}${n.toFixed(Math.abs(n)>=10?0:1)}%`; };
+  const fmtProb = (v) => { const n=Number(v); if(!Number.isFinite(n)) return '—'; return `${n.toFixed(n>=80?0:1)}%`; };
+  const fmtOdds = (v) => { const n=Number(v); if(!Number.isFinite(n)||n<=0) return '—'; return n.toFixed(2).replace(/\.00$/,''); };
+  const fmtTime = (raw) => { if(!raw) return '—'; const d=new Date(raw); if(Number.isNaN(d.getTime())) return String(raw); return d.toLocaleString('ro-RO',{weekday:'short',day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'}); };
+  const statusOf = (p) => String(p.status || p.result || 'PENDING').trim().toUpperCase();
+
+  function profitUnits(p){
+    const s=statusOf(p);
+    if(p.profit_units!=null) return nr(p.profit_units);
+    if(p.profit!=null) return nr(p.profit);
+    if(s==='WIN') return nr(p.odds,1)-1;
+    if(s==='LOST'||s==='LOSS') return -1;
+    return 0;
+  }
+  function historyStats(rows){
+    const wins=rows.filter(p=>statusOf(p)==='WIN').length;
+    const losses=rows.filter(p=>['LOST','LOSS'].includes(statusOf(p))).length;
+    const pending=rows.filter(p=>statusOf(p)==='PENDING').length;
+    const settled=rows.filter(p=>['WIN','LOST','LOSS'].includes(statusOf(p)));
+    const profit=settled.reduce((s,p)=>s+profitUnits(p),0);
+    const roi=settled.length?profit/settled.length*100:null;
+    const winrate=(wins+losses)?wins/(wins+losses)*100:null;
+    return {total:rows.length,wins,losses,pending,settled:settled.length,profit,roi,winrate};
+  }
+
+  async function fetchJson(url, optional=false){
+    try{
+      const r=await fetch(`${url}?v=${Date.now()}`,{cache:'no-store'});
+      if(!r.ok) throw new Error(`${url} HTTP ${r.status}`);
+      return await r.json();
+    }catch(err){
+      if(optional) return null;
+      throw err;
+    }
+  }
+
+  function engineStatus(monitor, health){
+    const mStatus = String(monitor?.status || monitor?.overall?.status || '').toUpperCase();
+    const hStatus = String(health?.overall?.status || health?.status || '').toUpperCase();
+    const score = monitor?.health_score ?? monitor?.overall_score ?? monitor?.score ?? health?.overall?.score ?? null;
+    const status = mStatus || hStatus || 'UNKNOWN';
+    let label = 'Motor prudent';
+    let cls = 'warn';
+    if(status === 'GREEN' && (score == null || Number(score) >= 75)){ label='Motor stabil'; cls='good'; }
+    else if(status === 'RED' || Number(score) < 55){ label='Nu juca / risc ridicat'; cls='bad'; }
+    return {status,label,cls,score};
+  }
+
+  function installStyle(){
+    if(byId('today-ui-style')) return;
+    const s=document.createElement('style'); s.id='today-ui-style';
+    s.textContent=`
+      .tab[data-t="today"] .tl{color:#00e87a;font-weight:900}
+      .today-shell{display:flex;flex-direction:column;gap:10px}
+      .today-hero{position:relative;overflow:hidden;border:1px solid rgba(0,232,122,.22);background:linear-gradient(145deg,rgba(0,232,122,.13),rgba(74,158,255,.05) 56%,rgba(5,8,15,.94));border-radius:20px;padding:15px 13px;box-shadow:0 18px 46px rgba(0,0,0,.22)}
+      .today-hero:before{content:'';position:absolute;inset:-85px -55px auto auto;width:170px;height:170px;border-radius:50%;background:radial-gradient(circle,rgba(0,232,122,.24),transparent 66%);pointer-events:none}
+      .today-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;position:relative;z-index:1}
+      .today-title{font-family:var(--ff-display);font-size:22px;font-weight:950;letter-spacing:-.05em;color:#f8fafc;line-height:1.02}
+      .today-sub{font-size:11px;color:#8ea0c4;margin-top:5px;line-height:1.35;max-width:315px}
+      .today-pill{font-family:var(--ff-mono);font-size:9px;font-weight:950;border-radius:999px;padding:6px 8px;white-space:nowrap;text-transform:uppercase;letter-spacing:.45px}
+      .today-pill.good{color:#00e87a;background:rgba(0,232,122,.11);border:1px solid rgba(0,232,122,.25)}.today-pill.warn{color:#ffb830;background:rgba(255,184,48,.11);border:1px solid rgba(255,184,48,.25)}.today-pill.bad{color:#ff8da0;background:rgba(255,61,90,.10);border:1px solid rgba(255,61,90,.25)}
+      .today-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:13px;position:relative;z-index:1}
+      .today-stat{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.075);border-radius:13px;padding:9px 6px;text-align:center}.today-stat-v{font-family:var(--ff-mono);font-size:18px;font-weight:950;color:#f8fafc;line-height:1}.today-stat-v.good{color:#00e87a}.today-stat-v.warn{color:#ffb830}.today-stat-v.bad{color:#ff8da0}.today-stat-l{font-size:8px;color:#7280a1;text-transform:uppercase;font-weight:850;letter-spacing:.35px;margin-top:4px}
+      .today-main-card{position:relative;overflow:hidden;background:linear-gradient(160deg,rgba(13,19,34,.98),rgba(6,10,20,.98));border:1px solid rgba(255,255,255,.08);border-radius:18px;box-shadow:0 12px 34px rgba(0,0,0,.18)}.today-main-card:before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,#00e87a,#4a9eff)}
+      .today-card-head{display:flex;align-items:center;justify-content:space-between;gap:9px;padding:10px 12px 8px;border-bottom:1px solid rgba(255,255,255,.055);background:rgba(255,255,255,.018)}.today-badge{display:inline-flex;align-items:center;gap:5px;font-size:9px;font-weight:950;letter-spacing:.5px;text-transform:uppercase;color:#00e87a;background:rgba(0,232,122,.09);border:1px solid rgba(0,232,122,.23);border-radius:999px;padding:5px 8px;white-space:nowrap}.today-score{font-family:var(--ff-mono);font-size:10px;color:#dbeafe;background:rgba(74,158,255,.10);border:1px solid rgba(74,158,255,.20);border-radius:999px;padding:5px 7px;white-space:nowrap}
+      .today-card-body{padding:12px}.today-match{font-family:var(--ff-display);font-size:18px;font-weight:950;color:#f8fafc;letter-spacing:-.03em;line-height:1.15;margin-bottom:4px}.today-meta{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:10px;color:#7d8aaa;margin-bottom:10px}.today-dot{width:3px;height:3px;border-radius:50%;background:#334155;display:inline-block}
+      .today-pick{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid rgba(0,232,122,.17);background:rgba(0,232,122,.07);border-radius:14px;padding:10px;margin-bottom:9px}.today-pick-l{font-size:9px;color:#6f7e9e;text-transform:uppercase;font-weight:950;letter-spacing:.45px;margin-bottom:2px}.today-pick-v{font-family:var(--ff-display);font-size:17px;font-weight:950;color:#eafff4;line-height:1.08}.today-odd{font-family:var(--ff-mono);font-size:23px;font-weight:950;color:#00e87a;white-space:nowrap}
+      .today-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:9px}.today-kpi{border:1px solid rgba(255,255,255,.065);background:rgba(255,255,255,.035);border-radius:12px;padding:8px 6px;text-align:center}.today-kpi-v{font-family:var(--ff-mono);font-size:14px;font-weight:950;color:#f8fafc;line-height:1}.today-kpi-v.green{color:#00e87a}.today-kpi-v.blue{color:#4a9eff}.today-kpi-v.gold{color:#ffb830}.today-kpi-l{font-size:8px;color:#64748b;text-transform:uppercase;font-weight:850;letter-spacing:.35px;margin-top:3px}.today-why{font-size:11px;color:#9aa7c4;line-height:1.45;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.055);border-radius:12px;padding:8px 9px}
+      .today-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.today-action{border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.045);color:#dbeafe;border-radius:13px;padding:10px 7px;font-size:11px;font-weight:950;text-align:center;cursor:pointer}.today-action.primary{border-color:rgba(0,232,122,.24);background:rgba(0,232,122,.08);color:#00e87a}.today-action:active{transform:scale(.98)}
+      .today-empty{border:1px solid rgba(255,184,48,.20);background:linear-gradient(145deg,rgba(255,184,48,.09),rgba(255,255,255,.025));border-radius:18px;padding:18px 14px;text-align:center;color:#cbd5e1}.today-empty-ico{font-size:31px;margin-bottom:8px}.today-empty-title{font-family:var(--ff-display);font-size:17px;font-weight:950;color:#f8fafc;margin-bottom:5px}.today-empty-sub{font-size:12px;color:#8ea0c4;line-height:1.45}.today-error{border:1px solid rgba(255,61,90,.22);background:rgba(255,61,90,.08);color:#fecdd3;border-radius:14px;padding:12px;font-size:12px;line-height:1.45}.today-note{font-size:10px;color:#64748b;text-align:center;line-height:1.4;padding:0 8px 6px}
+    `; document.head.appendChild(s);
+  }
+
+  function sectionHtml(){
+    return `<section class="section" id="sec-today"><div class="today-shell"><div class="today-hero"><div class="today-top"><div><div class="today-title">Azi</div><div class="today-sub">Decizie rapidă: status motor, predicții validate publicate azi și pick principal. Fără API raw, fără liste aglomerate.</div></div><div class="today-pill warn" id="today-status-pill">SE ÎNCARCĂ</div></div><div class="today-stats"><div class="today-stat"><div class="today-stat-v" id="today-count">—</div><div class="today-stat-l">Validate</div></div><div class="today-stat"><div class="today-stat-v" id="today-top-score">—</div><div class="today-stat-l">Top scor</div></div><div class="today-stat"><div class="today-stat-v" id="today-roi">—</div><div class="today-stat-l">ROI publicat</div></div></div></div><div id="today-body"><div class="loader"><div class="spinner"></div>Se încarcă sumarul zilei...</div></div><div class="today-actions"><button class="today-action primary" type="button" onclick="window.go&&go('safe')">Predicții</button><button class="today-action" type="button" onclick="window.go&&go('published')">Istoric</button><button class="today-action" type="button" onclick="window.go&&go('performance')">Perf</button></div><div class="today-note">Regulă: Azi arată doar snapshot-ul publicat, adică aceeași sursă folosită în Picks, Istoric și ROI.</div></div></section>`;
+  }
+  function tabHtml(){
+    return `<div class="tab" data-t="today" role="tab" aria-selected="false" tabindex="-1"><span class="ti"><svg class="ti-svg" viewBox="0 0 44 44"><rect width="44" height="44" rx="10" fill="#071B14"/><path d="M12 15h20M12 23h14M12 31h20" stroke="white" stroke-width="3" stroke-linecap="round" opacity=".88"/><path d="M31 20l2.5 2.5L38 17" fill="none" stroke="#00e87a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="tl">Azi</span></div>`;
+  }
+  function ensureUI(){
+    installStyle();
+    const app=byId('app');
+    if(app && !byId('sec-today')){ const dash=byId('sec-dash'); if(dash) dash.insertAdjacentHTML('afterend',sectionHtml()); else app.insertAdjacentHTML('afterbegin',sectionHtml()); }
+    const bar=byId('main-tabbar');
+    if(bar && !bar.querySelector('[data-t="today"]')){ const dashTab=bar.querySelector('[data-t="dash"]'); if(dashTab) dashTab.insertAdjacentHTML('afterend',tabHtml()); else bar.insertAdjacentHTML('afterbegin',tabHtml()); }
+    if(bar && !byId('today-tabbar-compact')){ const s=document.createElement('style'); s.id='today-tabbar-compact'; s.textContent='#main-tabbar .tab{min-width:0}#main-tabbar .tl{font-size:8.6px;line-height:1}#main-tabbar .ti-svg{width:21px;height:21px}'; document.head.appendChild(s); }
+  }
+
+  function renderPick(p){
+    const match=p.match || `${p.home_team||'Gazde'} vs ${p.away_team||'Oaspeți'}`;
+    const league=[p.country,p.league].filter(Boolean).join(' · ') || p.league || 'Ligă indisponibilă';
+    const pick=p.recommended_pick || p.market_label || p.market || 'Predicție';
+    const score=Math.round(nr(p.safe_score ?? p.confidence_score,0));
+    return `<article class="today-main-card"><div class="today-card-head"><div class="today-badge">✓ PICK PRINCIPAL</div><div class="today-score">Scor ${score}/100</div></div><div class="today-card-body"><div class="today-match">${esc(match)}</div><div class="today-meta"><span>${esc(league)}</span><span class="today-dot"></span><span>${esc(fmtTime(p.kickoff||p.event_date))}</span><span class="today-dot"></span><span>${esc(String(p.status||'PENDING').toUpperCase())}</span></div><div class="today-pick"><div><div class="today-pick-l">Predicție recomandată</div><div class="today-pick-v">${esc(pick)}</div></div><div class="today-odd">${esc(fmtOdds(p.odds))}</div></div><div class="today-kpis"><div class="today-kpi"><div class="today-kpi-v blue">${esc(fmtProb(p.probability_pct))}</div><div class="today-kpi-l">Prob.</div></div><div class="today-kpi"><div class="today-kpi-v green">${esc(fmtPct(p.ev_calibrated_pct))}</div><div class="today-kpi-l">EV cal.</div></div><div class="today-kpi"><div class="today-kpi-v gold">${esc(p.quality_grade_v6||'A')}</div><div class="today-kpi-l">Grad</div></div></div><div class="today-why">${esc(p.explain||'A trecut filtrele Safe Picks Gate și este publicat în snapshot-ul zilei.')}</div></div></article>`;
+  }
+
+  function renderEmpty(status){
+    return `<div class="today-empty"><div class="today-empty-ico">🛡️</div><div class="today-empty-title">Nu există predicții validate azi.</div><div class="today-empty-sub">${esc(status.label)}. Motorul a blocat selecțiile riscante. Este mai bine să nu apară nimic decât să apară predicții slabe.</div></div>`;
+  }
+
+  function render(){
+    ensureUI();
+    const safe=STATE.safe || {};
+    const history=STATE.history || {};
+    const monitor=STATE.monitor;
+    const health=STATE.health;
+    const picks=Array.isArray(safe.safe_picks)?safe.safe_picks.slice():[];
+    picks.sort((a,b)=>nr(b.safe_score??b.confidence_score)-nr(a.safe_score??a.confidence_score));
+    const hRows=Array.isArray(history.results)?history.results:[];
+    const hStats=historyStats(hRows);
+    const status=engineStatus(monitor,health);
+    const body=byId('today-body'), pill=byId('today-status-pill'), count=byId('today-count'), topScore=byId('today-top-score'), roi=byId('today-roi');
+    if(pill){ pill.textContent=status.score!=null?`${status.label} · ${status.score}`:status.label; pill.className=`today-pill ${status.cls}`; }
+    if(count) count.textContent=String(picks.length);
+    if(topScore) topScore.textContent=picks.length?String(Math.round(nr(picks[0].safe_score??picks[0].confidence_score,0))):'—';
+    if(roi){ roi.textContent=hStats.roi==null?'—':fmtPct(hStats.roi); roi.className=`today-stat-v ${hStats.roi==null?'warn':hStats.roi>=0?'good':'bad'}`; }
+    if(!body) return;
+    body.innerHTML = picks.length ? renderPick(picks[0]) : renderEmpty(status);
+  }
+
+  async function load(){
+    ensureUI();
+    const body=byId('today-body');
+    if(body) body.innerHTML='<div class="loader"><div class="spinner"></div>Se încarcă sumarul zilei...</div>';
+    try{
+      const [safe,history,monitor,health]=await Promise.all([
+        fetchJson(SAFE_URL),
+        fetchJson(HISTORY_URL,true),
+        fetchJson(MONITOR_URL,true),
+        fetchJson(HEALTH_URL,true)
+      ]);
+      STATE.safe=safe; STATE.history=history||{}; STATE.monitor=monitor; STATE.health=health; STATE.error=null; STATE.loaded=true;
+      render();
+    }catch(err){
+      STATE.error=err;
+      if(body) body.innerHTML='<div class="today-error">⚠ Nu pot încărca pagina Azi. Verifică <strong>data/published_safe_picks_today.json</strong>.</div>';
+      console.warn('[TodayUI] load failed',err);
+    }
+  }
+  function patchNavigation(){
+    if(patchNavigation.done) return; patchNavigation.done=true;
+    const originalGo=window.go;
+    if(typeof originalGo==='function'){
+      window.go=function(tab){ originalGo(tab); if(tab==='today') load(); };
+    }
+  }
+  function boot(){ ensureUI(); patchNavigation(); window.BPTodayUI={load,reload:load,render,state:STATE}; }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',boot); else boot();
+})();
