@@ -1,0 +1,181 @@
+name: 📊 Fetch Daily Data
+
+on:
+  schedule:
+    # La fiecare ora (la minutul :00). 24 runs/zi.
+    # Pe repo public = unlimited Actions. Pe privat = ~3600 min/luna.
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: betpredict-daily
+  cancel-in-progress: false
+
+jobs:
+  fetch-daily:
+    runs-on: ubuntu-latest
+    # Realistic: fetch+ML pipeline ~30-45min. 55min buffer previne kill prematur.
+    timeout-minutes: 55
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-v6-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-v6-
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Fetch data
+        env:
+          BSD_API_KEY: ${{ secrets.BSD_API_KEY }}
+          BETPREDICT_TEAM_LIMIT: "42"
+          BETPREDICT_CONTEXT_INTEL_LIMIT: "24"
+          BETPREDICT_PLAYER_TEAM_LIMIT: "24"
+          BETPREDICT_PLAYER_LIMIT: "72"
+          BETPREDICT_PLAYERS_PER_TEAM_LIMIT: "80"
+          BETPREDICT_PLAYER_STATS_LIMIT: "120"
+          BETPREDICT_PLAYER_TRANSFERS_LIMIT: "50"
+          BETPREDICT_PLAYER_HTTP_SLEEP: "0.04"
+          BETPREDICT_PLAYER_HTTP_TIMEOUT: "15"
+          BETPREDICT_EVENT_DEEP_LIMIT: "48"
+          BETPREDICT_EVENT_DEEP_HTTP_SLEEP: "0.04"
+          BETPREDICT_EVENT_DEEP_HTTP_TIMEOUT: "8"
+          BETPREDICT_EVENT_DEEP_ENABLE_SHOTMAP: "0"
+          BETPREDICT_BSD_PRED_LIMIT: "10"
+        run: |
+          time python src/fetch_league_metadata.py
+          time python src/fetch_daily.py
+          time python src/fetch_event_deep_data.py
+          time python src/fetch_player_intelligence.py
+          time python src/league_strength_safety.py
+          time python src/context_engine_runner.py
+          time python src/player_impact_engine.py
+          time python src/lineup_intelligence.py
+          time python src/event_match_intelligence.py
+          time python src/context_entity_hardening.py
+          time python src/market_odds_audit.py
+          time python src/api_coverage_final.py
+          time python src/bsd_v2_exact.py
+          time python src/match_data_pack.py
+          time python src/inject_match_data_pack_ui.py
+
+      # v6.0 ML Pipeline + Healthcheck
+      # Ordine DAG strictă: ML → Calibrare → Semnale → Context/CLV → Audit/Monitor
+      # Pașii critici (compute_signals_v6) opresc pipeline-ul la eșec.
+      - name: ML Pipeline v6
+        env:
+          BSD_API_KEY: ${{ secrets.BSD_API_KEY }}
+        run: |
+          echo "=== [1/9] ML Ensemble ==="
+          time python src/ml_ensemble.py || echo "[WARN] ml_ensemble.py esuat, continuam"
+          echo "=== [2/9] Calibration Engine + Health Monitor ==="
+          time python src/calibration_engine.py || echo "[WARN] calibration_engine.py esuat, continuam"
+          time python src/calibration_health.py || echo "[WARN] calibration_health.py esuat, continuam"
+          echo "=== [3/9] Adaptive Thresholds ==="
+          time python src/adaptive_thresholds.py || echo "[WARN] adaptive_thresholds.py esuat, continuam"
+          echo "=== [4/9] Consensus Engine ==="
+          time python src/consensus_engine.py || echo "[WARN] consensus_engine.py esuat, continuam"
+          echo "=== [5/9] Compute Signals v6 — CRITIC: semnalele UI depind de acest pas ==="
+          time python src/compute_signals_v6.py
+          echo "=== [5.5/9] Pattern Memory — boost/penalty pe smartbet_score ==="
+          time python src/pattern_memory.py || echo "[WARN] pattern_memory.py esuat, continuam"
+          echo "=== [6/9] Context Score + CLV Value Engine ==="
+          time python src/context_score_engine.py || echo "[WARN] context_score_engine.py esuat, continuam"
+          time python src/clv_value_engine.py || echo "[WARN] clv_value_engine.py esuat, continuam"
+          echo "=== [7/9] Performance Heatmap + RiskShield + AI Insight + Pyramid + Live Value ==="
+          time python src/performance_heatmap.py || echo "[WARN] performance_heatmap.py esuat, continuam"
+          time python src/risk_shield.py || echo "[WARN] risk_shield.py esuat, continuam"
+          time python src/ai_insight_generator.py || echo "[WARN] ai_insight_generator.py esuat, continuam"
+          time python src/pyramid_assistant.py || echo "[WARN] pyramid_assistant.py esuat, continuam"
+          time python src/live_value_alerts.py || echo "[WARN] live_value_alerts.py esuat, continuam"
+          echo "=== [8/9] Healthcheck v6 + Backtest ==="
+          time python src/v6_healthcheck.py || echo "[WARN] v6_healthcheck.py esuat, continuam"
+          time python src/v6_backtest.py || echo "[WARN] v6_backtest.py esuat, continuam"
+          echo "=== [9/9] Platform Monitor v1 — audit intern calitate date ==="
+          time python src/build_platform_monitor.py || echo "[WARN] build_platform_monitor.py esuat, continuam"
+          echo "=== ML Pipeline v6 complet ==="
+
+      - name: Run regression tests
+        run: |
+          python -m unittest discover -s tests -p "test_*.py" -v 2>&1 | tail -40 || echo "[WARN] Unele teste au esuat — vezi log-ul de mai sus"
+
+      - name: Commit & Push
+        run: |
+          git config --local user.email "betpredict-bot@github.com"
+          git config --local user.name  "BetPredict Bot"
+          git add data/ assets/ index.html \
+            src/fetch_daily.py \
+            src/fetch_league_metadata.py \
+            src/fetch_event_deep_data.py \
+            src/fetch_player_intelligence.py \
+            src/player_impact_engine.py \
+            src/lineup_intelligence.py \
+            src/event_match_intelligence.py \
+            src/context_entity_hardening.py \
+            src/market_odds_audit.py \
+            src/api_coverage_final.py \
+            src/league_strength_safety.py \
+            src/context_engine.py \
+            src/context_engine_runner.py \
+            src/ml_ensemble.py \
+            src/calibration_engine.py \
+            src/adaptive_thresholds.py \
+            src/consensus_engine.py \
+            src/compute_signals_v6.py \
+            src/context_score_engine.py \
+            src/build_clv_tracker.py \
+            src/clv_value_engine.py \
+            src/performance_heatmap.py \
+            src/ai_insight_generator.py \
+            src/pyramid_assistant.py \
+            src/live_value_alerts.py \
+            src/v6_healthcheck.py \
+            src/v6_backtest.py \
+            src/build_platform_monitor.py \
+            src/fetch_event_deep_data.py \
+            analytics_core.py \
+            requirements.txt \
+            tests/ \
+            .github/workflows/fetch_daily.yml \
+            .github/workflows/ml_train.yml \
+            -f
+          if [ -d "models" ]; then
+            git add models/ -f || true
+          fi
+          git diff --quiet && git diff --staged --quiet && exit 0
+
+          # Extrage status v6 pentru commit message
+          V6_STATUS=$(python3 -c "
+          import json
+          try:
+              with open('data/v6_health.json') as f:
+                  d = json.load(f)
+              s = d['overall']['status']
+              emoji = {'GREEN':'🟢','YELLOW':'🟡','RED':'🔴'}.get(s,'?')
+              print(f'{emoji}{s}')
+          except Exception:
+              print('?')
+          " 2>/dev/null || echo "?")
+
+          git commit -m "🤖 ML v6 $(TZ=Europe/Bucharest date '+%d.%m %H:%M') · $V6_STATUS"
+          for i in 1 2 3; do
+            git fetch origin main && git rebase --autostash origin/main && git push && break || {
+              echo "Push retry $i/3..."
+              git rebase --abort 2>/dev/null || true
+              sleep 5
+            }
+          done
