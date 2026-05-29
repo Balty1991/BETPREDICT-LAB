@@ -105,8 +105,10 @@ jobs:
           echo "=== [8/9] Healthcheck v6 + Backtest ==="
           time python src/v6_healthcheck.py || echo "[WARN] v6_healthcheck.py esuat, continuam"
           time python src/v6_backtest.py || echo "[WARN] v6_backtest.py esuat, continuam"
-          echo "=== [9/9] Platform Monitor v1 — audit intern calitate date ==="
+          echo "=== [9/10] Platform Monitor v1 — audit intern calitate date ==="
           time python src/build_platform_monitor.py || echo "[WARN] build_platform_monitor.py esuat, continuam"
+          echo "=== [10/10] Safe Picks Gate — publică doar predicțiile validate ==="
+          time python src/build_safe_picks_today.py
           echo "=== ML Pipeline v6 complet ==="
 
       - name: Run regression tests
@@ -146,6 +148,7 @@ jobs:
             src/v6_healthcheck.py \
             src/v6_backtest.py \
             src/build_platform_monitor.py \
+            src/build_safe_picks_today.py \
             src/fetch_event_deep_data.py \
             analytics_core.py \
             requirements.txt \

@@ -84,6 +84,8 @@ jobs:
           python src/compute_signals_v6.py
           echo "=== Healthcheck ==="
           python src/v6_healthcheck.py
+          echo "=== Safe Picks Gate ==="
+          python src/build_safe_picks_today.py
           echo "=== Rezumat antrenare ==="
           python3 -c "
           import json
@@ -120,7 +122,7 @@ jobs:
         run: |
           git config --local user.email "betpredict-ml-bot@github.com"
           git config --local user.name  "BetPredict ML Bot"
-          git add data/ models/ -f
+          git add data/ models/ src/build_safe_picks_today.py tests/test_safe_picks_gate.py -f
           git diff --quiet && git diff --staged --quiet && exit 0
 
           # Extrage metrici pentru commit message
