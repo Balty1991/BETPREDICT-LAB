@@ -1,8 +1,7 @@
 // BETPREDICT Service Worker — auto-update on deploy
-const VERSION = 'bp-lab-today-only-v1-20260529-1200';
+const VERSION = 'bp-lab-final-menu-v1-20260529-1300';
 const CACHE = `betpredict-${VERSION}`;
 
-// App shell — fișiere statice cache-uite
 const SHELL = [
   './',
   './index.html',
@@ -21,20 +20,16 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE)
       .then(c => c.addAll(SHELL.map(u => new Request(u, { cache: 'reload' }))))
-      .then(() => self.skipWaiting()) // activare imediată, fără așteptare
+      .then(() => self.skipWaiting())
   );
 });
 
 self.addEventListener('activate', event => {
   event.waitUntil(
-    // Șterge toate cache-urile vechi
     caches.keys()
       .then(keys => Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k))))
-      .then(() => self.clients.claim()) // preia controlul tuturor tab-urilor deschise
-      .then(() => {
-        // Trimite mesaj la toate tab-urile: "versiune nouă, reîncarcă"
-        return self.clients.matchAll({ type: 'window' });
-      })
+      .then(() => self.clients.claim())
+      .then(() => self.clients.matchAll({ type: 'window' }))
       .then(clients => clients.forEach(c => c.postMessage({ type: 'SW_UPDATED', version: VERSION })))
   );
 });
@@ -44,7 +39,6 @@ self.addEventListener('fetch', event => {
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
 
-  // HTML principal — întotdeauna din rețea (niciodată cache vechi)
   if (url.pathname.endsWith('/') || url.pathname.endsWith('.html')) {
     event.respondWith(
       fetch(req, { cache: 'no-store' })
@@ -57,7 +51,6 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // Fișiere JSON din /data/ — întotdeauna din rețea (date proaspete), fallback cache
   if (url.pathname.includes('/data/')) {
     event.respondWith(
       fetch(req, { cache: 'no-store' })
@@ -71,7 +64,6 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // CSS/JS assets — cache first, update în background
   event.respondWith(
     caches.match(req).then(cached => {
       const networkUpdate = fetch(req, { cache: 'no-store' })
