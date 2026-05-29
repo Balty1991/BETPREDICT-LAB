@@ -24,6 +24,7 @@ from collections import Counter
 from copy import deepcopy
 from datetime import datetime, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -34,6 +35,8 @@ CANDIDATES_PATH = DATA_DIR / "safe_picks_today.json"
 PUBLISHED_PATH = DATA_DIR / "published_safe_picks_today.json"
 PUBLISHED_JOURNAL_PATH = DATA_DIR / "selection_journal_published.json"
 DEBUG_PATH = DEBUG_DIR / "safe_picks_gate_debug.json"
+
+APP_TZ = ZoneInfo("Europe/Bucharest")
 
 SAFE_MARKETS = {"under35", "over25", "under25"}
 SAFE_STRATEGIES = {"smart_ev", "conservative"}
@@ -70,7 +73,8 @@ def iso_now() -> str:
 
 
 def today_key() -> str:
-    return utc_now().date().isoformat()
+    """Business day used by the app: Romanian local date, not UTC date."""
+    return utc_now().astimezone(APP_TZ).date().isoformat()
 
 
 def read_json(path: Path, default: Any) -> Any:
@@ -143,6 +147,39 @@ def normalize_status(value: Any) -> str:
 
 def event_id(sig: dict[str, Any]) -> str:
     return str(sig.get("event_id") or sig.get("id") or sig.get("match_id") or "").strip()
+
+
+def event_datetime(value: Any) -> datetime | None:
+    if not value:
+        return None
+    text = str(value).strip()
+    if not text:
+        return None
+    try:
+        # ISO values from BSD/data usually end in Z. Convert them to timezone-aware UTC.
+        if text.endswith("Z"):
+            text = text[:-1] + "+00:00"
+        dt = datetime.fromisoformat(text)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=APP_TZ)
+        return dt
+    except Exception:
+        return None
+
+
+def item_kickoff(item: dict[str, Any]) -> Any:
+    return item.get("kickoff") or item.get("event_date") or item.get("start_time") or item.get("date")
+
+
+def event_local_date(item: dict[str, Any]) -> str:
+    dt = event_datetime(item_kickoff(item))
+    if not dt:
+        return ""
+    return dt.astimezone(APP_TZ).date().isoformat()
+
+
+def is_event_today(item: dict[str, Any]) -> bool:
+    return event_local_date(item) == today_key()
 
 
 def published_date(value: Any | None = None) -> str:
@@ -267,6 +304,8 @@ def block_reasons(sig: dict[str, Any], perf: dict[str, Any], monitor: dict[str, 
         reasons.append("GRADE_BELOW_A")
     if has_missing_core_data(sig):
         reasons.append("MISSING_CORE_DATA")
+    if not is_event_today(sig):
+        reasons.append("NOT_TODAY_MATCH")
     if odds < ODDS_MIN or odds > ODDS_MAX:
         reasons.append("ODDS_OUTSIDE_SAFE_RANGE")
     if prob_pct < MIN_PROB_PCT:
@@ -392,7 +431,9 @@ def publish_snapshot(candidates: list[dict[str, Any]]) -> dict[str, Any]:
     for item in previous_picks:
         if not isinstance(item, dict):
             continue
-        if item.get("published_date") == day:
+        # Keep only today's already-published pending snapshot. If an older buggy
+        # snapshot contains tomorrow/future matches, do not carry it forward.
+        if item.get("published_date") == day and is_event_today(item):
             merged[pick_key(item)] = item
 
     for item in candidates:
@@ -427,8 +468,15 @@ def update_published_journal(published: dict[str, Any]) -> dict[str, Any]:
 
     by_key: dict[str, dict[str, Any]] = {}
     for rec in records:
-        if isinstance(rec, dict):
-            by_key[pick_key(rec)] = rec
+        if not isinstance(rec, dict):
+            continue
+        # Correction guard: remove current-day PENDING records that were published
+        # by the previous bug even though their kickoff is not today. Settled older
+        # records are preserved for audit continuity.
+        rec_status = normalize_status(rec.get("status", "PENDING"))
+        if rec.get("published_date") == today_key() and rec_status == "PENDING" and not is_event_today(rec):
+            continue
+        by_key[pick_key(rec)] = rec
 
     for pick in published.get("safe_picks", []):
         rec = deepcopy(pick)
@@ -499,6 +547,8 @@ def main() -> int:
             "safe_strategies": sorted(SAFE_STRATEGIES),
             "weak_leagues_blocked": sorted(weak_leagues(monitor)),
             "negative_sample_min": NEGATIVE_SAMPLE_MIN,
+            "event_date_rule": "kickoff local date must equal Europe/Bucharest today",
+            "today_local_date": today_key(),
         },
         "safe_picks": safe,
         "watchlist": watchlist,
