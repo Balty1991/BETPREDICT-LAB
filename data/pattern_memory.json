@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-05-31T00:26:20.860982+00:00",
+  "updated_at": "2026-05-31T05:35:52.881092+00:00",
   "source": "pattern_memory.py",
-  "n_journal": 518,
-  "baseline_wr": 67.76,
+  "n_journal": 540,
+  "baseline_wr": 67.22,
   "params": {
     "min_support": 15,
     "min_lift_pp": 8,
@@ -44,9 +44,9 @@
   },
   "summary": {
     "n_patterns": 5,
-    "n_boosts": 2,
-    "n_blocks": 3,
-    "n_signals_affected": 11
+    "n_boosts": 1,
+    "n_blocks": 4,
+    "n_signals_affected": 6
   },
   "patterns": [
     {
@@ -61,9 +61,9 @@
       ],
       "support": 21,
       "win_rate": 38.1,
-      "baseline_wr": 67.8,
-      "lift_pp": -29.7,
-      "p_value": 0.0049,
+      "baseline_wr": 67.2,
+      "lift_pp": -29.1,
+      "p_value": 0.0058,
       "modifier": -30,
       "direction": "block"
     },
@@ -79,10 +79,10 @@
       ],
       "support": 123,
       "win_rate": 78.9,
-      "baseline_wr": 67.8,
-      "lift_pp": 11.1,
-      "p_value": 0.0056,
-      "modifier": 13,
+      "baseline_wr": 67.2,
+      "lift_pp": 11.6,
+      "p_value": 0.004,
+      "modifier": 14,
       "direction": "boost"
     },
     {
@@ -97,10 +97,28 @@
       ],
       "support": 15,
       "win_rate": 40.0,
-      "baseline_wr": 67.8,
-      "lift_pp": -27.8,
-      "p_value": 0.0248,
+      "baseline_wr": 67.2,
+      "lift_pp": -27.2,
+      "p_value": 0.0276,
       "modifier": -30,
+      "direction": "block"
+    },
+    {
+      "id": "market=over25|bucket=1.65-1.95",
+      "keys": [
+        "market",
+        "bucket"
+      ],
+      "values": [
+        "over25",
+        "1.65-1.95"
+      ],
+      "support": 16,
+      "win_rate": 43.8,
+      "baseline_wr": 67.2,
+      "lift_pp": -23.5,
+      "p_value": 0.045,
+      "modifier": -28,
       "direction": "block"
     },
     {
@@ -115,29 +133,11 @@
       ],
       "support": 16,
       "win_rate": 43.8,
-      "baseline_wr": 67.8,
-      "lift_pp": -24.0,
-      "p_value": 0.0406,
-      "modifier": -29,
+      "baseline_wr": 67.2,
+      "lift_pp": -23.5,
+      "p_value": 0.045,
+      "modifier": -28,
       "direction": "block"
-    },
-    {
-      "id": "market=under35|dow=Sun",
-      "keys": [
-        "market",
-        "dow"
-      ],
-      "values": [
-        "under35",
-        "Sun"
-      ],
-      "support": 50,
-      "win_rate": 80.0,
-      "baseline_wr": 67.8,
-      "lift_pp": 12.2,
-      "p_value": 0.0445,
-      "modifier": 15,
-      "direction": "boost"
     }
   ]
 }
