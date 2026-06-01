@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-01T18:58:57.719886+00:00",
+  "updated_at": "2026-06-01T22:26:02.589940+00:00",
   "model_version": "v6.0-healthcheck",
   "source": "v6_healthcheck",
   "overall": {
@@ -15,8 +15,8 @@
       "layer": "ml_ensemble",
       "issues": [],
       "metrics": {
-        "n_matches": 46,
-        "n_training_samples": 461,
+        "n_matches": 44,
+        "n_training_samples": 449,
         "age_hours": 0.0,
         "model_pkl_exists": true,
         "markets_trained": [
@@ -28,7 +28,7 @@
           "over25",
           "under35"
         ],
-        "avg_auc": 0.844
+        "avg_auc": 0.831
       }
     },
     "calibration": {
@@ -38,7 +38,7 @@
       "metrics": {
         "n_calibrators_active": 8,
         "n_calibrators_identity": 0,
-        "n_total_settled": 590,
+        "n_total_settled": 592,
         "age_hours": 0.0,
         "pkl_exists": true,
         "biggest_bias_market": "homeWin",
@@ -51,9 +51,9 @@
       "layer": "adaptive_thresholds",
       "issues": [],
       "metrics": {
-        "n_settled_total": 590,
+        "n_settled_total": 592,
         "overall_roi_pct": 1.5,
-        "overall_win_rate_pct": 68.5,
+        "overall_win_rate_pct": 68.4,
         "n_markets_with_overrides": 6,
         "blacklisted_markets": [],
         "best_market": "draw",
@@ -66,16 +66,16 @@
       "layer": "consensus",
       "issues": [],
       "metrics": {
-        "n_matches": 46,
-        "avg_consensus_score": 0.821,
+        "n_matches": 44,
+        "avg_consensus_score": 0.827,
         "tier_distribution": {
-          "total": 35,
-          "partial": 8,
-          "divergent": 3,
+          "total": 31,
+          "partial": 13,
+          "divergent": 0,
           "contradictoriu": 0
         },
         "age_hours": 0.0,
-        "pct_total_consensus": 76.1
+        "pct_total_consensus": 70.5
       }
     },
     "signals_v6": {
@@ -87,18 +87,18 @@
       "metrics": {
         "n_signals": 5,
         "n_upgraded": 0,
-        "n_downgraded": 2,
-        "n_adjusted": 3,
+        "n_downgraded": 3,
+        "n_adjusted": 2,
         "n_unchanged": 0,
         "n_aplus": 0,
         "n_a": 0,
         "calibrators_applied": [
           "under35",
           "over25",
+          "btts",
           "over15",
           "awayWin",
           "under25",
-          "btts",
           "draw",
           "homeWin"
         ],
