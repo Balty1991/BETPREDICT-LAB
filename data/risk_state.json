@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-01T06:19:49.396346+00:00",
+  "updated_at": "2026-06-01T12:57:44.176284+00:00",
   "rules": {
     "bankroll_unit": 100.0,
     "max_daily_exposure_pct": 5.0,
@@ -24,10 +24,10 @@
     "max_pct": 5.0
   },
   "drawdown": {
-    "rolling_7d_pct": 5.26,
+    "rolling_7d_pct": 3.24,
     "rolling_30d_pct": 8.93,
-    "peak_units": 5.26,
-    "current_units": 5.26,
+    "peak_units": 3.24,
+    "current_units": 3.24,
     "n_30d": 603
   },
   "streak": {
@@ -37,49 +37,17 @@
   "circuit_breaker": {
     "active": false,
     "trigger_pct": -15,
-    "rolling_pct": 5.26
+    "rolling_pct": 3.24
   },
   "blocked_markets": {},
   "per_signal": {
-    "9093|over25": {
-      "event_id": 9093,
-      "market": "over25",
-      "league": "International Friendly Games",
-      "stake_pct": 1.5,
-      "stake_amount": 1.5,
-      "kelly_raw": 0.4659,
-      "blocked": false,
-      "reasons": []
-    },
-    "9249|over25": {
-      "event_id": 9249,
-      "market": "over25",
-      "league": "International Friendly Games",
-      "stake_pct": 0.0,
-      "stake_amount": 0.0,
-      "kelly_raw": 0.0,
-      "blocked": true,
-      "reasons": [
-        "grade<B(C)"
-      ]
-    },
     "207168|under35": {
       "event_id": 207168,
       "market": "under35",
       "league": "International Friendly Games",
       "stake_pct": 1.5,
       "stake_amount": 1.5,
-      "kelly_raw": 0.1247,
-      "blocked": false,
-      "reasons": []
-    },
-    "207444|under35": {
-      "event_id": 207444,
-      "market": "under35",
-      "league": "International Friendly Games",
-      "stake_pct": 1.5,
-      "stake_amount": 1.5,
-      "kelly_raw": 0.3104,
+      "kelly_raw": 0.2816,
       "blocked": false,
       "reasons": []
     },
@@ -90,10 +58,18 @@
       "stake_pct": 0.0,
       "stake_amount": 0.0,
       "kelly_raw": 0.0,
-      "blocked": true,
-      "reasons": [
-        "correlated_cap"
-      ]
+      "blocked": false,
+      "reasons": []
+    },
+    "207444|under35": {
+      "event_id": 207444,
+      "market": "under35",
+      "league": "International Friendly Games",
+      "stake_pct": 1.5,
+      "stake_amount": 1.5,
+      "kelly_raw": 0.4666,
+      "blocked": false,
+      "reasons": []
     },
     "207493|over25": {
       "event_id": 207493,
@@ -105,6 +81,30 @@
       "blocked": true,
       "reasons": [
         "grade<B(C)"
+      ]
+    },
+    "9093|over25": {
+      "event_id": 9093,
+      "market": "over25",
+      "league": "International Friendly Games",
+      "stake_pct": 0.0,
+      "stake_amount": 0.0,
+      "kelly_raw": 0.0,
+      "blocked": true,
+      "reasons": [
+        "correlated_cap"
+      ]
+    },
+    "9249|over25": {
+      "event_id": 9249,
+      "market": "over25",
+      "league": "International Friendly Games",
+      "stake_pct": 0.0,
+      "stake_amount": 0.0,
+      "kelly_raw": 0.0,
+      "blocked": true,
+      "reasons": [
+        "grade<B(D)"
       ]
     }
   }
