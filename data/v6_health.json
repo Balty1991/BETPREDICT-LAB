@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-02T18:57:16.319974+00:00",
+  "updated_at": "2026-06-02T22:09:41.716007+00:00",
   "model_version": "v6.0-healthcheck",
   "source": "v6_healthcheck",
   "overall": {
@@ -15,8 +15,8 @@
       "layer": "ml_ensemble",
       "issues": [],
       "metrics": {
-        "n_matches": 629,
-        "n_training_samples": 453,
+        "n_matches": 628,
+        "n_training_samples": 441,
         "age_hours": 0.0,
         "model_pkl_exists": true,
         "markets_trained": [
@@ -28,7 +28,7 @@
           "over25",
           "under35"
         ],
-        "avg_auc": 0.832
+        "avg_auc": 0.822
       }
     },
     "calibration": {
@@ -38,12 +38,12 @@
       "metrics": {
         "n_calibrators_active": 8,
         "n_calibrators_identity": 0,
-        "n_total_settled": 594,
+        "n_total_settled": 599,
         "age_hours": 0.0,
         "pkl_exists": true,
         "biggest_bias_market": "homeWin",
         "biggest_bias_pp": 16.4,
-        "brier_improvement_pct": 13.4
+        "brier_improvement_pct": 13.3
       }
     },
     "adaptive_thresholds": {
@@ -51,9 +51,9 @@
       "layer": "adaptive_thresholds",
       "issues": [],
       "metrics": {
-        "n_settled_total": 594,
+        "n_settled_total": 599,
         "overall_roi_pct": 1.2,
-        "overall_win_rate_pct": 68.2,
+        "overall_win_rate_pct": 68.1,
         "n_markets_with_overrides": 6,
         "blacklisted_markets": [],
         "best_market": "draw",
@@ -66,16 +66,16 @@
       "layer": "consensus",
       "issues": [],
       "metrics": {
-        "n_matches": 629,
-        "avg_consensus_score": 0.87,
+        "n_matches": 628,
+        "avg_consensus_score": 0.864,
         "tier_distribution": {
-          "total": 575,
-          "partial": 48,
-          "divergent": 6,
+          "total": 573,
+          "partial": 52,
+          "divergent": 3,
           "contradictoriu": 0
         },
         "age_hours": 0.0,
-        "pct_total_consensus": 91.4
+        "pct_total_consensus": 91.2
       }
     },
     "signals_v6": {
@@ -83,18 +83,18 @@
       "layer": "signals_v6",
       "issues": [],
       "metrics": {
-        "n_signals": 49,
-        "n_upgraded": 7,
-        "n_downgraded": 18,
-        "n_adjusted": 24,
-        "n_unchanged": 0,
-        "n_aplus": 5,
-        "n_a": 2,
+        "n_signals": 56,
+        "n_upgraded": 9,
+        "n_downgraded": 29,
+        "n_adjusted": 17,
+        "n_unchanged": 1,
+        "n_aplus": 7,
+        "n_a": 3,
         "calibrators_applied": [
           "over25",
           "under35",
-          "btts",
           "over15",
+          "btts",
           "awayWin",
           "under25",
           "draw",
