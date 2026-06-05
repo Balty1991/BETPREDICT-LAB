@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-06-05T20:17:47.999185+00:00",
+  "updated_at": "2026-06-05T21:55:29.938329+00:00",
   "source": "context_entity_hardening_v1",
   "count": 598,
   "summary": {
     "total_predictions": 598,
     "context_events_indexed": 24,
-    "available_predictions": 23,
+    "available_predictions": 24,
     "strong_reliability_predictions": 1,
-    "warnings_total": 611,
+    "warnings_total": 612,
     "score_impact": "none_safe_audit_only"
   },
   "results": [
@@ -569,14 +569,20 @@
     },
     {
       "event_id": "206691",
-      "match": "— vs —",
-      "available": false,
-      "coverage_score": 0,
-      "reliability": 0.0,
-      "confidence_note": null,
-      "deltas": null,
+      "match": "Argentina vs Honduras",
+      "available": true,
+      "coverage_score": 3,
+      "reliability": 0.698,
+      "confidence_note": "partial",
+      "deltas": {
+        "manager_win_pct": 15.0,
+        "manager_attack_index": 0.021,
+        "venue_home_edge": 0.0,
+        "referee_goal_drag": 0.0
+      },
       "warnings": [
-        "missing_context_entities"
+        "referee_missing",
+        "neutral_or_uncertain_venue"
       ]
     },
     {
