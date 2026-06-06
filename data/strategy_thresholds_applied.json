@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-06T21:24:39.815991+00:00",
+  "updated_at": "2026-06-06T23:22:55.521340+00:00",
   "applied": true,
   "reason": "ok",
   "changes": [
@@ -59,6 +59,17 @@
     },
     {
       "strategy": "smart_ev",
+      "market": "awayWin",
+      "action": "thresholds_tightened",
+      "overrides": {
+        "min_edge": 2,
+        "min_adj": 68.0,
+        "odd_min": 1.25,
+        "odd_max": 2.5
+      }
+    },
+    {
+      "strategy": "smart_ev",
       "market": "btts",
       "action": "thresholds_tightened",
       "overrides": {
@@ -94,20 +105,20 @@
   "summary": {
     "rehabilitated": 0,
     "removed_last_resort": 4,
-    "tightened": 5
+    "tightened": 6
   },
   "markets_in_by_market": [
-    "btts",
     "under35",
-    "draw",
+    "over25",
     "homeWin",
-    "under25",
-    "over15",
+    "btts",
     "awayWin",
-    "over25"
+    "draw",
+    "over15",
+    "under25"
   ],
-  "source_updated_at": "2026-06-06T19:42:18.763977+00:00",
-  "overall_roi": 1.2,
+  "source_updated_at": "2026-06-06T21:27:37.884132+00:00",
+  "overall_roi": 1.9,
   "strategies_after": {
     "engine_overall": {
       "markets": [
@@ -154,6 +165,12 @@
         "under35"
       ],
       "_market_overrides": {
+        "awayWin": {
+          "min_edge": 2,
+          "min_adj": 68.0,
+          "odd_min": 1.25,
+          "odd_max": 2.5
+        },
         "btts": {
           "min_edge": 15,
           "min_adj": 70,
