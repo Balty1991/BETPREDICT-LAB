@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-06T19:42:18.716191+00:00",
+  "updated_at": "2026-06-06T21:27:37.836066+00:00",
   "source": "calibration_health.py",
   "thresholds": {
     "healthy_ece": 0.05,
@@ -11,24 +11,37 @@
   "summary": {
     "n_markets": 8,
     "HEALTHY": 6,
-    "DRIFT": 0,
+    "DRIFT": 1,
     "CRITICAL": 0,
-    "NO_DATA": 2,
+    "NO_DATA": 1,
     "healthy_share": 0.75
   },
   "per_market": {
     "under35": {
       "status": "HEALTHY",
       "reason": "OK",
-      "n": 326,
+      "n": 331,
       "type": "isotonic",
-      "ece_pre": 0.0962,
+      "ece_pre": 0.092,
       "ece_post": 0.0003,
-      "brier_pre": 0.2132,
-      "brier_post": 0.1979,
+      "brier_pre": 0.2105,
+      "brier_post": 0.1961,
       "bias_pp": null,
       "experimental": false,
       "label": "Under 3.5"
+    },
+    "awayWin": {
+      "status": "DRIFT",
+      "reason": "sample n=10 < 20",
+      "n": 10,
+      "type": "isotonic",
+      "ece_pre": 0.4645,
+      "ece_post": 0.002,
+      "brier_pre": 0.2387,
+      "brier_post": 0.15,
+      "bias_pp": null,
+      "experimental": false,
+      "label": "Away Win"
     },
     "over15": {
       "status": "HEALTHY",
@@ -72,28 +85,15 @@
     "under25": {
       "status": "HEALTHY",
       "reason": "OK",
-      "n": 36,
+      "n": 37,
       "type": "isotonic",
-      "ece_pre": 0.2019,
-      "ece_post": 0.0028,
-      "brier_pre": 0.2349,
-      "brier_post": 0.1605,
+      "ece_pre": 0.1897,
+      "ece_post": 0.003,
+      "brier_pre": 0.2303,
+      "brier_post": 0.1562,
       "bias_pp": null,
       "experimental": false,
       "label": "Under 2.5"
-    },
-    "awayWin": {
-      "status": "NO_DATA",
-      "reason": "sample n=9 < 10",
-      "n": 9,
-      "type": "shift",
-      "ece_pre": 0.4739,
-      "ece_post": 0.4842,
-      "brier_pre": 0.2492,
-      "brier_post": 0.2405,
-      "bias_pp": null,
-      "experimental": true,
-      "label": "Away Win"
     },
     "draw": {
       "status": "NO_DATA",
