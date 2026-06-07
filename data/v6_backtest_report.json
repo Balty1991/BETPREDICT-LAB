@@ -1,82 +1,35 @@
 {
-  "updated_at": "2026-06-07T12:38:36.309398+00:00",
+  "updated_at": "2026-06-07T15:17:47.290813+00:00",
   "model_version": "v6.0-backtest",
   "source": "v6_backtest",
   "methodology": {
-    "out_of_sample": "Time-based holdout 60/40. Calibratori antrenati DOAR pe primele 406 pariuri cronologic, evaluati pe ultimele 272. Asta simuleaza productia: invata din trecut, prezice viitor.",
-    "in_sample": "Calibratori reali (din models/calibrators_v6.pkl) aplicati pe TOATE cele 678 pariuri. OPTIMIST — calibratorii au fost antrenati pe aceste date. Util doar pentru istoric individual."
+    "out_of_sample": "Time-based holdout 60/40. Calibratori antrenati DOAR pe primele 407 pariuri cronologic, evaluati pe ultimele 272. Asta simuleaza productia: invata din trecut, prezice viitor.",
+    "in_sample": "Calibratori reali (din models/calibrators_v6.pkl) aplicati pe TOATE cele 679 pariuri. OPTIMIST — calibratorii au fost antrenati pe aceste date. Util doar pentru istoric individual."
   },
   "out_of_sample": {
     "split": {
-      "train_n": 406,
+      "train_n": 407,
       "test_n": 272
     },
     "overall": {
       "n_total": 272,
       "n_v5_kept": 272,
-      "n_v6_kept": 207,
-      "n_skipped_by_v6": 65,
+      "n_v6_kept": 208,
+      "n_skipped_by_v6": 64,
       "skipped_losses_avoided": 20,
-      "skipped_wins_lost": 45,
+      "skipped_wins_lost": 44,
       "units_saved_from_avoided_losses": 20.0,
-      "units_lost_from_avoided_wins": -17.92,
-      "net_units_impact": 37.92,
-      "v5_roi_pct": 4.11,
-      "v6_roi_pct": 6.4,
-      "roi_delta_pp": 2.29,
+      "units_lost_from_avoided_wins": -17.73,
+      "net_units_impact": 37.73,
+      "v5_roi_pct": 4.27,
+      "v6_roi_pct": 6.68,
+      "roi_delta_pp": 2.41,
       "v5_win_rate_pct": 66.2,
-      "v6_win_rate_pct": 65.2,
-      "v5_total_profit": 11.17,
-      "v6_total_profit": 13.25
+      "v6_win_rate_pct": 65.4,
+      "v5_total_profit": 11.62,
+      "v6_total_profit": 13.89
     },
     "by_market": {
-      "under35": {
-        "n_total": 127,
-        "n_v5_kept": 127,
-        "n_v6_kept": 87,
-        "n_skipped_by_v6": 40,
-        "skipped_losses_avoided": 13,
-        "skipped_wins_lost": 27,
-        "units_saved_from_avoided_losses": 13.0,
-        "units_lost_from_avoided_wins": -8.17,
-        "net_units_impact": 21.17,
-        "v5_roi_pct": -0.87,
-        "v6_roi_pct": 4.29,
-        "roi_delta_pp": 5.15,
-        "v5_win_rate_pct": 66.9,
-        "v6_win_rate_pct": 66.7,
-        "v5_total_profit": -1.1,
-        "v6_total_profit": 3.73,
-        "sample_bets": [
-          {
-            "event": "Corinthians vs Club Atlético Platense",
-            "market": "under35",
-            "odds": 1.19,
-            "prob_v5": 0.924,
-            "prob_v6": 0.8077,
-            "result": "WIN",
-            "verdict_v6": "SKIPPED_BY_V6"
-          },
-          {
-            "event": "IF Elfsborg vs BK Häcken",
-            "market": "under35",
-            "odds": 1.45,
-            "prob_v5": 0.714,
-            "prob_v6": 0.6897,
-            "result": "WIN",
-            "verdict_v6": "SKIPPED_BY_V6"
-          },
-          {
-            "event": "River Plate vs Blooming",
-            "market": "under35",
-            "odds": 1.99,
-            "prob_v5": 0.734,
-            "prob_v6": 0.6897,
-            "result": "WIN",
-            "verdict_v6": "KEPT_LOWER_EV"
-          }
-        ]
-      },
       "over25": {
         "n_total": 39,
         "n_v5_kept": 39,
@@ -168,6 +121,53 @@
             "prob_v6": 0.6579,
             "result": "LOSS",
             "verdict_v6": "SKIPPED_BY_V6"
+          }
+        ]
+      },
+      "under35": {
+        "n_total": 126,
+        "n_v5_kept": 126,
+        "n_v6_kept": 87,
+        "n_skipped_by_v6": 39,
+        "skipped_losses_avoided": 13,
+        "skipped_wins_lost": 26,
+        "units_saved_from_avoided_losses": 13.0,
+        "units_lost_from_avoided_wins": -7.98,
+        "net_units_impact": 20.98,
+        "v5_roi_pct": -1.02,
+        "v6_roi_pct": 4.29,
+        "roi_delta_pp": 5.31,
+        "v5_win_rate_pct": 66.7,
+        "v6_win_rate_pct": 66.7,
+        "v5_total_profit": -1.29,
+        "v6_total_profit": 3.73,
+        "sample_bets": [
+          {
+            "event": "IF Elfsborg vs BK Häcken",
+            "market": "under35",
+            "odds": 1.45,
+            "prob_v5": 0.714,
+            "prob_v6": 0.6897,
+            "result": "WIN",
+            "verdict_v6": "SKIPPED_BY_V6"
+          },
+          {
+            "event": "River Plate vs Blooming",
+            "market": "under35",
+            "odds": 1.99,
+            "prob_v5": 0.734,
+            "prob_v6": 0.6897,
+            "result": "WIN",
+            "verdict_v6": "KEPT_LOWER_EV"
+          },
+          {
+            "event": "São Paulo vs Boston River",
+            "market": "under35",
+            "odds": 1.67,
+            "prob_v5": 0.855,
+            "prob_v6": 0.7521,
+            "result": "WIN",
+            "verdict_v6": "KEPT_LOWER_EV"
           }
         ]
       },
@@ -313,22 +313,22 @@
         ]
       },
       "under25": {
-        "n_total": 15,
-        "n_v5_kept": 15,
-        "n_v6_kept": 15,
+        "n_total": 16,
+        "n_v5_kept": 16,
+        "n_v6_kept": 16,
         "n_skipped_by_v6": 0,
         "skipped_losses_avoided": 0,
         "skipped_wins_lost": 0,
         "units_saved_from_avoided_losses": 0,
         "units_lost_from_avoided_wins": 0,
         "net_units_impact": 0,
-        "v5_roi_pct": -13.4,
-        "v6_roi_pct": -13.4,
+        "v5_roi_pct": -8.56,
+        "v6_roi_pct": -8.56,
         "roi_delta_pp": 0.0,
-        "v5_win_rate_pct": 53.3,
-        "v6_win_rate_pct": 53.3,
-        "v5_total_profit": -2.01,
-        "v6_total_profit": -2.01,
+        "v5_win_rate_pct": 56.2,
+        "v6_win_rate_pct": 56.2,
+        "v5_total_profit": -1.37,
+        "v6_total_profit": -1.37,
         "sample_bets": [
           {
             "event": "Grêmio vs Corinthians",
@@ -391,32 +391,23 @@
     },
     "by_strategy": {
       "value_bets": {
-        "n_total": 55,
-        "n_v5_kept": 55,
+        "n_total": 54,
+        "n_v5_kept": 54,
         "n_v6_kept": 40,
-        "n_skipped_by_v6": 15,
+        "n_skipped_by_v6": 14,
         "skipped_losses_avoided": 2,
-        "skipped_wins_lost": 13,
+        "skipped_wins_lost": 12,
         "units_saved_from_avoided_losses": 2.0,
-        "units_lost_from_avoided_wins": -7.07,
-        "net_units_impact": 9.07,
-        "v5_roi_pct": 22.95,
+        "units_lost_from_avoided_wins": -6.88,
+        "net_units_impact": 8.88,
+        "v5_roi_pct": 23.02,
         "v6_roi_pct": 18.88,
-        "roi_delta_pp": -4.07,
-        "v5_win_rate_pct": 74.5,
+        "roi_delta_pp": -4.14,
+        "v5_win_rate_pct": 74.1,
         "v6_win_rate_pct": 70.0,
-        "v5_total_profit": 12.62,
+        "v5_total_profit": 12.43,
         "v6_total_profit": 7.55,
         "sample_bets": [
-          {
-            "event": "Corinthians vs Club Atlético Platense",
-            "market": "under35",
-            "odds": 1.19,
-            "prob_v5": 0.924,
-            "prob_v6": 0.8077,
-            "result": "WIN",
-            "verdict_v6": "SKIPPED_BY_V6"
-          },
           {
             "event": "Sandefjord Fotball vs Fredrikstad FK",
             "market": "over25",
@@ -432,6 +423,15 @@
             "odds": 1.4,
             "prob_v5": 0.844,
             "prob_v6": 0.7521,
+            "result": "LOSS",
+            "verdict_v6": "KEPT_LOWER_EV"
+          },
+          {
+            "event": "FC Badalona vs Real Madrid",
+            "market": "btts",
+            "odds": 1.75,
+            "prob_v5": 0.615,
+            "prob_v6": 0.6,
             "result": "LOSS",
             "verdict_v6": "KEPT_LOWER_EV"
           }
@@ -532,22 +532,22 @@
         ]
       },
       "engine_overall": {
-        "n_total": 74,
-        "n_v5_kept": 74,
-        "n_v6_kept": 68,
+        "n_total": 75,
+        "n_v5_kept": 75,
+        "n_v6_kept": 69,
         "n_skipped_by_v6": 6,
         "skipped_losses_avoided": 3,
         "skipped_wins_lost": 3,
         "units_saved_from_avoided_losses": 3.0,
         "units_lost_from_avoided_wins": -0.78,
         "net_units_impact": 3.78,
-        "v5_roi_pct": -10.38,
-        "v6_roi_pct": -8.03,
-        "roi_delta_pp": 2.35,
-        "v5_win_rate_pct": 60.8,
-        "v6_win_rate_pct": 61.8,
-        "v5_total_profit": -7.68,
-        "v6_total_profit": -5.46,
+        "v5_roi_pct": -9.39,
+        "v6_roi_pct": -6.99,
+        "roi_delta_pp": 2.4,
+        "v5_win_rate_pct": 61.3,
+        "v6_win_rate_pct": 62.3,
+        "v5_total_profit": -7.04,
+        "v6_total_profit": -4.82,
         "sample_bets": [
           {
             "event": "Granada Club de Fútbol vs Madrid CFF",
@@ -676,22 +676,22 @@
   },
   "in_sample": {
     "overall": {
-      "n_total": 678,
-      "n_v5_kept": 678,
-      "n_v6_kept": 348,
+      "n_total": 679,
+      "n_v5_kept": 679,
+      "n_v6_kept": 349,
       "n_skipped_by_v6": 330,
       "skipped_losses_avoided": 116,
       "skipped_wins_lost": 214,
       "units_saved_from_avoided_losses": 116.0,
       "units_lost_from_avoided_wins": -83.8,
       "net_units_impact": 199.8,
-      "v5_roi_pct": 2.15,
-      "v6_roi_pct": 13.44,
-      "roi_delta_pp": 11.29,
+      "v5_roi_pct": 2.24,
+      "v6_roi_pct": 13.58,
+      "roi_delta_pp": 11.34,
       "v5_win_rate_pct": 67.7,
-      "v6_win_rate_pct": 70.4,
-      "v5_total_profit": 14.57,
-      "v6_total_profit": 46.77
+      "v6_win_rate_pct": 70.5,
+      "v5_total_profit": 15.21,
+      "v6_total_profit": 47.41
     },
     "by_market": {
       "under35": {
@@ -930,22 +930,22 @@
         ]
       },
       "under25": {
-        "n_total": 37,
-        "n_v5_kept": 37,
-        "n_v6_kept": 13,
+        "n_total": 38,
+        "n_v5_kept": 38,
+        "n_v6_kept": 14,
         "n_skipped_by_v6": 24,
         "skipped_losses_avoided": 15,
         "skipped_wins_lost": 9,
         "units_saved_from_avoided_losses": 15.0,
         "units_lost_from_avoided_wins": -6.63,
         "net_units_impact": 21.63,
-        "v5_roi_pct": -4.92,
-        "v6_roi_pct": 50.38,
-        "roi_delta_pp": 55.3,
-        "v5_win_rate_pct": 56.8,
-        "v6_win_rate_pct": 92.3,
-        "v5_total_profit": -1.82,
-        "v6_total_profit": 6.55,
+        "v5_roi_pct": -3.11,
+        "v6_roi_pct": 51.36,
+        "roi_delta_pp": 54.46,
+        "v5_win_rate_pct": 57.9,
+        "v6_win_rate_pct": 92.9,
+        "v5_total_profit": -1.18,
+        "v6_total_profit": 7.19,
         "sample_bets": [
           {
             "event": "Santos vs San Lorenzo",
@@ -1120,22 +1120,22 @@
         ]
       },
       "engine_overall": {
-        "n_total": 175,
-        "n_v5_kept": 175,
-        "n_v6_kept": 116,
+        "n_total": 176,
+        "n_v5_kept": 176,
+        "n_v6_kept": 117,
         "n_skipped_by_v6": 59,
         "skipped_losses_avoided": 22,
         "skipped_wins_lost": 37,
         "units_saved_from_avoided_losses": 22.0,
         "units_lost_from_avoided_wins": -13.56,
         "net_units_impact": 35.56,
-        "v5_roi_pct": -2.17,
-        "v6_roi_pct": 4.01,
-        "roi_delta_pp": 6.17,
-        "v5_win_rate_pct": 67.4,
-        "v6_win_rate_pct": 69.8,
-        "v5_total_profit": -3.79,
-        "v6_total_profit": 4.65,
+        "v5_roi_pct": -1.79,
+        "v6_roi_pct": 4.52,
+        "roi_delta_pp": 6.31,
+        "v5_win_rate_pct": 67.6,
+        "v6_win_rate_pct": 70.1,
+        "v5_total_profit": -3.15,
+        "v6_total_profit": 5.29,
         "sample_bets": [
           {
             "event": "Chengdu Rongcheng vs Shanghai Port",
@@ -19337,6 +19337,33 @@
       "v6_keeps": true,
       "verdict_v6": "KEPT_LOWER_EV",
       "profit_v6": -1.0,
+      "calibrator_type": "isotonic"
+    },
+    {
+      "event_id": 207953,
+      "home_team": "Afghanistan",
+      "away_team": "Pakistan",
+      "league": "International Friendly Games",
+      "event_date": "2026-06-07T11:00:00Z",
+      "first_seen_at": "2026-06-04T21:16:26.347412+00:00",
+      "settled_at": "2026-06-07T15:03:10.318808+00:00",
+      "market": "under25",
+      "market_label": "Under 2.5G",
+      "strategy": "engine_overall",
+      "strategy_label": "Engine Overall",
+      "odds": 1.64,
+      "prob_v5": 0.804,
+      "ev_v5": 0.31855999999999995,
+      "result": "WIN",
+      "win": 1,
+      "profit_v5": 0.64,
+      "actual_score": "0-2",
+      "prob_v6": 0.99,
+      "ev_v6": 0.6236,
+      "v5_keeps": true,
+      "v6_keeps": true,
+      "verdict_v6": "KEPT",
+      "profit_v6": 0.64,
       "calibrator_type": "isotonic"
     },
     {
