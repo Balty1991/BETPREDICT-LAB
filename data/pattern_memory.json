@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-06-06T23:25:53.809838+00:00",
+  "updated_at": "2026-06-07T04:21:34.506871+00:00",
   "source": "pattern_memory.py",
-  "n_journal": 671,
-  "baseline_wr": 67.66,
+  "n_journal": 678,
+  "baseline_wr": 67.7,
   "params": {
     "min_support": 15,
     "min_lift_pp": 8,
@@ -46,7 +46,7 @@
     "n_patterns": 8,
     "n_boosts": 2,
     "n_blocks": 6,
-    "n_signals_affected": 17
+    "n_signals_affected": 22
   },
   "patterns": [
     {
@@ -62,8 +62,8 @@
       "support": 145,
       "win_rate": 78.6,
       "baseline_wr": 67.7,
-      "lift_pp": 11.0,
-      "p_value": 0.0031,
+      "lift_pp": 10.9,
+      "p_value": 0.0032,
       "modifier": 13,
       "direction": "boost"
     },
@@ -81,27 +81,9 @@
       "win_rate": 40.9,
       "baseline_wr": 67.7,
       "lift_pp": -26.8,
-      "p_value": 0.0088,
+      "p_value": 0.0087,
       "modifier": -30,
       "direction": "block"
-    },
-    {
-      "id": "market=under35|dow=Sun",
-      "keys": [
-        "market",
-        "dow"
-      ],
-      "values": [
-        "under35",
-        "Sun"
-      ],
-      "support": 69,
-      "win_rate": 81.2,
-      "baseline_wr": 67.7,
-      "lift_pp": 13.5,
-      "p_value": 0.0116,
-      "modifier": 16,
-      "direction": "boost"
     },
     {
       "id": "league=J1 League|market=under35",
@@ -117,45 +99,45 @@
       "win_rate": 40.0,
       "baseline_wr": 67.7,
       "lift_pp": -27.7,
-      "p_value": 0.0253,
+      "p_value": 0.0251,
       "modifier": -30,
       "direction": "block"
     },
     {
-      "id": "market=over25|bucket=1.65-1.95",
+      "id": "market=btts|dow=Sat",
       "keys": [
         "market",
-        "bucket"
+        "dow"
       ],
       "values": [
-        "over25",
-        "1.65-1.95"
+        "btts",
+        "Sat"
       ],
-      "support": 22,
-      "win_rate": 45.5,
+      "support": 15,
+      "win_rate": 40.0,
       "baseline_wr": 67.7,
-      "lift_pp": -22.2,
-      "p_value": 0.0258,
-      "modifier": -27,
+      "lift_pp": -27.7,
+      "p_value": 0.0251,
+      "modifier": -30,
       "direction": "block"
     },
     {
-      "id": "league=International Friendly Games|bucket=1.40-1.65",
+      "id": "market=under35|dow=Sun",
       "keys": [
-        "league",
-        "bucket"
+        "market",
+        "dow"
       ],
       "values": [
-        "International Friendly Games",
-        "1.40-1.65"
+        "under35",
+        "Sun"
       ],
-      "support": 20,
-      "win_rate": 45.0,
+      "support": 73,
+      "win_rate": 79.5,
       "baseline_wr": 67.7,
-      "lift_pp": -22.7,
-      "p_value": 0.0302,
-      "modifier": -27,
-      "direction": "block"
+      "lift_pp": 11.8,
+      "p_value": 0.0216,
+      "modifier": 14,
+      "direction": "boost"
     },
     {
       "id": "market=homeWin|bucket=1.95-2.40",
@@ -171,26 +153,44 @@
       "win_rate": 43.8,
       "baseline_wr": 67.7,
       "lift_pp": -23.9,
-      "p_value": 0.0414,
+      "p_value": 0.0411,
       "modifier": -29,
       "direction": "block"
     },
     {
-      "id": "market=over25|dow=Sat",
+      "id": "market=over25|bucket=1.65-1.95",
       "keys": [
         "market",
-        "dow"
+        "bucket"
       ],
       "values": [
         "over25",
-        "Sat"
+        "1.65-1.95"
       ],
-      "support": 16,
-      "win_rate": 43.8,
+      "support": 23,
+      "win_rate": 47.8,
       "baseline_wr": 67.7,
-      "lift_pp": -23.9,
-      "p_value": 0.0414,
-      "modifier": -29,
+      "lift_pp": -19.9,
+      "p_value": 0.038,
+      "modifier": -24,
+      "direction": "block"
+    },
+    {
+      "id": "league=International Friendly Games|bucket=1.40-1.65",
+      "keys": [
+        "league",
+        "bucket"
+      ],
+      "values": [
+        "International Friendly Games",
+        "1.40-1.65"
+      ],
+      "support": 21,
+      "win_rate": 47.6,
+      "baseline_wr": 67.7,
+      "lift_pp": -20.1,
+      "p_value": 0.0448,
+      "modifier": -24,
       "direction": "block"
     }
   ]
