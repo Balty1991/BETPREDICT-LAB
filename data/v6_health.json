@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-09T18:29:27.987976+00:00",
+  "updated_at": "2026-06-09T21:17:34.790743+00:00",
   "model_version": "v6.0-healthcheck",
   "source": "v6_healthcheck",
   "overall": {
@@ -15,8 +15,8 @@
       "layer": "ml_ensemble",
       "issues": [],
       "metrics": {
-        "n_matches": 505,
-        "n_training_samples": 310,
+        "n_matches": 503,
+        "n_training_samples": 296,
         "age_hours": 0.0,
         "model_pkl_exists": true,
         "markets_trained": [
@@ -28,7 +28,7 @@
           "over25",
           "under35"
         ],
-        "avg_auc": 0.607
+        "avg_auc": 0.629
       }
     },
     "calibration": {
@@ -38,12 +38,12 @@
       "metrics": {
         "n_calibrators_active": 8,
         "n_calibrators_identity": 0,
-        "n_total_settled": 693,
+        "n_total_settled": 698,
         "age_hours": 0.0,
         "pkl_exists": true,
         "biggest_bias_market": "homeWin",
         "biggest_bias_pp": 16.4,
-        "brier_improvement_pct": 16.6
+        "brier_improvement_pct": 16.7
       }
     },
     "adaptive_thresholds": {
@@ -51,8 +51,8 @@
       "layer": "adaptive_thresholds",
       "issues": [],
       "metrics": {
-        "n_settled_total": 693,
-        "overall_roi_pct": 2.6,
+        "n_settled_total": 698,
+        "overall_roi_pct": 2.7,
         "overall_win_rate_pct": 68.1,
         "n_markets_with_overrides": 7,
         "blacklisted_markets": [],
@@ -66,16 +66,16 @@
       "layer": "consensus",
       "issues": [],
       "metrics": {
-        "n_matches": 505,
-        "avg_consensus_score": 0.889,
+        "n_matches": 503,
+        "avg_consensus_score": 0.879,
         "tier_distribution": {
-          "total": 463,
-          "partial": 42,
-          "divergent": 0,
+          "total": 447,
+          "partial": 55,
+          "divergent": 1,
           "contradictoriu": 0
         },
         "age_hours": 0.0,
-        "pct_total_consensus": 91.7
+        "pct_total_consensus": 88.9
       }
     },
     "signals_v6": {
@@ -86,14 +86,14 @@
         "n_signals": 25,
         "n_upgraded": 0,
         "n_downgraded": 14,
-        "n_adjusted": 8,
-        "n_unchanged": 3,
+        "n_adjusted": 9,
+        "n_unchanged": 2,
         "n_aplus": 0,
         "n_a": 0,
         "calibrators_applied": [
-          "over15",
-          "under35",
           "over25",
+          "under35",
+          "over15",
           "under25",
           "awayWin",
           "btts",
