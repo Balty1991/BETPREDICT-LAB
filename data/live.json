@@ -1,104 +1,11 @@
 {
-  "updated_at": "2026-06-09T20:27:24.328821+00:00",
+  "updated_at": "2026-06-09T20:54:28.122278+00:00",
   "source": "bsd_v2_events_live+backfill",
   "endpoint": "/api/v2/events/live/",
   "params": {},
-  "count": 2,
-  "backfill_count": 2,
+  "count": 1,
+  "backfill_count": 1,
   "events": [
-    {
-      "id": 209455,
-      "league_id": 38,
-      "season_id": null,
-      "home_team_id": 1264,
-      "home_team": "Almería",
-      "away_team_id": 1398,
-      "away_team": "CD Castellón",
-      "home_coach_id": 823,
-      "away_coach_id": 818,
-      "referee_id": 1954,
-      "venue_id": 731,
-      "event_date": "2026-06-09T19:00:00+00:00",
-      "status": "2nd_half",
-      "replaced_by": null,
-      "round_number": 28,
-      "round_name": "Semifinals",
-      "group_name": null,
-      "period": "2T",
-      "current_minute": 65,
-      "home_score": 1,
-      "away_score": 1,
-      "home_score_ht": 1,
-      "away_score_ht": 0,
-      "penalty_shootout": null,
-      "extra_time_score": null,
-      "is_local_derby": false,
-      "is_neutral_ground": false,
-      "travel_distance_km": 409,
-      "weather": {
-        "code": 1,
-        "description": "clear",
-        "wind_speed": 12.5,
-        "temperature_c": 29
-      },
-      "pitch_condition": null,
-      "attendance": null,
-      "live_websocket": true,
-      "highlights": [],
-      "head_to_head": {
-        "total_matches": 5,
-        "home_wins": 1,
-        "draws": 1,
-        "away_wins": 3,
-        "home_goals": 5,
-        "away_goals": 12,
-        "avg_total_goals": 3.4,
-        "home_win_rate": 0.2,
-        "away_win_rate": 0.6,
-        "recent_matches": [
-          {
-            "away": "Almería",
-            "date": "2026-06-06T19:00:00+00:00",
-            "home": "CD Castellón",
-            "score": "1-1"
-          },
-          {
-            "away": "Almería",
-            "date": "2026-04-02T18:00:00+00:00",
-            "home": "CD Castellón",
-            "score": "2-0"
-          },
-          {
-            "away": "CD Castellón",
-            "date": "2025-10-26T17:30:00+00:00",
-            "home": "Almería",
-            "score": "1-0"
-          },
-          {
-            "away": "Almería",
-            "date": "2025-04-18T19:00:00+00:00",
-            "home": "CD Castellón",
-            "score": "4-1"
-          },
-          {
-            "away": "CD Castellón",
-            "date": "2024-09-16T18:30:00+00:00",
-            "home": "Almería",
-            "score": "2-5"
-          }
-        ]
-      },
-      "event_id": 209455,
-      "minute": 65,
-      "league_name": null,
-      "last_updated": null,
-      "image_assets": {
-        "home_team_logo": "https://sports.bzzoiro.com/img/team/1264/",
-        "away_team_logo": "https://sports.bzzoiro.com/img/team/1398/",
-        "league_logo": "https://sports.bzzoiro.com/img/league/38/"
-      },
-      "_backfilled": true
-    },
     {
       "id": 209482,
       "league_id": 53,
@@ -112,13 +19,13 @@
       "referee_id": null,
       "venue_id": null,
       "event_date": "2026-06-09T20:00:00+00:00",
-      "status": "1st_half",
+      "status": "halftime",
       "replaced_by": null,
       "round_number": 23,
       "round_name": "",
       "group_name": null,
-      "period": "1T",
-      "current_minute": 25,
+      "period": "HT",
+      "current_minute": 45,
       "home_score": 0,
       "away_score": 0,
       "home_score_ht": 0,
@@ -158,7 +65,7 @@
         ]
       },
       "event_id": 209482,
-      "minute": 25,
+      "minute": 45,
       "league_name": null,
       "last_updated": null,
       "image_assets": {
@@ -172,6 +79,6 @@
   "notes": [
     "Conform BSD v2, live window ignoră date_from/date_to/status.",
     "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env.",
-    "Backfill: 2 eveniment(e) adăugate via /events/{id}/ pentru meciuri ratate de /events/live/."
+    "Backfill: 1 eveniment(e) adăugate via /events/{id}/ pentru meciuri ratate de /events/live/."
   ]
 }
