@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-10T14:42:07.118386+00:00",
+  "updated_at": "2026-06-10T18:14:59.316388+00:00",
   "source": "calibration_health.py",
   "thresholds": {
     "healthy_ece": 0.05,
@@ -17,6 +17,45 @@
     "healthy_share": 0.75
   },
   "per_market": {
+    "over25": {
+      "status": "HEALTHY",
+      "reason": "OK",
+      "n": 70,
+      "type": "isotonic",
+      "ece_pre": 0.1331,
+      "ece_post": 0.0006,
+      "brier_pre": 0.248,
+      "brier_post": 0.2137,
+      "bias_pp": null,
+      "experimental": false,
+      "label": "Over 2.5"
+    },
+    "btts": {
+      "status": "HEALTHY",
+      "reason": "OK",
+      "n": 47,
+      "type": "isotonic",
+      "ece_pre": 0.1177,
+      "ece_post": 0.0006,
+      "brier_pre": 0.2591,
+      "brier_post": 0.2234,
+      "bias_pp": null,
+      "experimental": false,
+      "label": "BTTS"
+    },
+    "over15": {
+      "status": "HEALTHY",
+      "reason": "OK",
+      "n": 134,
+      "type": "isotonic",
+      "ece_pre": 0.0792,
+      "ece_post": 0.0001,
+      "brier_pre": 0.198,
+      "brier_post": 0.1819,
+      "bias_pp": null,
+      "experimental": false,
+      "label": "Over 1.5"
+    },
     "under35": {
       "status": "HEALTHY",
       "reason": "OK",
@@ -29,32 +68,6 @@
       "bias_pp": null,
       "experimental": false,
       "label": "Under 3.5"
-    },
-    "over25": {
-      "status": "HEALTHY",
-      "reason": "OK",
-      "n": 67,
-      "type": "isotonic",
-      "ece_pre": 0.1332,
-      "ece_post": 0.0006,
-      "brier_pre": 0.2456,
-      "brier_post": 0.2126,
-      "bias_pp": null,
-      "experimental": false,
-      "label": "Over 2.5"
-    },
-    "over15": {
-      "status": "HEALTHY",
-      "reason": "OK",
-      "n": 132,
-      "type": "isotonic",
-      "ece_pre": 0.0731,
-      "ece_post": 0.0002,
-      "brier_pre": 0.1938,
-      "brier_post": 0.1788,
-      "bias_pp": null,
-      "experimental": false,
-      "label": "Over 1.5"
     },
     "under25": {
       "status": "HEALTHY",
@@ -81,19 +94,6 @@
       "bias_pp": null,
       "experimental": false,
       "label": "Away Win"
-    },
-    "btts": {
-      "status": "HEALTHY",
-      "reason": "OK",
-      "n": 46,
-      "type": "isotonic",
-      "ece_pre": 0.1184,
-      "ece_post": 0.0004,
-      "brier_pre": 0.2645,
-      "brier_post": 0.2283,
-      "bias_pp": null,
-      "experimental": false,
-      "label": "BTTS"
     },
     "draw": {
       "status": "NO_DATA",
