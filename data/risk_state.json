@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-09T22:59:26.306718+00:00",
+  "updated_at": "2026-06-10T00:33:55.628750+00:00",
   "rules": {
     "bankroll_unit": 100.0,
     "max_daily_exposure_pct": 5.0,
@@ -16,11 +16,11 @@
     "clv_lookback_days": 30
   },
   "today": {
-    "exposure_pct": 0.0,
-    "exposure_amount": 0.0,
-    "n_active": 1,
-    "n_blocked": 16,
-    "scale_applied": 1.0,
+    "exposure_pct": 5.0,
+    "exposure_amount": 5.0,
+    "n_active": 6,
+    "n_blocked": 15,
+    "scale_applied": 0.556,
     "max_pct": 5.0
   },
   "drawdown": {
@@ -45,11 +45,13 @@
       "event_id": 207441,
       "market": "under35",
       "league": "International Friendly Games",
-      "stake_pct": 1.5,
-      "stake_amount": 1.5,
+      "stake_pct": 0.833,
+      "stake_amount": 0.83,
       "kelly_raw": 0.3722,
       "blocked": false,
-      "reasons": []
+      "reasons": [
+        "daily_cap_scaled"
+      ]
     },
     "207658|under35": {
       "event_id": 207658,
@@ -60,6 +62,18 @@
       "kelly_raw": 0.0802,
       "blocked": false,
       "reasons": []
+    },
+    "207649|under35": {
+      "event_id": 207649,
+      "market": "under35",
+      "league": "USL Championship",
+      "stake_pct": 0.833,
+      "stake_amount": 0.83,
+      "kelly_raw": 0.1115,
+      "blocked": false,
+      "reasons": [
+        "daily_cap_scaled"
+      ]
     },
     "8287|under35": {
       "event_id": 8287,
@@ -82,6 +96,30 @@
       "kelly_raw": 0.0,
       "blocked": false,
       "reasons": []
+    },
+    "207653|under35": {
+      "event_id": 207653,
+      "market": "under35",
+      "league": "USL Championship",
+      "stake_pct": 0.0,
+      "stake_amount": 0.0,
+      "kelly_raw": 0.0,
+      "blocked": true,
+      "reasons": [
+        "grade<B(C)"
+      ]
+    },
+    "8294|under35": {
+      "event_id": 8294,
+      "market": "under35",
+      "league": "World Cup 2026",
+      "stake_pct": 0.0,
+      "stake_amount": 0.0,
+      "kelly_raw": 0.0,
+      "blocked": true,
+      "reasons": [
+        "grade<B(C)"
+      ]
     },
     "207655|under35": {
       "event_id": 207655,
@@ -121,16 +159,6 @@
       "event_id": 207657,
       "market": "under35",
       "league": "USL Championship",
-      "stake_pct": 1.5,
-      "stake_amount": 1.5,
-      "kelly_raw": 0.0802,
-      "blocked": false,
-      "reasons": []
-    },
-    "207649|under35": {
-      "event_id": 207649,
-      "market": "under35",
-      "league": "USL Championship",
       "stake_pct": 0.0,
       "stake_amount": 0.0,
       "kelly_raw": 0.0,
@@ -139,30 +167,20 @@
         "correlated_cap"
       ]
     },
-    "207442|under35": {
-      "event_id": 207442,
+    "9099|under35": {
+      "event_id": 9099,
       "market": "under35",
       "league": "International Friendly Games",
-      "stake_pct": 0.0,
-      "stake_amount": 0.0,
-      "kelly_raw": 0.0,
+      "stake_pct": 0.833,
+      "stake_amount": 0.83,
+      "kelly_raw": 0.2699,
       "blocked": false,
-      "reasons": []
-    },
-    "207653|under35": {
-      "event_id": 207653,
-      "market": "under35",
-      "league": "USL Championship",
-      "stake_pct": 0.0,
-      "stake_amount": 0.0,
-      "kelly_raw": 0.0,
-      "blocked": true,
       "reasons": [
-        "grade<B(C)"
+        "daily_cap_scaled"
       ]
     },
-    "8294|under35": {
-      "event_id": 8294,
+    "8296|under35": {
+      "event_id": 8296,
       "market": "under35",
       "league": "World Cup 2026",
       "stake_pct": 0.0,
@@ -170,51 +188,7 @@
       "kelly_raw": 0.0,
       "blocked": true,
       "reasons": [
-        "grade<B(C)"
-      ]
-    },
-    "209467|btts": {
-      "event_id": 209467,
-      "market": "btts",
-      "league": "Suomen Cup",
-      "stake_pct": 1.5,
-      "stake_amount": 1.5,
-      "kelly_raw": 0.0653,
-      "blocked": false,
-      "reasons": []
-    },
-    "207654|under35": {
-      "event_id": 207654,
-      "market": "under35",
-      "league": "USL Championship",
-      "stake_pct": 0.0,
-      "stake_amount": 0.0,
-      "kelly_raw": 0.0,
-      "blocked": true,
-      "reasons": [
         "grade<B(D)"
-      ]
-    },
-    "209467|over25": {
-      "event_id": 209467,
-      "market": "over25",
-      "league": "Suomen Cup",
-      "stake_pct": 1.5,
-      "stake_amount": 1.5,
-      "kelly_raw": 0.0893,
-      "blocked": false,
-      "reasons": []
-    },
-    "207663|under35": {
-      "event_id": 207663,
-      "market": "under35",
-      "league": "USL Championship",
-      "stake_pct": 0.0,
-      "stake_amount": 0.0,
-      "kelly_raw": 0.0,
-      "blocked": true,
-      "reasons": [
-        "grade<B(C)"
       ]
     },
     "207664|under35": {
@@ -229,8 +203,20 @@
         "grade<B(C)"
       ]
     },
-    "207650|under35": {
-      "event_id": 207650,
+    "209467|over25": {
+      "event_id": 209467,
+      "market": "over25",
+      "league": "Suomen Cup",
+      "stake_pct": 0.833,
+      "stake_amount": 0.83,
+      "kelly_raw": 0.0893,
+      "blocked": false,
+      "reasons": [
+        "daily_cap_scaled"
+      ]
+    },
+    "207663|under35": {
+      "event_id": 207663,
       "market": "under35",
       "league": "USL Championship",
       "stake_pct": 0.0,
@@ -238,7 +224,19 @@
       "kelly_raw": 0.0,
       "blocked": true,
       "reasons": [
-        "correlated_cap"
+        "grade<B(C)"
+      ]
+    },
+    "209467|btts": {
+      "event_id": 209467,
+      "market": "btts",
+      "league": "Suomen Cup",
+      "stake_pct": 0.833,
+      "stake_amount": 0.83,
+      "kelly_raw": 0.0653,
+      "blocked": false,
+      "reasons": [
+        "daily_cap_scaled"
       ]
     },
     "8292|under35": {
@@ -265,50 +263,16 @@
         "grade<B(D)"
       ]
     },
-    "9099|under35": {
-      "event_id": 9099,
-      "market": "under35",
-      "league": "International Friendly Games",
-      "stake_pct": 0.0,
-      "stake_amount": 0.0,
-      "kelly_raw": 0.0,
-      "blocked": true,
-      "reasons": [
-        "grade<B(C)"
-      ]
-    },
-    "8296|under35": {
-      "event_id": 8296,
-      "market": "under35",
-      "league": "World Cup 2026",
-      "stake_pct": 0.0,
-      "stake_amount": 0.0,
-      "kelly_raw": 0.0,
-      "blocked": true,
-      "reasons": [
-        "grade<B(D)"
-      ]
-    },
     "209461|over25": {
       "event_id": 209461,
       "market": "over25",
       "league": "Suomen Cup",
-      "stake_pct": 1.5,
-      "stake_amount": 1.5,
+      "stake_pct": 0.833,
+      "stake_amount": 0.83,
       "kelly_raw": 0.1562,
       "blocked": false,
-      "reasons": []
-    },
-    "207659|under35": {
-      "event_id": 207659,
-      "market": "under35",
-      "league": "USL Championship",
-      "stake_pct": 0.0,
-      "stake_amount": 0.0,
-      "kelly_raw": 0.0,
-      "blocked": true,
       "reasons": [
-        "grade<B(D)"
+        "daily_cap_scaled"
       ]
     },
     "209460|over25": {
@@ -321,6 +285,42 @@
       "blocked": true,
       "reasons": [
         "correlated_cap"
+      ]
+    },
+    "207654|under35": {
+      "event_id": 207654,
+      "market": "under35",
+      "league": "USL Championship",
+      "stake_pct": 0.0,
+      "stake_amount": 0.0,
+      "kelly_raw": 0.0,
+      "blocked": true,
+      "reasons": [
+        "grade<B(D)"
+      ]
+    },
+    "207650|under35": {
+      "event_id": 207650,
+      "market": "under35",
+      "league": "USL Championship",
+      "stake_pct": 0.0,
+      "stake_amount": 0.0,
+      "kelly_raw": 0.0,
+      "blocked": true,
+      "reasons": [
+        "correlated_cap"
+      ]
+    },
+    "207659|under35": {
+      "event_id": 207659,
+      "market": "under35",
+      "league": "USL Championship",
+      "stake_pct": 0.0,
+      "stake_amount": 0.0,
+      "kelly_raw": 0.0,
+      "blocked": true,
+      "reasons": [
+        "grade<B(D)"
       ]
     }
   }
