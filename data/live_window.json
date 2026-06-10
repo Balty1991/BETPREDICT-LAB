@@ -1,13 +1,96 @@
 {
-  "updated_at": "2026-06-10T17:29:17.979243+00:00",
-  "source": "bsd_v2_events_live",
+  "updated_at": "2026-06-10T19:25:36.750374+00:00",
+  "source": "bsd_v2_events_live+backfill",
   "endpoint": "/api/v2/events/live/",
   "params": {},
-  "count": 0,
-  "backfill_count": 0,
-  "events": [],
+  "count": 1,
+  "backfill_count": 1,
+  "events": [
+    {
+      "id": 209456,
+      "league_id": 38,
+      "season_id": null,
+      "home_team_id": 1259,
+      "home_team": "Málaga CF",
+      "away_team_id": 1266,
+      "away_team": "Las Palmas",
+      "home_coach_id": 820,
+      "away_coach_id": 966,
+      "referee_id": null,
+      "venue_id": 726,
+      "event_date": "2026-06-10T19:00:00+00:00",
+      "status": "1st_half",
+      "replaced_by": null,
+      "round_number": 28,
+      "round_name": "Semifinals",
+      "group_name": null,
+      "period": "1T",
+      "current_minute": 24,
+      "home_score": 0,
+      "away_score": 1,
+      "home_score_ht": 0,
+      "away_score_ht": 1,
+      "penalty_shootout": null,
+      "extra_time_score": null,
+      "is_local_derby": false,
+      "is_neutral_ground": false,
+      "travel_distance_km": 1413,
+      "weather": {
+        "code": 0,
+        "description": "unknown",
+        "wind_speed": 11.5,
+        "temperature_c": 28
+      },
+      "pitch_condition": null,
+      "attendance": null,
+      "live_websocket": true,
+      "highlights": [],
+      "head_to_head": {
+        "total_matches": 3,
+        "home_wins": 3,
+        "draws": 0,
+        "away_wins": 0,
+        "home_goals": 4,
+        "away_goals": 0,
+        "avg_total_goals": 1.3333333333333333,
+        "home_win_rate": 1.0,
+        "away_win_rate": 0.0,
+        "recent_matches": [
+          {
+            "away": "Málaga CF",
+            "date": "2026-06-07T19:00:00+00:00",
+            "home": "Las Palmas",
+            "score": "0-1"
+          },
+          {
+            "away": "Las Palmas",
+            "date": "2026-04-11T16:30:00+00:00",
+            "home": "Málaga CF",
+            "score": "2-0"
+          },
+          {
+            "away": "Málaga CF",
+            "date": "2025-08-31T17:30:00+00:00",
+            "home": "Las Palmas",
+            "score": "0-1"
+          }
+        ]
+      },
+      "event_id": 209456,
+      "minute": 24,
+      "league_name": null,
+      "last_updated": null,
+      "image_assets": {
+        "home_team_logo": "https://sports.bzzoiro.com/img/team/1259/",
+        "away_team_logo": "https://sports.bzzoiro.com/img/team/1266/",
+        "league_logo": "https://sports.bzzoiro.com/img/league/38/"
+      },
+      "_backfilled": true
+    }
+  ],
   "notes": [
     "Conform BSD v2, live window ignoră date_from/date_to/status.",
-    "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env."
+    "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env.",
+    "Backfill: 1 eveniment(e) adăugate via /events/{id}/ pentru meciuri ratate de /events/live/."
   ]
 }
