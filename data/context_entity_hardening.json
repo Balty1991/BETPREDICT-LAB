@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-06-10T05:38:09.206384+00:00",
+  "updated_at": "2026-06-10T10:17:23.933374+00:00",
   "source": "context_entity_hardening_v1",
   "count": 507,
   "summary": {
     "total_predictions": 507,
     "context_events_indexed": 24,
-    "available_predictions": 23,
+    "available_predictions": 24,
     "strong_reliability_predictions": 2,
-    "warnings_total": 522,
+    "warnings_total": 523,
     "score_impact": "none_safe_audit_only"
   },
   "results": [
@@ -5783,14 +5783,20 @@
     },
     {
       "event_id": "7190",
-      "match": "— vs —",
-      "available": false,
-      "coverage_score": 0,
-      "reliability": 0.0,
-      "confidence_note": null,
-      "deltas": null,
+      "match": "Red Bull Bragantino vs Coritiba",
+      "available": true,
+      "coverage_score": 3,
+      "reliability": 0.488,
+      "confidence_note": "partial",
+      "deltas": {
+        "manager_win_pct": 40.6,
+        "manager_attack_index": 0.692,
+        "venue_home_edge": 0.0,
+        "referee_goal_drag": 0.0
+      },
       "warnings": [
-        "missing_context_entities"
+        "referee_missing",
+        "neutral_or_uncertain_venue"
       ]
     },
     {
