@@ -1,6 +1,6 @@
 {
-  "started_at": "2026-06-12T22:02:55.919481+00:00",
-  "finished_at": "2026-06-12T22:03:09.535637+00:00",
+  "started_at": "2026-06-12T22:08:53.982135+00:00",
+  "finished_at": "2026-06-12T22:08:55.849934+00:00",
   "has_api_key": true,
   "requests": [
     {
@@ -8,29 +8,40 @@
       "url": "https://sports.bzzoiro.com/api/v2/events/live/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 3276
+      "elapsed_ms": 579
     },
     {
       "label": "backfill_event_9975",
       "url": "https://sports.bzzoiro.com/api/v2/events/9975/",
       "params": {},
-      "status": null,
-      "elapsed_ms": 10285,
-      "error": "HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=10)"
-    }
-  ],
-  "warnings": [
+      "status": 200,
+      "elapsed_ms": 683
+    },
     {
-      "message": "Request live eșuat",
-      "context": {
-        "label": "backfill_event_9975",
-        "error": "HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=10)"
-      },
-      "time": "2026-06-12T22:03:09.534137+00:00"
+      "label": "live_lineups_9975",
+      "url": "https://sports.bzzoiro.com/api/v2/events/9975/lineups/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 519
+    },
+    {
+      "label": "live_stats_9975",
+      "url": "https://sports.bzzoiro.com/api/v2/events/9975/stats/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 535
+    },
+    {
+      "label": "live_incidents_9975",
+      "url": "https://sports.bzzoiro.com/api/v2/events/9975/incidents/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 541
     }
   ],
+  "warnings": [],
   "cache": {
     "reused": 0,
-    "refetched": 0
+    "refetched": 1
   }
 }
