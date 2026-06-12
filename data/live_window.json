@@ -1,13 +1,155 @@
 {
-  "updated_at": "2026-06-12T13:55:24.982829+00:00",
-  "source": "bsd_v2_events_live",
+  "updated_at": "2026-06-12T15:51:27.510151+00:00",
+  "source": "bsd_v2_events_live+backfill",
   "endpoint": "/api/v2/events/live/",
   "params": {},
-  "count": 0,
-  "backfill_count": 0,
-  "events": [],
+  "count": 2,
+  "backfill_count": 2,
+  "events": [
+    {
+      "id": 209497,
+      "league_id": 53,
+      "season_id": null,
+      "home_team_id": 2066,
+      "home_team": "Fath Union Sport",
+      "away_team_id": 2071,
+      "away_team": "MAS de Fès",
+      "home_coach_id": 1484,
+      "away_coach_id": 1489,
+      "referee_id": null,
+      "venue_id": null,
+      "event_date": "2026-06-12T15:00:00+00:00",
+      "status": "1st_half",
+      "replaced_by": null,
+      "round_number": 24,
+      "round_name": "",
+      "group_name": null,
+      "period": "1T",
+      "current_minute": 48,
+      "home_score": 1,
+      "away_score": 0,
+      "home_score_ht": 1,
+      "away_score_ht": 0,
+      "penalty_shootout": null,
+      "extra_time_score": null,
+      "is_local_derby": false,
+      "is_neutral_ground": false,
+      "travel_distance_km": null,
+      "weather": {
+        "code": null,
+        "description": null,
+        "wind_speed": null,
+        "temperature_c": null
+      },
+      "pitch_condition": null,
+      "attendance": null,
+      "live_websocket": false,
+      "websocket_plus": false,
+      "highlights": [],
+      "head_to_head": {
+        "total_matches": 1,
+        "home_wins": 0,
+        "draws": 0,
+        "away_wins": 1,
+        "home_goals": 2,
+        "away_goals": 4,
+        "avg_total_goals": 6.0,
+        "home_win_rate": 0.0,
+        "away_win_rate": 1.0,
+        "recent_matches": [
+          {
+            "away": "Fath Union Sport",
+            "date": "2026-01-24T17:00:00+00:00",
+            "home": "MAS de Fès",
+            "score": "4-2"
+          }
+        ]
+      },
+      "event_id": 209497,
+      "minute": 48,
+      "league_name": null,
+      "last_updated": null,
+      "image_assets": {
+        "home_team_logo": "https://sports.bzzoiro.com/img/team/2066/",
+        "away_team_logo": "https://sports.bzzoiro.com/img/team/2071/",
+        "league_logo": "https://sports.bzzoiro.com/img/league/53/"
+      },
+      "_backfilled": true
+    },
+    {
+      "id": 209498,
+      "league_id": 53,
+      "season_id": null,
+      "home_team_id": 2061,
+      "home_team": "Olympic Safi",
+      "away_team_id": 2065,
+      "away_team": "Kawkab Athletic Club Marrakech",
+      "home_coach_id": 1479,
+      "away_coach_id": 1483,
+      "referee_id": null,
+      "venue_id": null,
+      "event_date": "2026-06-12T15:00:00+00:00",
+      "status": "halftime",
+      "replaced_by": null,
+      "round_number": 24,
+      "round_name": "",
+      "group_name": null,
+      "period": "HT",
+      "current_minute": 45,
+      "home_score": 1,
+      "away_score": 0,
+      "home_score_ht": 1,
+      "away_score_ht": 0,
+      "penalty_shootout": null,
+      "extra_time_score": null,
+      "is_local_derby": false,
+      "is_neutral_ground": false,
+      "travel_distance_km": 135,
+      "weather": {
+        "code": null,
+        "description": null,
+        "wind_speed": null,
+        "temperature_c": null
+      },
+      "pitch_condition": null,
+      "attendance": null,
+      "live_websocket": true,
+      "websocket_plus": false,
+      "highlights": [],
+      "head_to_head": {
+        "total_matches": 1,
+        "home_wins": 0,
+        "draws": 1,
+        "away_wins": 0,
+        "home_goals": 1,
+        "away_goals": 1,
+        "avg_total_goals": 2.0,
+        "home_win_rate": 0.0,
+        "away_win_rate": 0.0,
+        "recent_matches": [
+          {
+            "away": "Olympic Safi",
+            "date": "2026-03-04T22:00:00+00:00",
+            "home": "Kawkab Athletic Club Marrakech",
+            "score": "1-1"
+          }
+        ]
+      },
+      "event_id": 209498,
+      "minute": 45,
+      "league_name": null,
+      "last_updated": null,
+      "image_assets": {
+        "home_team_logo": "https://sports.bzzoiro.com/img/team/2061/",
+        "away_team_logo": "https://sports.bzzoiro.com/img/team/2065/",
+        "league_logo": "https://sports.bzzoiro.com/img/league/53/"
+      },
+      "_backfilled": true
+    }
+  ],
   "notes": [
     "Conform BSD v2, live window ignoră date_from/date_to/status.",
-    "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env."
+    "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env.",
+    "Backfill: 2 eveniment(e) adăugate via /events/{id}/ pentru meciuri ratate de /events/live/."
   ]
 }
