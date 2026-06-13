@@ -1,17 +1,27 @@
 {
-  "started_at": "2026-06-13T11:27:43.220428+00:00",
-  "finished_at": "2026-06-13T11:27:43.958006+00:00",
+  "started_at": "2026-06-13T11:30:54.361331+00:00",
+  "finished_at": "2026-06-13T11:31:04.758873+00:00",
   "has_api_key": true,
   "requests": [
     {
       "label": "events_live",
       "url": "https://sports.bzzoiro.com/api/v2/events/live/",
       "params": {},
-      "status": 200,
-      "elapsed_ms": 677
+      "status": null,
+      "elapsed_ms": 10336,
+      "error": "HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=10)"
     }
   ],
-  "warnings": [],
+  "warnings": [
+    {
+      "message": "Request live eșuat",
+      "context": {
+        "label": "events_live",
+        "error": "HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=10)"
+      },
+      "time": "2026-06-13T11:31:04.697751+00:00"
+    }
+  ],
   "cache": {
     "reused": 0,
     "refetched": 0
