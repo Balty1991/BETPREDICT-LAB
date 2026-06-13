@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-13T01:52:02.764344+00:00",
+  "updated_at": "2026-06-13T01:53:34.179289+00:00",
   "source": "live_intelligence_v23",
   "endpoint": "/api/v2/events/live/",
   "params": {},
@@ -24,10 +24,10 @@
       "league_id": 27,
       "league_name": null,
       "event_date": "2026-06-13T01:00:00+00:00",
-      "status": "1st_half",
-      "period": "1T",
-      "current_minute": 48,
-      "home_score": 2,
+      "status": "halftime",
+      "period": "HT",
+      "current_minute": 45,
+      "home_score": 3,
       "away_score": 0,
       "last_updated": null,
       "event": {
@@ -43,16 +43,16 @@
         "referee_id": 2251,
         "venue_id": 1180,
         "event_date": "2026-06-13T01:00:00+00:00",
-        "status": "1st_half",
+        "status": "halftime",
         "replaced_by": null,
         "round_number": 1,
         "round_name": "",
         "group_name": "Group D",
-        "period": "1T",
-        "current_minute": 48,
-        "home_score": 2,
+        "period": "HT",
+        "current_minute": 45,
+        "home_score": 3,
         "away_score": 0,
-        "home_score_ht": 1,
+        "home_score_ht": 2,
         "away_score_ht": 1,
         "penalty_shootout": null,
         "extra_time_score": null,
@@ -72,7 +72,7 @@
         "highlights": [],
         "head_to_head": null,
         "event_id": 8290,
-        "minute": 48,
+        "minute": 45,
         "league_name": null,
         "last_updated": null,
         "image_assets": {
@@ -82,24 +82,47 @@
         },
         "_backfilled": true
       },
-      "phase": "mid-game",
+      "phase": "half-time",
       "pressure_side": "home",
-      "pressure_score": 34.9,
+      "pressure_score": 41.9,
       "stats_summary": {
         "xg_home": 0.65,
         "xg_away": 0.1,
-        "shots_on_target_home": 3.0,
+        "shots_on_target_home": 4.0,
         "shots_on_target_away": 1.0,
-        "shots_home": 6.0,
+        "shots_home": 7.0,
         "shots_away": 2.0,
         "possession_home": 72.0,
         "possession_away": 28.0,
         "dangerous_attacks_home": null,
         "dangerous_attacks_away": null,
         "momentum_points": 46,
-        "xg_per_minute_points": 8,
-        "shotmap_count": 9,
+        "xg_per_minute_points": 9,
+        "shotmap_count": 10,
         "shotmap": [
+          {
+            "gm": {
+              "x": 0,
+              "y": 54.3,
+              "z": 32.9
+            },
+            "xg": 0.4155,
+            "gml": "high-left",
+            "min": 45,
+            "pos": {
+              "x": 12.8,
+              "y": 56.5,
+              "z": 0
+            },
+            "sit": "assisted",
+            "body": "left-foot",
+            "home": true,
+            "type": "goal",
+            "xgot": 0.9766,
+            "added": 5,
+            "gtype": "regular",
+            "player_id": 2232
+          },
           {
             "gm": {
               "x": 0,
@@ -322,6 +345,29 @@
         {
           "gm": {
             "x": 0,
+            "y": 54.3,
+            "z": 32.9
+          },
+          "xg": 0.4155,
+          "gml": "high-left",
+          "min": 45,
+          "pos": {
+            "x": 12.8,
+            "y": 56.5,
+            "z": 0
+          },
+          "sit": "assisted",
+          "body": "left-foot",
+          "home": true,
+          "type": "goal",
+          "xgot": 0.9766,
+          "added": 5,
+          "gtype": "regular",
+          "player_id": 2232
+        },
+        {
+          "gm": {
+            "x": 0,
             "y": 49.3,
             "z": 13.3
           },
@@ -536,15 +582,27 @@
           "player_id": 488
         }
       ],
-      "incidents_count": 5,
+      "incidents_count": 6,
       "recent_incidents": [
         {
-          "text": "First half",
+          "text": "HT",
           "type": "period",
           "minute": 45,
-          "is_live": true,
+          "is_live": false,
           "away_score": 0,
-          "home_score": 2
+          "home_score": 3
+        },
+        {
+          "type": "goal",
+          "assist": "M. Tillman",
+          "minute": 45,
+          "player": "F. Balogun",
+          "is_home": true,
+          "goal_type": "regular",
+          "player_id": 2232,
+          "added_time": 5,
+          "away_score": 0,
+          "home_score": 3
         },
         {
           "type": "injuryTime",
@@ -587,7 +645,7 @@
       "lineup_status": "confirmed",
       "resources": {
         "stats": 1,
-        "incidents": 5,
+        "incidents": 6,
         "lineups": 1
       },
       "live_signals": [
@@ -595,7 +653,7 @@
           "type": "momentum",
           "level": "strong",
           "label": "presiune acasă",
-          "note": "Momentum home: xG 0.65-0.10, SOT 3-1."
+          "note": "Momentum home: xG 0.65-0.10, SOT 4-1."
         },
         {
           "type": "lineups",
