@@ -1,25 +1,76 @@
 {
-  "updated_at": "2026-06-15T21:18:37.337593+00:00",
+  "updated_at": "2026-06-15T22:26:46.157413+00:00",
   "limit": 18,
   "params": {},
   "summary": {
-    "live_events": 0,
-    "enriched_events": 0,
-    "with_stats": 0,
-    "with_incidents": 0,
-    "with_lineups": 0,
+    "live_events": 1,
+    "enriched_events": 1,
+    "with_stats": 1,
+    "with_incidents": 1,
+    "with_lineups": 1,
     "strong_signals": 0,
     "reused_cache": 0,
-    "refetched": 0
+    "refetched": 1
   },
-  "events": [],
+  "events": [
+    {
+      "event_id": 8301,
+      "score": "0-0",
+      "minute": 22,
+      "last_updated": null,
+      "cache_status": "refetched",
+      "pressure_side": "away",
+      "pressure_score": -13.8,
+      "resources": {
+        "stats": 1,
+        "incidents": 1,
+        "lineups": 1
+      },
+      "signals": [
+        {
+          "type": "lineups",
+          "level": "info",
+          "label": "lineup confirmed",
+          "note": "Status lineup disponibil pentru context live."
+        }
+      ]
+    }
+  ],
   "requests": [
     {
       "label": "events_live",
       "url": "https://sports.bzzoiro.com/api/v2/events/live/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 453
+      "elapsed_ms": 597
+    },
+    {
+      "label": "backfill_event_8301",
+      "url": "https://sports.bzzoiro.com/api/v2/events/8301/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 582
+    },
+    {
+      "label": "live_lineups_8301",
+      "url": "https://sports.bzzoiro.com/api/v2/events/8301/lineups/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 539
+    },
+    {
+      "label": "live_stats_8301",
+      "url": "https://sports.bzzoiro.com/api/v2/events/8301/stats/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 555
+    },
+    {
+      "label": "live_incidents_8301",
+      "url": "https://sports.bzzoiro.com/api/v2/events/8301/incidents/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 557
     }
   ],
   "warnings": []
