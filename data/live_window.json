@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-06-17T19:49:58.843853+00:00",
+  "updated_at": "2026-06-17T20:13:54.352091+00:00",
   "source": "bsd_v2_events_live+backfill",
   "endpoint": "/api/v2/events/live/",
   "params": {},
-  "count": 1,
-  "backfill_count": 1,
+  "count": 2,
+  "backfill_count": 2,
   "events": [
     {
       "id": 207665,
@@ -19,17 +19,17 @@
       "referee_id": null,
       "venue_id": 1334,
       "event_date": "2026-06-17T19:00:00+00:00",
-      "status": "1st_half",
+      "status": "2nd_half",
       "replaced_by": null,
       "round_number": 1,
       "round_name": "",
       "group_name": null,
-      "period": "1T",
-      "current_minute": 42,
+      "period": "2T",
+      "current_minute": 46,
       "home_score": 0,
-      "away_score": 0,
+      "away_score": 1,
       "home_score_ht": 0,
-      "away_score_ht": 0,
+      "away_score_ht": 1,
       "penalty_shootout": null,
       "extra_time_score": null,
       "is_local_derby": false,
@@ -48,7 +48,7 @@
       "highlights": [],
       "head_to_head": null,
       "event_id": 207665,
-      "minute": 42,
+      "minute": 46,
       "league_name": null,
       "last_updated": null,
       "image_assets": {
@@ -57,11 +57,81 @@
         "league_logo": "https://sports.bzzoiro.com/img/league/57/"
       },
       "_backfilled": true
+    },
+    {
+      "id": 8308,
+      "league_id": 27,
+      "season_id": 188,
+      "home_team_id": 493,
+      "home_team": "England",
+      "away_team_id": 494,
+      "away_team": "Croatia",
+      "home_coach_id": 108,
+      "away_coach_id": 126,
+      "referee_id": 2134,
+      "venue_id": 1184,
+      "event_date": "2026-06-17T20:00:00+00:00",
+      "status": "1st_half",
+      "replaced_by": null,
+      "round_number": 1,
+      "round_name": "",
+      "group_name": "Group L",
+      "period": "1T",
+      "current_minute": 12,
+      "home_score": 1,
+      "away_score": 0,
+      "home_score_ht": 1,
+      "away_score_ht": 0,
+      "penalty_shootout": null,
+      "extra_time_score": null,
+      "is_local_derby": false,
+      "is_neutral_ground": false,
+      "travel_distance_km": null,
+      "weather": {
+        "code": 1,
+        "description": "clear",
+        "wind_speed": 29.1,
+        "temperature_c": 35
+      },
+      "pitch_condition": null,
+      "attendance": null,
+      "live_websocket": true,
+      "websocket_plus": true,
+      "highlights": [],
+      "head_to_head": {
+        "total_matches": 1,
+        "home_wins": 0,
+        "draws": 0,
+        "away_wins": 1,
+        "home_goals": 1,
+        "away_goals": 2,
+        "avg_total_goals": 3.0,
+        "home_win_rate": 0.0,
+        "away_win_rate": 1.0,
+        "recent_matches": [
+          {
+            "away": "Croatia",
+            "date": "2018-06-26T17:00:00+00:00",
+            "home": "England",
+            "score": "1-2"
+          }
+        ]
+      },
+      "event_id": 8308,
+      "minute": 12,
+      "league_name": null,
+      "last_updated": null,
+      "image_assets": {
+        "home_team_logo": "https://sports.bzzoiro.com/img/team/493/",
+        "away_team_logo": "https://sports.bzzoiro.com/img/team/494/",
+        "league_logo": "https://sports.bzzoiro.com/img/league/27/"
+      },
+      "_backfilled": true
     }
   ],
   "notes": [
     "Conform BSD v2, live window ignoră date_from/date_to/status.",
     "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env.",
-    "Backfill: 1 eveniment(e) adăugate via /events/{id}/ pentru meciuri ratate de /events/live/."
+    "Backfill: 2 eveniment(e) adăugate via /events/{id}/ pentru meciuri ratate de /events/live/."
   ]
 }
