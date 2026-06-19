@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-19T23:00:06.401552+00:00",
+  "updated_at": "2026-06-19T23:15:15.035613+00:00",
   "source": "live_intelligence_v23",
   "endpoint": "/api/v2/events/live/",
   "params": {},
@@ -24,9 +24,9 @@
       "league_id": 27,
       "league_name": null,
       "event_date": "2026-06-19T22:00:00+00:00",
-      "status": "halftime",
-      "period": "HT",
-      "current_minute": 45,
+      "status": "2nd_half",
+      "period": "2T",
+      "current_minute": 51,
       "home_score": 0,
       "away_score": 1,
       "last_updated": null,
@@ -43,13 +43,13 @@
         "referee_id": 1714,
         "venue_id": 273,
         "event_date": "2026-06-19T22:00:00+00:00",
-        "status": "halftime",
+        "status": "2nd_half",
         "replaced_by": null,
         "round_number": 2,
         "round_name": "",
         "group_name": "Group C",
-        "period": "HT",
-        "current_minute": 45,
+        "period": "2T",
+        "current_minute": 51,
         "home_score": 0,
         "away_score": 1,
         "home_score_ht": 0,
@@ -72,7 +72,7 @@
         "highlights": [],
         "head_to_head": null,
         "event_id": 8317,
-        "minute": 45,
+        "minute": 51,
         "league_name": null,
         "last_updated": null,
         "image_assets": {
@@ -82,24 +82,50 @@
         },
         "_backfilled": true
       },
-      "phase": "half-time",
+      "phase": "mid-game",
       "pressure_side": "away",
-      "pressure_score": -24.5,
+      "pressure_score": -28.3,
       "stats_summary": {
         "xg_home": 0.2,
-        "xg_away": 0.66,
+        "xg_away": 0.76,
         "shots_on_target_home": null,
         "shots_on_target_away": 1.0,
         "shots_home": 2.0,
-        "shots_away": 5.0,
-        "possession_home": 38.0,
-        "possession_away": 62.0,
+        "shots_away": 6.0,
+        "possession_home": 41.0,
+        "possession_away": 59.0,
         "dangerous_attacks_home": null,
         "dangerous_attacks_away": null,
-        "momentum_points": 46,
-        "xg_per_minute_points": 6,
-        "shotmap_count": 7,
+        "momentum_points": 53,
+        "xg_per_minute_points": 7,
+        "shotmap_count": 8,
         "shotmap": [
+          {
+            "gm": {
+              "x": 0,
+              "y": 51,
+              "z": 19
+            },
+            "xg": 0.1011,
+            "gml": "low-centre",
+            "min": 50,
+            "pos": {
+              "x": 11.4,
+              "y": 43.8,
+              "z": 0
+            },
+            "sit": "assisted",
+            "body": "left-foot",
+            "home": false,
+            "type": "block",
+            "xgot": null,
+            "block": {
+              "x": 9.7,
+              "y": 44.6,
+              "z": 0
+            },
+            "player_id": 3511
+          },
           {
             "gm": {
               "x": 0,
@@ -271,6 +297,32 @@
         {
           "gm": {
             "x": 0,
+            "y": 51,
+            "z": 19
+          },
+          "xg": 0.1011,
+          "gml": "low-centre",
+          "min": 50,
+          "pos": {
+            "x": 11.4,
+            "y": 43.8,
+            "z": 0
+          },
+          "sit": "assisted",
+          "body": "left-foot",
+          "home": false,
+          "type": "block",
+          "xgot": null,
+          "block": {
+            "x": 9.7,
+            "y": 44.6,
+            "z": 0
+          },
+          "player_id": 3511
+        },
+        {
+          "gm": {
+            "x": 0,
             "y": 52.9,
             "z": 19
           },
@@ -434,8 +486,16 @@
           "player_id": 3511
         }
       ],
-      "incidents_count": 4,
+      "incidents_count": 5,
       "recent_incidents": [
+        {
+          "text": "Second half",
+          "type": "period",
+          "minute": 90,
+          "is_live": true,
+          "away_score": 1,
+          "home_score": 0
+        },
         {
           "text": "HT",
           "type": "period",
@@ -474,7 +534,7 @@
       "lineup_status": "confirmed",
       "resources": {
         "stats": 1,
-        "incidents": 4,
+        "incidents": 5,
         "lineups": 1
       },
       "live_signals": [
@@ -482,7 +542,7 @@
           "type": "momentum",
           "level": "medium",
           "label": "presiune deplasare",
-          "note": "Momentum away: xG 0.20-0.66, SOT 0-1."
+          "note": "Momentum away: xG 0.20-0.76, SOT 0-1."
         },
         {
           "type": "lineups",
