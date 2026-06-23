@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-06-22T23:44:19.383598+00:00",
+  "updated_at": "2026-06-23T00:19:48.973360+00:00",
   "source": "bsd_v2_events_live+backfill",
   "endpoint": "/api/v2/events/live/",
   "params": {},
-  "count": 1,
-  "backfill_count": 1,
+  "count": 2,
+  "backfill_count": 2,
   "events": [
     {
       "id": 9990,
@@ -19,13 +19,13 @@
       "referee_id": 2225,
       "venue_id": 636,
       "event_date": "2026-06-22T23:00:00+00:00",
-      "status": "1st_half",
+      "status": "2nd_half",
       "replaced_by": null,
       "round_number": 14,
       "round_name": "",
       "group_name": null,
-      "period": "1T",
-      "current_minute": 42,
+      "period": "2T",
+      "current_minute": 53,
       "home_score": 0,
       "away_score": 1,
       "home_score_ht": 0,
@@ -48,7 +48,7 @@
       "highlights": [],
       "head_to_head": null,
       "event_id": 9990,
-      "minute": 42,
+      "minute": 53,
       "league_name": null,
       "last_updated": null,
       "image_assets": {
@@ -57,11 +57,63 @@
         "league_logo": "https://sports.bzzoiro.com/img/league/34/"
       },
       "_backfilled": true
+    },
+    {
+      "id": 8329,
+      "league_id": 27,
+      "season_id": 188,
+      "home_team_id": 488,
+      "home_team": "Norway",
+      "away_team_id": 486,
+      "away_team": "Senegal",
+      "home_coach_id": 77,
+      "away_coach_id": 112,
+      "referee_id": 1932,
+      "venue_id": 1182,
+      "event_date": "2026-06-23T00:00:00+00:00",
+      "status": "1st_half",
+      "replaced_by": null,
+      "round_number": 2,
+      "round_name": "",
+      "group_name": "Group I",
+      "period": "1T",
+      "current_minute": 18,
+      "home_score": 0,
+      "away_score": 0,
+      "home_score_ht": 0,
+      "away_score_ht": 0,
+      "penalty_shootout": null,
+      "extra_time_score": null,
+      "is_local_derby": false,
+      "is_neutral_ground": false,
+      "travel_distance_km": null,
+      "weather": {
+        "code": 1,
+        "description": "clear",
+        "wind_speed": 12.9,
+        "temperature_c": 28
+      },
+      "pitch_condition": null,
+      "attendance": null,
+      "live_websocket": true,
+      "websocket_plus": true,
+      "highlights": [],
+      "head_to_head": null,
+      "event_id": 8329,
+      "minute": 18,
+      "league_name": null,
+      "last_updated": null,
+      "image_assets": {
+        "home_team_logo": "https://sports.bzzoiro.com/img/team/488/",
+        "away_team_logo": "https://sports.bzzoiro.com/img/team/486/",
+        "league_logo": "https://sports.bzzoiro.com/img/league/27/"
+      },
+      "_backfilled": true
     }
   ],
   "notes": [
     "Conform BSD v2, live window ignoră date_from/date_to/status.",
     "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env.",
-    "Backfill: 1 eveniment(e) adăugate via /events/{id}/ pentru meciuri ratate de /events/live/."
+    "Backfill: 2 eveniment(e) adăugate via /events/{id}/ pentru meciuri ratate de /events/live/."
   ]
 }
