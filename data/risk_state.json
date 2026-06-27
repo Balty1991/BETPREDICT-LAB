@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-27T08:07:40.533899+00:00",
+  "updated_at": "2026-06-27T10:29:50.238065+00:00",
   "rules": {
     "bankroll_unit": 100.0,
     "max_daily_exposure_pct": 5.0,
@@ -16,31 +16,41 @@
     "clv_lookback_days": 30
   },
   "today": {
-    "exposure_pct": 2.93,
-    "exposure_amount": 2.93,
+    "exposure_pct": 4.5,
+    "exposure_amount": 4.5,
     "n_active": 6,
     "n_blocked": 11,
     "scale_applied": 1.0,
     "max_pct": 5.0
   },
   "drawdown": {
-    "rolling_7d_pct": -5.77,
-    "rolling_30d_pct": 15.59,
+    "rolling_7d_pct": -4.23,
+    "rolling_30d_pct": 17.13,
     "peak_units": 0.54,
-    "current_units": -5.77,
-    "n_30d": 338
+    "current_units": -4.23,
+    "n_30d": 340
   },
   "streak": {
-    "consecutive_losses": 6,
-    "stop_loss_triggered": true
+    "consecutive_losses": 0,
+    "stop_loss_triggered": false
   },
   "circuit_breaker": {
     "active": false,
     "trigger_pct": -15,
-    "rolling_pct": -5.77
+    "rolling_pct": -4.23
   },
   "blocked_markets": {},
   "per_signal": {
+    "205808|under35": {
+      "event_id": 205808,
+      "market": "under35",
+      "league": "Chinese Super League",
+      "stake_pct": 1.5,
+      "stake_amount": 1.5,
+      "kelly_raw": 0.2577,
+      "blocked": false,
+      "reasons": []
+    },
     "10003|under35": {
       "event_id": 10003,
       "market": "under35",
@@ -57,37 +67,31 @@
       "event_id": 207259,
       "market": "under35",
       "league": "Veikkausliiga",
-      "stake_pct": 0.75,
-      "stake_amount": 0.75,
-      "kelly_raw": 0.2822,
+      "stake_pct": 1.5,
+      "stake_amount": 1.5,
+      "kelly_raw": 0.0889,
       "blocked": false,
-      "reasons": [
-        "stop_loss_halved"
-      ]
+      "reasons": []
     },
-    "205808|under35": {
-      "event_id": 205808,
+    "205806|under35": {
+      "event_id": 205806,
       "market": "under35",
       "league": "Chinese Super League",
-      "stake_pct": 0.75,
-      "stake_amount": 0.75,
-      "kelly_raw": 0.2577,
+      "stake_pct": 1.5,
+      "stake_amount": 1.5,
+      "kelly_raw": 0.3782,
       "blocked": false,
-      "reasons": [
-        "stop_loss_halved"
-      ]
+      "reasons": []
     },
     "205811|under35": {
       "event_id": 205811,
       "market": "under35",
       "league": "Chinese Super League",
-      "stake_pct": 0.75,
-      "stake_amount": 0.75,
+      "stake_pct": 1.5,
+      "stake_amount": 1.5,
       "kelly_raw": 0.2909,
       "blocked": false,
-      "reasons": [
-        "stop_loss_halved"
-      ]
+      "reasons": []
     },
     "10002|under35": {
       "event_id": 10002,
@@ -105,12 +109,12 @@
       "event_id": 205807,
       "market": "under35",
       "league": "Chinese Super League",
-      "stake_pct": 0.75,
-      "stake_amount": 0.75,
-      "kelly_raw": 0.1859,
-      "blocked": false,
+      "stake_pct": 0.0,
+      "stake_amount": 0.0,
+      "kelly_raw": 0.0,
+      "blocked": true,
       "reasons": [
-        "stop_loss_halved"
+        "correlated_cap"
       ]
     },
     "8362|under35": {
@@ -125,18 +129,6 @@
         "grade<B(C)"
       ]
     },
-    "207257|under35": {
-      "event_id": 207257,
-      "market": "under35",
-      "league": "Veikkausliiga",
-      "stake_pct": 0.684,
-      "stake_amount": 0.68,
-      "kelly_raw": 0.0547,
-      "blocked": false,
-      "reasons": [
-        "stop_loss_halved"
-      ]
-    },
     "205812|under35": {
       "event_id": 205812,
       "market": "under35",
@@ -148,6 +140,16 @@
       "reasons": [
         "correlated_cap"
       ]
+    },
+    "8353|over15": {
+      "event_id": 8353,
+      "market": "over15",
+      "league": "World Cup 2026",
+      "stake_pct": 0.0,
+      "stake_amount": 0.0,
+      "kelly_raw": 0.0,
+      "blocked": false,
+      "reasons": []
     },
     "8355|over25": {
       "event_id": 8355,
@@ -161,29 +163,15 @@
         "grade<B(C)"
       ]
     },
-    "8353|over15": {
-      "event_id": 8353,
-      "market": "over15",
-      "league": "World Cup 2026",
+    "207257|under35": {
+      "event_id": 207257,
+      "market": "under35",
+      "league": "Veikkausliiga",
       "stake_pct": 0.0,
       "stake_amount": 0.0,
       "kelly_raw": 0.0,
       "blocked": false,
-      "reasons": [
-        "stop_loss_halved"
-      ]
-    },
-    "205806|under35": {
-      "event_id": 205806,
-      "market": "under35",
-      "league": "Chinese Super League",
-      "stake_pct": 0.0,
-      "stake_amount": 0.0,
-      "kelly_raw": 0.0,
-      "blocked": true,
-      "reasons": [
-        "grade<B(D)"
-      ]
+      "reasons": []
     },
     "207256|under35": {
       "event_id": 207256,
@@ -253,9 +241,7 @@
       "stake_amount": 0.0,
       "kelly_raw": 0.0,
       "blocked": false,
-      "reasons": [
-        "stop_loss_halved"
-      ]
+      "reasons": []
     }
   }
 }
