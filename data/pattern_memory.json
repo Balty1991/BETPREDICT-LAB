@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-06-28T19:48:03.595780+00:00",
+  "updated_at": "2026-06-28T21:26:31.512998+00:00",
   "source": "pattern_memory.py",
-  "n_journal": 775,
-  "baseline_wr": 68.0,
+  "n_journal": 776,
+  "baseline_wr": 68.04,
   "params": {
     "min_support": 15,
     "min_lift_pp": 8,
@@ -43,8 +43,8 @@
     ]
   },
   "summary": {
-    "n_patterns": 7,
-    "n_boosts": 2,
+    "n_patterns": 8,
+    "n_boosts": 3,
     "n_blocks": 5,
     "n_signals_affected": 7
   },
@@ -81,7 +81,7 @@
       "win_rate": 35.0,
       "baseline_wr": 68.0,
       "lift_pp": -33.0,
-      "p_value": 0.0025,
+      "p_value": 0.0024,
       "modifier": -30,
       "direction": "block"
     },
@@ -95,12 +95,30 @@
         "under35",
         "1.20-1.40"
       ],
-      "support": 169,
-      "win_rate": 78.7,
+      "support": 170,
+      "win_rate": 78.8,
       "baseline_wr": 68.0,
-      "lift_pp": 10.7,
-      "p_value": 0.0019,
+      "lift_pp": 10.8,
+      "p_value": 0.0017,
       "modifier": 13,
+      "direction": "boost"
+    },
+    {
+      "id": "league=Brasileirão Serie B|market=under35",
+      "keys": [
+        "league",
+        "market"
+      ],
+      "values": [
+        "Brasileirão Serie B",
+        "under35"
+      ],
+      "support": 15,
+      "win_rate": 100.0,
+      "baseline_wr": 68.0,
+      "lift_pp": 32.0,
+      "p_value": 0.0031,
+      "modifier": 30,
       "direction": "boost"
     },
     {
@@ -117,7 +135,7 @@
       "win_rate": 40.0,
       "baseline_wr": 68.0,
       "lift_pp": -28.0,
-      "p_value": 0.0236,
+      "p_value": 0.0234,
       "modifier": -30,
       "direction": "block"
     },
@@ -135,9 +153,27 @@
       "win_rate": 43.8,
       "baseline_wr": 68.0,
       "lift_pp": -24.3,
-      "p_value": 0.0388,
+      "p_value": 0.0385,
       "modifier": -29,
       "direction": "block"
+    },
+    {
+      "id": "market=under35|dow=Sun",
+      "keys": [
+        "market",
+        "dow"
+      ],
+      "values": [
+        "under35",
+        "Sun"
+      ],
+      "support": 97,
+      "win_rate": 77.3,
+      "baseline_wr": 68.0,
+      "lift_pp": 9.3,
+      "p_value": 0.0321,
+      "modifier": 11,
+      "direction": "boost"
     },
     {
       "id": "market=over25|dow=Sat",
@@ -152,28 +188,10 @@
       "support": 19,
       "win_rate": 47.4,
       "baseline_wr": 68.0,
-      "lift_pp": -20.6,
-      "p_value": 0.0499,
+      "lift_pp": -20.7,
+      "p_value": 0.0495,
       "modifier": -25,
       "direction": "block"
-    },
-    {
-      "id": "market=under35|dow=Sun",
-      "keys": [
-        "market",
-        "dow"
-      ],
-      "values": [
-        "under35",
-        "Sun"
-      ],
-      "support": 96,
-      "win_rate": 77.1,
-      "baseline_wr": 68.0,
-      "lift_pp": 9.1,
-      "p_value": 0.0361,
-      "modifier": 11,
-      "direction": "boost"
     }
   ]
 }

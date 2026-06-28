@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-06-28T19:44:20.925134+00:00",
+  "updated_at": "2026-06-28T21:23:22.163515+00:00",
   "source": "context_entity_hardening_v1",
   "count": 340,
   "summary": {
     "total_predictions": 340,
     "context_events_indexed": 24,
     "available_predictions": 24,
-    "strong_reliability_predictions": 7,
-    "warnings_total": 352,
+    "strong_reliability_predictions": 8,
+    "warnings_total": 351,
     "score_impact": "none_safe_audit_only"
   },
   "results": [
@@ -137,20 +137,14 @@
     },
     {
       "event_id": "8365",
-      "match": "Mexico vs Ecuador",
-      "available": true,
-      "coverage_score": 3,
-      "reliability": 0.689,
-      "confidence_note": "partial",
-      "deltas": {
-        "manager_win_pct": 34.6,
-        "manager_attack_index": 0.135,
-        "venue_home_edge": 0.0,
-        "referee_goal_drag": 0.0
-      },
+      "match": "— vs —",
+      "available": false,
+      "coverage_score": 0,
+      "reliability": 0.0,
+      "confidence_note": null,
+      "deltas": null,
       "warnings": [
-        "referee_missing",
-        "neutral_or_uncertain_venue"
+        "missing_context_entities"
       ]
     },
     {
@@ -1299,14 +1293,19 @@
     },
     {
       "event_id": "46395",
-      "match": "— vs —",
-      "available": false,
-      "coverage_score": 0,
-      "reliability": 0.0,
-      "confidence_note": null,
-      "deltas": null,
+      "match": "IF Brommapojkarna vs IK Sirius",
+      "available": true,
+      "coverage_score": 3,
+      "reliability": 0.838,
+      "confidence_note": "strong",
+      "deltas": {
+        "manager_win_pct": -17.5,
+        "manager_attack_index": -0.451,
+        "venue_home_edge": 0.12,
+        "referee_goal_drag": 0.0
+      },
       "warnings": [
-        "missing_context_entities"
+        "referee_missing"
       ]
     },
     {
