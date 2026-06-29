@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-28T23:26:01.356649+00:00",
+  "updated_at": "2026-06-29T04:19:33.910087+00:00",
   "rules": {
     "bankroll_unit": 100.0,
     "max_daily_exposure_pct": 5.0,
@@ -16,19 +16,19 @@
     "clv_lookback_days": 30
   },
   "today": {
-    "exposure_pct": 0.0,
-    "exposure_amount": 0.0,
+    "exposure_pct": 1.5,
+    "exposure_amount": 1.5,
     "n_active": 1,
-    "n_blocked": 7,
+    "n_blocked": 9,
     "scale_applied": 1.0,
     "max_pct": 5.0
   },
   "drawdown": {
-    "rolling_7d_pct": -7.43,
-    "rolling_30d_pct": 15.91,
+    "rolling_7d_pct": -7.13,
+    "rolling_30d_pct": 15.78,
     "peak_units": 0.54,
-    "current_units": -7.43,
-    "n_30d": 329
+    "current_units": -7.13,
+    "n_30d": 333
   },
   "streak": {
     "consecutive_losses": 0,
@@ -37,7 +37,7 @@
   "circuit_breaker": {
     "active": false,
     "trigger_pct": -15,
-    "rolling_pct": -7.43
+    "rolling_pct": -7.13
   },
   "blocked_markets": {},
   "per_signal": {
@@ -47,7 +47,27 @@
       "league": "World Cup 2026",
       "stake_pct": 1.5,
       "stake_amount": 1.5,
-      "kelly_raw": 0.34,
+      "kelly_raw": 0.3593,
+      "blocked": false,
+      "reasons": []
+    },
+    "8361|under35": {
+      "event_id": 8361,
+      "market": "under35",
+      "league": "World Cup 2026",
+      "stake_pct": 1.5,
+      "stake_amount": 1.5,
+      "kelly_raw": 0.15,
+      "blocked": false,
+      "reasons": []
+    },
+    "8366|under35": {
+      "event_id": 8366,
+      "market": "under35",
+      "league": "World Cup 2026",
+      "stake_pct": 0.0,
+      "stake_amount": 0.0,
+      "kelly_raw": 0.0,
       "blocked": false,
       "reasons": []
     },
@@ -58,8 +78,22 @@
       "stake_pct": 0.0,
       "stake_amount": 0.0,
       "kelly_raw": 0.0,
-      "blocked": false,
-      "reasons": []
+      "blocked": true,
+      "reasons": [
+        "correlated_cap"
+      ]
+    },
+    "8368|under35": {
+      "event_id": 8368,
+      "market": "under35",
+      "league": "World Cup 2026",
+      "stake_pct": 0.0,
+      "stake_amount": 0.0,
+      "kelly_raw": 0.0,
+      "blocked": true,
+      "reasons": [
+        "correlated_cap"
+      ]
     },
     "46389|under35": {
       "event_id": 46389,
@@ -67,7 +101,7 @@
       "league": "Allsvenskan",
       "stake_pct": 1.5,
       "stake_amount": 1.5,
-      "kelly_raw": 0.1835,
+      "kelly_raw": 0.1866,
       "blocked": false,
       "reasons": []
     },
@@ -83,17 +117,25 @@
         "grade<B(C)"
       ]
     },
-    "46385|under35": {
-      "event_id": 46385,
-      "market": "under35",
-      "league": "Allsvenskan",
-      "stake_pct": 0.0,
-      "stake_amount": 0.0,
-      "kelly_raw": 0.0,
-      "blocked": true,
-      "reasons": [
-        "grade<B(C)"
-      ]
+    "209510|over25": {
+      "event_id": 209510,
+      "market": "over25",
+      "league": "Suomen Cup",
+      "stake_pct": 0.937,
+      "stake_amount": 0.94,
+      "kelly_raw": 0.0375,
+      "blocked": false,
+      "reasons": []
+    },
+    "209509|over25": {
+      "event_id": 209509,
+      "market": "over25",
+      "league": "Suomen Cup",
+      "stake_pct": 1.5,
+      "stake_amount": 1.5,
+      "kelly_raw": 0.431,
+      "blocked": false,
+      "reasons": []
     },
     "209510|btts": {
       "event_id": 209510,
@@ -105,29 +147,9 @@
       "blocked": false,
       "reasons": []
     },
-    "209510|over25": {
-      "event_id": 209510,
-      "market": "over25",
-      "league": "Suomen Cup",
-      "stake_pct": 0.0,
-      "stake_amount": 0.0,
-      "kelly_raw": 0.0,
-      "blocked": false,
-      "reasons": []
-    },
     "209509|btts": {
       "event_id": 209509,
       "market": "btts",
-      "league": "Suomen Cup",
-      "stake_pct": 1.5,
-      "stake_amount": 1.5,
-      "kelly_raw": 0.2228,
-      "blocked": false,
-      "reasons": []
-    },
-    "209509|over25": {
-      "event_id": 209509,
-      "market": "over25",
       "league": "Suomen Cup",
       "stake_pct": 0.0,
       "stake_amount": 0.0,
@@ -137,22 +159,10 @@
         "correlated_cap"
       ]
     },
-    "46391|under35": {
-      "event_id": 46391,
+    "46385|under35": {
+      "event_id": 46385,
       "market": "under35",
       "league": "Allsvenskan",
-      "stake_pct": 0.0,
-      "stake_amount": 0.0,
-      "kelly_raw": 0.0,
-      "blocked": true,
-      "reasons": [
-        "grade<B(D)"
-      ]
-    },
-    "8361|under35": {
-      "event_id": 8361,
-      "market": "under35",
-      "league": "World Cup 2026",
       "stake_pct": 0.0,
       "stake_amount": 0.0,
       "kelly_raw": 0.0,
@@ -171,6 +181,30 @@
       "blocked": true,
       "reasons": [
         "grade<B(C)"
+      ]
+    },
+    "8370|under35": {
+      "event_id": 8370,
+      "market": "under35",
+      "league": "World Cup 2026",
+      "stake_pct": 0.0,
+      "stake_amount": 0.0,
+      "kelly_raw": 0.0,
+      "blocked": true,
+      "reasons": [
+        "correlated_cap"
+      ]
+    },
+    "46391|under35": {
+      "event_id": 46391,
+      "market": "under35",
+      "league": "Allsvenskan",
+      "stake_pct": 0.0,
+      "stake_amount": 0.0,
+      "kelly_raw": 0.0,
+      "blocked": true,
+      "reasons": [
+        "grade<B(D)"
       ]
     },
     "8363|under35": {
