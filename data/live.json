@@ -1,13 +1,67 @@
 {
-  "updated_at": "2026-06-30T19:22:55.420393+00:00",
-  "source": "bsd_v2_events_live",
+  "updated_at": "2026-06-30T21:05:19.505415+00:00",
+  "source": "bsd_v2_events_live+backfill",
   "endpoint": "/api/v2/events/live/",
   "params": {},
-  "count": 0,
-  "backfill_count": 0,
-  "events": [],
+  "count": 1,
+  "backfill_count": 1,
+  "events": [
+    {
+      "id": 8364,
+      "league_id": 27,
+      "season_id": 188,
+      "home_team_id": 485,
+      "home_team": "France",
+      "away_team_id": 731,
+      "away_team": "Sweden",
+      "home_coach_id": 32,
+      "away_coach_id": 574,
+      "referee_id": 2251,
+      "venue_id": 1182,
+      "event_date": "2026-06-30T21:00:00+00:00",
+      "status": "1st_half",
+      "replaced_by": null,
+      "round_number": 6,
+      "round_name": "Round of 32",
+      "group_name": null,
+      "period": "1T",
+      "current_minute": 5,
+      "home_score": 0,
+      "away_score": 0,
+      "home_score_ht": 0,
+      "away_score_ht": 0,
+      "penalty_shootout": null,
+      "extra_time_score": null,
+      "is_local_derby": false,
+      "is_neutral_ground": false,
+      "travel_distance_km": null,
+      "weather": {
+        "code": 3,
+        "description": "rain",
+        "wind_speed": 20.5,
+        "temperature_c": 34
+      },
+      "pitch_condition": null,
+      "attendance": null,
+      "live_websocket": true,
+      "websocket_plus": true,
+      "highlights": [],
+      "head_to_head": null,
+      "event_id": 8364,
+      "minute": 5,
+      "league_name": null,
+      "last_updated": null,
+      "image_assets": {
+        "home_team_logo": "https://sports.bzzoiro.com/img/team/485/",
+        "away_team_logo": "https://sports.bzzoiro.com/img/team/731/",
+        "league_logo": "https://sports.bzzoiro.com/img/league/27/"
+      },
+      "_backfilled": true
+    }
+  ],
   "notes": [
     "Conform BSD v2, live window ignoră date_from/date_to/status.",
-    "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env."
+    "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env.",
+    "Backfill: 1 eveniment(e) adăugate via /events/{id}/ pentru meciuri ratate de /events/live/."
   ]
 }
