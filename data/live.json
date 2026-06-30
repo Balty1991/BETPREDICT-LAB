@@ -1,13 +1,85 @@
 {
-  "updated_at": "2026-06-30T13:20:12.884848+00:00",
-  "source": "bsd_v2_events_live",
+  "updated_at": "2026-06-30T15:42:08.079071+00:00",
+  "source": "bsd_v2_events_live+backfill",
   "endpoint": "/api/v2/events/live/",
   "params": {},
-  "count": 0,
-  "backfill_count": 0,
-  "events": [],
+  "count": 1,
+  "backfill_count": 1,
+  "events": [
+    {
+      "id": 209509,
+      "league_id": 56,
+      "season_id": null,
+      "home_team_id": 2093,
+      "home_team": "VPS",
+      "away_team_id": 2098,
+      "away_team": "Inter Turku",
+      "home_coach_id": 1523,
+      "away_coach_id": 1528,
+      "referee_id": null,
+      "venue_id": null,
+      "event_date": "2026-06-30T15:00:00+00:00",
+      "status": "1st_half",
+      "replaced_by": null,
+      "round_number": 28,
+      "round_name": "Semifinals",
+      "group_name": null,
+      "period": "1T",
+      "current_minute": 39,
+      "home_score": 0,
+      "away_score": 0,
+      "home_score_ht": 0,
+      "away_score_ht": 0,
+      "penalty_shootout": null,
+      "extra_time_score": null,
+      "is_local_derby": false,
+      "is_neutral_ground": false,
+      "travel_distance_km": null,
+      "weather": {
+        "code": null,
+        "description": null,
+        "wind_speed": null,
+        "temperature_c": null
+      },
+      "pitch_condition": null,
+      "attendance": null,
+      "live_websocket": false,
+      "websocket_plus": false,
+      "highlights": [],
+      "head_to_head": {
+        "total_matches": 1,
+        "home_wins": 0,
+        "draws": 1,
+        "away_wins": 0,
+        "home_goals": 0,
+        "away_goals": 0,
+        "avg_total_goals": 0.0,
+        "home_win_rate": 0.0,
+        "away_win_rate": 0.0,
+        "recent_matches": [
+          {
+            "away": "VPS",
+            "date": "2026-04-04T10:00:00+00:00",
+            "home": "Inter Turku",
+            "score": "0-0"
+          }
+        ]
+      },
+      "event_id": 209509,
+      "minute": 39,
+      "league_name": null,
+      "last_updated": null,
+      "image_assets": {
+        "home_team_logo": "https://sports.bzzoiro.com/img/team/2093/",
+        "away_team_logo": "https://sports.bzzoiro.com/img/team/2098/",
+        "league_logo": "https://sports.bzzoiro.com/img/league/56/"
+      },
+      "_backfilled": true
+    }
+  ],
   "notes": [
     "Conform BSD v2, live window ignoră date_from/date_to/status.",
-    "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env."
+    "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env.",
+    "Backfill: 1 eveniment(e) adăugate via /events/{id}/ pentru meciuri ratate de /events/live/."
   ]
 }
