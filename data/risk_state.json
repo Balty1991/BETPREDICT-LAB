@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-29T23:27:12.106353+00:00",
+  "updated_at": "2026-06-30T00:32:56.221494+00:00",
   "rules": {
     "bankroll_unit": 100.0,
     "max_daily_exposure_pct": 5.0,
@@ -16,19 +16,19 @@
     "clv_lookback_days": 30
   },
   "today": {
-    "exposure_pct": 3.0,
-    "exposure_amount": 3.0,
+    "exposure_pct": 1.5,
+    "exposure_amount": 1.5,
     "n_active": 2,
     "n_blocked": 7,
     "scale_applied": 1.0,
     "max_pct": 5.0
   },
   "drawdown": {
-    "rolling_7d_pct": -6.16,
-    "rolling_30d_pct": 18.34,
+    "rolling_7d_pct": -5.24,
+    "rolling_30d_pct": 19.84,
     "peak_units": 0.54,
-    "current_units": -6.16,
-    "n_30d": 299
+    "current_units": -5.24,
+    "n_30d": 293
   },
   "streak": {
     "consecutive_losses": 0,
@@ -37,7 +37,7 @@
   "circuit_breaker": {
     "active": false,
     "trigger_pct": -15,
-    "rolling_pct": -6.16
+    "rolling_pct": -5.24
   },
   "blocked_markets": {},
   "per_signal": {
@@ -47,7 +47,7 @@
       "league": "World Cup 2026",
       "stake_pct": 1.5,
       "stake_amount": 1.5,
-      "kelly_raw": 0.0708,
+      "kelly_raw": 0.078,
       "blocked": false,
       "reasons": []
     },
@@ -57,7 +57,7 @@
       "league": "Allsvenskan",
       "stake_pct": 1.5,
       "stake_amount": 1.5,
-      "kelly_raw": 0.1962,
+      "kelly_raw": 0.2023,
       "blocked": false,
       "reasons": []
     },
@@ -65,9 +65,9 @@
       "event_id": 46387,
       "market": "under35",
       "league": "Allsvenskan",
-      "stake_pct": 0.868,
-      "stake_amount": 0.87,
-      "kelly_raw": 0.0347,
+      "stake_pct": 1.053,
+      "stake_amount": 1.05,
+      "kelly_raw": 0.0421,
       "blocked": false,
       "reasons": []
     },
@@ -78,10 +78,8 @@
       "stake_pct": 0.0,
       "stake_amount": 0.0,
       "kelly_raw": 0.0,
-      "blocked": true,
-      "reasons": [
-        "grade<B(C)"
-      ]
+      "blocked": false,
+      "reasons": []
     },
     "8370|under35": {
       "event_id": 8370,
@@ -97,11 +95,13 @@
       "event_id": 8364,
       "market": "under35",
       "league": "World Cup 2026",
-      "stake_pct": 1.5,
-      "stake_amount": 1.5,
-      "kelly_raw": 0.2819,
-      "blocked": false,
-      "reasons": []
+      "stake_pct": 0.0,
+      "stake_amount": 0.0,
+      "kelly_raw": 0.0,
+      "blocked": true,
+      "reasons": [
+        "correlated_cap"
+      ]
     },
     "209509|over25": {
       "event_id": 209509,
@@ -113,9 +113,9 @@
       "blocked": false,
       "reasons": []
     },
-    "209510|over25": {
+    "209510|btts": {
       "event_id": 209510,
-      "market": "over25",
+      "market": "btts",
       "league": "Suomen Cup",
       "stake_pct": 0.0,
       "stake_amount": 0.0,
@@ -123,9 +123,9 @@
       "blocked": false,
       "reasons": []
     },
-    "209510|btts": {
+    "209510|over25": {
       "event_id": 209510,
-      "market": "btts",
+      "market": "over25",
       "league": "Suomen Cup",
       "stake_pct": 0.0,
       "stake_amount": 0.0,
@@ -145,10 +145,22 @@
         "correlated_cap"
       ]
     },
-    "46388|under35": {
-      "event_id": 46388,
+    "46391|under35": {
+      "event_id": 46391,
       "market": "under35",
       "league": "Allsvenskan",
+      "stake_pct": 0.0,
+      "stake_amount": 0.0,
+      "kelly_raw": 0.0,
+      "blocked": true,
+      "reasons": [
+        "grade<B(D)"
+      ]
+    },
+    "8363|under35": {
+      "event_id": 8363,
+      "market": "under35",
+      "league": "World Cup 2026",
       "stake_pct": 0.0,
       "stake_amount": 0.0,
       "kelly_raw": 0.0,
@@ -157,10 +169,10 @@
         "grade<B(C)"
       ]
     },
-    "8363|under35": {
-      "event_id": 8363,
+    "46388|under35": {
+      "event_id": 46388,
       "market": "under35",
-      "league": "World Cup 2026",
+      "league": "Allsvenskan",
       "stake_pct": 0.0,
       "stake_amount": 0.0,
       "kelly_raw": 0.0,
@@ -179,18 +191,6 @@
       "blocked": true,
       "reasons": [
         "grade<B(C)"
-      ]
-    },
-    "46391|under35": {
-      "event_id": 46391,
-      "market": "under35",
-      "league": "Allsvenskan",
-      "stake_pct": 0.0,
-      "stake_amount": 0.0,
-      "kelly_raw": 0.0,
-      "blocked": true,
-      "reasons": [
-        "grade<B(D)"
       ]
     },
     "8366|under35": {
