@@ -1,13 +1,85 @@
 {
-  "updated_at": "2026-07-03T08:20:16.509199+00:00",
-  "source": "bsd_v2_events_live",
+  "updated_at": "2026-07-03T10:22:19.913825+00:00",
+  "source": "bsd_v2_events_live+backfill",
   "endpoint": "/api/v2/events/live/",
   "params": {},
-  "count": 0,
-  "backfill_count": 0,
-  "events": [],
+  "count": 1,
+  "backfill_count": 1,
+  "events": [
+    {
+      "id": 210021,
+      "league_id": 70,
+      "season_id": null,
+      "home_team_id": 3115,
+      "home_team": "Wynnum Wolves FC",
+      "away_team_id": 3831,
+      "away_team": "Rochedale Rovers",
+      "home_coach_id": null,
+      "away_coach_id": 1828,
+      "referee_id": null,
+      "venue_id": null,
+      "event_date": "2026-07-03T09:30:00+00:00",
+      "status": "halftime",
+      "replaced_by": null,
+      "round_number": 17,
+      "round_name": "",
+      "group_name": null,
+      "period": "HT",
+      "current_minute": 45,
+      "home_score": 0,
+      "away_score": 0,
+      "home_score_ht": 0,
+      "away_score_ht": 0,
+      "penalty_shootout": null,
+      "extra_time_score": null,
+      "is_local_derby": false,
+      "is_neutral_ground": false,
+      "travel_distance_km": null,
+      "weather": {
+        "code": null,
+        "description": null,
+        "wind_speed": null,
+        "temperature_c": null
+      },
+      "pitch_condition": null,
+      "attendance": null,
+      "live_websocket": false,
+      "websocket_plus": false,
+      "highlights": [],
+      "head_to_head": {
+        "total_matches": 1,
+        "home_wins": 1,
+        "draws": 0,
+        "away_wins": 0,
+        "home_goals": 3,
+        "away_goals": 0,
+        "avg_total_goals": 3.0,
+        "home_win_rate": 1.0,
+        "away_win_rate": 0.0,
+        "recent_matches": [
+          {
+            "away": "Wynnum Wolves FC",
+            "date": "2026-02-21T07:00:00+00:00",
+            "home": "Rochedale Rovers",
+            "score": "0-3"
+          }
+        ]
+      },
+      "event_id": 210021,
+      "minute": 45,
+      "league_name": null,
+      "last_updated": null,
+      "image_assets": {
+        "home_team_logo": "https://sports.bzzoiro.com/img/team/3115/",
+        "away_team_logo": "https://sports.bzzoiro.com/img/team/3831/",
+        "league_logo": "https://sports.bzzoiro.com/img/league/70/"
+      },
+      "_backfilled": true
+    }
+  ],
   "notes": [
     "Conform BSD v2, live window ignoră date_from/date_to/status.",
-    "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env."
+    "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env.",
+    "Backfill: 1 eveniment(e) adăugate via /events/{id}/ pentru meciuri ratate de /events/live/."
   ]
 }
