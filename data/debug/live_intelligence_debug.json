@@ -1,25 +1,201 @@
 {
-  "updated_at": "2026-07-04T18:45:09.822720+00:00",
+  "updated_at": "2026-07-04T19:51:01.160985+00:00",
   "limit": 18,
   "params": {},
   "summary": {
-    "live_events": 0,
-    "enriched_events": 0,
-    "with_stats": 0,
-    "with_incidents": 0,
-    "with_lineups": 0,
-    "strong_signals": 0,
+    "live_events": 3,
+    "enriched_events": 3,
+    "with_stats": 3,
+    "with_incidents": 3,
+    "with_lineups": 3,
+    "strong_signals": 1,
     "reused_cache": 0,
-    "refetched": 0
+    "refetched": 3
   },
-  "events": [],
+  "events": [
+    {
+      "event_id": 10010,
+      "score": "1-0",
+      "minute": 45,
+      "last_updated": null,
+      "cache_status": "refetched",
+      "pressure_side": "home",
+      "pressure_score": 18.6,
+      "resources": {
+        "stats": 1,
+        "incidents": 4,
+        "lineups": 1
+      },
+      "signals": [
+        {
+          "type": "momentum",
+          "level": "medium",
+          "label": "presiune acasă",
+          "note": "Momentum home: xG 0.38-0.26, SOT 2-0."
+        },
+        {
+          "type": "lineups",
+          "level": "info",
+          "label": "lineup confirmed",
+          "note": "Status lineup disponibil pentru context live."
+        }
+      ]
+    },
+    {
+      "event_id": 10006,
+      "score": "1-0",
+      "minute": 45,
+      "last_updated": null,
+      "cache_status": "refetched",
+      "pressure_side": "home",
+      "pressure_score": 53.5,
+      "resources": {
+        "stats": 1,
+        "incidents": 7,
+        "lineups": 1
+      },
+      "signals": [
+        {
+          "type": "momentum",
+          "level": "strong",
+          "label": "presiune acasă",
+          "note": "Momentum home: xG 0.74-0.07, SOT 4-0."
+        },
+        {
+          "type": "cards",
+          "level": "watch",
+          "label": "meci tensionat",
+          "note": "4 cartonașe detectate în timeline."
+        },
+        {
+          "type": "lineups",
+          "level": "info",
+          "label": "lineup confirmed",
+          "note": "Status lineup disponibil pentru context live."
+        }
+      ]
+    },
+    {
+      "event_id": 10011,
+      "score": "2-0",
+      "minute": 50,
+      "last_updated": null,
+      "cache_status": "refetched",
+      "pressure_side": "balanced",
+      "pressure_score": 4.4,
+      "resources": {
+        "stats": 1,
+        "incidents": 8,
+        "lineups": 1
+      },
+      "signals": [
+        {
+          "type": "lineups",
+          "level": "info",
+          "label": "lineup confirmed",
+          "note": "Status lineup disponibil pentru context live."
+        }
+      ]
+    }
+  ],
   "requests": [
     {
       "label": "events_live",
       "url": "https://sports.bzzoiro.com/api/v2/events/live/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 557
+      "elapsed_ms": 422
+    },
+    {
+      "label": "backfill_event_10006",
+      "url": "https://sports.bzzoiro.com/api/v2/events/10006/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 445
+    },
+    {
+      "label": "backfill_event_10010",
+      "url": "https://sports.bzzoiro.com/api/v2/events/10010/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 430
+    },
+    {
+      "label": "backfill_event_10011",
+      "url": "https://sports.bzzoiro.com/api/v2/events/10011/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 481
+    },
+    {
+      "label": "backfill_event_207682",
+      "url": "https://sports.bzzoiro.com/api/v2/events/207682/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 440
+    },
+    {
+      "label": "live_stats_10010",
+      "url": "https://sports.bzzoiro.com/api/v2/events/10010/stats/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 481
+    },
+    {
+      "label": "live_stats_10006",
+      "url": "https://sports.bzzoiro.com/api/v2/events/10006/stats/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 484
+    },
+    {
+      "label": "live_lineups_10010",
+      "url": "https://sports.bzzoiro.com/api/v2/events/10010/lineups/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 489
+    },
+    {
+      "label": "live_incidents_10011",
+      "url": "https://sports.bzzoiro.com/api/v2/events/10011/incidents/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 510
+    },
+    {
+      "label": "live_incidents_10010",
+      "url": "https://sports.bzzoiro.com/api/v2/events/10010/incidents/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 520
+    },
+    {
+      "label": "live_incidents_10006",
+      "url": "https://sports.bzzoiro.com/api/v2/events/10006/incidents/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 526
+    },
+    {
+      "label": "live_lineups_10006",
+      "url": "https://sports.bzzoiro.com/api/v2/events/10006/lineups/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 543
+    },
+    {
+      "label": "live_lineups_10011",
+      "url": "https://sports.bzzoiro.com/api/v2/events/10011/lineups/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 540
+    },
+    {
+      "label": "live_stats_10011",
+      "url": "https://sports.bzzoiro.com/api/v2/events/10011/stats/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 565
     }
   ],
   "warnings": []
