@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-05T22:40:46.987151+00:00",
+  "updated_at": "2026-07-05T23:40:33.982064+00:00",
   "limit": 18,
   "params": {},
   "summary": {
@@ -18,9 +18,46 @@
       "label": "events_live",
       "url": "https://sports.bzzoiro.com/api/v2/events/live/",
       "params": {},
+      "status": 502,
+      "elapsed_ms": 552
+    },
+    {
+      "label": "events_live",
+      "url": "https://sports.bzzoiro.com/api/v2/events/live/",
+      "params": {},
       "status": null,
-      "elapsed_ms": 10401,
-      "error": "HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=10)"
+      "elapsed_ms": 552,
+      "error": "502 Server Error: Bad Gateway for url: https://sports.bzzoiro.com/api/v2/events/live/"
+    },
+    {
+      "label": "backfill_event_207692",
+      "url": "https://sports.bzzoiro.com/api/v2/events/207692/",
+      "params": {},
+      "status": 502,
+      "elapsed_ms": 534
+    },
+    {
+      "label": "backfill_event_207692",
+      "url": "https://sports.bzzoiro.com/api/v2/events/207692/",
+      "params": {},
+      "status": null,
+      "elapsed_ms": 534,
+      "error": "502 Server Error: Bad Gateway for url: https://sports.bzzoiro.com/api/v2/events/207692/"
+    },
+    {
+      "label": "backfill_event_10012",
+      "url": "https://sports.bzzoiro.com/api/v2/events/10012/",
+      "params": {},
+      "status": 502,
+      "elapsed_ms": 537
+    },
+    {
+      "label": "backfill_event_10012",
+      "url": "https://sports.bzzoiro.com/api/v2/events/10012/",
+      "params": {},
+      "status": null,
+      "elapsed_ms": 537,
+      "error": "502 Server Error: Bad Gateway for url: https://sports.bzzoiro.com/api/v2/events/10012/"
     }
   ],
   "warnings": [
@@ -28,9 +65,25 @@
       "message": "Request live eșuat",
       "context": {
         "label": "events_live",
-        "error": "HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=10)"
+        "error": "502 Server Error: Bad Gateway for url: https://sports.bzzoiro.com/api/v2/events/live/"
       },
-      "time": "2026-07-05T22:40:46.949162+00:00"
+      "time": "2026-07-05T23:40:32.872706+00:00"
+    },
+    {
+      "message": "Request live eșuat",
+      "context": {
+        "label": "backfill_event_207692",
+        "error": "502 Server Error: Bad Gateway for url: https://sports.bzzoiro.com/api/v2/events/207692/"
+      },
+      "time": "2026-07-05T23:40:33.442206+00:00"
+    },
+    {
+      "message": "Request live eșuat",
+      "context": {
+        "label": "backfill_event_10012",
+        "error": "502 Server Error: Bad Gateway for url: https://sports.bzzoiro.com/api/v2/events/10012/"
+      },
+      "time": "2026-07-05T23:40:33.979680+00:00"
     }
   ]
 }
