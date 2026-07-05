@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-05T12:41:42.360552+00:00",
+  "updated_at": "2026-07-05T15:11:03.025451+00:00",
   "rules": {
     "bankroll_unit": 100.0,
     "max_daily_exposure_pct": 5.0,
@@ -16,19 +16,19 @@
     "clv_lookback_days": 30
   },
   "today": {
-    "exposure_pct": 0.0,
-    "exposure_amount": 0.0,
+    "exposure_pct": 0.06,
+    "exposure_amount": 0.06,
     "n_active": 3,
-    "n_blocked": 6,
+    "n_blocked": 5,
     "scale_applied": 1.0,
     "max_pct": 5.0
   },
   "drawdown": {
-    "rolling_7d_pct": 6.44,
-    "rolling_30d_pct": 22.93,
-    "peak_units": 8.24,
-    "current_units": 6.44,
-    "n_30d": 254
+    "rolling_7d_pct": 15.13,
+    "rolling_30d_pct": 29.62,
+    "peak_units": 15.13,
+    "current_units": 15.13,
+    "n_30d": 255
   },
   "streak": {
     "consecutive_losses": 0,
@@ -37,22 +37,12 @@
   "circuit_breaker": {
     "active": false,
     "trigger_pct": -15,
-    "rolling_pct": 6.44
+    "rolling_pct": 15.13
   },
   "blocked_markets": {},
   "per_signal": {
-    "215485|under35": {
-      "event_id": 215485,
-      "market": "under35",
-      "league": "Botola Pro",
-      "stake_pct": 0.0,
-      "stake_amount": 0.0,
-      "kelly_raw": 0.0,
-      "blocked": false,
-      "reasons": []
-    },
-    "215484|under35": {
-      "event_id": 215484,
+    "215487|under35": {
+      "event_id": 215487,
       "market": "under35",
       "league": "Botola Pro",
       "stake_pct": 0.0,
@@ -71,6 +61,16 @@
       "blocked": false,
       "reasons": []
     },
+    "215484|under35": {
+      "event_id": 215484,
+      "market": "under35",
+      "league": "Botola Pro",
+      "stake_pct": 0.062,
+      "stake_amount": 0.06,
+      "kelly_raw": 0.0025,
+      "blocked": false,
+      "reasons": []
+    },
     "207693|under35": {
       "event_id": 207693,
       "market": "under35",
@@ -83,15 +83,17 @@
         "grade<B(C)"
       ]
     },
-    "8380|under35": {
-      "event_id": 8380,
+    "215485|under35": {
+      "event_id": 215485,
       "market": "under35",
-      "league": "World Cup 2026",
-      "stake_pct": 1.5,
-      "stake_amount": 1.5,
-      "kelly_raw": 0.2338,
-      "blocked": false,
-      "reasons": []
+      "league": "Botola Pro",
+      "stake_pct": 0.0,
+      "stake_amount": 0.0,
+      "kelly_raw": 0.0,
+      "blocked": true,
+      "reasons": [
+        "correlated_cap"
+      ]
     },
     "215490|under35": {
       "event_id": 215490,
@@ -105,25 +107,23 @@
         "correlated_cap"
       ]
     },
-    "215487|under35": {
-      "event_id": 215487,
-      "market": "under35",
-      "league": "Botola Pro",
-      "stake_pct": 0.0,
-      "stake_amount": 0.0,
-      "kelly_raw": 0.0,
-      "blocked": true,
-      "reasons": [
-        "correlated_cap"
-      ]
-    },
-    "8379|under35": {
-      "event_id": 8379,
+    "8380|under35": {
+      "event_id": 8380,
       "market": "under35",
       "league": "World Cup 2026",
       "stake_pct": 1.5,
       "stake_amount": 1.5,
-      "kelly_raw": 0.1598,
+      "kelly_raw": 0.2575,
+      "blocked": false,
+      "reasons": []
+    },
+    "46387|under35": {
+      "event_id": 46387,
+      "market": "under35",
+      "league": "Allsvenskan",
+      "stake_pct": 1.5,
+      "stake_amount": 1.5,
+      "kelly_raw": 0.1012,
       "blocked": false,
       "reasons": []
     },
@@ -131,9 +131,19 @@
       "event_id": 210744,
       "market": "under35",
       "league": "Champions League",
-      "stake_pct": 0.0,
-      "stake_amount": 0.0,
-      "kelly_raw": 0.0,
+      "stake_pct": 0.062,
+      "stake_amount": 0.06,
+      "kelly_raw": 0.0025,
+      "blocked": false,
+      "reasons": []
+    },
+    "8379|under35": {
+      "event_id": 8379,
+      "market": "under35",
+      "league": "World Cup 2026",
+      "stake_pct": 1.5,
+      "stake_amount": 1.5,
+      "kelly_raw": 0.1938,
       "blocked": false,
       "reasons": []
     },
@@ -161,16 +171,6 @@
         "grade<B(C)"
       ]
     },
-    "46387|under35": {
-      "event_id": 46387,
-      "market": "under35",
-      "league": "Allsvenskan",
-      "stake_pct": 0.0,
-      "stake_amount": 0.0,
-      "kelly_raw": 0.0,
-      "blocked": false,
-      "reasons": []
-    },
     "209994|over25": {
       "event_id": 209994,
       "market": "over25",
@@ -180,18 +180,6 @@
       "kelly_raw": 0.0,
       "blocked": false,
       "reasons": []
-    },
-    "46388|under35": {
-      "event_id": 46388,
-      "market": "under35",
-      "league": "Allsvenskan",
-      "stake_pct": 0.0,
-      "stake_amount": 0.0,
-      "kelly_raw": 0.0,
-      "blocked": true,
-      "reasons": [
-        "grade<B(C)"
-      ]
     }
   }
 }
