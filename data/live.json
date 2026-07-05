@@ -1,13 +1,85 @@
 {
-  "updated_at": "2026-07-05T04:32:40.745097+00:00",
-  "source": "bsd_v2_events_live",
+  "updated_at": "2026-07-05T05:09:46.512851+00:00",
+  "source": "bsd_v2_events_live+backfill",
   "endpoint": "/api/v2/events/live/",
   "params": {},
-  "count": 0,
-  "backfill_count": 0,
-  "events": [],
+  "count": 1,
+  "backfill_count": 1,
+  "events": [
+    {
+      "id": 210025,
+      "league_id": 70,
+      "season_id": 1312,
+      "home_team_id": 3780,
+      "home_team": "Gold Coast United",
+      "away_team_id": 3830,
+      "away_team": "Magic United TFA",
+      "home_coach_id": null,
+      "away_coach_id": 1827,
+      "referee_id": null,
+      "venue_id": null,
+      "event_date": "2026-07-05T05:00:00+00:00",
+      "status": "1st_half",
+      "replaced_by": null,
+      "round_number": 17,
+      "round_name": "",
+      "group_name": null,
+      "period": "1T",
+      "current_minute": 8,
+      "home_score": 0,
+      "away_score": 1,
+      "home_score_ht": 0,
+      "away_score_ht": 1,
+      "penalty_shootout": null,
+      "extra_time_score": null,
+      "is_local_derby": false,
+      "is_neutral_ground": false,
+      "travel_distance_km": null,
+      "weather": {
+        "code": null,
+        "description": null,
+        "wind_speed": null,
+        "temperature_c": null
+      },
+      "pitch_condition": null,
+      "attendance": null,
+      "live_websocket": false,
+      "websocket_plus": false,
+      "highlights": [],
+      "head_to_head": {
+        "total_matches": 1,
+        "home_wins": 0,
+        "draws": 0,
+        "away_wins": 1,
+        "home_goals": 1,
+        "away_goals": 3,
+        "avg_total_goals": 4.0,
+        "home_win_rate": 0.0,
+        "away_win_rate": 1.0,
+        "recent_matches": [
+          {
+            "away": "Gold Coast United",
+            "date": "2026-02-21T05:00:00+00:00",
+            "home": "Magic United TFA",
+            "score": "3-1"
+          }
+        ]
+      },
+      "event_id": 210025,
+      "minute": 8,
+      "league_name": null,
+      "last_updated": null,
+      "image_assets": {
+        "home_team_logo": "https://sports.bzzoiro.com/img/team/3780/",
+        "away_team_logo": "https://sports.bzzoiro.com/img/team/3830/",
+        "league_logo": "https://sports.bzzoiro.com/img/league/70/"
+      },
+      "_backfilled": true
+    }
+  ],
   "notes": [
     "Conform BSD v2, live window ignoră date_from/date_to/status.",
-    "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env."
+    "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env.",
+    "Backfill: 1 eveniment(e) adăugate via /events/{id}/ pentru meciuri ratate de /events/live/."
   ]
 }
