@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-07-06T00:29:35.192266+00:00",
+  "updated_at": "2026-07-06T05:28:36.720166+00:00",
   "source": "pattern_memory.py",
-  "n_journal": 864,
-  "baseline_wr": 69.44,
+  "n_journal": 865,
+  "baseline_wr": 69.36,
   "params": {
     "min_support": 15,
     "min_lift_pp": 8,
@@ -43,30 +43,12 @@
     ]
   },
   "summary": {
-    "n_patterns": 11,
-    "n_boosts": 6,
+    "n_patterns": 9,
+    "n_boosts": 4,
     "n_blocks": 5,
-    "n_signals_affected": 5
+    "n_signals_affected": 6
   },
   "patterns": [
-    {
-      "id": "market=under35|bucket=1.20-1.40",
-      "keys": [
-        "market",
-        "bucket"
-      ],
-      "values": [
-        "under35",
-        "1.20-1.40"
-      ],
-      "support": 209,
-      "win_rate": 79.9,
-      "baseline_wr": 69.4,
-      "lift_pp": 10.5,
-      "p_value": 0.0007,
-      "modifier": 13,
-      "direction": "boost"
-    },
     {
       "id": "league=Chinese Super League|bucket=1.40-1.65",
       "keys": [
@@ -80,10 +62,28 @@
       "support": 29,
       "win_rate": 41.4,
       "baseline_wr": 69.4,
-      "lift_pp": -28.1,
-      "p_value": 0.0016,
+      "lift_pp": -28.0,
+      "p_value": 0.0017,
       "modifier": -30,
       "direction": "block"
+    },
+    {
+      "id": "market=under35|bucket=1.20-1.40",
+      "keys": [
+        "market",
+        "bucket"
+      ],
+      "values": [
+        "under35",
+        "1.20-1.40"
+      ],
+      "support": 210,
+      "win_rate": 79.5,
+      "baseline_wr": 69.4,
+      "lift_pp": 10.2,
+      "p_value": 0.0009,
+      "modifier": 12,
+      "direction": "boost"
     },
     {
       "id": "league=Brasileirão Serie B|market=under35",
@@ -116,8 +116,8 @@
       "support": 27,
       "win_rate": 44.4,
       "baseline_wr": 69.4,
-      "lift_pp": -25.0,
-      "p_value": 0.006,
+      "lift_pp": -24.9,
+      "p_value": 0.0062,
       "modifier": -30,
       "direction": "block"
     },
@@ -135,45 +135,7 @@
       "win_rate": 40.0,
       "baseline_wr": 69.4,
       "lift_pp": -29.4,
-      "p_value": 0.0173,
-      "modifier": -30,
-      "direction": "block"
-    },
-    {
-      "id": "league=World Cup 2026|market=under35|bucket=1.20-1.40",
-      "keys": [
-        "league",
-        "market",
-        "bucket"
-      ],
-      "values": [
-        "World Cup 2026",
-        "under35",
-        "1.20-1.40"
-      ],
-      "support": 18,
-      "win_rate": 94.4,
-      "baseline_wr": 69.4,
-      "lift_pp": 25.0,
-      "p_value": 0.0126,
-      "modifier": 30,
-      "direction": "boost"
-    },
-    {
-      "id": "market=homeWin|bucket=1.95-2.40",
-      "keys": [
-        "market",
-        "bucket"
-      ],
-      "values": [
-        "homeWin",
-        "1.95-2.40"
-      ],
-      "support": 16,
-      "win_rate": 43.8,
-      "baseline_wr": 69.4,
-      "lift_pp": -25.7,
-      "p_value": 0.0289,
+      "p_value": 0.0176,
       "modifier": -30,
       "direction": "block"
     },
@@ -190,10 +152,28 @@
       "support": 122,
       "win_rate": 78.7,
       "baseline_wr": 69.4,
-      "lift_pp": 9.2,
-      "p_value": 0.0171,
+      "lift_pp": 9.3,
+      "p_value": 0.0163,
       "modifier": 11,
       "direction": "boost"
+    },
+    {
+      "id": "market=homeWin|bucket=1.95-2.40",
+      "keys": [
+        "market",
+        "bucket"
+      ],
+      "values": [
+        "homeWin",
+        "1.95-2.40"
+      ],
+      "support": 16,
+      "win_rate": 43.8,
+      "baseline_wr": 69.4,
+      "lift_pp": -25.6,
+      "p_value": 0.0294,
+      "modifier": -30,
+      "direction": "block"
     },
     {
       "id": "market=over25|dow=Sat",
@@ -208,45 +188,29 @@
       "support": 19,
       "win_rate": 47.4,
       "baseline_wr": 69.4,
-      "lift_pp": -22.1,
-      "p_value": 0.0368,
+      "lift_pp": -22.0,
+      "p_value": 0.0375,
       "modifier": -26,
       "direction": "block"
     },
     {
-      "id": "league=World Cup 2026|bucket=1.20-1.40",
+      "id": "league=World Cup 2026|market=under35|bucket=1.20-1.40",
       "keys": [
         "league",
+        "market",
         "bucket"
       ],
       "values": [
         "World Cup 2026",
+        "under35",
         "1.20-1.40"
       ],
       "support": 19,
       "win_rate": 89.5,
       "baseline_wr": 69.4,
-      "lift_pp": 20.0,
-      "p_value": 0.0416,
+      "lift_pp": 20.1,
+      "p_value": 0.041,
       "modifier": 24,
-      "direction": "boost"
-    },
-    {
-      "id": "market=under35|dow=Mon",
-      "keys": [
-        "market",
-        "dow"
-      ],
-      "values": [
-        "under35",
-        "Mon"
-      ],
-      "support": 28,
-      "win_rate": 85.7,
-      "baseline_wr": 69.4,
-      "lift_pp": 16.3,
-      "p_value": 0.0417,
-      "modifier": 20,
       "direction": "boost"
     }
   ]
