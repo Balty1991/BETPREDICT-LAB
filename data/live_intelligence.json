@@ -1,20 +1,144 @@
 {
-  "updated_at": "2026-07-09T14:14:52.878764+00:00",
+  "updated_at": "2026-07-09T16:32:45.095938+00:00",
   "source": "live_intelligence_v23",
   "endpoint": "/api/v2/events/live/",
   "params": {},
-  "count": 0,
+  "count": 1,
   "summary": {
-    "live_events": 0,
-    "enriched_events": 0,
-    "with_stats": 0,
-    "with_incidents": 0,
-    "with_lineups": 0,
+    "live_events": 1,
+    "enriched_events": 1,
+    "with_stats": 1,
+    "with_incidents": 1,
+    "with_lineups": 1,
     "strong_signals": 0,
     "reused_cache": 0,
-    "refetched": 0
+    "refetched": 1
   },
-  "events": [],
+  "events": [
+    {
+      "event_id": 210779,
+      "home_team": "Qarabağ FK",
+      "away_team": "IF Vestri",
+      "home_team_id": 117,
+      "away_team_id": 3837,
+      "league_id": 8,
+      "league_name": "Europa League",
+      "event_date": "2026-07-09T16:00:00Z",
+      "status": "inprogress",
+      "period": "1st_half",
+      "current_minute": 32,
+      "home_score": 1,
+      "away_score": 0,
+      "last_updated": "2026-07-09T16:32:14Z",
+      "event": {
+        "id": 210779,
+        "league_id": 8,
+        "league_name": "Europa League",
+        "home_team_id": 117,
+        "home_team": "Qarabağ FK",
+        "away_team_id": 3837,
+        "away_team": "IF Vestri",
+        "event_date": "2026-07-09T16:00:00Z",
+        "status": "inprogress",
+        "period": "1st_half",
+        "current_minute": 32,
+        "home_score": 1,
+        "away_score": 0,
+        "penalty_shootout": null,
+        "extra_time_score": null,
+        "home_score_ht": 1,
+        "away_score_ht": 0,
+        "live_websocket": true,
+        "websocket_plus": false,
+        "last_updated": "2026-07-09T16:32:14Z",
+        "event_id": 210779,
+        "minute": 32,
+        "image_assets": {
+          "home_team_logo": "https://sports.bzzoiro.com/img/team/117/",
+          "away_team_logo": "https://sports.bzzoiro.com/img/team/3837/",
+          "league_logo": "https://sports.bzzoiro.com/img/league/8/"
+        }
+      },
+      "phase": "mid-game",
+      "pressure_side": "balanced",
+      "pressure_score": 0.0,
+      "stats_summary": {
+        "xg_home": null,
+        "xg_away": null,
+        "shots_on_target_home": null,
+        "shots_on_target_away": null,
+        "shots_home": null,
+        "shots_away": null,
+        "possession_home": null,
+        "possession_away": null,
+        "dangerous_attacks_home": null,
+        "dangerous_attacks_away": null,
+        "momentum_points": 0,
+        "xg_per_minute_points": 0,
+        "shotmap_count": 0,
+        "shotmap": []
+      },
+      "shotmap": [],
+      "incidents_count": 4,
+      "recent_incidents": [
+        {
+          "text": "First half",
+          "type": "period",
+          "minute": 45,
+          "is_live": true,
+          "away_score": 0,
+          "home_score": 1
+        },
+        {
+          "type": "goal",
+          "assist": "O. Kashchuk",
+          "minute": 30,
+          "player": "Z. Sawo",
+          "is_home": true,
+          "goal_type": "regular",
+          "player_id": 16071,
+          "added_time": null,
+          "away_score": 0,
+          "home_score": 1
+        },
+        {
+          "type": "substitution",
+          "minute": 26,
+          "is_home": false,
+          "player_in": "J. Stensson",
+          "added_time": null,
+          "player_out": "I. Baldé",
+          "player_in_id": 61515,
+          "player_out_id": 61506
+        },
+        {
+          "type": "card",
+          "minute": 2,
+          "player": "S. Fall",
+          "is_home": false,
+          "card_type": "yellow",
+          "player_id": 61520,
+          "added_time": null
+        }
+      ],
+      "lineup_status": "confirmed",
+      "resources": {
+        "stats": 1,
+        "incidents": 4,
+        "lineups": 1
+      },
+      "live_signals": [
+        {
+          "type": "lineups",
+          "level": "info",
+          "label": "lineup confirmed",
+          "note": "Status lineup disponibil pentru context live."
+        }
+      ],
+      "coverage_score": 2,
+      "cache_status": "refetched"
+    }
+  ],
   "notes": [
     "Live Intelligence folosește HTTP live window; WebSocket push rămâne add-on separat.",
     "Dacă last_updated nu s-a schimbat, enrichment-ul vechi este refolosit pentru a nu lovi inutil stats/incidents/lineups.",
