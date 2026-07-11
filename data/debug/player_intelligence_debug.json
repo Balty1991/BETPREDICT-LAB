@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-11T20:58:20.978909+00:00",
+  "updated_at": "2026-07-11T22:06:06.614769+00:00",
   "source": "player_intelligence_v1",
   "base_url": "https://sports.bzzoiro.com/api/v2",
   "limits": {
@@ -14,15 +14,15 @@
     "players_from_local_files": 1456,
     "players_selected": 72,
     "players_saved": 72,
-    "with_detail": 72,
+    "with_detail": 71,
     "with_stats": 64,
     "with_transfers": 9,
     "with_career": 64,
-    "with_national_team": 72,
-    "endpoint_ok": 305,
+    "with_national_team": 71,
+    "endpoint_ok": 303,
     "endpoint_empty": 79,
     "endpoint_404": 0,
-    "endpoint_errors": 0
+    "endpoint_errors": 2
   },
   "teams": [
     {
@@ -134,6 +134,16 @@
       "priority_score": 40.56
     },
     {
+      "team_id": 277,
+      "name": "Atlanta United",
+      "sources": [
+        "team_intelligence",
+        "team_squads",
+        "predictions"
+      ],
+      "priority_score": 35.97
+    },
+    {
       "team_id": 3475,
       "name": "Larne FC",
       "sources": [
@@ -153,16 +163,6 @@
         "predictions"
       ],
       "priority_score": 35.33
-    },
-    {
-      "team_id": 277,
-      "name": "Atlanta United",
-      "sources": [
-        "team_intelligence",
-        "team_squads",
-        "predictions"
-      ],
-      "priority_score": 35.13
     },
     {
       "team_id": 3759,
@@ -185,17 +185,6 @@
       "priority_score": 34.58
     },
     {
-      "team_id": 2085,
-      "name": "Sandefjord Fotball",
-      "sources": [
-        "team_intelligence",
-        "team_squads",
-        "signals",
-        "predictions"
-      ],
-      "priority_score": 34.29
-    },
-    {
       "team_id": 285,
       "name": "New England Revolution",
       "sources": [
@@ -204,6 +193,17 @@
         "predictions"
       ],
       "priority_score": 33.23
+    },
+    {
+      "team_id": 2085,
+      "name": "Sandefjord Fotball",
+      "sources": [
+        "team_intelligence",
+        "team_squads",
+        "signals",
+        "predictions"
+      ],
+      "priority_score": 32.62
     },
     {
       "team_id": 395,
@@ -266,7 +266,7 @@
         "team_squads",
         "predictions"
       ],
-      "priority_score": 29.81
+      "priority_score": 30.64
     },
     {
       "team_id": 2074,
@@ -623,12 +623,12 @@
       "stats_status": 200,
       "transfers_status": 200,
       "career_status": 200,
-      "national_status": 200,
+      "national_status": "error",
       "detail_count": 1,
       "stats_count": 19,
       "transfers_count": 0,
       "career_count": 3,
-      "national_count": 1
+      "national_count": 0
     },
     {
       "player_id": 16020,
@@ -1053,12 +1053,12 @@
     {
       "player_id": 24150,
       "name": "Gustav Engvall",
-      "detail_status": 200,
+      "detail_status": "error",
       "stats_status": 200,
       "transfers_status": 200,
       "career_status": 200,
       "national_status": 200,
-      "detail_count": 1,
+      "detail_count": 0,
       "stats_count": 20,
       "transfers_count": 14,
       "career_count": 4,
@@ -1300,7 +1300,7 @@
       "ok": true,
       "status": 200,
       "count": 40,
-      "elapsed_ms": 407
+      "elapsed_ms": 337
     },
     {
       "label": "players_list_team_447",
@@ -1312,7 +1312,7 @@
       "ok": true,
       "status": 200,
       "count": 32,
-      "elapsed_ms": 386
+      "elapsed_ms": 296
     },
     {
       "label": "players_list_team_2076",
@@ -1324,7 +1324,7 @@
       "ok": true,
       "status": 200,
       "count": 26,
-      "elapsed_ms": 370
+      "elapsed_ms": 339
     },
     {
       "label": "players_list_team_436",
@@ -1336,7 +1336,7 @@
       "ok": true,
       "status": 200,
       "count": 33,
-      "elapsed_ms": 358
+      "elapsed_ms": 298
     },
     {
       "label": "players_list_team_377",
@@ -1348,7 +1348,7 @@
       "ok": true,
       "status": 200,
       "count": 36,
-      "elapsed_ms": 234
+      "elapsed_ms": 294
     },
     {
       "label": "players_list_team_3681",
@@ -1360,7 +1360,7 @@
       "ok": true,
       "status": 200,
       "count": 32,
-      "elapsed_ms": 370
+      "elapsed_ms": 331
     },
     {
       "label": "players_list_team_437",
@@ -1372,7 +1372,7 @@
       "ok": true,
       "status": 200,
       "count": 41,
-      "elapsed_ms": 395
+      "elapsed_ms": 359
     },
     {
       "label": "players_list_team_438",
@@ -1384,7 +1384,7 @@
       "ok": true,
       "status": 200,
       "count": 29,
-      "elapsed_ms": 344
+      "elapsed_ms": 340
     },
     {
       "label": "players_list_team_1053",
@@ -1396,7 +1396,7 @@
       "ok": true,
       "status": 200,
       "count": 29,
-      "elapsed_ms": 365
+      "elapsed_ms": 348
     },
     {
       "label": "players_list_team_121",
@@ -1408,31 +1408,7 @@
       "ok": true,
       "status": 200,
       "count": 27,
-      "elapsed_ms": 341
-    },
-    {
-      "label": "players_list_team_3475",
-      "path": "/players/",
-      "params": {
-        "team_id": 3475,
-        "limit": 80
-      },
-      "ok": true,
-      "status": 200,
-      "count": 35,
-      "elapsed_ms": 377
-    },
-    {
-      "label": "players_list_team_439",
-      "path": "/players/",
-      "params": {
-        "team_id": 439,
-        "limit": 80
-      },
-      "ok": true,
-      "status": 200,
-      "count": 34,
-      "elapsed_ms": 376
+      "elapsed_ms": 325
     },
     {
       "label": "players_list_team_277",
@@ -1444,7 +1420,31 @@
       "ok": true,
       "status": 200,
       "count": 34,
-      "elapsed_ms": 363
+      "elapsed_ms": 330
+    },
+    {
+      "label": "players_list_team_3475",
+      "path": "/players/",
+      "params": {
+        "team_id": 3475,
+        "limit": 80
+      },
+      "ok": true,
+      "status": 200,
+      "count": 35,
+      "elapsed_ms": 349
+    },
+    {
+      "label": "players_list_team_439",
+      "path": "/players/",
+      "params": {
+        "team_id": 439,
+        "limit": 80
+      },
+      "ok": true,
+      "status": 200,
+      "count": 34,
+      "elapsed_ms": 346
     },
     {
       "label": "players_list_team_3759",
@@ -1456,7 +1456,7 @@
       "ok": true,
       "status": 200,
       "count": 38,
-      "elapsed_ms": 390
+      "elapsed_ms": 572
     },
     {
       "label": "players_list_team_373",
@@ -1468,18 +1468,6 @@
       "ok": true,
       "status": 200,
       "count": 60,
-      "elapsed_ms": 380
-    },
-    {
-      "label": "players_list_team_2085",
-      "path": "/players/",
-      "params": {
-        "team_id": 2085,
-        "limit": 80
-      },
-      "ok": true,
-      "status": 200,
-      "count": 27,
       "elapsed_ms": 399
     },
     {
@@ -1492,7 +1480,19 @@
       "ok": true,
       "status": 200,
       "count": 39,
-      "elapsed_ms": 403
+      "elapsed_ms": 293
+    },
+    {
+      "label": "players_list_team_2085",
+      "path": "/players/",
+      "params": {
+        "team_id": 2085,
+        "limit": 80
+      },
+      "ok": true,
+      "status": 200,
+      "count": 27,
+      "elapsed_ms": 348
     },
     {
       "label": "players_list_team_395",
@@ -1504,7 +1504,7 @@
       "ok": true,
       "status": 200,
       "count": 49,
-      "elapsed_ms": 392
+      "elapsed_ms": 329
     },
     {
       "label": "players_list_team_448",
@@ -1516,7 +1516,7 @@
       "ok": true,
       "status": 200,
       "count": 36,
-      "elapsed_ms": 376
+      "elapsed_ms": 268
     },
     {
       "label": "players_list_team_821",
@@ -1528,7 +1528,7 @@
       "ok": true,
       "status": 200,
       "count": 53,
-      "elapsed_ms": 367
+      "elapsed_ms": 334
     },
     {
       "label": "players_list_team_2723",
@@ -1540,7 +1540,7 @@
       "ok": true,
       "status": 200,
       "count": 27,
-      "elapsed_ms": 219
+      "elapsed_ms": 195
     },
     {
       "label": "players_list_team_1958",
@@ -1552,7 +1552,7 @@
       "ok": true,
       "status": 200,
       "count": 39,
-      "elapsed_ms": 390
+      "elapsed_ms": 331
     },
     {
       "label": "players_list_team_284",
@@ -1564,7 +1564,7 @@
       "ok": true,
       "status": 200,
       "count": 34,
-      "elapsed_ms": 358
+      "elapsed_ms": 331
     },
     {
       "label": "players_list_team_2074",
@@ -1576,7 +1576,7 @@
       "ok": true,
       "status": 200,
       "count": 34,
-      "elapsed_ms": 386
+      "elapsed_ms": 354
     },
     {
       "label": "player_detail_16181",
@@ -1585,7 +1585,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 227
+      "elapsed_ms": 191
     },
     {
       "label": "player_stats_16181",
@@ -1596,7 +1596,7 @@
       "ok": true,
       "status": 200,
       "count": 26,
-      "elapsed_ms": 437
+      "elapsed_ms": 356
     },
     {
       "label": "player_transfers_16181",
@@ -1607,7 +1607,7 @@
       "ok": true,
       "status": 200,
       "count": 0,
-      "elapsed_ms": 229
+      "elapsed_ms": 213
     },
     {
       "label": "player_career_16181",
@@ -1616,7 +1616,7 @@
       "ok": true,
       "status": 200,
       "count": 2,
-      "elapsed_ms": 216
+      "elapsed_ms": 212
     },
     {
       "label": "player_national_team_16181",
@@ -1625,7 +1625,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 227
+      "elapsed_ms": 208
     },
     {
       "label": "player_detail_16029",
@@ -1634,7 +1634,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 226
+      "elapsed_ms": 199
     },
     {
       "label": "player_stats_16029",
@@ -1645,7 +1645,7 @@
       "ok": true,
       "status": 200,
       "count": 36,
-      "elapsed_ms": 415
+      "elapsed_ms": 414
     },
     {
       "label": "player_transfers_16029",
@@ -1656,7 +1656,7 @@
       "ok": true,
       "status": 200,
       "count": 0,
-      "elapsed_ms": 213
+      "elapsed_ms": 202
     },
     {
       "label": "player_career_16029",
@@ -1665,7 +1665,7 @@
       "ok": true,
       "status": 200,
       "count": 2,
-      "elapsed_ms": 238
+      "elapsed_ms": 268
     },
     {
       "label": "player_national_team_16029",
@@ -1674,7 +1674,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 229
+      "elapsed_ms": 184
     },
     {
       "label": "player_detail_16019",
@@ -1683,7 +1683,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 240
+      "elapsed_ms": 195
     },
     {
       "label": "player_stats_16019",
@@ -1694,7 +1694,7 @@
       "ok": true,
       "status": 200,
       "count": 27,
-      "elapsed_ms": 418
+      "elapsed_ms": 401
     },
     {
       "label": "player_transfers_16019",
@@ -1705,7 +1705,7 @@
       "ok": true,
       "status": 200,
       "count": 0,
-      "elapsed_ms": 210
+      "elapsed_ms": 221
     },
     {
       "label": "player_career_16019",
@@ -1714,7 +1714,7 @@
       "ok": true,
       "status": 200,
       "count": 2,
-      "elapsed_ms": 231
+      "elapsed_ms": 467
     },
     {
       "label": "player_national_team_16019",
@@ -1723,7 +1723,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 233
+      "elapsed_ms": 322
     },
     {
       "label": "player_detail_16021",
@@ -1732,7 +1732,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 219
+      "elapsed_ms": 814
     },
     {
       "label": "player_stats_16021",
@@ -1743,7 +1743,7 @@
       "ok": true,
       "status": 200,
       "count": 39,
-      "elapsed_ms": 374
+      "elapsed_ms": 882
     },
     {
       "label": "player_transfers_16021",
@@ -1754,7 +1754,7 @@
       "ok": true,
       "status": 200,
       "count": 0,
-      "elapsed_ms": 220
+      "elapsed_ms": 359
     },
     {
       "label": "player_career_16021",
@@ -1763,7 +1763,7 @@
       "ok": true,
       "status": 200,
       "count": 2,
-      "elapsed_ms": 241
+      "elapsed_ms": 1686
     },
     {
       "label": "player_national_team_16021",
@@ -1772,7 +1772,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 239
+      "elapsed_ms": 2953
     },
     {
       "label": "player_detail_16094",
@@ -1781,7 +1781,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 230
+      "elapsed_ms": 504
     },
     {
       "label": "player_stats_16094",
@@ -1792,7 +1792,7 @@
       "ok": true,
       "status": 200,
       "count": 26,
-      "elapsed_ms": 408
+      "elapsed_ms": 4517
     },
     {
       "label": "player_transfers_16094",
@@ -1803,7 +1803,7 @@
       "ok": true,
       "status": 200,
       "count": 0,
-      "elapsed_ms": 233
+      "elapsed_ms": 1692
     },
     {
       "label": "player_career_16094",
@@ -1812,7 +1812,7 @@
       "ok": true,
       "status": 200,
       "count": 3,
-      "elapsed_ms": 247
+      "elapsed_ms": 2129
     },
     {
       "label": "player_national_team_16094",
@@ -1821,7 +1821,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 223
+      "elapsed_ms": 2783
     },
     {
       "label": "player_detail_16109",
@@ -1830,7 +1830,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 263
+      "elapsed_ms": 1759
     },
     {
       "label": "player_stats_16109",
@@ -1841,7 +1841,7 @@
       "ok": true,
       "status": 200,
       "count": 24,
-      "elapsed_ms": 408
+      "elapsed_ms": 5157
     },
     {
       "label": "player_transfers_16109",
@@ -1852,7 +1852,7 @@
       "ok": true,
       "status": 200,
       "count": 0,
-      "elapsed_ms": 261
+      "elapsed_ms": 392
     },
     {
       "label": "player_career_16109",
@@ -1861,7 +1861,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 413
+      "elapsed_ms": 3825
     },
     {
       "label": "player_national_team_16109",
@@ -1870,7 +1870,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 239
+      "elapsed_ms": 260
     },
     {
       "label": "player_detail_16921",
@@ -1879,7 +1879,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 220
+      "elapsed_ms": 1318
     },
     {
       "label": "player_stats_16921",
@@ -1890,7 +1890,7 @@
       "ok": true,
       "status": 200,
       "count": 14,
-      "elapsed_ms": 244
+      "elapsed_ms": 362
     },
     {
       "label": "player_transfers_16921",
@@ -1901,7 +1901,7 @@
       "ok": true,
       "status": 200,
       "count": 0,
-      "elapsed_ms": 228
+      "elapsed_ms": 287
     },
     {
       "label": "player_career_16921",
@@ -1910,7 +1910,7 @@
       "ok": true,
       "status": 200,
       "count": 3,
-      "elapsed_ms": 231
+      "elapsed_ms": 304
     },
     {
       "label": "player_national_team_16921",
@@ -1919,7 +1919,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 234
+      "elapsed_ms": 3082
     },
     {
       "label": "player_detail_24793",
@@ -1928,7 +1928,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 241
+      "elapsed_ms": 3289
     },
     {
       "label": "player_stats_24793",
@@ -1939,7 +1939,7 @@
       "ok": true,
       "status": 200,
       "count": 14,
-      "elapsed_ms": 245
+      "elapsed_ms": 541
     },
     {
       "label": "player_transfers_24793",
@@ -1950,7 +1950,7 @@
       "ok": true,
       "status": 200,
       "count": 0,
-      "elapsed_ms": 228
+      "elapsed_ms": 446
     },
     {
       "label": "player_career_24793",
@@ -1959,7 +1959,7 @@
       "ok": true,
       "status": 200,
       "count": 4,
-      "elapsed_ms": 223
+      "elapsed_ms": 489
     },
     {
       "label": "player_national_team_24793",
@@ -1968,7 +1968,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 217
+      "elapsed_ms": 303
     },
     {
       "label": "player_detail_61011",
@@ -1977,7 +1977,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 240
+      "elapsed_ms": 907
     },
     {
       "label": "player_stats_61011",
@@ -1988,7 +1988,7 @@
       "ok": true,
       "status": 200,
       "count": 0,
-      "elapsed_ms": 229
+      "elapsed_ms": 1856
     },
     {
       "label": "player_transfers_61011",
@@ -1999,7 +1999,7 @@
       "ok": true,
       "status": 200,
       "count": 0,
-      "elapsed_ms": 234
+      "elapsed_ms": 1292
     },
     {
       "label": "player_career_61011",
@@ -2008,7 +2008,7 @@
       "ok": true,
       "status": 200,
       "count": 0,
-      "elapsed_ms": 219
+      "elapsed_ms": 382
     },
     {
       "label": "player_national_team_61011",
@@ -2017,7 +2017,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 257
+      "elapsed_ms": 759
     },
     {
       "label": "player_detail_50280",
@@ -2026,7 +2026,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 238
+      "elapsed_ms": 1620
     },
     {
       "label": "player_stats_50280",
@@ -2037,7 +2037,7 @@
       "ok": true,
       "status": 200,
       "count": 10,
-      "elapsed_ms": 231
+      "elapsed_ms": 295
     },
     {
       "label": "player_transfers_50280",
@@ -2048,7 +2048,7 @@
       "ok": true,
       "status": 200,
       "count": 0,
-      "elapsed_ms": 222
+      "elapsed_ms": 276
     },
     {
       "label": "player_career_50280",
@@ -2057,7 +2057,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 220
+      "elapsed_ms": 234
     },
     {
       "label": "player_national_team_50280",
@@ -2066,7 +2066,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 226
+      "elapsed_ms": 783
     },
     {
       "label": "player_detail_16103",
@@ -2075,7 +2075,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 228
+      "elapsed_ms": 238
     },
     {
       "label": "player_stats_16103",
@@ -2086,7 +2086,7 @@
       "ok": true,
       "status": 200,
       "count": 29,
-      "elapsed_ms": 413
+      "elapsed_ms": 459
     },
     {
       "label": "player_transfers_16103",
@@ -2097,7 +2097,7 @@
       "ok": true,
       "status": 200,
       "count": 0,
-      "elapsed_ms": 227
+      "elapsed_ms": 274
     },
     {
       "label": "player_career_16103",
@@ -2106,7 +2106,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 229
+      "elapsed_ms": 222
     },
     {
       "label": "player_national_team_16103",
@@ -2115,7 +2115,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 211
+      "elapsed_ms": 222
     },
     {
       "label": "player_detail_16344",
@@ -2124,7 +2124,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 215
+      "elapsed_ms": 249
     },
     {
       "label": "player_stats_16344",
@@ -2135,7 +2135,7 @@
       "ok": true,
       "status": 200,
       "count": 15,
-      "elapsed_ms": 273
+      "elapsed_ms": 4878
     },
     {
       "label": "player_transfers_16344",
@@ -2146,7 +2146,7 @@
       "ok": true,
       "status": 200,
       "count": 0,
-      "elapsed_ms": 244
+      "elapsed_ms": 275
     },
     {
       "label": "player_career_16344",
@@ -2155,7 +2155,7 @@
       "ok": true,
       "status": 200,
       "count": 2,
-      "elapsed_ms": 224
+      "elapsed_ms": 225
     },
     {
       "label": "player_national_team_16344",
@@ -2164,7 +2164,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 219
+      "elapsed_ms": 232
     },
     {
       "label": "player_detail_16354",
@@ -2173,7 +2173,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 236
+      "elapsed_ms": 274
     },
     {
       "label": "player_stats_16354",
@@ -2184,7 +2184,7 @@
       "ok": true,
       "status": 200,
       "count": 12,
-      "elapsed_ms": 243
+      "elapsed_ms": 271
     },
     {
       "label": "player_transfers_16354",
@@ -2195,7 +2195,7 @@
       "ok": true,
       "status": 200,
       "count": 0,
-      "elapsed_ms": 229
+      "elapsed_ms": 296
     },
     {
       "label": "player_career_16354",
@@ -2204,7 +2204,7 @@
       "ok": true,
       "status": 200,
       "count": 2,
-      "elapsed_ms": 222
+      "elapsed_ms": 275
     },
     {
       "label": "player_national_team_16354",
@@ -2213,7 +2213,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 214
+      "elapsed_ms": 246
     },
     {
       "label": "player_detail_50270",
@@ -2222,7 +2222,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 224
+      "elapsed_ms": 291
     },
     {
       "label": "player_stats_50270",
@@ -2233,7 +2233,7 @@
       "ok": true,
       "status": 200,
       "count": 10,
-      "elapsed_ms": 256
+      "elapsed_ms": 384
     },
     {
       "label": "player_transfers_50270",
@@ -2244,7 +2244,7 @@
       "ok": true,
       "status": 200,
       "count": 0,
-      "elapsed_ms": 240
+      "elapsed_ms": 3026
     },
     {
       "label": "player_career_50270",
@@ -2253,7 +2253,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 439
+      "elapsed_ms": 481
     },
     {
       "label": "player_national_team_50270",
@@ -2262,7 +2262,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 232
+      "elapsed_ms": 886
     },
     {
       "label": "player_detail_50271",
@@ -2271,7 +2271,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 227
+      "elapsed_ms": 247
     },
     {
       "label": "player_stats_50271",
@@ -2282,7 +2282,7 @@
       "ok": true,
       "status": 200,
       "count": 9,
-      "elapsed_ms": 248
+      "elapsed_ms": 619
     },
     {
       "label": "player_transfers_50271",
@@ -2293,7 +2293,7 @@
       "ok": true,
       "status": 200,
       "count": 0,
-      "elapsed_ms": 304
+      "elapsed_ms": 751
     },
     {
       "label": "player_career_50271",
@@ -2302,7 +2302,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 239
+      "elapsed_ms": 5864
     },
     {
       "label": "player_national_team_50271",
@@ -2311,7 +2311,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 232
+      "elapsed_ms": 231
     },
     {
       "label": "player_detail_50282",
@@ -2320,7 +2320,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 214
+      "elapsed_ms": 286
     },
     {
       "label": "player_stats_50282",
@@ -2331,7 +2331,7 @@
       "ok": true,
       "status": 200,
       "count": 10,
-      "elapsed_ms": 246
+      "elapsed_ms": 334
     },
     {
       "label": "player_transfers_50282",
@@ -2342,7 +2342,7 @@
       "ok": true,
       "status": 200,
       "count": 0,
-      "elapsed_ms": 234
+      "elapsed_ms": 308
     },
     {
       "label": "player_career_50282",
@@ -2351,7 +2351,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 242
+      "elapsed_ms": 270
     },
     {
       "label": "player_national_team_50282",
@@ -2360,7 +2360,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 209
+      "elapsed_ms": 225
     },
     {
       "label": "player_detail_16037",
@@ -2369,7 +2369,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 243
+      "elapsed_ms": 231
     },
     {
       "label": "player_stats_16037",
@@ -2380,7 +2380,7 @@
       "ok": true,
       "status": 200,
       "count": 25,
-      "elapsed_ms": 576
+      "elapsed_ms": 435
     },
     {
       "label": "player_transfers_16037",
@@ -2391,7 +2391,7 @@
       "ok": true,
       "status": 200,
       "count": 0,
-      "elapsed_ms": 260
+      "elapsed_ms": 249
     },
     {
       "label": "player_career_16037",
@@ -2400,7 +2400,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 238
+      "elapsed_ms": 245
     },
     {
       "label": "player_national_team_16037",
@@ -2409,7 +2409,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 226
+      "elapsed_ms": 295
     },
     {
       "label": "player_detail_16096",
@@ -2418,7 +2418,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 223
+      "elapsed_ms": 635
     },
     {
       "label": "player_stats_16096",
@@ -2429,7 +2429,7 @@
       "ok": true,
       "status": 200,
       "count": 37,
-      "elapsed_ms": 403
+      "elapsed_ms": 588
     },
     {
       "label": "player_transfers_16096",
@@ -2440,7 +2440,7 @@
       "ok": true,
       "status": 200,
       "count": 0,
-      "elapsed_ms": 233
+      "elapsed_ms": 253
     },
     {
       "label": "player_career_16096",
@@ -2449,7 +2449,7 @@
       "ok": true,
       "status": 200,
       "count": 2,
-      "elapsed_ms": 256
+      "elapsed_ms": 381
     },
     {
       "label": "player_national_team_16096",
@@ -2458,7 +2458,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 227
+      "elapsed_ms": 337
     },
     {
       "label": "player_detail_59146",
@@ -2467,7 +2467,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 235
+      "elapsed_ms": 274
     },
     {
       "label": "player_stats_59146",
@@ -2478,7 +2478,7 @@
       "ok": true,
       "status": 200,
       "count": 0,
-      "elapsed_ms": 244
+      "elapsed_ms": 408
     },
     {
       "label": "player_transfers_59146",
@@ -2489,7 +2489,7 @@
       "ok": true,
       "status": 200,
       "count": 0,
-      "elapsed_ms": 229
+      "elapsed_ms": 249
     },
     {
       "label": "player_career_59146",
@@ -2498,7 +2498,7 @@
       "ok": true,
       "status": 200,
       "count": 0,
-      "elapsed_ms": 238
+      "elapsed_ms": 246
     },
     {
       "label": "player_national_team_59146",
@@ -2507,7 +2507,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 266
+      "elapsed_ms": 293
     },
     {
       "label": "player_detail_24794",
@@ -2516,7 +2516,7 @@
       "ok": true,
       "status": 200,
       "count": 1,
-      "elapsed_ms": 235
+      "elapsed_ms": 321
     }
   ],
   "notes": [
