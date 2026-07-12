@@ -1,13 +1,67 @@
 {
-  "updated_at": "2026-07-11T23:53:54.257702+00:00",
-  "source": "bsd_v2_events_live",
+  "updated_at": "2026-07-12T01:05:03.296462+00:00",
+  "source": "bsd_v2_events_live+backfill",
   "endpoint": "/api/v2/events/live/",
   "params": {},
-  "count": 0,
-  "backfill_count": 0,
-  "events": [],
+  "count": 1,
+  "backfill_count": 1,
+  "events": [
+    {
+      "id": 8386,
+      "league_id": 27,
+      "season_id": 188,
+      "home_team_id": 489,
+      "home_team": "Argentina",
+      "away_team_id": 462,
+      "away_team": "Switzerland",
+      "home_coach_id": 124,
+      "away_coach_id": 78,
+      "referee_id": 2238,
+      "venue_id": 1187,
+      "event_date": "2026-07-12T01:00:00+00:00",
+      "status": "1st_half",
+      "replaced_by": null,
+      "round_number": 27,
+      "round_name": "Quarterfinals",
+      "group_name": null,
+      "period": "1T",
+      "current_minute": 3,
+      "home_score": 0,
+      "away_score": 0,
+      "home_score_ht": 0,
+      "away_score_ht": 0,
+      "penalty_shootout": null,
+      "extra_time_score": null,
+      "is_local_derby": false,
+      "is_neutral_ground": false,
+      "travel_distance_km": null,
+      "weather": {
+        "code": 0,
+        "description": "unknown",
+        "wind_speed": 11.0,
+        "temperature_c": 27
+      },
+      "pitch_condition": null,
+      "attendance": null,
+      "live_websocket": true,
+      "websocket_plus": true,
+      "highlights": [],
+      "head_to_head": null,
+      "event_id": 8386,
+      "minute": 3,
+      "league_name": null,
+      "last_updated": null,
+      "image_assets": {
+        "home_team_logo": "https://sports.bzzoiro.com/img/team/489/",
+        "away_team_logo": "https://sports.bzzoiro.com/img/team/462/",
+        "league_logo": "https://sports.bzzoiro.com/img/league/27/"
+      },
+      "_backfilled": true
+    }
+  ],
   "notes": [
     "Conform BSD v2, live window ignoră date_from/date_to/status.",
-    "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env."
+    "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env.",
+    "Backfill: 1 eveniment(e) adăugate via /events/{id}/ pentru meciuri ratate de /events/live/."
   ]
 }

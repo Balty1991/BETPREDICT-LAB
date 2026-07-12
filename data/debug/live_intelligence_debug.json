@@ -1,25 +1,76 @@
 {
-  "updated_at": "2026-07-11T23:53:54.258977+00:00",
+  "updated_at": "2026-07-12T01:05:04.116479+00:00",
   "limit": 18,
   "params": {},
   "summary": {
-    "live_events": 0,
-    "enriched_events": 0,
-    "with_stats": 0,
-    "with_incidents": 0,
-    "with_lineups": 0,
+    "live_events": 1,
+    "enriched_events": 1,
+    "with_stats": 1,
+    "with_incidents": 1,
+    "with_lineups": 1,
     "strong_signals": 0,
     "reused_cache": 0,
-    "refetched": 0
+    "refetched": 1
   },
-  "events": [],
+  "events": [
+    {
+      "event_id": 8386,
+      "score": "0-0",
+      "minute": 3,
+      "last_updated": null,
+      "cache_status": "refetched",
+      "pressure_side": "balanced",
+      "pressure_score": -0.8,
+      "resources": {
+        "stats": 1,
+        "incidents": 1,
+        "lineups": 1
+      },
+      "signals": [
+        {
+          "type": "lineups",
+          "level": "info",
+          "label": "lineup confirmed",
+          "note": "Status lineup disponibil pentru context live."
+        }
+      ]
+    }
+  ],
   "requests": [
     {
       "label": "events_live",
       "url": "https://sports.bzzoiro.com/api/v2/events/live/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 344
+      "elapsed_ms": 267
+    },
+    {
+      "label": "backfill_event_8386",
+      "url": "https://sports.bzzoiro.com/api/v2/events/8386/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 1006
+    },
+    {
+      "label": "live_stats_8386",
+      "url": "https://sports.bzzoiro.com/api/v2/events/8386/stats/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 747
+    },
+    {
+      "label": "live_incidents_8386",
+      "url": "https://sports.bzzoiro.com/api/v2/events/8386/incidents/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 786
+    },
+    {
+      "label": "live_lineups_8386",
+      "url": "https://sports.bzzoiro.com/api/v2/events/8386/lineups/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 814
     }
   ],
   "warnings": []
