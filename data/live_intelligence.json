@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-12T21:26:05.262716+00:00",
+  "updated_at": "2026-07-12T21:58:28.533426+00:00",
   "source": "live_intelligence_v23",
   "endpoint": "/api/v2/events/live/",
   "params": {},
@@ -24,10 +24,10 @@
       "league_id": 34,
       "league_name": null,
       "event_date": "2026-07-12T21:00:00+00:00",
-      "status": "1st_half",
-      "period": "1T",
-      "current_minute": 24,
-      "home_score": 0,
+      "status": "halftime",
+      "period": "HT",
+      "current_minute": 45,
+      "home_score": 1,
       "away_score": 0,
       "last_updated": null,
       "event": {
@@ -43,16 +43,16 @@
         "referee_id": 2082,
         "venue_id": 612,
         "event_date": "2026-07-12T21:00:00+00:00",
-        "status": "1st_half",
+        "status": "halftime",
         "replaced_by": null,
         "round_number": 17,
         "round_name": "",
         "group_name": null,
-        "period": "1T",
-        "current_minute": 24,
-        "home_score": 0,
+        "period": "HT",
+        "current_minute": 45,
+        "home_score": 1,
         "away_score": 0,
-        "home_score_ht": 0,
+        "home_score_ht": 1,
         "away_score_ht": 0,
         "penalty_shootout": null,
         "extra_time_score": null,
@@ -144,7 +144,7 @@
           ]
         },
         "event_id": 10015,
-        "minute": 24,
+        "minute": 45,
         "league_name": null,
         "last_updated": null,
         "image_assets": {
@@ -154,24 +154,125 @@
         },
         "_backfilled": true
       },
-      "phase": "early",
-      "pressure_side": "balanced",
-      "pressure_score": -2.3,
+      "phase": "half-time",
+      "pressure_side": "home",
+      "pressure_score": 20.7,
       "stats_summary": {
-        "xg_home": 0.02,
-        "xg_away": 0.08,
-        "shots_on_target_home": null,
-        "shots_on_target_away": null,
-        "shots_home": 1.0,
-        "shots_away": 2.0,
-        "possession_home": 49.0,
-        "possession_away": 51.0,
+        "xg_home": 0.45,
+        "xg_away": 0.09,
+        "shots_on_target_home": 2.0,
+        "shots_on_target_away": 1.0,
+        "shots_home": 4.0,
+        "shots_away": 3.0,
+        "possession_home": 44.0,
+        "possession_away": 56.0,
         "dangerous_attacks_home": null,
         "dangerous_attacks_away": null,
-        "momentum_points": 25,
-        "xg_per_minute_points": 3,
-        "shotmap_count": 3,
+        "momentum_points": 46,
+        "xg_per_minute_points": 7,
+        "shotmap_count": 7,
         "shotmap": [
+          {
+            "gm": {
+              "x": 0,
+              "y": 89.4,
+              "z": 18.1
+            },
+            "xg": 0.0431,
+            "gml": "left",
+            "min": 45,
+            "pos": {
+              "x": 8.4,
+              "y": 56,
+              "z": 0
+            },
+            "sit": "corner",
+            "body": "head",
+            "home": true,
+            "type": "miss",
+            "xgot": null,
+            "added": 1,
+            "block": {
+              "x": 2.4,
+              "y": 15,
+              "z": 0
+            },
+            "player_id": 17383
+          },
+          {
+            "gm": {
+              "x": 0,
+              "y": 47.4,
+              "z": 19
+            },
+            "xg": 0.3577,
+            "gml": "low-right",
+            "min": 44,
+            "pos": {
+              "x": 4.1,
+              "y": 60.2,
+              "z": 0
+            },
+            "sit": "fast-break",
+            "body": "right-foot",
+            "home": true,
+            "type": "save",
+            "xgot": null,
+            "block": {
+              "x": 1.9,
+              "y": 56.1,
+              "z": 0
+            },
+            "player_id": 17387
+          },
+          {
+            "gm": {
+              "x": 0,
+              "y": 46.7,
+              "z": 24.7
+            },
+            "xg": 0.0261,
+            "gml": "high-right",
+            "min": 42,
+            "pos": {
+              "x": 25.5,
+              "y": 6.5,
+              "z": 0
+            },
+            "sit": "free-kick",
+            "body": "right-foot",
+            "home": true,
+            "type": "goal",
+            "xgot": 0.2889,
+            "gtype": "regular",
+            "player_id": 61000
+          },
+          {
+            "gm": {
+              "x": 0,
+              "y": 48,
+              "z": 15.2
+            },
+            "xg": 0.0067,
+            "gml": "low-right",
+            "min": 41,
+            "pos": {
+              "x": 20.1,
+              "y": 81.3,
+              "z": 0
+            },
+            "sit": "corner",
+            "body": "left-foot",
+            "home": false,
+            "type": "save",
+            "xgot": 0.0274,
+            "block": {
+              "x": 1.4,
+              "y": 53.6,
+              "z": 0
+            },
+            "player_id": 10302
+          },
           {
             "gm": {
               "x": 0,
@@ -246,6 +347,107 @@
         {
           "gm": {
             "x": 0,
+            "y": 89.4,
+            "z": 18.1
+          },
+          "xg": 0.0431,
+          "gml": "left",
+          "min": 45,
+          "pos": {
+            "x": 8.4,
+            "y": 56,
+            "z": 0
+          },
+          "sit": "corner",
+          "body": "head",
+          "home": true,
+          "type": "miss",
+          "xgot": null,
+          "added": 1,
+          "block": {
+            "x": 2.4,
+            "y": 15,
+            "z": 0
+          },
+          "player_id": 17383
+        },
+        {
+          "gm": {
+            "x": 0,
+            "y": 47.4,
+            "z": 19
+          },
+          "xg": 0.3577,
+          "gml": "low-right",
+          "min": 44,
+          "pos": {
+            "x": 4.1,
+            "y": 60.2,
+            "z": 0
+          },
+          "sit": "fast-break",
+          "body": "right-foot",
+          "home": true,
+          "type": "save",
+          "xgot": null,
+          "block": {
+            "x": 1.9,
+            "y": 56.1,
+            "z": 0
+          },
+          "player_id": 17387
+        },
+        {
+          "gm": {
+            "x": 0,
+            "y": 46.7,
+            "z": 24.7
+          },
+          "xg": 0.0261,
+          "gml": "high-right",
+          "min": 42,
+          "pos": {
+            "x": 25.5,
+            "y": 6.5,
+            "z": 0
+          },
+          "sit": "free-kick",
+          "body": "right-foot",
+          "home": true,
+          "type": "goal",
+          "xgot": 0.2889,
+          "gtype": "regular",
+          "player_id": 61000
+        },
+        {
+          "gm": {
+            "x": 0,
+            "y": 48,
+            "z": 15.2
+          },
+          "xg": 0.0067,
+          "gml": "low-right",
+          "min": 41,
+          "pos": {
+            "x": 20.1,
+            "y": 81.3,
+            "z": 0
+          },
+          "sit": "corner",
+          "body": "left-foot",
+          "home": false,
+          "type": "save",
+          "xgot": 0.0274,
+          "block": {
+            "x": 1.4,
+            "y": 53.6,
+            "z": 0
+          },
+          "player_id": 10302
+        },
+        {
+          "gm": {
+            "x": 0,
             "y": 44.9,
             "z": 75
           },
@@ -312,15 +514,55 @@
           "player_id": 12339
         }
       ],
-      "incidents_count": 2,
+      "incidents_count": 9,
       "recent_incidents": [
         {
-          "text": "First half",
-          "type": "period",
-          "minute": 45,
-          "is_live": true,
-          "away_score": 0,
-          "home_score": 0
+          "type": "card",
+          "minute": 41,
+          "player": "M. Júnior",
+          "is_home": false,
+          "card_type": "yellow",
+          "player_id": 17528,
+          "added_time": null
+        },
+        {
+          "type": "substitution",
+          "minute": 36,
+          "is_home": true,
+          "player_in": "Cristiano",
+          "added_time": null,
+          "player_out": "G. Soares",
+          "player_in_id": 17384,
+          "player_out_id": 17389
+        },
+        {
+          "type": "substitution",
+          "minute": 36,
+          "is_home": true,
+          "player_in": "Tito",
+          "added_time": null,
+          "player_out": "B. José",
+          "player_in_id": 17383,
+          "player_out_id": 17395
+        },
+        {
+          "type": "card",
+          "minute": 33,
+          "player": "Gustavo Coutinho",
+          "is_home": true,
+          "card_type": "red",
+          "player_id": 18282,
+          "added_time": null
+        },
+        {
+          "type": "varDecision",
+          "minute": 32,
+          "player": "Gustavo Coutinho",
+          "is_home": true,
+          "decision": "cardUpgrade",
+          "confirmed": false,
+          "player_id": 18282,
+          "added_time": null
         },
         {
           "type": "card",
@@ -335,10 +577,16 @@
       "lineup_status": "confirmed",
       "resources": {
         "stats": 1,
-        "incidents": 2,
+        "incidents": 9,
         "lineups": 1
       },
       "live_signals": [
+        {
+          "type": "momentum",
+          "level": "medium",
+          "label": "presiune acasă",
+          "note": "Momentum home: xG 0.45-0.09, SOT 2-1."
+        },
         {
           "type": "lineups",
           "level": "info",
