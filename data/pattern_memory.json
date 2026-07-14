@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-07-14T11:43:57.563745+00:00",
+  "updated_at": "2026-07-14T13:59:43.856999+00:00",
   "source": "pattern_memory.py",
-  "n_journal": 924,
-  "baseline_wr": 69.05,
+  "n_journal": 926,
+  "baseline_wr": 68.9,
   "params": {
     "min_support": 15,
     "min_lift_pp": 8,
@@ -43,10 +43,10 @@
     ]
   },
   "summary": {
-    "n_patterns": 13,
+    "n_patterns": 14,
     "n_boosts": 7,
-    "n_blocks": 6,
-    "n_signals_affected": 11
+    "n_blocks": 7,
+    "n_signals_affected": 10
   },
   "patterns": [
     {
@@ -61,11 +61,29 @@
       ],
       "support": 231,
       "win_rate": 78.4,
-      "baseline_wr": 69.0,
-      "lift_pp": 9.3,
-      "p_value": 0.0014,
+      "baseline_wr": 68.9,
+      "lift_pp": 9.5,
+      "p_value": 0.0012,
       "modifier": 11,
       "direction": "boost"
+    },
+    {
+      "id": "league=Chinese Super League|market=under35",
+      "keys": [
+        "league",
+        "market"
+      ],
+      "values": [
+        "Chinese Super League",
+        "under35"
+      ],
+      "support": 33,
+      "win_rate": 45.5,
+      "baseline_wr": 68.9,
+      "lift_pp": -23.4,
+      "p_value": 0.0043,
+      "modifier": -28,
+      "direction": "block"
     },
     {
       "id": "league=Chinese Super League|bucket=1.40-1.65",
@@ -79,28 +97,10 @@
       ],
       "support": 31,
       "win_rate": 45.2,
-      "baseline_wr": 69.0,
-      "lift_pp": -23.9,
-      "p_value": 0.0049,
-      "modifier": -29,
-      "direction": "block"
-    },
-    {
-      "id": "market=over25|dow=Sat",
-      "keys": [
-        "market",
-        "dow"
-      ],
-      "values": [
-        "over25",
-        "Sat"
-      ],
-      "support": 21,
-      "win_rate": 42.9,
-      "baseline_wr": 69.0,
-      "lift_pp": -26.2,
-      "p_value": 0.0114,
-      "modifier": -30,
+      "baseline_wr": 68.9,
+      "lift_pp": -23.7,
+      "p_value": 0.0051,
+      "modifier": -28,
       "direction": "block"
     },
     {
@@ -115,28 +115,28 @@
       ],
       "support": 15,
       "win_rate": 100.0,
-      "baseline_wr": 69.0,
-      "lift_pp": 31.0,
-      "p_value": 0.0039,
+      "baseline_wr": 68.9,
+      "lift_pp": 31.1,
+      "p_value": 0.0037,
       "modifier": 30,
       "direction": "boost"
     },
     {
-      "id": "league=Chinese Super League|market=under35",
+      "id": "market=over25|dow=Sat",
       "keys": [
-        "league",
-        "market"
+        "market",
+        "dow"
       ],
       "values": [
-        "Chinese Super League",
-        "under35"
+        "over25",
+        "Sat"
       ],
-      "support": 31,
-      "win_rate": 48.4,
-      "baseline_wr": 69.0,
-      "lift_pp": -20.7,
-      "p_value": 0.0131,
-      "modifier": -25,
+      "support": 21,
+      "win_rate": 42.9,
+      "baseline_wr": 68.9,
+      "lift_pp": -26.0,
+      "p_value": 0.0119,
+      "modifier": -30,
       "direction": "block"
     },
     {
@@ -151,11 +151,29 @@
       ],
       "support": 133,
       "win_rate": 78.9,
-      "baseline_wr": 69.0,
-      "lift_pp": 9.9,
-      "p_value": 0.0088,
+      "baseline_wr": 68.9,
+      "lift_pp": 10.0,
+      "p_value": 0.008,
       "modifier": 12,
       "direction": "boost"
+    },
+    {
+      "id": "league=Chinese Super League|bucket=1.65-1.95",
+      "keys": [
+        "league",
+        "bucket"
+      ],
+      "values": [
+        "Chinese Super League",
+        "1.65-1.95"
+      ],
+      "support": 17,
+      "win_rate": 41.2,
+      "baseline_wr": 68.9,
+      "lift_pp": -27.7,
+      "p_value": 0.0166,
+      "modifier": -30,
+      "direction": "block"
     },
     {
       "id": "league=J1 League|market=under35",
@@ -169,9 +187,9 @@
       ],
       "support": 15,
       "win_rate": 40.0,
-      "baseline_wr": 69.0,
-      "lift_pp": -29.0,
-      "p_value": 0.0189,
+      "baseline_wr": 68.9,
+      "lift_pp": -28.9,
+      "p_value": 0.0195,
       "modifier": -30,
       "direction": "block"
     },
@@ -187,9 +205,9 @@
       ],
       "support": 23,
       "win_rate": 91.3,
-      "baseline_wr": 69.0,
-      "lift_pp": 22.3,
-      "p_value": 0.0124,
+      "baseline_wr": 68.9,
+      "lift_pp": 22.4,
+      "p_value": 0.012,
       "modifier": 27,
       "direction": "boost"
     },
@@ -205,10 +223,10 @@
       ],
       "support": 36,
       "win_rate": 86.1,
-      "baseline_wr": 69.0,
-      "lift_pp": 17.1,
-      "p_value": 0.0162,
-      "modifier": 20,
+      "baseline_wr": 68.9,
+      "lift_pp": 17.2,
+      "p_value": 0.0155,
+      "modifier": 21,
       "direction": "boost"
     },
     {
@@ -223,9 +241,9 @@
       ],
       "support": 16,
       "win_rate": 43.8,
-      "baseline_wr": 69.0,
-      "lift_pp": -25.3,
-      "p_value": 0.0314,
+      "baseline_wr": 68.9,
+      "lift_pp": -25.1,
+      "p_value": 0.0324,
       "modifier": -30,
       "direction": "block"
     },
@@ -241,9 +259,9 @@
       ],
       "support": 19,
       "win_rate": 47.4,
-      "baseline_wr": 69.0,
-      "lift_pp": -21.7,
-      "p_value": 0.0401,
+      "baseline_wr": 68.9,
+      "lift_pp": -21.5,
+      "p_value": 0.0414,
       "modifier": -26,
       "direction": "block"
     },
@@ -259,9 +277,9 @@
       ],
       "support": 19,
       "win_rate": 89.5,
-      "baseline_wr": 69.0,
-      "lift_pp": 20.4,
-      "p_value": 0.0386,
+      "baseline_wr": 68.9,
+      "lift_pp": 20.6,
+      "p_value": 0.0375,
       "modifier": 25,
       "direction": "boost"
     },
@@ -279,10 +297,10 @@
       ],
       "support": 23,
       "win_rate": 87.0,
-      "baseline_wr": 69.0,
-      "lift_pp": 17.9,
-      "p_value": 0.0443,
-      "modifier": 21,
+      "baseline_wr": 68.9,
+      "lift_pp": 18.1,
+      "p_value": 0.0429,
+      "modifier": 22,
       "direction": "boost"
     }
   ]
