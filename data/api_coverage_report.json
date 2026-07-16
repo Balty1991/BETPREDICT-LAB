@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-16T14:18:45.597510+00:00",
+  "updated_at": "2026-07-16T15:54:49.814937+00:00",
   "source": "api_coverage_scanner_v1",
   "base_url": "https://sports.bzzoiro.com/api/v2",
   "sample": {
@@ -9,61 +9,61 @@
   },
   "summary": {
     "total": 29,
-    "ok": 24,
-    "ok_empty": 2,
-    "not_found": 3,
+    "ok": 15,
+    "ok_empty": 1,
+    "not_found": 1,
     "auth_failed": 0,
-    "errors": 0
+    "errors": 12
   },
   "by_category": {
     "core": {
       "total": 5,
-      "ok": 4,
-      "empty": 1,
+      "ok": 2,
+      "empty": 0,
       "not_found": 0,
-      "errors": 0
+      "errors": 3
     },
     "reference": {
       "total": 10,
-      "ok": 10,
+      "ok": 8,
       "empty": 0,
       "not_found": 0,
-      "errors": 0
+      "errors": 2
     },
     "business": {
       "total": 2,
       "ok": 0,
       "empty": 0,
-      "not_found": 2,
-      "errors": 0
+      "not_found": 0,
+      "errors": 2
     },
     "event_subresource": {
       "total": 6,
-      "ok": 4,
+      "ok": 3,
       "empty": 1,
       "not_found": 1,
-      "errors": 0
+      "errors": 1
     },
     "odds": {
       "total": 2,
-      "ok": 2,
+      "ok": 0,
       "empty": 0,
       "not_found": 0,
-      "errors": 0
+      "errors": 2
     },
     "ml_ai": {
       "total": 1,
-      "ok": 1,
+      "ok": 0,
       "empty": 0,
       "not_found": 0,
-      "errors": 0
+      "errors": 1
     },
     "team_subresource": {
       "total": 3,
-      "ok": 3,
+      "ok": 2,
       "empty": 0,
       "not_found": 0,
-      "errors": 0
+      "errors": 1
     }
   },
   "results": [
@@ -102,7 +102,7 @@
           "event_date"
         ]
       },
-      "elapsed_ms": 223,
+      "elapsed_ms": 240,
       "note": "ok"
     },
     {
@@ -110,19 +110,15 @@
       "category": "core",
       "url": "https://sports.bzzoiro.com/api/v2/events/live/",
       "params": {},
-      "status": 200,
-      "ok": true,
+      "status": null,
+      "ok": false,
       "count": 0,
       "shape": {
-        "type": "dict",
-        "keys": [
-          "count",
-          "events"
-        ],
-        "sample_keys": []
+        "type": "unknown",
+        "keys": []
       },
-      "elapsed_ms": 217,
-      "note": "ok_empty"
+      "elapsed_ms": 22056,
+      "note": "error: HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=22)"
     },
     {
       "name": "predictions",
@@ -131,77 +127,49 @@
       "params": {
         "limit": 3
       },
-      "status": 200,
-      "ok": true,
-      "count": 282,
+      "status": null,
+      "ok": false,
+      "count": 0,
       "shape": {
-        "type": "dict",
-        "keys": [
-          "count",
-          "next",
-          "previous",
-          "results"
-        ],
-        "sample_keys": [
-          "id",
-          "created_at",
-          "event",
-          "markets",
-          "recommendations",
-          "model"
-        ]
+        "type": "unknown",
+        "keys": []
       },
-      "elapsed_ms": 249,
-      "note": "ok"
+      "elapsed_ms": 22053,
+      "note": "error: HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=22)"
     },
     {
       "name": "odds_best_1x2",
       "category": "core",
       "url": "https://sports.bzzoiro.com/api/v2/odds/best/",
       "params": {
-        "date_from": "2026-07-16T14:18:31Z",
-        "date_to": "2026-07-23T14:18:31Z",
+        "date_from": "2026-07-16T15:49:42Z",
+        "date_to": "2026-07-23T15:49:42Z",
         "market": "1x2",
         "limit": 3
       },
-      "status": 200,
-      "ok": true,
-      "count": 84,
+      "status": null,
+      "ok": false,
+      "count": 0,
       "shape": {
-        "type": "dict",
-        "keys": [
-          "count",
-          "results"
-        ],
-        "sample_keys": [
-          "event_id",
-          "event_date",
-          "league_id",
-          "league_name",
-          "home_team_id",
-          "home_team",
-          "away_team_id",
-          "away_team",
-          "market",
-          "best_odds"
-        ]
+        "type": "unknown",
+        "keys": []
       },
-      "elapsed_ms": 525,
-      "note": "ok"
+      "elapsed_ms": 22049,
+      "note": "error: HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=22)"
     },
     {
       "name": "odds_best_ou25",
       "category": "core",
       "url": "https://sports.bzzoiro.com/api/v2/odds/best/",
       "params": {
-        "date_from": "2026-07-16T14:18:31Z",
-        "date_to": "2026-07-23T14:18:31Z",
+        "date_from": "2026-07-16T15:49:42Z",
+        "date_to": "2026-07-23T15:49:42Z",
         "market": "over_under_25",
         "limit": 3
       },
       "status": 200,
       "ok": true,
-      "count": 84,
+      "count": 104,
       "shape": {
         "type": "dict",
         "keys": [
@@ -221,7 +189,7 @@
           "best_odds"
         ]
       },
-      "elapsed_ms": 454,
+      "elapsed_ms": 17720,
       "note": "ok"
     },
     {
@@ -231,28 +199,15 @@
       "params": {
         "limit": 5
       },
-      "status": 200,
-      "ok": true,
-      "count": 68,
+      "status": null,
+      "ok": false,
+      "count": 0,
       "shape": {
-        "type": "dict",
-        "keys": [
-          "count",
-          "next",
-          "previous",
-          "results"
-        ],
-        "sample_keys": [
-          "id",
-          "name",
-          "country",
-          "is_women",
-          "is_active",
-          "current_season"
-        ]
+        "type": "unknown",
+        "keys": []
       },
-      "elapsed_ms": 192,
-      "note": "ok"
+      "elapsed_ms": 22033,
+      "note": "error: HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=22)"
     },
     {
       "name": "teams",
@@ -280,7 +235,7 @@
           "venue_id"
         ]
       },
-      "elapsed_ms": 236,
+      "elapsed_ms": 219,
       "note": "ok"
     },
     {
@@ -292,7 +247,7 @@
       },
       "status": 200,
       "ok": true,
-      "count": 66313,
+      "count": 66373,
       "shape": {
         "type": "dict",
         "keys": [
@@ -316,7 +271,7 @@
           "current_team_id"
         ]
       },
-      "elapsed_ms": 300,
+      "elapsed_ms": 8547,
       "note": "ok"
     },
     {
@@ -352,7 +307,7 @@
           "avg_fouls_per_match"
         ]
       },
-      "elapsed_ms": 5076,
+      "elapsed_ms": 4815,
       "note": "ok"
     },
     {
@@ -388,7 +343,7 @@
           "home_team_id"
         ]
       },
-      "elapsed_ms": 271,
+      "elapsed_ms": 196,
       "note": "ok"
     },
     {
@@ -424,7 +379,7 @@
           "win_pct"
         ]
       },
-      "elapsed_ms": 270,
+      "elapsed_ms": 323,
       "note": "ok"
     },
     {
@@ -460,7 +415,7 @@
           "channel_name"
         ]
       },
-      "elapsed_ms": 622,
+      "elapsed_ms": 780,
       "note": "ok"
     },
     {
@@ -488,7 +443,7 @@
           "link"
         ]
       },
-      "elapsed_ms": 190,
+      "elapsed_ms": 392,
       "note": "ok"
     },
     {
@@ -522,7 +477,7 @@
           "linked"
         ]
       },
-      "elapsed_ms": 623,
+      "elapsed_ms": 1875,
       "note": "ok"
     },
     {
@@ -532,15 +487,15 @@
       "params": {
         "limit": 5
       },
-      "status": 404,
+      "status": null,
       "ok": false,
       "count": 0,
       "shape": {
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 169,
-      "note": "not_found"
+      "elapsed_ms": 22045,
+      "note": "error: HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=22)"
     },
     {
       "name": "odds_value",
@@ -549,15 +504,15 @@
       "params": {
         "limit": 5
       },
-      "status": 404,
+      "status": null,
       "ok": false,
       "count": 0,
       "shape": {
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 163,
-      "note": "not_found"
+      "elapsed_ms": 22027,
+      "note": "error: HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=22)"
     },
     {
       "name": "event_detail",
@@ -591,7 +546,7 @@
         ],
         "sample_keys": []
       },
-      "elapsed_ms": 220,
+      "elapsed_ms": 271,
       "note": "ok"
     },
     {
@@ -599,70 +554,45 @@
       "category": "odds",
       "url": "https://sports.bzzoiro.com/api/v2/events/207019/odds/",
       "params": {},
-      "status": 200,
-      "ok": true,
-      "count": 1,
+      "status": null,
+      "ok": false,
+      "count": 0,
       "shape": {
-        "type": "dict",
-        "keys": [
-          "event_id",
-          "odds"
-        ],
-        "sample_keys": []
+        "type": "unknown",
+        "keys": []
       },
-      "elapsed_ms": 284,
-      "note": "ok"
+      "elapsed_ms": 22050,
+      "note": "error: HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=22)"
     },
     {
       "name": "event_odds_comparison",
       "category": "odds",
       "url": "https://sports.bzzoiro.com/api/v2/events/207019/odds/comparison/",
       "params": {},
-      "status": 200,
-      "ok": true,
-      "count": 1,
+      "status": null,
+      "ok": false,
+      "count": 0,
       "shape": {
-        "type": "dict",
-        "keys": [
-          "event_id",
-          "event_date",
-          "league_id",
-          "league_name",
-          "home_team_id",
-          "home_team",
-          "away_team_id",
-          "away_team",
-          "bookmakers_count",
-          "total_odds",
-          "markets"
-        ],
-        "sample_keys": []
+        "type": "unknown",
+        "keys": []
       },
-      "elapsed_ms": 812,
-      "note": "ok"
+      "elapsed_ms": 22054,
+      "note": "error: HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=22)"
     },
     {
       "name": "event_prediction",
       "category": "ml_ai",
       "url": "https://sports.bzzoiro.com/api/v2/events/207019/prediction/",
       "params": {},
-      "status": 200,
-      "ok": true,
-      "count": 1,
+      "status": null,
+      "ok": false,
+      "count": 0,
       "shape": {
-        "type": "dict",
-        "keys": [
-          "id",
-          "created_at",
-          "event",
-          "markets",
-          "recommendations",
-          "model"
-        ],
-        "sample_keys": []
+        "type": "unknown",
+        "keys": []
       },
-      "elapsed_ms": 241,
-      "note": "ok"
+      "elapsed_ms": 22055,
+      "note": "error: HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=22)"
     },
     {
       "name": "event_stats",
@@ -684,7 +614,7 @@
         ],
         "sample_keys": []
       },
-      "elapsed_ms": 317,
+      "elapsed_ms": 210,
       "note": "ok"
     },
     {
@@ -703,7 +633,7 @@
         ],
         "sample_keys": []
       },
-      "elapsed_ms": 283,
+      "elapsed_ms": 238,
       "note": "ok"
     },
     {
@@ -711,23 +641,15 @@
       "category": "event_subresource",
       "url": "https://sports.bzzoiro.com/api/v2/events/207019/lineups/",
       "params": {},
-      "status": 200,
-      "ok": true,
-      "count": 1,
+      "status": null,
+      "ok": false,
+      "count": 0,
       "shape": {
-        "type": "dict",
-        "keys": [
-          "event_id",
-          "lineup_status",
-          "beta",
-          "lineups",
-          "unavailable_players",
-          "updated_at"
-        ],
-        "sample_keys": []
+        "type": "unknown",
+        "keys": []
       },
-      "elapsed_ms": 244,
-      "note": "ok"
+      "elapsed_ms": 22051,
+      "note": "error: HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=22)"
     },
     {
       "name": "event_player_stats",
@@ -746,7 +668,7 @@
         ],
         "sample_keys": []
       },
-      "elapsed_ms": 225,
+      "elapsed_ms": 6207,
       "note": "ok_empty"
     },
     {
@@ -761,7 +683,7 @@
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 172,
+      "elapsed_ms": 187,
       "note": "not_found"
     },
     {
@@ -769,21 +691,15 @@
       "category": "reference",
       "url": "https://sports.bzzoiro.com/api/v2/leagues/54/standings/",
       "params": {},
-      "status": 200,
-      "ok": true,
-      "count": 16,
+      "status": null,
+      "ok": false,
+      "count": 0,
       "shape": {
-        "type": "dict",
-        "keys": [
-          "league_id",
-          "season",
-          "grouped",
-          "standings"
-        ],
-        "sample_keys": []
+        "type": "unknown",
+        "keys": []
       },
-      "elapsed_ms": 468,
-      "note": "ok"
+      "elapsed_ms": 22054,
+      "note": "error: HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=22)"
     },
     {
       "name": "team_detail",
@@ -804,7 +720,7 @@
         ],
         "sample_keys": []
       },
-      "elapsed_ms": 220,
+      "elapsed_ms": 195,
       "note": "ok"
     },
     {
@@ -812,20 +728,15 @@
       "category": "team_subresource",
       "url": "https://sports.bzzoiro.com/api/v2/teams/2084/squad/",
       "params": {},
-      "status": 200,
-      "ok": true,
-      "count": 26,
+      "status": null,
+      "ok": false,
+      "count": 0,
       "shape": {
-        "type": "dict",
-        "keys": [
-          "team_id",
-          "count",
-          "players"
-        ],
-        "sample_keys": []
+        "type": "unknown",
+        "keys": []
       },
-      "elapsed_ms": 207,
-      "note": "ok"
+      "elapsed_ms": 22050,
+      "note": "error: HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=22)"
     },
     {
       "name": "team_fixtures",
@@ -860,7 +771,7 @@
           "event_date"
         ]
       },
-      "elapsed_ms": 207,
+      "elapsed_ms": 205,
       "note": "ok"
     }
   ],
@@ -868,8 +779,6 @@
     "social"
   ],
   "blockers_404": [
-    "value_bets_v2",
-    "odds_value",
     "event_shotmap"
   ],
   "websocket_note": "WebSocket live trebuie integrat separat în frontend/backend; nu este evaluat prin HTTP GET static.",
