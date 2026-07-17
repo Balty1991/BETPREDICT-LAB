@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-07-17T15:43:01.179412+00:00",
-  "source": "bsd_v2_events_live",
+  "updated_at": "2026-07-17T16:36:35.944369+00:00",
+  "source": "bsd_v2_events_live+backfill",
   "endpoint": "/api/v2/events/live/",
   "params": {},
-  "count": 1,
-  "backfill_count": 0,
+  "count": 2,
+  "backfill_count": 1,
   "events": [
     {
       "id": 214528,
@@ -16,28 +16,117 @@
       "away_team": "FC Botoșani",
       "event_date": "2026-07-17T15:30:00Z",
       "status": "inprogress",
-      "period": "1st_half",
-      "current_minute": 10,
-      "home_score": 0,
-      "away_score": 0,
+      "period": null,
+      "current_minute": 45,
+      "home_score": 1,
+      "away_score": 1,
       "penalty_shootout": null,
       "extra_time_score": null,
       "home_score_ht": 0,
-      "away_score_ht": 0,
+      "away_score_ht": 2,
       "live_websocket": true,
       "websocket_plus": true,
-      "last_updated": "2026-07-17T15:42:24Z",
+      "last_updated": "2026-07-17T16:36:10Z",
       "event_id": 214528,
-      "minute": 10,
+      "minute": 45,
       "image_assets": {
         "home_team_logo": "https://sports.bzzoiro.com/img/team/2217/",
         "away_team_logo": "https://sports.bzzoiro.com/img/team/365/",
         "league_logo": "https://sports.bzzoiro.com/img/league/23/"
       }
+    },
+    {
+      "id": 211654,
+      "league_id": 22,
+      "season_id": 1326,
+      "home_team_id": 352,
+      "home_team": "FK Spartak Varna",
+      "away_team_id": 339,
+      "away_team": "FC CSKA 1948 Sofia",
+      "home_coach_id": 256,
+      "away_coach_id": 422,
+      "referee_id": null,
+      "venue_id": 332,
+      "event_date": "2026-07-17T16:00:00+00:00",
+      "status": "1st_half",
+      "replaced_by": null,
+      "round_number": 1,
+      "round_name": "",
+      "group_name": null,
+      "period": "1T",
+      "current_minute": 34,
+      "home_score": 1,
+      "away_score": 0,
+      "home_score_ht": 1,
+      "away_score_ht": 0,
+      "penalty_shootout": null,
+      "extra_time_score": null,
+      "is_local_derby": false,
+      "is_neutral_ground": false,
+      "travel_distance_km": 378,
+      "weather": {
+        "code": 1,
+        "description": "clear",
+        "wind_speed": 16.8,
+        "temperature_c": 30
+      },
+      "pitch_condition": null,
+      "attendance": null,
+      "live_websocket": true,
+      "websocket_plus": false,
+      "highlights": [],
+      "head_to_head": {
+        "total_matches": 4,
+        "home_wins": 0,
+        "draws": 3,
+        "away_wins": 1,
+        "home_goals": 5,
+        "away_goals": 6,
+        "avg_total_goals": 2.75,
+        "home_win_rate": 0.0,
+        "away_win_rate": 0.25,
+        "recent_matches": [
+          {
+            "away": "FC CSKA 1948 Sofia",
+            "date": "2026-03-14T10:45:00+00:00",
+            "home": "FK Spartak Varna",
+            "score": "1-2"
+          },
+          {
+            "away": "FK Spartak Varna",
+            "date": "2025-10-04T12:15:00+00:00",
+            "home": "FC CSKA 1948 Sofia",
+            "score": "1-1"
+          },
+          {
+            "away": "FC CSKA 1948 Sofia",
+            "date": "2024-11-29T10:30:00+00:00",
+            "home": "FK Spartak Varna",
+            "score": "1-1"
+          },
+          {
+            "away": "FK Spartak Varna",
+            "date": "2024-07-28T15:00:00+00:00",
+            "home": "FC CSKA 1948 Sofia",
+            "score": "2-2"
+          }
+        ]
+      },
+      "event_id": 211654,
+      "minute": 34,
+      "league_name": null,
+      "last_updated": null,
+      "image_assets": {
+        "home_team_logo": "https://sports.bzzoiro.com/img/team/352/",
+        "away_team_logo": "https://sports.bzzoiro.com/img/team/339/",
+        "league_logo": "https://sports.bzzoiro.com/img/league/22/"
+      },
+      "_backfilled": true
     }
   ],
   "notes": [
     "Conform BSD v2, live window ignoră date_from/date_to/status.",
-    "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env."
+    "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env.",
+    "Backfill: 1 eveniment(e) adăugate via /events/{id}/ pentru meciuri ratate de /events/live/."
   ]
 }
