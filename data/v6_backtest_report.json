@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-07-18T22:03:30.875329+00:00",
+  "updated_at": "2026-07-18T23:01:55.344637+00:00",
   "model_version": "v6.0-backtest",
   "source": "v6_backtest",
   "methodology": {
-    "out_of_sample": "Time-based holdout 60/40. Calibratori antrenati DOAR pe primele 605 pariuri cronologic, evaluati pe ultimele 404. Asta simuleaza productia: invata din trecut, prezice viitor.",
-    "in_sample": "Calibratori reali (din models/calibrators_v6.pkl) aplicati pe TOATE cele 1009 pariuri. OPTIMIST — calibratorii au fost antrenati pe aceste date. Util doar pentru istoric individual."
+    "out_of_sample": "Time-based holdout 60/40. Calibratori antrenati DOAR pe primele 606 pariuri cronologic, evaluati pe ultimele 404. Asta simuleaza productia: invata din trecut, prezice viitor.",
+    "in_sample": "Calibratori reali (din models/calibrators_v6.pkl) aplicati pe TOATE cele 1010 pariuri. OPTIMIST — calibratorii au fost antrenati pe aceste date. Util doar pentru istoric individual."
   },
   "out_of_sample": {
     "split": {
-      "train_n": 605,
+      "train_n": 606,
       "test_n": 404
     },
     "overall": {
@@ -30,53 +30,6 @@
       "v6_total_profit": 16.59
     },
     "by_market": {
-      "under25": {
-        "n_total": 14,
-        "n_v5_kept": 14,
-        "n_v6_kept": 14,
-        "n_skipped_by_v6": 0,
-        "skipped_losses_avoided": 0,
-        "skipped_wins_lost": 0,
-        "units_saved_from_avoided_losses": 0,
-        "units_lost_from_avoided_wins": 0,
-        "net_units_impact": 0,
-        "v5_roi_pct": -18.5,
-        "v6_roi_pct": -18.5,
-        "roi_delta_pp": 0.0,
-        "v5_win_rate_pct": 50.0,
-        "v6_win_rate_pct": 50.0,
-        "v5_total_profit": -2.59,
-        "v6_total_profit": -2.59,
-        "sample_bets": [
-          {
-            "event": "Slovakia vs Montenegro",
-            "market": "under25",
-            "odds": 1.59,
-            "prob_v5": 0.725,
-            "prob_v6": 0.7,
-            "result": "LOSS",
-            "verdict_v6": "KEPT_LOWER_EV"
-          },
-          {
-            "event": "Belarus vs Syria",
-            "market": "under25",
-            "odds": 1.68,
-            "prob_v5": 0.711,
-            "prob_v6": 0.7,
-            "result": "LOSS",
-            "verdict_v6": "KEPT"
-          },
-          {
-            "event": "Denmark vs DR Congo",
-            "market": "under25",
-            "odds": 1.75,
-            "prob_v5": 0.711,
-            "prob_v6": 0.7,
-            "result": "WIN",
-            "verdict_v6": "KEPT"
-          }
-        ]
-      },
       "over25": {
         "n_total": 31,
         "n_v5_kept": 31,
@@ -167,6 +120,53 @@
             "prob_v5": 0.819,
             "prob_v6": 0.7317,
             "result": "WIN",
+            "verdict_v6": "KEPT_LOWER_EV"
+          }
+        ]
+      },
+      "under25": {
+        "n_total": 13,
+        "n_v5_kept": 13,
+        "n_v6_kept": 13,
+        "n_skipped_by_v6": 0,
+        "skipped_losses_avoided": 0,
+        "skipped_wins_lost": 0,
+        "units_saved_from_avoided_losses": 0,
+        "units_lost_from_avoided_wins": 0,
+        "net_units_impact": 0,
+        "v5_roi_pct": -12.23,
+        "v6_roi_pct": -12.23,
+        "roi_delta_pp": 0.0,
+        "v5_win_rate_pct": 53.8,
+        "v6_win_rate_pct": 53.8,
+        "v5_total_profit": -1.59,
+        "v6_total_profit": -1.59,
+        "sample_bets": [
+          {
+            "event": "Belarus vs Syria",
+            "market": "under25",
+            "odds": 1.68,
+            "prob_v5": 0.711,
+            "prob_v6": 0.625,
+            "result": "LOSS",
+            "verdict_v6": "KEPT_LOWER_EV"
+          },
+          {
+            "event": "Denmark vs DR Congo",
+            "market": "under25",
+            "odds": 1.75,
+            "prob_v5": 0.711,
+            "prob_v6": 0.625,
+            "result": "WIN",
+            "verdict_v6": "KEPT_LOWER_EV"
+          },
+          {
+            "event": "Haiti vs New Zealand",
+            "market": "under25",
+            "odds": 1.73,
+            "prob_v5": 0.703,
+            "prob_v6": 0.625,
+            "result": "LOSS",
             "verdict_v6": "KEPT_LOWER_EV"
           }
         ]
@@ -266,22 +266,22 @@
         ]
       },
       "awayWin": {
-        "n_total": 4,
-        "n_v5_kept": 4,
-        "n_v6_kept": 0,
+        "n_total": 5,
+        "n_v5_kept": 5,
+        "n_v6_kept": 1,
         "n_skipped_by_v6": 4,
         "skipped_losses_avoided": 1,
         "skipped_wins_lost": 3,
         "units_saved_from_avoided_losses": 1.0,
         "units_lost_from_avoided_wins": -1.71,
         "net_units_impact": 2.71,
-        "v5_roi_pct": 17.75,
-        "v6_roi_pct": 0.0,
-        "roi_delta_pp": -17.75,
-        "v5_win_rate_pct": 75.0,
-        "v6_win_rate_pct": 0,
-        "v5_total_profit": 0.71,
-        "v6_total_profit": 0,
+        "v5_roi_pct": -5.8,
+        "v6_roi_pct": -100.0,
+        "roi_delta_pp": -94.2,
+        "v5_win_rate_pct": 60.0,
+        "v6_win_rate_pct": 0.0,
+        "v5_total_profit": -0.29,
+        "v6_total_profit": -1.0,
         "sample_bets": [
           {
             "event": "USA vs Germany",
@@ -361,53 +361,6 @@
       }
     },
     "by_strategy": {
-      "engine_overall": {
-        "n_total": 157,
-        "n_v5_kept": 157,
-        "n_v6_kept": 147,
-        "n_skipped_by_v6": 10,
-        "skipped_losses_avoided": 1,
-        "skipped_wins_lost": 9,
-        "units_saved_from_avoided_losses": 1.0,
-        "units_lost_from_avoided_wins": -2.95,
-        "net_units_impact": 3.95,
-        "v5_roi_pct": -0.42,
-        "v6_roi_pct": -1.78,
-        "roi_delta_pp": -1.36,
-        "v5_win_rate_pct": 66.9,
-        "v6_win_rate_pct": 65.3,
-        "v5_total_profit": -0.66,
-        "v6_total_profit": -2.61,
-        "sample_bets": [
-          {
-            "event": "Slovakia vs Montenegro",
-            "market": "under25",
-            "odds": 1.59,
-            "prob_v5": 0.725,
-            "prob_v6": 0.7,
-            "result": "LOSS",
-            "verdict_v6": "KEPT_LOWER_EV"
-          },
-          {
-            "event": "Sweden vs Greece",
-            "market": "under35",
-            "odds": 1.35,
-            "prob_v5": 0.886,
-            "prob_v6": 0.8056,
-            "result": "LOSS",
-            "verdict_v6": "KEPT_LOWER_EV"
-          },
-          {
-            "event": "USA vs Germany",
-            "market": "under35",
-            "odds": 1.8,
-            "prob_v5": 0.835,
-            "prob_v6": 0.7317,
-            "result": "WIN",
-            "verdict_v6": "KEPT_LOWER_EV"
-          }
-        ]
-      },
       "best_single": {
         "n_total": 33,
         "n_v5_kept": 33,
@@ -502,23 +455,70 @@
           }
         ]
       },
+      "engine_overall": {
+        "n_total": 156,
+        "n_v5_kept": 156,
+        "n_v6_kept": 146,
+        "n_skipped_by_v6": 10,
+        "skipped_losses_avoided": 1,
+        "skipped_wins_lost": 9,
+        "units_saved_from_avoided_losses": 1.0,
+        "units_lost_from_avoided_wins": -2.95,
+        "net_units_impact": 3.95,
+        "v5_roi_pct": 0.22,
+        "v6_roi_pct": -1.1,
+        "roi_delta_pp": -1.32,
+        "v5_win_rate_pct": 67.3,
+        "v6_win_rate_pct": 65.8,
+        "v5_total_profit": 0.34,
+        "v6_total_profit": -1.61,
+        "sample_bets": [
+          {
+            "event": "Sweden vs Greece",
+            "market": "under35",
+            "odds": 1.35,
+            "prob_v5": 0.886,
+            "prob_v6": 0.8056,
+            "result": "LOSS",
+            "verdict_v6": "KEPT_LOWER_EV"
+          },
+          {
+            "event": "USA vs Germany",
+            "market": "under35",
+            "odds": 1.8,
+            "prob_v5": 0.835,
+            "prob_v6": 0.7317,
+            "result": "WIN",
+            "verdict_v6": "KEPT_LOWER_EV"
+          },
+          {
+            "event": "Mexico vs Serbia",
+            "market": "under35",
+            "odds": 1.45,
+            "prob_v5": 0.921,
+            "prob_v6": 0.8056,
+            "result": "LOSS",
+            "verdict_v6": "KEPT_LOWER_EV"
+          }
+        ]
+      },
       "value_bets": {
-        "n_total": 94,
-        "n_v5_kept": 94,
-        "n_v6_kept": 60,
+        "n_total": 95,
+        "n_v5_kept": 95,
+        "n_v6_kept": 61,
         "n_skipped_by_v6": 34,
         "skipped_losses_avoided": 5,
         "skipped_wins_lost": 29,
         "units_saved_from_avoided_losses": 5.0,
         "units_lost_from_avoided_wins": -10.52,
         "net_units_impact": 15.52,
-        "v5_roi_pct": 13.14,
-        "v6_roi_pct": 11.38,
-        "roi_delta_pp": -1.75,
-        "v5_win_rate_pct": 76.6,
-        "v6_win_rate_pct": 71.7,
-        "v5_total_profit": 12.35,
-        "v6_total_profit": 6.83,
+        "v5_roi_pct": 11.95,
+        "v6_roi_pct": 9.56,
+        "roi_delta_pp": -2.39,
+        "v5_win_rate_pct": 75.8,
+        "v6_win_rate_pct": 70.5,
+        "v5_total_profit": 11.35,
+        "v6_total_profit": 5.83,
         "sample_bets": [
           {
             "event": "Morocco vs Norway",
@@ -543,9 +543,9 @@
             "market": "under25",
             "odds": 1.68,
             "prob_v5": 0.711,
-            "prob_v6": 0.7,
+            "prob_v6": 0.625,
             "result": "LOSS",
-            "verdict_v6": "KEPT"
+            "verdict_v6": "KEPT_LOWER_EV"
           }
         ]
       },
@@ -647,22 +647,22 @@
   },
   "in_sample": {
     "overall": {
-      "n_total": 1009,
-      "n_v5_kept": 1009,
-      "n_v6_kept": 524,
-      "n_skipped_by_v6": 485,
-      "skipped_losses_avoided": 158,
-      "skipped_wins_lost": 327,
-      "units_saved_from_avoided_losses": 158.0,
-      "units_lost_from_avoided_wins": -122.98,
-      "net_units_impact": 280.98,
-      "v5_roi_pct": 2.62,
-      "v6_roi_pct": 11.74,
-      "roi_delta_pp": 9.11,
-      "v5_win_rate_pct": 68.5,
-      "v6_win_rate_pct": 69.5,
-      "v5_total_profit": 26.48,
-      "v6_total_profit": 61.5
+      "n_total": 1010,
+      "n_v5_kept": 1010,
+      "n_v6_kept": 523,
+      "n_skipped_by_v6": 487,
+      "skipped_losses_avoided": 159,
+      "skipped_wins_lost": 328,
+      "units_saved_from_avoided_losses": 159.0,
+      "units_lost_from_avoided_wins": -123.7,
+      "net_units_impact": 282.7,
+      "v5_roi_pct": 2.52,
+      "v6_roi_pct": 11.62,
+      "roi_delta_pp": 9.1,
+      "v5_win_rate_pct": 68.4,
+      "v6_win_rate_pct": 69.4,
+      "v5_total_profit": 25.48,
+      "v6_total_profit": 60.78
     },
     "by_market": {
       "under35": {
@@ -995,31 +995,31 @@
         ]
       },
       "awayWin": {
-        "n_total": 13,
-        "n_v5_kept": 13,
-        "n_v6_kept": 11,
-        "n_skipped_by_v6": 2,
-        "skipped_losses_avoided": 2,
-        "skipped_wins_lost": 0,
-        "units_saved_from_avoided_losses": 2.0,
-        "units_lost_from_avoided_wins": 0,
-        "net_units_impact": 2.0,
-        "v5_roi_pct": 5.15,
-        "v6_roi_pct": 24.27,
-        "roi_delta_pp": 19.12,
-        "v5_win_rate_pct": 61.5,
-        "v6_win_rate_pct": 72.7,
-        "v5_total_profit": 0.67,
-        "v6_total_profit": 2.67,
+        "n_total": 14,
+        "n_v5_kept": 14,
+        "n_v6_kept": 10,
+        "n_skipped_by_v6": 4,
+        "skipped_losses_avoided": 3,
+        "skipped_wins_lost": 1,
+        "units_saved_from_avoided_losses": 3.0,
+        "units_lost_from_avoided_wins": -0.72,
+        "net_units_impact": 3.72,
+        "v5_roi_pct": -2.36,
+        "v6_roi_pct": 19.5,
+        "roi_delta_pp": 21.86,
+        "v5_win_rate_pct": 57.1,
+        "v6_win_rate_pct": 70.0,
+        "v5_total_profit": -0.33,
+        "v6_total_profit": 1.95,
         "sample_bets": [
           {
             "event": "Deportivo La Guaira vs Independiente Rivadavia",
             "market": "awayWin",
             "odds": 2.1,
             "prob_v5": 0.615,
-            "prob_v6": 0.6667,
+            "prob_v6": 0.5,
             "result": "WIN",
-            "verdict_v6": "KEPT"
+            "verdict_v6": "KEPT_LOWER_EV"
           },
           {
             "event": "Dalian Yingbo FC vs Chengdu Rongcheng",
@@ -1232,22 +1232,22 @@
         ]
       },
       "value_bets": {
-        "n_total": 249,
-        "n_v5_kept": 249,
-        "n_v6_kept": 135,
-        "n_skipped_by_v6": 114,
-        "skipped_losses_avoided": 46,
-        "skipped_wins_lost": 68,
-        "units_saved_from_avoided_losses": 46.0,
-        "units_lost_from_avoided_wins": -32.29,
-        "net_units_impact": 78.29,
-        "v5_roi_pct": 4.43,
-        "v6_roi_pct": 18.33,
-        "roi_delta_pp": 13.9,
-        "v5_win_rate_pct": 66.3,
-        "v6_win_rate_pct": 71.9,
-        "v5_total_profit": 11.03,
-        "v6_total_profit": 24.74,
+        "n_total": 250,
+        "n_v5_kept": 250,
+        "n_v6_kept": 134,
+        "n_skipped_by_v6": 116,
+        "skipped_losses_avoided": 47,
+        "skipped_wins_lost": 69,
+        "units_saved_from_avoided_losses": 47.0,
+        "units_lost_from_avoided_wins": -33.01,
+        "net_units_impact": 80.01,
+        "v5_roi_pct": 4.01,
+        "v6_roi_pct": 17.93,
+        "roi_delta_pp": 13.91,
+        "v5_win_rate_pct": 66.0,
+        "v6_win_rate_pct": 71.6,
+        "v5_total_profit": 10.03,
+        "v6_total_profit": 24.02,
         "sample_bets": [
           {
             "event": "Chengdu Rongcheng vs Shanghai Port",
@@ -4344,11 +4344,11 @@
       "win": 1,
       "profit_v5": 1.1,
       "actual_score": "2-4",
-      "prob_v6": 0.6667,
-      "ev_v6": 0.4,
+      "prob_v6": 0.5,
+      "ev_v6": 0.05,
       "v5_keeps": true,
       "v6_keeps": true,
-      "verdict_v6": "KEPT",
+      "verdict_v6": "KEPT_LOWER_EV",
       "profit_v6": 1.1,
       "calibrator_type": "isotonic"
     },
@@ -18924,12 +18924,12 @@
       "win": 1,
       "profit_v5": 0.72,
       "actual_score": "1-2",
-      "prob_v6": 0.6667,
-      "ev_v6": 0.1467,
+      "prob_v6": 0.5,
+      "ev_v6": -0.14,
       "v5_keeps": true,
-      "v6_keeps": true,
-      "verdict_v6": "KEPT",
-      "profit_v6": 0.72,
+      "v6_keeps": false,
+      "verdict_v6": "SKIPPED_BY_V6",
+      "profit_v6": 0.0,
       "calibrator_type": "isotonic"
     },
     {
@@ -25755,12 +25755,12 @@
       "win": 0,
       "profit_v5": -1.0,
       "actual_score": "1-0",
-      "prob_v6": 0.6667,
-      "ev_v6": 0.1,
+      "prob_v6": 0.5,
+      "ev_v6": -0.175,
       "v5_keeps": true,
-      "v6_keeps": true,
-      "verdict_v6": "KEPT",
-      "profit_v6": -1.0,
+      "v6_keeps": false,
+      "verdict_v6": "SKIPPED_BY_V6",
+      "profit_v6": 0.0,
       "calibrator_type": "isotonic"
     },
     {
@@ -28542,6 +28542,33 @@
       "v6_keeps": true,
       "verdict_v6": "KEPT",
       "profit_v6": 0.15,
+      "calibrator_type": "isotonic"
+    },
+    {
+      "event_id": 216373,
+      "home_team": "Bay FC",
+      "away_team": "North Carolina Courage",
+      "league": "NWSL",
+      "event_date": "2026-07-18T20:00:00Z",
+      "first_seen_at": "2026-07-18T07:54:40.609773+00:00",
+      "settled_at": "2026-07-18T22:54:21.428470+00:00",
+      "market": "awayWin",
+      "market_label": "Victorie deplasare",
+      "strategy": "value_bets",
+      "strategy_label": "Value Bets",
+      "odds": 2.15,
+      "prob_v5": 0.615,
+      "ev_v5": 0.3222499999999999,
+      "result": "LOSS",
+      "win": 0,
+      "profit_v5": -1.0,
+      "actual_score": "3-0",
+      "prob_v6": 0.5,
+      "ev_v6": 0.075,
+      "v5_keeps": true,
+      "v6_keeps": true,
+      "verdict_v6": "KEPT_LOWER_EV",
+      "profit_v6": -1.0,
       "calibrator_type": "isotonic"
     },
     {
