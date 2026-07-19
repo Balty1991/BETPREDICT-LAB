@@ -1,40 +1,45 @@
 {
-  "started_at": "2026-07-19T18:11:39.767068+00:00",
-  "finished_at": "2026-07-19T18:11:40.525985+00:00",
+  "started_at": "2026-07-19T19:18:37.244961+00:00",
+  "finished_at": "2026-07-19T19:18:57.406655+00:00",
   "has_api_key": true,
   "requests": [
     {
       "label": "events_live",
       "url": "https://sports.bzzoiro.com/api/v2/events/live/",
       "params": {},
-      "status": 200,
-      "elapsed_ms": 340
+      "status": null,
+      "elapsed_ms": 10084,
+      "error": "HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=10)"
     },
     {
-      "label": "live_stats_214526",
-      "url": "https://sports.bzzoiro.com/api/v2/events/214526/stats/",
+      "label": "backfill_event_8390",
+      "url": "https://sports.bzzoiro.com/api/v2/events/8390/",
       "params": {},
-      "status": 200,
-      "elapsed_ms": 252
-    },
-    {
-      "label": "live_incidents_214526",
-      "url": "https://sports.bzzoiro.com/api/v2/events/214526/incidents/",
-      "params": {},
-      "status": 200,
-      "elapsed_ms": 253
-    },
-    {
-      "label": "live_lineups_214526",
-      "url": "https://sports.bzzoiro.com/api/v2/events/214526/lineups/",
-      "params": {},
-      "status": 200,
-      "elapsed_ms": 373
+      "status": null,
+      "elapsed_ms": 10037,
+      "error": "HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=10)"
     }
   ],
-  "warnings": [],
+  "warnings": [
+    {
+      "message": "Request live eșuat",
+      "context": {
+        "label": "events_live",
+        "error": "HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=10)"
+      },
+      "time": "2026-07-19T19:18:47.329369+00:00"
+    },
+    {
+      "message": "Request live eșuat",
+      "context": {
+        "label": "backfill_event_8390",
+        "error": "HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=10)"
+      },
+      "time": "2026-07-19T19:18:57.404707+00:00"
+    }
+  ],
   "cache": {
     "reused": 0,
-    "refetched": 1
+    "refetched": 0
   }
 }
