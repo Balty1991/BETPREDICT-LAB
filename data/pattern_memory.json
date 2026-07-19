@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-07-18T23:01:53.345575+00:00",
+  "updated_at": "2026-07-19T00:08:36.860513+00:00",
   "source": "pattern_memory.py",
-  "n_journal": 1011,
-  "baseline_wr": 68.45,
+  "n_journal": 1012,
+  "baseline_wr": 68.38,
   "params": {
     "min_support": 15,
     "min_lift_pp": 8,
@@ -46,7 +46,7 @@
     "n_patterns": 16,
     "n_boosts": 8,
     "n_blocks": 8,
-    "n_signals_affected": 25
+    "n_signals_affected": 22
   },
   "patterns": [
     {
@@ -63,9 +63,27 @@
       "win_rate": 47.6,
       "baseline_wr": 68.4,
       "lift_pp": -20.8,
-      "p_value": 0.004,
+      "p_value": 0.0041,
       "modifier": -25,
       "direction": "block"
+    },
+    {
+      "id": "market=under35|bucket=1.20-1.40",
+      "keys": [
+        "market",
+        "bucket"
+      ],
+      "values": [
+        "under35",
+        "1.20-1.40"
+      ],
+      "support": 259,
+      "win_rate": 76.4,
+      "baseline_wr": 68.4,
+      "lift_pp": 8.1,
+      "p_value": 0.0032,
+      "modifier": 10,
+      "direction": "boost"
     },
     {
       "id": "league=MLS|bucket=1.40-1.65",
@@ -86,24 +104,6 @@
       "direction": "boost"
     },
     {
-      "id": "market=under35|bucket=1.20-1.40",
-      "keys": [
-        "market",
-        "bucket"
-      ],
-      "values": [
-        "under35",
-        "1.20-1.40"
-      ],
-      "support": 259,
-      "win_rate": 76.4,
-      "baseline_wr": 68.4,
-      "lift_pp": 8.0,
-      "p_value": 0.0034,
-      "modifier": 10,
-      "direction": "boost"
-    },
-    {
       "id": "league=Allsvenskan|bucket=1.20-1.40",
       "keys": [
         "league",
@@ -117,7 +117,7 @@
       "win_rate": 100.0,
       "baseline_wr": 68.4,
       "lift_pp": 31.6,
-      "p_value": 0.0034,
+      "p_value": 0.0033,
       "modifier": 30,
       "direction": "boost"
     },
@@ -134,8 +134,8 @@
       "support": 133,
       "win_rate": 78.9,
       "baseline_wr": 68.4,
-      "lift_pp": 10.5,
-      "p_value": 0.006,
+      "lift_pp": 10.6,
+      "p_value": 0.0057,
       "modifier": 13,
       "direction": "boost"
     },
@@ -152,8 +152,8 @@
       "support": 21,
       "win_rate": 42.9,
       "baseline_wr": 68.4,
-      "lift_pp": -25.6,
-      "p_value": 0.0134,
+      "lift_pp": -25.5,
+      "p_value": 0.0137,
       "modifier": -30,
       "direction": "block"
     },
@@ -171,7 +171,7 @@
       "win_rate": 42.1,
       "baseline_wr": 68.4,
       "lift_pp": -26.3,
-      "p_value": 0.0157,
+      "p_value": 0.016,
       "modifier": -30,
       "direction": "block"
     },
@@ -189,7 +189,7 @@
       "win_rate": 50.0,
       "baseline_wr": 68.4,
       "lift_pp": -18.4,
-      "p_value": 0.0161,
+      "p_value": 0.0164,
       "modifier": -22,
       "direction": "block"
     },
@@ -207,7 +207,7 @@
       "win_rate": 40.0,
       "baseline_wr": 68.4,
       "lift_pp": -28.4,
-      "p_value": 0.0215,
+      "p_value": 0.0218,
       "modifier": -30,
       "direction": "block"
     },
@@ -225,8 +225,8 @@
       "win_rate": 91.3,
       "baseline_wr": 68.4,
       "lift_pp": 22.9,
-      "p_value": 0.0107,
-      "modifier": 27,
+      "p_value": 0.0105,
+      "modifier": 28,
       "direction": "boost"
     },
     {
@@ -243,27 +243,9 @@
       "win_rate": 86.1,
       "baseline_wr": 68.4,
       "lift_pp": 17.7,
-      "p_value": 0.0134,
+      "p_value": 0.0131,
       "modifier": 21,
       "direction": "boost"
-    },
-    {
-      "id": "market=homeWin|bucket=1.95-2.40",
-      "keys": [
-        "market",
-        "bucket"
-      ],
-      "values": [
-        "homeWin",
-        "1.95-2.40"
-      ],
-      "support": 16,
-      "win_rate": 43.8,
-      "baseline_wr": 68.4,
-      "lift_pp": -24.7,
-      "p_value": 0.0355,
-      "modifier": -30,
-      "direction": "block"
     },
     {
       "id": "market=over25|dow=Sat",
@@ -279,8 +261,26 @@
       "win_rate": 47.8,
       "baseline_wr": 68.4,
       "lift_pp": -20.6,
-      "p_value": 0.0318,
+      "p_value": 0.0323,
       "modifier": -25,
+      "direction": "block"
+    },
+    {
+      "id": "market=homeWin|bucket=1.95-2.40",
+      "keys": [
+        "market",
+        "bucket"
+      ],
+      "values": [
+        "homeWin",
+        "1.95-2.40"
+      ],
+      "support": 16,
+      "win_rate": 43.8,
+      "baseline_wr": 68.4,
+      "lift_pp": -24.6,
+      "p_value": 0.036,
+      "modifier": -30,
       "direction": "block"
     },
     {
@@ -299,8 +299,8 @@
       "win_rate": 88.0,
       "baseline_wr": 68.4,
       "lift_pp": 19.6,
-      "p_value": 0.0231,
-      "modifier": 23,
+      "p_value": 0.0227,
+      "modifier": 24,
       "direction": "boost"
     },
     {
@@ -317,7 +317,7 @@
       "win_rate": 50.0,
       "baseline_wr": 68.4,
       "lift_pp": -18.4,
-      "p_value": 0.032,
+      "p_value": 0.0326,
       "modifier": -22,
       "direction": "block"
     },
@@ -334,8 +334,8 @@
       "support": 19,
       "win_rate": 89.5,
       "baseline_wr": 68.4,
-      "lift_pp": 21.0,
-      "p_value": 0.0343,
+      "lift_pp": 21.1,
+      "p_value": 0.0339,
       "modifier": 25,
       "direction": "boost"
     }
