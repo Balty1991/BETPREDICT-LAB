@@ -1,20 +1,180 @@
 {
-  "updated_at": "2026-07-19T22:55:51.055300+00:00",
+  "updated_at": "2026-07-19T23:29:07.734584+00:00",
   "source": "live_intelligence_v23",
   "endpoint": "/api/v2/events/live/",
   "params": {},
-  "count": 0,
+  "count": 1,
   "summary": {
-    "live_events": 0,
-    "enriched_events": 0,
-    "with_stats": 0,
-    "with_incidents": 0,
-    "with_lineups": 0,
+    "live_events": 1,
+    "enriched_events": 1,
+    "with_stats": 1,
+    "with_incidents": 1,
+    "with_lineups": 1,
     "strong_signals": 0,
     "reused_cache": 0,
-    "refetched": 0
+    "refetched": 1
   },
-  "events": [],
+  "events": [
+    {
+      "event_id": 216377,
+      "home_team": "Boston Legacy FC",
+      "away_team": "Washington Spirit",
+      "home_team_id": 3928,
+      "away_team_id": 3926,
+      "league_id": 72,
+      "league_name": null,
+      "event_date": "2026-07-19T23:00:00+00:00",
+      "status": "1st_half",
+      "period": "1T",
+      "current_minute": 11,
+      "home_score": 0,
+      "away_score": 0,
+      "last_updated": null,
+      "event": {
+        "id": 216377,
+        "league_id": 72,
+        "season_id": 1540,
+        "home_team_id": 3928,
+        "home_team": "Boston Legacy FC",
+        "away_team_id": 3926,
+        "away_team": "Washington Spirit",
+        "home_coach_id": 2051,
+        "away_coach_id": 2049,
+        "referee_id": null,
+        "venue_id": 1339,
+        "event_date": "2026-07-19T23:00:00+00:00",
+        "status": "1st_half",
+        "replaced_by": null,
+        "round_number": 1,
+        "round_name": "",
+        "group_name": null,
+        "period": "1T",
+        "current_minute": 11,
+        "home_score": 0,
+        "away_score": 0,
+        "home_score_ht": 0,
+        "away_score_ht": 0,
+        "penalty_shootout": null,
+        "extra_time_score": null,
+        "is_local_derby": false,
+        "is_neutral_ground": false,
+        "travel_distance_km": null,
+        "weather": {
+          "code": 51,
+          "description": null,
+          "wind_speed": 16.2,
+          "temperature_c": 17
+        },
+        "pitch_condition": null,
+        "attendance": null,
+        "live_websocket": true,
+        "websocket_plus": true,
+        "highlights": [],
+        "head_to_head": null,
+        "event_id": 216377,
+        "minute": 11,
+        "league_name": null,
+        "last_updated": null,
+        "image_assets": {
+          "home_team_logo": "https://sports.bzzoiro.com/img/team/3928/",
+          "away_team_logo": "https://sports.bzzoiro.com/img/team/3926/",
+          "league_logo": "https://sports.bzzoiro.com/img/league/72/"
+        },
+        "_backfilled": true
+      },
+      "phase": "early",
+      "pressure_side": "balanced",
+      "pressure_score": 0.0,
+      "stats_summary": {
+        "xg_home": null,
+        "xg_away": null,
+        "shots_on_target_home": null,
+        "shots_on_target_away": null,
+        "shots_home": 1.0,
+        "shots_away": null,
+        "possession_home": 40.0,
+        "possession_away": 60.0,
+        "dangerous_attacks_home": null,
+        "dangerous_attacks_away": null,
+        "momentum_points": 11,
+        "xg_per_minute_points": 0,
+        "shotmap_count": 1,
+        "shotmap": [
+          {
+            "gm": {
+              "x": 0,
+              "y": 61.7,
+              "z": 19.4
+            },
+            "xg": null,
+            "gml": "left",
+            "min": 4,
+            "pos": {
+              "x": 12.2,
+              "y": 47.9,
+              "z": 0
+            },
+            "sit": "set-piece",
+            "body": "head",
+            "home": true,
+            "type": "miss",
+            "xgot": null,
+            "player_id": 65274
+          }
+        ]
+      },
+      "shotmap": [
+        {
+          "gm": {
+            "x": 0,
+            "y": 61.7,
+            "z": 19.4
+          },
+          "xg": null,
+          "gml": "left",
+          "min": 4,
+          "pos": {
+            "x": 12.2,
+            "y": 47.9,
+            "z": 0
+          },
+          "sit": "set-piece",
+          "body": "head",
+          "home": true,
+          "type": "miss",
+          "xgot": null,
+          "player_id": 65274
+        }
+      ],
+      "incidents_count": 1,
+      "recent_incidents": [
+        {
+          "text": "First half",
+          "type": "period",
+          "minute": 45,
+          "is_live": true,
+          "away_score": 0,
+          "home_score": 0
+        }
+      ],
+      "lineup_status": "confirmed",
+      "resources": {
+        "stats": 1,
+        "incidents": 1,
+        "lineups": 1
+      },
+      "live_signals": [
+        {
+          "type": "lineups",
+          "level": "info",
+          "label": "lineup confirmed",
+          "note": "Status lineup disponibil pentru context live."
+        }
+      ],
+      "coverage_score": 3,
+      "cache_status": "refetched"
+    }
+  ],
   "notes": [
     "Live Intelligence folosește HTTP live window; WebSocket push rămâne add-on separat.",
     "Dacă last_updated nu s-a schimbat, enrichment-ul vechi este refolosit pentru a nu lovi inutil stats/incidents/lineups.",
