@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-07-21T19:35:10.701405+00:00",
+  "updated_at": "2026-07-21T21:18:27.996270+00:00",
   "source": "pattern_memory.py",
-  "n_journal": 1068,
-  "baseline_wr": 68.54,
+  "n_journal": 1076,
+  "baseline_wr": 68.4,
   "params": {
     "min_support": 15,
     "min_lift_pp": 8,
@@ -46,7 +46,7 @@
     "n_patterns": 16,
     "n_boosts": 8,
     "n_blocks": 8,
-    "n_signals_affected": 12
+    "n_signals_affected": 13
   },
   "patterns": [
     {
@@ -61,9 +61,9 @@
       ],
       "support": 275,
       "win_rate": 77.1,
-      "baseline_wr": 68.5,
-      "lift_pp": 8.6,
-      "p_value": 0.0014,
+      "baseline_wr": 68.4,
+      "lift_pp": 8.7,
+      "p_value": 0.0012,
       "modifier": 10,
       "direction": "boost"
     },
@@ -79,9 +79,9 @@
       ],
       "support": 42,
       "win_rate": 47.6,
-      "baseline_wr": 68.5,
-      "lift_pp": -20.9,
-      "p_value": 0.0039,
+      "baseline_wr": 68.4,
+      "lift_pp": -20.8,
+      "p_value": 0.0041,
       "modifier": -25,
       "direction": "block"
     },
@@ -97,8 +97,8 @@
       ],
       "support": 17,
       "win_rate": 100.0,
-      "baseline_wr": 68.5,
-      "lift_pp": 31.5,
+      "baseline_wr": 68.4,
+      "lift_pp": 31.6,
       "p_value": 0.0016,
       "modifier": 30,
       "direction": "boost"
@@ -115,11 +115,29 @@
       ],
       "support": 15,
       "win_rate": 100.0,
-      "baseline_wr": 68.5,
-      "lift_pp": 31.5,
-      "p_value": 0.0035,
+      "baseline_wr": 68.4,
+      "lift_pp": 31.6,
+      "p_value": 0.0034,
       "modifier": 30,
       "direction": "boost"
+    },
+    {
+      "id": "market=over25|bucket=1.65-1.95",
+      "keys": [
+        "market",
+        "bucket"
+      ],
+      "values": [
+        "over25",
+        "1.65-1.95"
+      ],
+      "support": 30,
+      "win_rate": 46.7,
+      "baseline_wr": 68.4,
+      "lift_pp": -21.7,
+      "p_value": 0.011,
+      "modifier": -26,
+      "direction": "block"
     },
     {
       "id": "market=btts|dow=Sat",
@@ -133,9 +151,9 @@
       ],
       "support": 21,
       "win_rate": 42.9,
-      "baseline_wr": 68.5,
-      "lift_pp": -25.7,
-      "p_value": 0.0131,
+      "baseline_wr": 68.4,
+      "lift_pp": -25.5,
+      "p_value": 0.0136,
       "modifier": -30,
       "direction": "block"
     },
@@ -151,45 +169,9 @@
       ],
       "support": 19,
       "win_rate": 42.1,
-      "baseline_wr": 68.5,
-      "lift_pp": -26.4,
-      "p_value": 0.0154,
-      "modifier": -30,
-      "direction": "block"
-    },
-    {
-      "id": "league=Chinese Super League|bucket=1.40-1.65",
-      "keys": [
-        "league",
-        "bucket"
-      ],
-      "values": [
-        "Chinese Super League",
-        "1.40-1.65"
-      ],
-      "support": 36,
-      "win_rate": 50.0,
-      "baseline_wr": 68.5,
-      "lift_pp": -18.5,
-      "p_value": 0.0156,
-      "modifier": -22,
-      "direction": "block"
-    },
-    {
-      "id": "league=J1 League|market=under35",
-      "keys": [
-        "league",
-        "market"
-      ],
-      "values": [
-        "J1 League",
-        "under35"
-      ],
-      "support": 15,
-      "win_rate": 40.0,
-      "baseline_wr": 68.5,
-      "lift_pp": -28.5,
-      "p_value": 0.021,
+      "baseline_wr": 68.4,
+      "lift_pp": -26.3,
+      "p_value": 0.0159,
       "modifier": -30,
       "direction": "block"
     },
@@ -205,11 +187,47 @@
       ],
       "support": 158,
       "win_rate": 77.2,
-      "baseline_wr": 68.5,
-      "lift_pp": 8.7,
-      "p_value": 0.0118,
-      "modifier": 10,
+      "baseline_wr": 68.4,
+      "lift_pp": 8.8,
+      "p_value": 0.0108,
+      "modifier": 11,
       "direction": "boost"
+    },
+    {
+      "id": "league=Chinese Super League|bucket=1.40-1.65",
+      "keys": [
+        "league",
+        "bucket"
+      ],
+      "values": [
+        "Chinese Super League",
+        "1.40-1.65"
+      ],
+      "support": 36,
+      "win_rate": 50.0,
+      "baseline_wr": 68.4,
+      "lift_pp": -18.4,
+      "p_value": 0.0163,
+      "modifier": -22,
+      "direction": "block"
+    },
+    {
+      "id": "league=J1 League|market=under35",
+      "keys": [
+        "league",
+        "market"
+      ],
+      "values": [
+        "J1 League",
+        "under35"
+      ],
+      "support": 15,
+      "win_rate": 40.0,
+      "baseline_wr": 68.4,
+      "lift_pp": -28.4,
+      "p_value": 0.0217,
+      "modifier": -30,
+      "direction": "block"
     },
     {
       "id": "league=Brasileirão Serie B|market=under35",
@@ -223,29 +241,11 @@
       ],
       "support": 23,
       "win_rate": 91.3,
-      "baseline_wr": 68.5,
-      "lift_pp": 22.8,
-      "p_value": 0.0109,
+      "baseline_wr": 68.4,
+      "lift_pp": 22.9,
+      "p_value": 0.0106,
       "modifier": 27,
       "direction": "boost"
-    },
-    {
-      "id": "market=over25|bucket=1.65-1.95",
-      "keys": [
-        "market",
-        "bucket"
-      ],
-      "values": [
-        "over25",
-        "1.65-1.95"
-      ],
-      "support": 29,
-      "win_rate": 48.3,
-      "baseline_wr": 68.5,
-      "lift_pp": -20.3,
-      "p_value": 0.0183,
-      "modifier": -24,
-      "direction": "block"
     },
     {
       "id": "market=under35|dow=Mon",
@@ -257,31 +257,13 @@
         "under35",
         "Mon"
       ],
-      "support": 44,
-      "win_rate": 84.1,
-      "baseline_wr": 68.5,
-      "lift_pp": 15.6,
-      "p_value": 0.0157,
+      "support": 45,
+      "win_rate": 84.4,
+      "baseline_wr": 68.4,
+      "lift_pp": 16.0,
+      "p_value": 0.012,
       "modifier": 19,
       "direction": "boost"
-    },
-    {
-      "id": "market=over25|dow=Sat",
-      "keys": [
-        "market",
-        "dow"
-      ],
-      "values": [
-        "over25",
-        "Sat"
-      ],
-      "support": 23,
-      "win_rate": 47.8,
-      "baseline_wr": 68.5,
-      "lift_pp": -20.7,
-      "p_value": 0.0311,
-      "modifier": -25,
-      "direction": "block"
     },
     {
       "id": "market=homeWin|bucket=1.95-2.40",
@@ -295,10 +277,28 @@
       ],
       "support": 16,
       "win_rate": 43.8,
-      "baseline_wr": 68.5,
-      "lift_pp": -24.8,
-      "p_value": 0.0348,
+      "baseline_wr": 68.4,
+      "lift_pp": -24.7,
+      "p_value": 0.0358,
       "modifier": -30,
+      "direction": "block"
+    },
+    {
+      "id": "market=over25|dow=Sat",
+      "keys": [
+        "market",
+        "dow"
+      ],
+      "values": [
+        "over25",
+        "Sat"
+      ],
+      "support": 23,
+      "win_rate": 47.8,
+      "baseline_wr": 68.4,
+      "lift_pp": -20.6,
+      "p_value": 0.0322,
+      "modifier": -25,
       "direction": "block"
     },
     {
@@ -315,10 +315,10 @@
       ],
       "support": 25,
       "win_rate": 88.0,
-      "baseline_wr": 68.5,
-      "lift_pp": 19.5,
-      "p_value": 0.0236,
-      "modifier": 23,
+      "baseline_wr": 68.4,
+      "lift_pp": 19.6,
+      "p_value": 0.0228,
+      "modifier": 24,
       "direction": "boost"
     },
     {
@@ -333,9 +333,9 @@
       ],
       "support": 19,
       "win_rate": 89.5,
-      "baseline_wr": 68.5,
-      "lift_pp": 20.9,
-      "p_value": 0.0349,
+      "baseline_wr": 68.4,
+      "lift_pp": 21.1,
+      "p_value": 0.034,
       "modifier": 25,
       "direction": "boost"
     }
