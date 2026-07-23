@@ -1,33 +1,33 @@
 {
-  "updated_at": "2026-07-23T02:57:48.700188+00:00",
+  "updated_at": "2026-07-23T06:07:46.402586+00:00",
   "model_version": "v6.0-calibration",
   "source": "calibration_engine_v6",
-  "n_total_settled": 1104,
+  "n_total_settled": 1106,
   "overall": {
     "n_markets_calibrated": 8,
     "n_markets_identity": 0,
-    "avg_brier_pre": 0.2352,
-    "avg_brier_post": 0.1976,
+    "avg_brier_pre": 0.2339,
+    "avg_brier_post": 0.1952,
     "biggest_bias_market": "homeWin",
     "biggest_bias_value_pp": 16.4
   },
   "markets": {
     "under35": {
       "type": "isotonic",
-      "n_samples": 687,
+      "n_samples": 688,
       "pre": {
-        "brier": 0.2144,
-        "ece": 0.1011,
-        "avg_predicted": 0.8173,
-        "avg_actual": 0.7162,
-        "bias": 0.1011
+        "brier": 0.2141,
+        "ece": 0.1008,
+        "avg_predicted": 0.8174,
+        "avg_actual": 0.7166,
+        "bias": 0.1008
       },
       "post": {
-        "brier": 0.1997,
+        "brier": 0.1995,
         "ece": 0.0
       },
       "improvement": {
-        "brier_delta": 0.0148,
+        "brier_delta": 0.0147,
         "improved": true
       },
       "calibration_curve": [
@@ -107,10 +107,10 @@
           "bin": 9,
           "range_lo": 0.8,
           "range_hi": 0.9,
-          "n": 302,
-          "predicted_avg": 0.8415,
-          "actual_avg": 0.7053,
-          "gap": 0.1362
+          "n": 303,
+          "predicted_avg": 0.8416,
+          "actual_avg": 0.7063,
+          "gap": 0.1353
         },
         {
           "bin": 10,
@@ -235,21 +235,21 @@
       ]
     },
     "draw": {
-      "type": "shift",
-      "n_samples": 9,
+      "type": "isotonic",
+      "n_samples": 10,
       "pre": {
-        "brier": 0.1812,
-        "ece": 0.041,
-        "avg_predicted": 0.2632,
-        "avg_actual": 0.2222,
-        "bias": 0.041
+        "brier": 0.171,
+        "ece": 0.0651,
+        "avg_predicted": 0.2651,
+        "avg_actual": 0.2,
+        "bias": 0.0651
       },
       "post": {
-        "brier": 0.1795,
+        "brier": 0.16,
         "ece": 0.0
       },
       "improvement": {
-        "brier_delta": 0.0017,
+        "brier_delta": 0.011,
         "improved": true
       },
       "calibration_curve": [
@@ -275,10 +275,10 @@
           "bin": 3,
           "range_lo": 0.2,
           "range_hi": 0.3,
-          "n": 9,
-          "predicted_avg": 0.2632,
-          "actual_avg": 0.2222,
-          "gap": 0.041
+          "n": 10,
+          "predicted_avg": 0.2651,
+          "actual_avg": 0.2,
+          "gap": 0.0651
         },
         {
           "bin": 4,
@@ -343,8 +343,7 @@
           "actual_avg": null,
           "gap": null
         }
-      ],
-      "shift_applied": -0.041
+      ]
     },
     "btts": {
       "type": "isotonic",
