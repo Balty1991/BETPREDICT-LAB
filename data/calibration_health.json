@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-22T23:21:12.679716+00:00",
+  "updated_at": "2026-07-23T02:57:48.841877+00:00",
   "source": "calibration_health.py",
   "thresholds": {
     "healthy_ece": 0.05,
@@ -17,6 +17,45 @@
     "healthy_share": 0.75
   },
   "per_market": {
+    "under35": {
+      "status": "HEALTHY",
+      "reason": "OK",
+      "n": 687,
+      "type": "isotonic",
+      "ece_pre": 0.1011,
+      "ece_post": 0.0,
+      "brier_pre": 0.2144,
+      "brier_post": 0.1997,
+      "bias_pp": null,
+      "experimental": false,
+      "label": "Under 3.5"
+    },
+    "over25": {
+      "status": "HEALTHY",
+      "reason": "OK",
+      "n": 92,
+      "type": "isotonic",
+      "ece_pre": 0.1372,
+      "ece_post": 0.0009,
+      "brier_pre": 0.2543,
+      "brier_post": 0.216,
+      "bias_pp": null,
+      "experimental": false,
+      "label": "Over 2.5"
+    },
+    "draw": {
+      "status": "NO_DATA",
+      "reason": "sample n=9 < 10",
+      "n": 9,
+      "type": "shift",
+      "ece_pre": 0.041,
+      "ece_post": 0.0,
+      "brier_pre": 0.1812,
+      "brier_post": 0.1795,
+      "bias_pp": null,
+      "experimental": true,
+      "label": "Draw"
+    },
     "btts": {
       "status": "HEALTHY",
       "reason": "OK",
@@ -30,19 +69,6 @@
       "experimental": false,
       "label": "BTTS"
     },
-    "over25": {
-      "status": "HEALTHY",
-      "reason": "OK",
-      "n": 91,
-      "type": "isotonic",
-      "ece_pre": 0.141,
-      "ece_post": 0.0009,
-      "brier_pre": 0.2566,
-      "brier_post": 0.2172,
-      "bias_pp": null,
-      "experimental": false,
-      "label": "Over 2.5"
-    },
     "over15": {
       "status": "HEALTHY",
       "reason": "OK",
@@ -55,32 +81,6 @@
       "bias_pp": null,
       "experimental": false,
       "label": "Over 1.5"
-    },
-    "under35": {
-      "status": "HEALTHY",
-      "reason": "OK",
-      "n": 671,
-      "type": "isotonic",
-      "ece_pre": 0.0978,
-      "ece_post": 0.0,
-      "brier_pre": 0.2126,
-      "brier_post": 0.1982,
-      "bias_pp": null,
-      "experimental": false,
-      "label": "Under 3.5"
-    },
-    "draw": {
-      "status": "NO_DATA",
-      "reason": "sample n=7 < 10",
-      "n": 7,
-      "type": "shift",
-      "ece_pre": 0.0234,
-      "ece_post": 0.0,
-      "brier_pre": 0.2126,
-      "brier_post": 0.212,
-      "bias_pp": null,
-      "experimental": true,
-      "label": "Draw"
     },
     "awayWin": {
       "status": "DRIFT",
