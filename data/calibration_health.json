@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-24T17:52:00.446239+00:00",
+  "updated_at": "2026-07-24T19:35:11.390487+00:00",
   "source": "calibration_health.py",
   "thresholds": {
     "healthy_ece": 0.05,
@@ -20,12 +20,12 @@
     "under35": {
       "status": "HEALTHY",
       "reason": "OK",
-      "n": 708,
+      "n": 710,
       "type": "isotonic",
-      "ece_pre": 0.103,
+      "ece_pre": 0.1024,
       "ece_post": 0.0,
-      "brier_pre": 0.216,
-      "brier_post": 0.2008,
+      "brier_pre": 0.2154,
+      "brier_post": 0.2005,
       "bias_pp": null,
       "experimental": false,
       "label": "Under 3.5"
@@ -56,6 +56,19 @@
       "experimental": false,
       "label": "BTTS"
     },
+    "draw": {
+      "status": "DRIFT",
+      "reason": "sample n=11 < 20",
+      "n": 11,
+      "type": "isotonic",
+      "ece_pre": 0.0831,
+      "ece_post": 0.0,
+      "brier_pre": 0.1617,
+      "brier_post": 0.1488,
+      "bias_pp": null,
+      "experimental": false,
+      "label": "Draw"
+    },
     "over15": {
       "status": "HEALTHY",
       "reason": "OK",
@@ -68,19 +81,6 @@
       "bias_pp": null,
       "experimental": false,
       "label": "Over 1.5"
-    },
-    "draw": {
-      "status": "DRIFT",
-      "reason": "sample n=10 < 20",
-      "n": 10,
-      "type": "isotonic",
-      "ece_pre": 0.0651,
-      "ece_post": 0.0,
-      "brier_pre": 0.171,
-      "brier_post": 0.16,
-      "bias_pp": null,
-      "experimental": false,
-      "label": "Draw"
     },
     "awayWin": {
       "status": "DRIFT",
