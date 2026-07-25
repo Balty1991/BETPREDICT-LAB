@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-25T19:33:46.868585+00:00",
+  "updated_at": "2026-07-25T21:03:59.862754+00:00",
   "model_version": "v6.0-healthcheck",
   "source": "v6_healthcheck",
   "overall": {
@@ -15,8 +15,8 @@
       "layer": "ml_ensemble",
       "issues": [],
       "metrics": {
-        "n_matches": 169,
-        "n_training_samples": 1341,
+        "n_matches": 171,
+        "n_training_samples": 1136,
         "age_hours": 0.0,
         "model_pkl_exists": true,
         "markets_trained": [
@@ -28,7 +28,7 @@
           "over25",
           "under35"
         ],
-        "avg_auc": 0.567
+        "avg_auc": 0.566
       }
     },
     "calibration": {
@@ -38,12 +38,12 @@
       "metrics": {
         "n_calibrators_active": 8,
         "n_calibrators_identity": 0,
-        "n_total_settled": 1177,
+        "n_total_settled": 1182,
         "age_hours": 0.0,
         "pkl_exists": true,
         "biggest_bias_market": "homeWin",
         "biggest_bias_pp": 16.4,
-        "brier_improvement_pct": 17.2
+        "brier_improvement_pct": 17.1
       }
     },
     "adaptive_thresholds": {
@@ -51,9 +51,9 @@
       "layer": "adaptive_thresholds",
       "issues": [],
       "metrics": {
-        "n_settled_total": 1177,
-        "overall_roi_pct": 1.7,
-        "overall_win_rate_pct": 68.1,
+        "n_settled_total": 1182,
+        "overall_roi_pct": 1.8,
+        "overall_win_rate_pct": 68.2,
         "n_markets_with_overrides": 8,
         "blacklisted_markets": [],
         "best_market": "under35",
@@ -66,16 +66,16 @@
       "layer": "consensus",
       "issues": [],
       "metrics": {
-        "n_matches": 169,
-        "avg_consensus_score": 0.911,
+        "n_matches": 171,
+        "avg_consensus_score": 0.915,
         "tier_distribution": {
-          "total": 162,
-          "partial": 7,
+          "total": 167,
+          "partial": 4,
           "divergent": 0,
           "contradictoriu": 0
         },
         "age_hours": 0.0,
-        "pct_total_consensus": 95.9
+        "pct_total_consensus": 97.7
       }
     },
     "signals_v6": {
@@ -86,15 +86,15 @@
       ],
       "metrics": {
         "n_signals": 8,
-        "n_upgraded": 1,
-        "n_downgraded": 3,
+        "n_upgraded": 0,
+        "n_downgraded": 4,
         "n_adjusted": 2,
         "n_unchanged": 2,
         "n_aplus": 0,
         "n_a": 0,
         "calibrators_applied": [
-          "under35",
           "over25",
+          "under35",
           "btts",
           "draw",
           "over15",
