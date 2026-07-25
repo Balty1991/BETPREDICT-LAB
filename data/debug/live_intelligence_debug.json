@@ -1,43 +1,65 @@
 {
-  "updated_at": "2026-07-25T11:09:55.886806+00:00",
+  "updated_at": "2026-07-25T11:49:13.340034+00:00",
   "limit": 18,
   "params": {},
   "summary": {
-    "live_events": 1,
-    "enriched_events": 1,
-    "with_stats": 1,
-    "with_incidents": 1,
-    "with_lineups": 1,
+    "live_events": 2,
+    "enriched_events": 2,
+    "with_stats": 2,
+    "with_incidents": 2,
+    "with_lineups": 2,
     "strong_signals": 0,
     "reused_cache": 0,
-    "refetched": 1
+    "refetched": 2
   },
   "events": [
     {
-      "event_id": 205837,
-      "score": "0-1",
-      "minute": 81,
-      "last_updated": "2026-07-25T11:08:56Z",
+      "event_id": 205838,
+      "score": "0-0",
+      "minute": 12,
+      "last_updated": "2026-07-25T11:48:03Z",
       "cache_status": "refetched",
-      "pressure_side": "balanced",
-      "pressure_score": 2.2,
+      "pressure_side": "home",
+      "pressure_score": 28.3,
       "resources": {
         "stats": 1,
-        "incidents": 16,
+        "incidents": 1,
         "lineups": 1
       },
       "signals": [
         {
-          "type": "goals_pressure",
+          "type": "momentum",
           "level": "medium",
-          "label": "xG peste scor",
-          "note": "xG total 1.91 la scor 0-1; meci cu potențial de gol suplimentar."
+          "label": "presiune acasă",
+          "note": "Momentum home: xG 0.56-0.00, SOT 1-0."
         },
         {
-          "type": "late_game",
-          "level": "watch",
-          "label": "final strâns",
-          "note": "Minut 81, diferență mică de scor; volatilitate live crescută."
+          "type": "lineups",
+          "level": "info",
+          "label": "lineup confirmed",
+          "note": "Status lineup disponibil pentru context live."
+        }
+      ]
+    },
+    {
+      "event_id": 205839,
+      "score": "0-0",
+      "minute": 12,
+      "last_updated": "2026-07-25T11:48:07Z",
+      "cache_status": "refetched",
+      "pressure_side": "home",
+      "pressure_score": 28.7,
+      "resources": {
+        "stats": 1,
+        "incidents": 1,
+        "lineups": 1
+      },
+      "signals": [
+        {
+          "type": "momentum",
+          "level": "medium",
+          "label": "presiune acasă",
+          "note": "Momentum home: xG 0.57-0.00, SOT 1-0."
         },
         {
           "type": "lineups",
@@ -54,28 +76,49 @@
       "url": "https://sports.bzzoiro.com/api/v2/events/live/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 259
+      "elapsed_ms": 326
     },
     {
-      "label": "live_lineups_205837",
-      "url": "https://sports.bzzoiro.com/api/v2/events/205837/lineups/",
+      "label": "live_stats_205839",
+      "url": "https://sports.bzzoiro.com/api/v2/events/205839/stats/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 214
+      "elapsed_ms": 261
     },
     {
-      "label": "live_incidents_205837",
-      "url": "https://sports.bzzoiro.com/api/v2/events/205837/incidents/",
+      "label": "live_stats_205838",
+      "url": "https://sports.bzzoiro.com/api/v2/events/205838/stats/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 220
+      "elapsed_ms": 277
     },
     {
-      "label": "live_stats_205837",
-      "url": "https://sports.bzzoiro.com/api/v2/events/205837/stats/",
+      "label": "live_incidents_205838",
+      "url": "https://sports.bzzoiro.com/api/v2/events/205838/incidents/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 239
+      "elapsed_ms": 277
+    },
+    {
+      "label": "live_incidents_205839",
+      "url": "https://sports.bzzoiro.com/api/v2/events/205839/incidents/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 280
+    },
+    {
+      "label": "live_lineups_205838",
+      "url": "https://sports.bzzoiro.com/api/v2/events/205838/lineups/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 288
+    },
+    {
+      "label": "live_lineups_205839",
+      "url": "https://sports.bzzoiro.com/api/v2/events/205839/lineups/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 287
     }
   ],
   "warnings": []
