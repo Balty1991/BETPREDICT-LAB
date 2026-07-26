@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-07-26T06:07:38.628531+00:00",
+  "updated_at": "2026-07-26T07:44:16.181760+00:00",
   "model_version": "v6.0-healthcheck",
   "source": "v6_healthcheck",
   "overall": {
-    "status": "GREEN",
-    "message": "Toate layerele functionale",
-    "n_green": 5,
-    "n_yellow": 0,
+    "status": "YELLOW",
+    "message": "Warnings pe: signals_v6",
+    "n_green": 4,
+    "n_yellow": 1,
     "n_red": 0
   },
   "layers": {
@@ -16,7 +16,7 @@
       "issues": [],
       "metrics": {
         "n_matches": 195,
-        "n_training_samples": 1203,
+        "n_training_samples": 1210,
         "age_hours": 0.0,
         "model_pkl_exists": true,
         "markets_trained": [
@@ -38,12 +38,12 @@
       "metrics": {
         "n_calibrators_active": 8,
         "n_calibrators_identity": 0,
-        "n_total_settled": 1203,
+        "n_total_settled": 1205,
         "age_hours": 0.0,
         "pkl_exists": true,
         "biggest_bias_market": "over25",
-        "biggest_bias_pp": 17.6,
-        "brier_improvement_pct": 17.7
+        "biggest_bias_pp": 18.1,
+        "brier_improvement_pct": 17.8
       }
     },
     "adaptive_thresholds": {
@@ -51,8 +51,8 @@
       "layer": "adaptive_thresholds",
       "issues": [],
       "metrics": {
-        "n_settled_total": 1203,
-        "overall_roi_pct": 1.2,
+        "n_settled_total": 1205,
+        "overall_roi_pct": 1.1,
         "overall_win_rate_pct": 67.7,
         "n_markets_with_overrides": 8,
         "blacklisted_markets": [],
@@ -67,7 +67,7 @@
       "issues": [],
       "metrics": {
         "n_matches": 195,
-        "avg_consensus_score": 0.915,
+        "avg_consensus_score": 0.916,
         "tier_distribution": {
           "total": 189,
           "partial": 6,
@@ -79,13 +79,15 @@
       }
     },
     "signals_v6": {
-      "status": "GREEN",
+      "status": "YELLOW",
       "layer": "signals_v6",
-      "issues": [],
+      "issues": [
+        "Putine semnale augmentate: 3"
+      ],
       "metrics": {
-        "n_signals": 10,
+        "n_signals": 3,
         "n_upgraded": 0,
-        "n_downgraded": 9,
+        "n_downgraded": 2,
         "n_adjusted": 0,
         "n_unchanged": 1,
         "n_aplus": 0,
