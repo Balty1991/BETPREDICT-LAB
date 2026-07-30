@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-07-30T20:34:32.487103+00:00",
+  "updated_at": "2026-07-30T21:30:25.565880+00:00",
   "source": "live_intelligence_v23",
   "endpoint": "/api/v2/events/live/",
   "params": {},
-  "count": 3,
+  "count": 1,
   "summary": {
-    "live_events": 3,
-    "enriched_events": 3,
-    "with_stats": 3,
-    "with_incidents": 3,
-    "with_lineups": 3,
-    "strong_signals": 1,
+    "live_events": 1,
+    "enriched_events": 1,
+    "with_stats": 1,
+    "with_incidents": 1,
+    "with_lineups": 1,
+    "strong_signals": 0,
     "reused_cache": 0,
-    "refetched": 3
+    "refetched": 1
   },
   "events": [
     {
@@ -24,11 +24,11 @@
       "league_id": 81,
       "league_name": null,
       "event_date": "2026-07-30T20:30:00+00:00",
-      "status": "1st_half",
-      "period": "1T",
-      "current_minute": 2,
+      "status": "halftime",
+      "period": "HT",
+      "current_minute": 45,
       "home_score": 0,
-      "away_score": 1,
+      "away_score": 2,
       "last_updated": null,
       "event": {
         "id": 220403,
@@ -43,17 +43,17 @@
         "referee_id": null,
         "venue_id": null,
         "event_date": "2026-07-30T20:30:00+00:00",
-        "status": "1st_half",
+        "status": "halftime",
         "replaced_by": null,
         "round_number": 1,
         "round_name": "Round 1",
         "group_name": null,
-        "period": "1T",
-        "current_minute": 2,
+        "period": "HT",
+        "current_minute": 45,
         "home_score": 0,
-        "away_score": 1,
+        "away_score": 2,
         "home_score_ht": 0,
-        "away_score_ht": 1,
+        "away_score_ht": 2,
         "penalty_shootout": null,
         "extra_time_score": null,
         "is_local_derby": false,
@@ -90,7 +90,7 @@
           ]
         },
         "event_id": 220403,
-        "minute": 2,
+        "minute": 45,
         "league_name": null,
         "last_updated": null,
         "image_assets": {
@@ -100,7 +100,7 @@
         },
         "_backfilled": true
       },
-      "phase": "early",
+      "phase": "half-time",
       "pressure_side": "balanced",
       "pressure_score": 0.0,
       "stats_summary": {
@@ -120,23 +120,52 @@
         "shotmap": []
       },
       "shotmap": [],
-      "incidents_count": 2,
+      "incidents_count": 5,
       "recent_incidents": [
         {
-          "text": "First half",
+          "text": "HT",
           "type": "period",
           "minute": 45,
-          "is_live": true,
-          "away_score": 1,
+          "is_live": false,
+          "away_score": 2,
           "home_score": 0
+        },
+        {
+          "type": "goal",
+          "minute": 41,
+          "player": "J. D. Cuesta",
+          "is_home": false,
+          "goal_type": "regular",
+          "player_id": 74626,
+          "added_time": null,
+          "away_score": 2,
+          "home_score": 0
+        },
+        {
+          "type": "card",
+          "minute": 34,
+          "player": "Unknown",
+          "is_home": true,
+          "card_type": "yellow",
+          "player_id": null,
+          "added_time": null
+        },
+        {
+          "type": "card",
+          "minute": 19,
+          "player": "Unknown",
+          "is_home": true,
+          "card_type": "yellow",
+          "player_id": null,
+          "added_time": null
         },
         {
           "type": "goal",
           "minute": 2,
-          "player": "Unknown",
+          "player": "E. Torres",
           "is_home": false,
           "goal_type": "regular",
-          "player_id": null,
+          "player_id": 17949,
           "added_time": null,
           "away_score": 1,
           "home_score": 0
@@ -145,298 +174,10 @@
       "lineup_status": "confirmed",
       "resources": {
         "stats": 1,
-        "incidents": 2,
+        "incidents": 5,
         "lineups": 1
       },
       "live_signals": [
-        {
-          "type": "lineups",
-          "level": "info",
-          "label": "lineup confirmed",
-          "note": "Status lineup disponibil pentru context live."
-        }
-      ],
-      "coverage_score": 2,
-      "cache_status": "refetched"
-    },
-    {
-      "event_id": 210795,
-      "home_team": "Benfica",
-      "away_team": "FC St. Gallen 1879",
-      "home_team_id": 37,
-      "away_team_id": 248,
-      "league_id": 8,
-      "league_name": "Europa League",
-      "event_date": "2026-07-30T19:00:00Z",
-      "status": "inprogress",
-      "period": "2nd_half",
-      "current_minute": 74,
-      "home_score": 4,
-      "away_score": 0,
-      "last_updated": "2026-07-30T20:33:12Z",
-      "event": {
-        "id": 210795,
-        "league_id": 8,
-        "league_name": "Europa League",
-        "home_team_id": 37,
-        "home_team": "Benfica",
-        "away_team_id": 248,
-        "away_team": "FC St. Gallen 1879",
-        "event_date": "2026-07-30T19:00:00Z",
-        "status": "inprogress",
-        "period": "2nd_half",
-        "current_minute": 74,
-        "home_score": 4,
-        "away_score": 0,
-        "penalty_shootout": null,
-        "extra_time_score": null,
-        "home_score_ht": 1,
-        "away_score_ht": 0,
-        "live_websocket": true,
-        "websocket_plus": true,
-        "last_updated": "2026-07-30T20:33:12Z",
-        "event_id": 210795,
-        "minute": 74,
-        "image_assets": {
-          "home_team_logo": "https://sports.bzzoiro.com/img/team/37/",
-          "away_team_logo": "https://sports.bzzoiro.com/img/team/248/",
-          "league_logo": "https://sports.bzzoiro.com/img/league/8/"
-        }
-      },
-      "phase": "late build-up",
-      "pressure_side": "home",
-      "pressure_score": 42.0,
-      "stats_summary": {
-        "xg_home": null,
-        "xg_away": null,
-        "shots_on_target_home": 8.0,
-        "shots_on_target_away": 2.0,
-        "shots_home": null,
-        "shots_away": null,
-        "possession_home": 76.0,
-        "possession_away": 24.0,
-        "dangerous_attacks_home": null,
-        "dangerous_attacks_away": null,
-        "momentum_points": 0,
-        "xg_per_minute_points": 0,
-        "shotmap_count": 0,
-        "shotmap": []
-      },
-      "shotmap": [],
-      "incidents_count": 14,
-      "recent_incidents": [
-        {
-          "type": "card",
-          "minute": 50,
-          "player": "C. Okoroji",
-          "is_home": false,
-          "card_type": "yellow",
-          "player_id": 7220,
-          "added_time": null
-        },
-        {
-          "text": "HT",
-          "type": "period",
-          "minute": 45,
-          "is_live": false,
-          "away_score": 0,
-          "home_score": 1
-        },
-        {
-          "type": "injuryTime",
-          "length": 3,
-          "minute": 45
-        },
-        {
-          "type": "substitution",
-          "minute": 33,
-          "is_home": false,
-          "player_in": "J. Ruiz",
-          "added_time": null,
-          "player_out": "T. Gaal",
-          "player_in_id": 7235,
-          "player_out_id": 7217
-        },
-        {
-          "type": "card",
-          "minute": 21,
-          "player": "J. Stanić",
-          "is_home": false,
-          "card_type": "yellow",
-          "player_id": 7498,
-          "added_time": null
-        },
-        {
-          "type": "goal",
-          "assist": "R. Silva",
-          "minute": 11,
-          "player": "V. Pavlidis",
-          "is_home": true,
-          "goal_type": "regular",
-          "player_id": 2061,
-          "added_time": null,
-          "away_score": 0,
-          "home_score": 1
-        }
-      ],
-      "lineup_status": "confirmed",
-      "resources": {
-        "stats": 1,
-        "incidents": 14,
-        "lineups": 1
-      },
-      "live_signals": [
-        {
-          "type": "momentum",
-          "level": "strong",
-          "label": "presiune acasă",
-          "note": "Momentum home: xG 0.00-0.00, SOT 8-2."
-        },
-        {
-          "type": "lineups",
-          "level": "info",
-          "label": "lineup confirmed",
-          "note": "Status lineup disponibil pentru context live."
-        }
-      ],
-      "coverage_score": 2,
-      "cache_status": "refetched"
-    },
-    {
-      "event_id": 216532,
-      "home_team": "CSKA Sofia",
-      "away_team": "Qarabağ FK",
-      "home_team_id": 345,
-      "away_team_id": 117,
-      "league_id": 8,
-      "league_name": "Europa League",
-      "event_date": "2026-07-30T18:00:00Z",
-      "status": "inprogress",
-      "period": null,
-      "current_minute": 120,
-      "home_score": 0,
-      "away_score": 0,
-      "last_updated": "2026-07-30T20:33:45Z",
-      "event": {
-        "id": 216532,
-        "league_id": 8,
-        "league_name": "Europa League",
-        "home_team_id": 345,
-        "home_team": "CSKA Sofia",
-        "away_team_id": 117,
-        "away_team": "Qarabağ FK",
-        "event_date": "2026-07-30T18:00:00Z",
-        "status": "inprogress",
-        "period": null,
-        "current_minute": 120,
-        "home_score": 0,
-        "away_score": 0,
-        "penalty_shootout": null,
-        "extra_time_score": null,
-        "home_score_ht": 0,
-        "away_score_ht": 0,
-        "live_websocket": true,
-        "websocket_plus": false,
-        "last_updated": "2026-07-30T20:33:45Z",
-        "event_id": 216532,
-        "minute": 120,
-        "image_assets": {
-          "home_team_logo": "https://sports.bzzoiro.com/img/team/345/",
-          "away_team_logo": "https://sports.bzzoiro.com/img/team/117/",
-          "league_logo": "https://sports.bzzoiro.com/img/league/8/"
-        }
-      },
-      "phase": "endgame",
-      "pressure_side": "away",
-      "pressure_score": -14.0,
-      "stats_summary": {
-        "xg_home": null,
-        "xg_away": null,
-        "shots_on_target_home": 3.0,
-        "shots_on_target_away": 5.0,
-        "shots_home": null,
-        "shots_away": null,
-        "possession_home": 42.0,
-        "possession_away": 58.0,
-        "dangerous_attacks_home": null,
-        "dangerous_attacks_away": null,
-        "momentum_points": 0,
-        "xg_per_minute_points": 0,
-        "shotmap_count": 0,
-        "shotmap": []
-      },
-      "shotmap": [],
-      "incidents_count": 25,
-      "recent_incidents": [
-        {
-          "type": "card",
-          "minute": 55,
-          "player": "B. Várkonyi",
-          "is_home": false,
-          "card_type": "yellow",
-          "player_id": 31104,
-          "added_time": null
-        },
-        {
-          "type": "card",
-          "minute": 50,
-          "player": "M. Janković",
-          "is_home": false,
-          "card_type": "yellow",
-          "player_id": 3635,
-          "added_time": null
-        },
-        {
-          "type": "card",
-          "minute": 48,
-          "player": "L. Godoy",
-          "is_home": true,
-          "card_type": "yellow",
-          "player_id": 10793,
-          "added_time": null
-        },
-        {
-          "text": "HT",
-          "type": "period",
-          "minute": 45,
-          "is_live": false,
-          "away_score": 0,
-          "home_score": 0
-        },
-        {
-          "type": "injuryTime",
-          "length": 2,
-          "minute": 45
-        },
-        {
-          "type": "card",
-          "minute": 39,
-          "player": "B. Jordão",
-          "is_home": true,
-          "card_type": "yellow",
-          "player_id": 10779,
-          "added_time": null
-        }
-      ],
-      "lineup_status": "confirmed",
-      "resources": {
-        "stats": 1,
-        "incidents": 25,
-        "lineups": 1
-      },
-      "live_signals": [
-        {
-          "type": "late_game",
-          "level": "watch",
-          "label": "final strâns",
-          "note": "Minut 120, diferență mică de scor; volatilitate live crescută."
-        },
-        {
-          "type": "cards",
-          "level": "watch",
-          "label": "meci tensionat",
-          "note": "9 cartonașe detectate în timeline."
-        },
         {
           "type": "lineups",
           "level": "info",
