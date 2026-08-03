@@ -1,24 +1,22 @@
 {
-  "updated_at": "2026-08-02T23:11:35.128014+00:00",
+  "updated_at": "2026-08-03T00:18:16.357718+00:00",
   "model_version": "v6.0-healthcheck",
   "source": "v6_healthcheck",
   "overall": {
     "status": "YELLOW",
-    "message": "Warnings pe: ml_ensemble, signals_v6",
-    "n_green": 3,
-    "n_yellow": 2,
+    "message": "Warnings pe: signals_v6",
+    "n_green": 4,
+    "n_yellow": 1,
     "n_red": 0
   },
   "layers": {
     "ml_ensemble": {
-      "status": "YELLOW",
+      "status": "GREEN",
       "layer": "ml_ensemble",
-      "issues": [
-        "AUC mediu scazut: 0.548"
-      ],
+      "issues": [],
       "metrics": {
         "n_matches": 199,
-        "n_training_samples": 1297,
+        "n_training_samples": 1299,
         "age_hours": 0.0,
         "model_pkl_exists": true,
         "markets_trained": [
@@ -30,7 +28,7 @@
           "over25",
           "under35"
         ],
-        "avg_auc": 0.548
+        "avg_auc": 0.554
       }
     },
     "calibration": {
@@ -40,7 +38,7 @@
       "metrics": {
         "n_calibrators_active": 8,
         "n_calibrators_identity": 0,
-        "n_total_settled": 1293,
+        "n_total_settled": 1295,
         "age_hours": 0.0,
         "pkl_exists": true,
         "biggest_bias_market": "homeWin",
@@ -53,9 +51,9 @@
       "layer": "adaptive_thresholds",
       "issues": [],
       "metrics": {
-        "n_settled_total": 1293,
-        "overall_roi_pct": 1.2,
-        "overall_win_rate_pct": 67.8,
+        "n_settled_total": 1295,
+        "overall_roi_pct": 1.3,
+        "overall_win_rate_pct": 67.9,
         "n_markets_with_overrides": 8,
         "blacklisted_markets": [],
         "best_market": "under35",
@@ -69,15 +67,15 @@
       "issues": [],
       "metrics": {
         "n_matches": 199,
-        "avg_consensus_score": 0.912,
+        "avg_consensus_score": 0.91,
         "tier_distribution": {
-          "total": 191,
-          "partial": 8,
+          "total": 187,
+          "partial": 12,
           "divergent": 0,
           "contradictoriu": 0
         },
         "age_hours": 0.0,
-        "pct_total_consensus": 96.0
+        "pct_total_consensus": 94.0
       }
     },
     "signals_v6": {
