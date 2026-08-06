@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-06T10:48:22.275085+00:00",
+  "updated_at": "2026-08-06T13:07:18.914007+00:00",
   "rules": {
     "bankroll_unit": 100.0,
     "max_daily_exposure_pct": 5.0,
@@ -16,11 +16,11 @@
     "clv_lookback_days": 30
   },
   "today": {
-    "exposure_pct": 3.0,
-    "exposure_amount": 3.0,
-    "n_active": 2,
-    "n_blocked": 10,
-    "scale_applied": 1.0,
+    "exposure_pct": 5.0,
+    "exposure_amount": 5.0,
+    "n_active": 4,
+    "n_blocked": 9,
+    "scale_applied": 0.833,
     "max_pct": 5.0
   },
   "drawdown": {
@@ -28,7 +28,7 @@
     "rolling_30d_pct": -19.57,
     "peak_units": 0.0,
     "current_units": -1.73,
-    "n_30d": 573
+    "n_30d": 574
   },
   "streak": {
     "consecutive_losses": 1,
@@ -41,25 +41,29 @@
   },
   "blocked_markets": {},
   "per_signal": {
-    "211677|under35": {
-      "event_id": 211677,
-      "market": "under35",
-      "league": "Parva Liga",
-      "stake_pct": 1.5,
-      "stake_amount": 1.5,
-      "kelly_raw": 0.2185,
-      "blocked": false,
-      "reasons": []
-    },
     "223236|under35": {
       "event_id": 223236,
       "market": "under35",
       "league": "Europa League",
-      "stake_pct": 1.5,
-      "stake_amount": 1.5,
-      "kelly_raw": 0.3981,
+      "stake_pct": 1.25,
+      "stake_amount": 1.25,
+      "kelly_raw": 0.394,
       "blocked": false,
-      "reasons": []
+      "reasons": [
+        "daily_cap_scaled"
+      ]
+    },
+    "223239|under35": {
+      "event_id": 223239,
+      "market": "under35",
+      "league": "Conference League",
+      "stake_pct": 0.0,
+      "stake_amount": 0.0,
+      "kelly_raw": 0.0,
+      "blocked": true,
+      "reasons": [
+        "grade<B(C)"
+      ]
     },
     "10057|under35": {
       "event_id": 10057,
@@ -77,35 +81,25 @@
       "event_id": 223292,
       "market": "under35",
       "league": "Europa League",
-      "stake_pct": 0.0,
-      "stake_amount": 0.0,
-      "kelly_raw": 0.0,
-      "blocked": true,
+      "stake_pct": 1.25,
+      "stake_amount": 1.25,
+      "kelly_raw": 0.1261,
+      "blocked": false,
       "reasons": [
-        "grade<B(C)"
-      ]
-    },
-    "223239|under35": {
-      "event_id": 223239,
-      "market": "under35",
-      "league": "Conference League",
-      "stake_pct": 0.0,
-      "stake_amount": 0.0,
-      "kelly_raw": 0.0,
-      "blocked": true,
-      "reasons": [
-        "grade<B(D)"
+        "daily_cap_scaled"
       ]
     },
     "223401|under35": {
       "event_id": 223401,
       "market": "under35",
       "league": "Conference League",
-      "stake_pct": 1.5,
-      "stake_amount": 1.5,
+      "stake_pct": 1.25,
+      "stake_amount": 1.25,
       "kelly_raw": 0.2171,
       "blocked": false,
-      "reasons": []
+      "reasons": [
+        "daily_cap_scaled"
+      ]
     },
     "207936|under35": {
       "event_id": 207936,
@@ -116,19 +110,31 @@
       "kelly_raw": 0.0,
       "blocked": true,
       "reasons": [
-        "grade<B(C)"
+        "grade<B(D)"
       ]
     },
-    "223313|under35": {
-      "event_id": 223313,
+    "211677|under35": {
+      "event_id": 211677,
       "market": "under35",
-      "league": "Conference League",
+      "league": "Parva Liga",
       "stake_pct": 0.0,
       "stake_amount": 0.0,
       "kelly_raw": 0.0,
       "blocked": true,
       "reasons": [
         "grade<B(C)"
+      ]
+    },
+    "223396|under35": {
+      "event_id": 223396,
+      "market": "under35",
+      "league": "Conference League",
+      "stake_pct": 1.25,
+      "stake_amount": 1.25,
+      "kelly_raw": 0.3643,
+      "blocked": false,
+      "reasons": [
+        "daily_cap_scaled"
       ]
     },
     "207738|under35": {
@@ -179,16 +185,16 @@
         "grade<B(E)"
       ]
     },
-    "207737|under35": {
-      "event_id": 207737,
+    "223394|under35": {
+      "event_id": 223394,
       "market": "under35",
-      "league": "USL Championship",
+      "league": "Conference League",
       "stake_pct": 0.0,
       "stake_amount": 0.0,
       "kelly_raw": 0.0,
       "blocked": true,
       "reasons": [
-        "grade<B(D)"
+        "grade<B(E)"
       ]
     }
   }
