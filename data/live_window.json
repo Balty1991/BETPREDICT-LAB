@@ -1,13 +1,141 @@
 {
-  "updated_at": "2026-08-07T23:07:51.826940+00:00",
-  "source": "bsd_v2_events_live",
+  "updated_at": "2026-08-07T23:29:52.030314+00:00",
+  "source": "bsd_v2_events_live+backfill",
   "endpoint": "/api/v2/events/live/",
   "params": {},
-  "count": 0,
-  "backfill_count": 0,
-  "events": [],
+  "count": 1,
+  "backfill_count": 1,
+  "events": [
+    {
+      "id": 216398,
+      "league_id": 72,
+      "season_id": 1540,
+      "home_team_id": 3938,
+      "home_team": "Orlando Pride",
+      "away_team_id": 3935,
+      "away_team": "Racing Louisville",
+      "home_coach_id": 2061,
+      "away_coach_id": 2058,
+      "referee_id": null,
+      "venue_id": 268,
+      "event_date": "2026-08-07T23:00:00+00:00",
+      "status": "1st_half",
+      "replaced_by": null,
+      "round_number": 1,
+      "round_name": "",
+      "group_name": null,
+      "period": "1T",
+      "current_minute": 20,
+      "home_score": 0,
+      "away_score": 1,
+      "home_score_ht": 0,
+      "away_score_ht": 1,
+      "penalty_shootout": null,
+      "extra_time_score": null,
+      "is_local_derby": false,
+      "is_neutral_ground": false,
+      "travel_distance_km": 1155,
+      "weather": {
+        "code": 0,
+        "description": "unknown",
+        "wind_speed": 22.1,
+        "temperature_c": 33
+      },
+      "pitch_condition": null,
+      "attendance": null,
+      "live_websocket": true,
+      "websocket_plus": true,
+      "highlights": [],
+      "head_to_head": {
+        "total_matches": 12,
+        "home_wins": 2,
+        "draws": 3,
+        "away_wins": 5,
+        "home_goals": 12,
+        "away_goals": 18,
+        "avg_total_goals": 2.5,
+        "home_win_rate": 0.16666666666666666,
+        "away_win_rate": 0.4166666666666667,
+        "recent_matches": [
+          {
+            "away": "Orlando Pride",
+            "date": "2026-04-24T21:30:00+00:00",
+            "home": "Racing Louisville",
+            "score": "3-2"
+          },
+          {
+            "away": "Racing Louisville",
+            "date": "2025-08-09T23:30:00+00:00",
+            "home": "Orlando Pride",
+            "score": "1-1"
+          },
+          {
+            "away": "Orlando Pride",
+            "date": "2025-06-21T00:00:00+00:00",
+            "home": "Racing Louisville",
+            "score": "2-0"
+          },
+          {
+            "away": "Racing Louisville",
+            "date": "2024-05-05T22:00:00+00:00",
+            "home": "Orlando Pride",
+            "score": "1-0"
+          },
+          {
+            "away": "Orlando Pride",
+            "date": "2024-03-16T20:00:00+00:00",
+            "home": "Racing Louisville",
+            "score": "2-2"
+          },
+          {
+            "away": "Orlando Pride",
+            "date": "2023-10-06T23:30:00+00:00",
+            "home": "Racing Louisville",
+            "score": "3-2"
+          },
+          {
+            "away": "Racing Louisville",
+            "date": "2023-05-06T23:00:00+00:00",
+            "home": "Orlando Pride",
+            "score": "1-0"
+          },
+          {
+            "away": "Orlando Pride",
+            "date": "2022-09-16T23:30:00+00:00",
+            "home": "Racing Louisville",
+            "score": "2-0"
+          },
+          {
+            "away": "Racing Louisville",
+            "date": "2022-07-04T00:00:00+00:00",
+            "home": "Orlando Pride",
+            "score": "2-2"
+          },
+          {
+            "away": "Orlando Pride",
+            "date": "2021-10-16T23:30:00+00:00",
+            "home": "Racing Louisville",
+            "score": "3-1"
+          }
+        ]
+      },
+      "has_xg": false,
+      "previous_leg_event_id": null,
+      "event_id": 216398,
+      "minute": 20,
+      "league_name": null,
+      "last_updated": null,
+      "image_assets": {
+        "home_team_logo": "https://sports.bzzoiro.com/img/team/3938/",
+        "away_team_logo": "https://sports.bzzoiro.com/img/team/3935/",
+        "league_logo": "https://sports.bzzoiro.com/img/league/72/"
+      },
+      "_backfilled": true
+    }
+  ],
   "notes": [
     "Conform BSD v2, live window ignoră date_from/date_to/status.",
-    "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env."
+    "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env.",
+    "Backfill: 1 eveniment(e) adăugate via /events/{id}/ pentru meciuri ratate de /events/live/."
   ]
 }
