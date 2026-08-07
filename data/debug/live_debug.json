@@ -1,6 +1,6 @@
 {
-  "started_at": "2026-08-07T08:37:49.284098+00:00",
-  "finished_at": "2026-08-07T08:37:59.882737+00:00",
+  "started_at": "2026-08-07T08:41:26.285197+00:00",
+  "finished_at": "2026-08-07T08:41:37.003940+00:00",
   "has_api_key": true,
   "requests": [
     {
@@ -8,36 +8,43 @@
       "url": "https://sports.bzzoiro.com/api/v2/events/live/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 282
+      "elapsed_ms": 283
     },
     {
       "label": "backfill_event_210050",
       "url": "https://sports.bzzoiro.com/api/v2/events/210050/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 202
+      "elapsed_ms": 287
     },
     {
       "label": "live_stats_210050",
       "url": "https://sports.bzzoiro.com/api/v2/events/210050/stats/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 217
+      "elapsed_ms": 288
     },
     {
-      "label": "live_lineups_210050",
-      "url": "https://sports.bzzoiro.com/api/v2/events/210050/lineups/",
+      "label": "live_incidents_210050",
+      "url": "https://sports.bzzoiro.com/api/v2/events/210050/incidents/",
       "params": {},
-      "status": null,
-      "elapsed_ms": 10062,
-      "error": "HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=10)"
+      "status": 502,
+      "elapsed_ms": 6336
     },
     {
       "label": "live_incidents_210050",
       "url": "https://sports.bzzoiro.com/api/v2/events/210050/incidents/",
       "params": {},
       "status": null,
-      "elapsed_ms": 10063,
+      "elapsed_ms": 6336,
+      "error": "502 Server Error: Bad Gateway for url: https://sports.bzzoiro.com/api/v2/events/210050/incidents/"
+    },
+    {
+      "label": "live_lineups_210050",
+      "url": "https://sports.bzzoiro.com/api/v2/events/210050/lineups/",
+      "params": {},
+      "status": null,
+      "elapsed_ms": 10095,
       "error": "HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=10)"
     }
   ],
@@ -45,18 +52,18 @@
     {
       "message": "Request live eșuat",
       "context": {
-        "label": "live_lineups_210050",
-        "error": "HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=10)"
+        "label": "live_incidents_210050",
+        "error": "502 Server Error: Bad Gateway for url: https://sports.bzzoiro.com/api/v2/events/210050/incidents/"
       },
-      "time": "2026-08-07T08:37:59.880747+00:00"
+      "time": "2026-08-07T08:41:33.242140+00:00"
     },
     {
       "message": "Request live eșuat",
       "context": {
-        "label": "live_incidents_210050",
+        "label": "live_lineups_210050",
         "error": "HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=10)"
       },
-      "time": "2026-08-07T08:37:59.881009+00:00"
+      "time": "2026-08-07T08:41:37.002130+00:00"
     }
   ],
   "cache": {
