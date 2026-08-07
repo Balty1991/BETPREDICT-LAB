@@ -1,13 +1,87 @@
 {
-  "updated_at": "2026-08-07T22:08:39.807001+00:00",
-  "source": "bsd_v2_events_live",
+  "updated_at": "2026-08-07T22:33:48.990744+00:00",
+  "source": "bsd_v2_events_live+backfill",
   "endpoint": "/api/v2/events/live/",
   "params": {},
-  "count": 0,
-  "backfill_count": 0,
-  "events": [],
+  "count": 1,
+  "backfill_count": 1,
+  "events": [
+    {
+      "id": 10062,
+      "league_id": 34,
+      "season_id": 52,
+      "home_team_id": 828,
+      "home_team": "Operário-PR",
+      "away_team_id": 841,
+      "away_team": "São Bernardo",
+      "home_coach_id": 161,
+      "away_coach_id": 1755,
+      "referee_id": 2676,
+      "venue_id": 621,
+      "event_date": "2026-08-07T22:30:00+00:00",
+      "status": "1st_half",
+      "replaced_by": null,
+      "round_number": 21,
+      "round_name": "",
+      "group_name": null,
+      "period": "1T",
+      "current_minute": 0,
+      "home_score": 0,
+      "away_score": 0,
+      "home_score_ht": 0,
+      "away_score_ht": 0,
+      "penalty_shootout": null,
+      "extra_time_score": null,
+      "is_local_derby": false,
+      "is_neutral_ground": false,
+      "travel_distance_km": null,
+      "weather": {
+        "code": null,
+        "description": null,
+        "wind_speed": null,
+        "temperature_c": null
+      },
+      "pitch_condition": null,
+      "attendance": null,
+      "live_websocket": false,
+      "websocket_plus": true,
+      "highlights": [],
+      "head_to_head": {
+        "total_matches": 1,
+        "home_wins": 1,
+        "draws": 0,
+        "away_wins": 0,
+        "home_goals": 2,
+        "away_goals": 1,
+        "avg_total_goals": 3.0,
+        "home_win_rate": 1.0,
+        "away_win_rate": 0.0,
+        "recent_matches": [
+          {
+            "away": "Operário-PR",
+            "date": "2026-04-02T22:00:00+00:00",
+            "home": "São Bernardo",
+            "score": "1-2"
+          }
+        ]
+      },
+      "has_xg": false,
+      "previous_leg_event_id": null,
+      "event_id": 10062,
+      "minute": 0,
+      "league_name": null,
+      "last_updated": null,
+      "image_assets": {
+        "home_team_logo": "https://sports.bzzoiro.com/img/team/828/",
+        "away_team_logo": "https://sports.bzzoiro.com/img/team/841/",
+        "league_logo": "https://sports.bzzoiro.com/img/league/34/"
+      },
+      "_backfilled": true
+    }
+  ],
   "notes": [
     "Conform BSD v2, live window ignoră date_from/date_to/status.",
-    "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env."
+    "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env.",
+    "Backfill: 1 eveniment(e) adăugate via /events/{id}/ pentru meciuri ratate de /events/live/."
   ]
 }
