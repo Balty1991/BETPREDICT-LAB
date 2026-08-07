@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07T20:02:58.171994+00:00",
+  "updated_at": "2026-08-07T20:06:41.601532+00:00",
   "source": "live_intelligence_v23",
   "endpoint": "/api/v2/events/live/",
   "params": {},
@@ -11,8 +11,8 @@
     "with_incidents": 2,
     "with_lineups": 2,
     "strong_signals": 1,
-    "reused_cache": 0,
-    "refetched": 2
+    "reused_cache": 1,
+    "refetched": 1
   },
   "events": [
     {
@@ -1083,7 +1083,7 @@
         }
       ],
       "coverage_score": 3,
-      "cache_status": "refetched"
+      "cache_status": "reused_last_updated"
     },
     {
       "event_id": 215494,
@@ -1095,11 +1095,11 @@
       "league_name": "Liga Portugal Betclic",
       "event_date": "2026-08-07T19:15:00Z",
       "status": "inprogress",
-      "period": "1st_half",
-      "current_minute": 44,
+      "period": null,
+      "current_minute": 45,
       "home_score": 0,
       "away_score": 1,
-      "last_updated": "2026-08-07T20:02:11Z",
+      "last_updated": "2026-08-07T20:06:13Z",
       "event": {
         "id": 215494,
         "league_id": 2,
@@ -1110,8 +1110,8 @@
         "away_team": "Famalicão",
         "event_date": "2026-08-07T19:15:00Z",
         "status": "inprogress",
-        "period": "1st_half",
-        "current_minute": 44,
+        "period": null,
+        "current_minute": 45,
         "home_score": 0,
         "away_score": 1,
         "penalty_shootout": null,
@@ -1120,9 +1120,9 @@
         "away_score_ht": 1,
         "live_websocket": true,
         "websocket_plus": true,
-        "last_updated": "2026-08-07T20:02:11Z",
+        "last_updated": "2026-08-07T20:06:13Z",
         "event_id": 215494,
-        "minute": 44,
+        "minute": 45,
         "image_assets": {
           "home_team_logo": "https://sports.bzzoiro.com/img/team/33/",
           "away_team_logo": "https://sports.bzzoiro.com/img/team/27/",
@@ -1131,22 +1131,43 @@
       },
       "phase": "mid-game",
       "pressure_side": "away",
-      "pressure_score": -25.1,
+      "pressure_score": -23.2,
       "stats_summary": {
-        "xg_home": 0.46,
+        "xg_home": 0.51,
         "xg_away": 1.12,
         "shots_on_target_home": 2.0,
         "shots_on_target_away": 2.0,
-        "shots_home": 10.0,
+        "shots_home": 11.0,
         "shots_away": 4.0,
-        "possession_home": 44.0,
-        "possession_away": 56.0,
+        "possession_home": 45.0,
+        "possession_away": 55.0,
         "dangerous_attacks_home": null,
         "dangerous_attacks_away": null,
-        "momentum_points": 44,
-        "xg_per_minute_points": 10,
-        "shotmap_count": 14,
+        "momentum_points": 46,
+        "xg_per_minute_points": 11,
+        "shotmap_count": 15,
         "shotmap": [
+          {
+            "gm": {
+              "x": 0,
+              "y": 40,
+              "z": 81.9
+            },
+            "xg": 0.048,
+            "gml": "high-right",
+            "min": 45,
+            "pos": {
+              "x": 9.3,
+              "y": 52.3,
+              "z": 0
+            },
+            "sit": "corner",
+            "body": "head",
+            "home": true,
+            "type": "miss",
+            "xgot": null,
+            "player_id": 1026
+          },
           {
             "gm": {
               "x": 0,
@@ -1498,6 +1519,27 @@
         {
           "gm": {
             "x": 0,
+            "y": 40,
+            "z": 81.9
+          },
+          "xg": 0.048,
+          "gml": "high-right",
+          "min": 45,
+          "pos": {
+            "x": 9.3,
+            "y": 52.3,
+            "z": 0
+          },
+          "sit": "corner",
+          "body": "head",
+          "home": true,
+          "type": "miss",
+          "xgot": null,
+          "player_id": 1026
+        },
+        {
+          "gm": {
+            "x": 0,
             "y": 55.5,
             "z": 79.2
           },
@@ -1841,15 +1883,20 @@
           "player_id": 1026
         }
       ],
-      "incidents_count": 2,
+      "incidents_count": 3,
       "recent_incidents": [
         {
-          "text": "First half",
+          "text": "HT",
           "type": "period",
           "minute": 45,
-          "is_live": true,
+          "is_live": false,
           "away_score": 1,
           "home_score": 0
+        },
+        {
+          "type": "injuryTime",
+          "length": 1,
+          "minute": 45
         },
         {
           "type": "goal",
@@ -1939,7 +1986,7 @@
       "lineup_status": "confirmed",
       "resources": {
         "stats": 1,
-        "incidents": 2,
+        "incidents": 3,
         "lineups": 1
       },
       "live_signals": [
@@ -1947,7 +1994,7 @@
           "type": "momentum",
           "level": "medium",
           "label": "presiune deplasare",
-          "note": "Momentum away: xG 0.46-1.12, SOT 2-2."
+          "note": "Momentum away: xG 0.51-1.12, SOT 2-2."
         },
         {
           "type": "lineups",
