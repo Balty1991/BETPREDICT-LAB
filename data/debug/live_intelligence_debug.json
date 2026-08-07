@@ -1,25 +1,75 @@
 {
-  "updated_at": "2026-08-07T11:27:34.895846+00:00",
+  "updated_at": "2026-08-07T12:00:41.501174+00:00",
   "limit": 18,
   "params": {},
   "summary": {
-    "live_events": 0,
-    "enriched_events": 0,
-    "with_stats": 0,
-    "with_incidents": 0,
-    "with_lineups": 0,
-    "strong_signals": 0,
+    "live_events": 1,
+    "enriched_events": 1,
+    "with_stats": 1,
+    "with_incidents": 1,
+    "with_lineups": 1,
+    "strong_signals": 1,
     "reused_cache": 0,
-    "refetched": 0
+    "refetched": 1
   },
-  "events": [],
+  "events": [
+    {
+      "event_id": 205853,
+      "score": "1-0",
+      "minute": 23,
+      "last_updated": "2026-08-07T11:59:08Z",
+      "cache_status": "refetched",
+      "pressure_side": "home",
+      "pressure_score": 53.1,
+      "resources": {
+        "stats": 1,
+        "incidents": 2,
+        "lineups": 1
+      },
+      "signals": [
+        {
+          "type": "momentum",
+          "level": "strong",
+          "label": "presiune acasă",
+          "note": "Momentum home: xG 1.03-0.00, SOT 2-0."
+        },
+        {
+          "type": "lineups",
+          "level": "info",
+          "label": "lineup confirmed",
+          "note": "Status lineup disponibil pentru context live."
+        }
+      ]
+    }
+  ],
   "requests": [
     {
       "label": "events_live",
       "url": "https://sports.bzzoiro.com/api/v2/events/live/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 198
+      "elapsed_ms": 192
+    },
+    {
+      "label": "live_incidents_205853",
+      "url": "https://sports.bzzoiro.com/api/v2/events/205853/incidents/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 172
+    },
+    {
+      "label": "live_lineups_205853",
+      "url": "https://sports.bzzoiro.com/api/v2/events/205853/lineups/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 172
+    },
+    {
+      "label": "live_stats_205853",
+      "url": "https://sports.bzzoiro.com/api/v2/events/205853/stats/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 184
     }
   ],
   "warnings": []
