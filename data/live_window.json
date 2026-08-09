@@ -1,13 +1,141 @@
 {
-  "updated_at": "2026-08-09T08:55:13.988776+00:00",
-  "source": "bsd_v2_events_live",
+  "updated_at": "2026-08-09T09:20:19.835732+00:00",
+  "source": "bsd_v2_events_live+backfill",
   "endpoint": "/api/v2/events/live/",
   "params": {},
-  "count": 0,
-  "backfill_count": 0,
-  "events": [],
+  "count": 1,
+  "backfill_count": 1,
+  "events": [
+    {
+      "id": 212191,
+      "league_id": 49,
+      "season_id": 1518,
+      "home_team_id": 1946,
+      "home_team": "Tokyo Verdy",
+      "away_team_id": 1944,
+      "away_team": "Kawasaki Frontale",
+      "home_coach_id": 1303,
+      "away_coach_id": 1301,
+      "referee_id": null,
+      "venue_id": 1104,
+      "event_date": "2026-08-09T09:00:00+00:00",
+      "status": "1st_half",
+      "replaced_by": null,
+      "round_number": 1,
+      "round_name": "",
+      "group_name": null,
+      "period": "1T",
+      "current_minute": 14,
+      "home_score": 0,
+      "away_score": 0,
+      "home_score_ht": 0,
+      "away_score_ht": 0,
+      "penalty_shootout": null,
+      "extra_time_score": null,
+      "is_local_derby": true,
+      "is_neutral_ground": false,
+      "travel_distance_km": 23,
+      "weather": {
+        "code": 0,
+        "description": "unknown",
+        "wind_speed": 32.9,
+        "temperature_c": 32
+      },
+      "pitch_condition": null,
+      "attendance": null,
+      "live_websocket": true,
+      "websocket_plus": true,
+      "highlights": [],
+      "head_to_head": {
+        "total_matches": 10,
+        "home_wins": 1,
+        "draws": 3,
+        "away_wins": 6,
+        "home_goals": 7,
+        "away_goals": 14,
+        "avg_total_goals": 2.1,
+        "home_win_rate": 0.1,
+        "away_win_rate": 0.6,
+        "recent_matches": [
+          {
+            "away": "Tokyo Verdy",
+            "date": "2026-05-06T08:00:00+00:00",
+            "home": "Kawasaki Frontale",
+            "score": "1-0"
+          },
+          {
+            "away": "Kawasaki Frontale",
+            "date": "2026-03-18T10:00:00+00:00",
+            "home": "Tokyo Verdy",
+            "score": "0-2"
+          },
+          {
+            "away": "Kawasaki Frontale",
+            "date": "2025-06-29T09:00:00+00:00",
+            "home": "Tokyo Verdy",
+            "score": "1-0"
+          },
+          {
+            "away": "Tokyo Verdy",
+            "date": "2025-04-20T06:00:00+00:00",
+            "home": "Kawasaki Frontale",
+            "score": "0-0"
+          },
+          {
+            "away": "Kawasaki Frontale",
+            "date": "2024-11-30T05:00:00+00:00",
+            "home": "Tokyo Verdy",
+            "score": "4-5"
+          },
+          {
+            "away": "Tokyo Verdy",
+            "date": "2024-04-20T07:00:00+00:00",
+            "home": "Kawasaki Frontale",
+            "score": "0-0"
+          },
+          {
+            "away": "Kawasaki Frontale",
+            "date": "2008-12-06T05:30:00+00:00",
+            "home": "Tokyo Verdy",
+            "score": "0-2"
+          },
+          {
+            "away": "Tokyo Verdy",
+            "date": "2008-03-09T05:00:00+00:00",
+            "home": "Kawasaki Frontale",
+            "score": "1-1"
+          },
+          {
+            "away": "Kawasaki Frontale",
+            "date": "2005-09-17T07:00:00+00:00",
+            "home": "Tokyo Verdy",
+            "score": "1-2"
+          },
+          {
+            "away": "Tokyo Verdy",
+            "date": "2005-04-09T10:00:00+00:00",
+            "home": "Kawasaki Frontale",
+            "score": "1-0"
+          }
+        ]
+      },
+      "has_xg": false,
+      "previous_leg_event_id": null,
+      "event_id": 212191,
+      "minute": 14,
+      "league_name": null,
+      "last_updated": null,
+      "image_assets": {
+        "home_team_logo": "https://sports.bzzoiro.com/img/team/1946/",
+        "away_team_logo": "https://sports.bzzoiro.com/img/team/1944/",
+        "league_logo": "https://sports.bzzoiro.com/img/league/49/"
+      },
+      "_backfilled": true
+    }
+  ],
   "notes": [
     "Conform BSD v2, live window ignoră date_from/date_to/status.",
-    "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env."
+    "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env.",
+    "Backfill: 1 eveniment(e) adăugate via /events/{id}/ pentru meciuri ratate de /events/live/."
   ]
 }
