@@ -1,29 +1,29 @@
 {
-  "updated_at": "2026-08-10T13:17:26.145753+00:00",
+  "updated_at": "2026-08-10T15:10:37.302426+00:00",
   "source": "market_odds_audit_v1",
   "summary": {
     "predictions_count": 357,
-    "signals_count": 6,
-    "value_bets_count": 4,
+    "signals_count": 13,
+    "value_bets_count": 5,
     "unique_prediction_events": 357,
-    "unique_signal_events": 6,
-    "unique_value_events": 4,
-    "signals_with_value_bet_overlap": 4,
-    "odds_present": 4,
-    "local_sources": 4,
+    "unique_signal_events": 13,
+    "unique_value_events": 5,
+    "signals_with_value_bet_overlap": 5,
+    "odds_present": 5,
+    "local_sources": 5,
     "official_or_bsd_sources": 0,
-    "strong_edges_ge_8pp": 1,
+    "strong_edges_ge_8pp": 2,
     "suspicious_rows": 0,
     "duplicate_event_market_rows": 0,
     "market_intelligence_events": 32,
     "events_with_1x2": 32,
     "events_with_over_under_25": 32,
     "events_with_btts": 32,
-    "avg_bookmakers_count": 4.09,
+    "avg_bookmakers_count": 6.44,
     "movement_counts": {
-      "SHORTENING": 257,
-      "DRIFTING": 304,
-      "UNKNOWN": 128
+      "DRIFTING": 477,
+      "SHORTENING": 394,
+      "UNKNOWN": 223
     },
     "file_presence": {
       "predictions.json": true,
@@ -41,15 +41,15 @@
   "sample_value_bets": [
     {
       "source": "local_disciplined",
-      "confidence": 91.6,
-      "tier": "strong",
+      "confidence": 87.5,
+      "tier": "neutral",
       "market": "under35",
       "market_label": "Under 3.5G",
-      "market_odds": 1.43,
+      "market_odds": 1.4,
       "model_probability": 76.2,
-      "market_probability": 69.9,
-      "edge": 0.0895,
-      "edge_pct": "+9.0%",
+      "market_probability": 71.4,
+      "edge": 0.0667,
+      "edge_pct": "+6.7%",
       "fair_odd": 1.29,
       "event_id": 223423,
       "home_team": "Boca Juniors",
@@ -61,7 +61,7 @@
       "event_date": "2026-08-11T22:00:00Z",
       "kelly_pct": "5.0%",
       "quality_grade": "A",
-      "edge_nv_pp": 6.26,
+      "edge_nv_pp": 4.76,
       "odds_source": "bookmaker",
       "odds_market": "over_under_35",
       "league_strength": {
@@ -140,7 +140,7 @@
         },
         "calibration": {
           "version": "league_strength_safety_v1",
-          "updated_at": "2026-08-10T13:17:22.351925+00:00",
+          "updated_at": "2026-08-10T15:10:33.471138+00:00",
           "idempotent_from": "pre_league_home/pre_league_draw/pre_league_away",
           "scale": 0.0,
           "reason": "competition_unreliable_type",
@@ -178,19 +178,59 @@
       },
       "league_strength_delta": 15.8,
       "league_strength_bonus": 0.0,
-      "risk_note": "cote reale + standings strength + edge controlat"
+      "risk_note": "semnal moderat, verifică contextul/standings"
     },
     {
       "source": "local_disciplined",
-      "confidence": 76.4,
+      "confidence": 84.4,
       "tier": "neutral",
       "market": "under35",
       "market_label": "Under 3.5G",
-      "market_odds": 1.75,
+      "market_odds": 1.7,
+      "model_probability": 74.3,
+      "market_probability": 58.8,
+      "edge": 0.2633,
+      "edge_pct": "+26.3%",
+      "fair_odd": 1.32,
+      "event_id": 223305,
+      "home_team": "Omonia Nicosia",
+      "away_team": "Lincoln Red Imps",
+      "home_team_id": 2346,
+      "away_team_id": 382,
+      "league": "Europa League",
+      "league_id": 8,
+      "event_date": "2026-08-13T17:00:00Z",
+      "kelly_pct": "5.0%",
+      "quality_grade": "A",
+      "edge_nv_pp": 15.48,
+      "odds_source": "bookmaker",
+      "odds_market": "over_under_35",
+      "league_strength": {
+        "available": false,
+        "league_id": 8,
+        "reason": "missing_team_standings_or_probabilities",
+        "context_summary": {
+          "leagues": 49,
+          "teams_by_id": 2845,
+          "teams_by_name": 3598,
+          "meta_updated_at": "2026-08-10T15:02:07.459406+00:00"
+        }
+      },
+      "league_strength_delta": null,
+      "league_strength_bonus": 0.0,
+      "risk_note": "semnal moderat, verifică contextul/standings"
+    },
+    {
+      "source": "local_disciplined",
+      "confidence": 79.3,
+      "tier": "neutral",
+      "market": "under35",
+      "market_label": "Under 3.5G",
+      "market_odds": 1.76,
       "model_probability": 75.1,
-      "market_probability": 57.2,
-      "edge": 0.3131,
-      "edge_pct": "+31.3%",
+      "market_probability": 56.8,
+      "edge": 0.3221,
+      "edge_pct": "+32.2%",
       "fair_odd": 1.31,
       "event_id": 223234,
       "home_team": "FK Crvena zvezda",
@@ -202,7 +242,7 @@
       "event_date": "2026-08-11T18:00:00Z",
       "kelly_pct": "5.0%",
       "quality_grade": "B+",
-      "edge_nv_pp": 17.91,
+      "edge_nv_pp": 18.3,
       "odds_source": "bookmaker",
       "odds_market": "over_under_35",
       "league_strength": {
@@ -281,7 +321,7 @@
         },
         "calibration": {
           "version": "league_strength_safety_v1",
-          "updated_at": "2026-08-10T13:17:22.351686+00:00",
+          "updated_at": "2026-08-10T15:10:33.470937+00:00",
           "idempotent_from": "pre_league_home/pre_league_draw/pre_league_away",
           "scale": 0.0,
           "reason": "competition_unreliable_type",
@@ -422,7 +462,7 @@
         },
         "calibration": {
           "version": "league_strength_safety_v1",
-          "updated_at": "2026-08-10T13:17:22.351348+00:00",
+          "updated_at": "2026-08-10T15:10:33.470637+00:00",
           "idempotent_from": "pre_league_home/pre_league_draw/pre_league_away",
           "scale": 0.0,
           "reason": "competition_unreliable_type",
@@ -464,7 +504,7 @@
     },
     {
       "source": "local_disciplined",
-      "confidence": 61.7,
+      "confidence": 61.4,
       "tier": "neutral",
       "market": "under35",
       "market_label": "Under 3.5G",
@@ -557,13 +597,13 @@
           "away": 0.0
         },
         "raw_adjustment_pp": {
-          "home": 4.09,
-          "draw": -1.14,
-          "away": -2.96
+          "home": 4.13,
+          "draw": -1.12,
+          "away": -2.95
         },
         "calibration": {
           "version": "league_strength_safety_v1",
-          "updated_at": "2026-08-10T13:17:22.351309+00:00",
+          "updated_at": "2026-08-10T15:10:33.470602+00:00",
           "idempotent_from": "pre_league_home/pre_league_draw/pre_league_away",
           "scale": 0.0,
           "reason": "competition_unreliable_type",
@@ -577,14 +617,14 @@
           "away_played": 19.0,
           "sample_min": 2.0,
           "raw_adjustment_pp": {
-            "home": 4.09,
-            "draw": -1.14,
-            "away": -2.96
+            "home": 4.13,
+            "draw": -1.12,
+            "away": -2.95
           },
           "capped_adjustment_pp": {
             "home": 4.0,
-            "draw": -1.14,
-            "away": -2.96
+            "draw": -1.12,
+            "away": -2.95
           },
           "weighted_before_rebalance_pp": {
             "home": 0.0,
