@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-08-10T05:30:42.895954+00:00",
+  "updated_at": "2026-08-10T07:44:56.488746+00:00",
   "summary": {
     "priority_events": 32,
     "compare_events": 32,
     "markets_checked": 160,
     "events_with_bookmakers": 9,
-    "events_with_10plus_bookmakers": 8,
+    "events_with_10plus_bookmakers": 9,
     "polymarket_events": 6,
-    "shortening_rows": 13,
-    "drifting_rows": 6
+    "shortening_rows": 7,
+    "drifting_rows": 12
   },
   "endpoint_debug": [
     {
@@ -54,41 +54,41 @@
     {
       "event_id": 223234,
       "market": "1x2",
-      "endpoint": "https://sports.bzzoiro.com/api/v2/events/223234/odds/",
-      "source_shape": "bsd_consensus_odds",
-      "bookmakers_count": 1,
+      "endpoint": "https://sports.bzzoiro.com/api/v2/events/223234/odds/comparison/",
+      "source_shape": "odds_comparison",
+      "bookmakers_count": 16,
       "outcomes": 3
     },
     {
       "event_id": 223234,
       "market": "over_under_15",
-      "endpoint": "https://sports.bzzoiro.com/api/v2/events/223234/odds/",
-      "source_shape": "bsd_consensus_odds",
-      "bookmakers_count": 1,
+      "endpoint": "data/best_odds.json",
+      "source_shape": "best_odds_fallback",
+      "bookmakers_count": 2,
       "outcomes": 2
     },
     {
       "event_id": 223234,
       "market": "over_under_25",
-      "endpoint": "https://sports.bzzoiro.com/api/v2/events/223234/odds/",
-      "source_shape": "bsd_consensus_odds",
-      "bookmakers_count": 1,
+      "endpoint": "data/best_odds.json",
+      "source_shape": "best_odds_fallback",
+      "bookmakers_count": 2,
       "outcomes": 2
     },
     {
       "event_id": 223234,
       "market": "over_under_35",
-      "endpoint": "https://sports.bzzoiro.com/api/v2/events/223234/odds/",
-      "source_shape": "bsd_consensus_odds",
+      "endpoint": "data/best_odds.json",
+      "source_shape": "best_odds_fallback",
       "bookmakers_count": 1,
       "outcomes": 2
     },
     {
       "event_id": 223234,
       "market": "btts",
-      "endpoint": "https://sports.bzzoiro.com/api/v2/events/223234/odds/",
-      "source_shape": "bsd_consensus_odds",
-      "bookmakers_count": 1,
+      "endpoint": "https://sports.bzzoiro.com/api/v2/events/223234/odds/comparison/",
+      "source_shape": "odds_comparison",
+      "bookmakers_count": 17,
       "outcomes": 2
     },
     {
@@ -1293,8 +1293,8 @@
     }
   ],
   "movement_summary": {
-    "shortening": 13,
-    "drifting": 6,
+    "shortening": 7,
+    "drifting": 12,
     "stable": 72,
     "new": 6,
     "removed": 6
