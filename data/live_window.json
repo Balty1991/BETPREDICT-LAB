@@ -1,13 +1,141 @@
 {
-  "updated_at": "2026-08-10T22:02:09.159117+00:00",
-  "source": "bsd_v2_events_live",
+  "updated_at": "2026-08-10T22:18:28.930476+00:00",
+  "source": "bsd_v2_events_live+backfill",
   "endpoint": "/api/v2/events/live/",
   "params": {},
-  "count": 0,
-  "backfill_count": 0,
-  "events": [],
+  "count": 1,
+  "backfill_count": 1,
+  "events": [
+    {
+      "id": 223537,
+      "league_id": 85,
+      "season_id": 1635,
+      "home_team_id": 4994,
+      "home_team": "Banfield",
+      "away_team_id": 3299,
+      "away_team": "Club Atlético Belgrano",
+      "home_coach_id": 3186,
+      "away_coach_id": 3196,
+      "referee_id": 2808,
+      "venue_id": 1219,
+      "event_date": "2026-08-10T22:00:00+00:00",
+      "status": "1st_half",
+      "replaced_by": null,
+      "round_number": 4,
+      "round_name": "",
+      "group_name": "Group B",
+      "period": "1T",
+      "current_minute": 15,
+      "home_score": 0,
+      "away_score": 0,
+      "home_score_ht": 0,
+      "away_score_ht": 0,
+      "penalty_shootout": null,
+      "extra_time_score": null,
+      "is_local_derby": false,
+      "is_neutral_ground": false,
+      "travel_distance_km": null,
+      "weather": {
+        "code": null,
+        "description": null,
+        "wind_speed": null,
+        "temperature_c": null
+      },
+      "pitch_condition": null,
+      "attendance": null,
+      "live_websocket": false,
+      "websocket_plus": true,
+      "highlights": [],
+      "head_to_head": {
+        "total_matches": 13,
+        "home_wins": 2,
+        "draws": 4,
+        "away_wins": 4,
+        "home_goals": 10,
+        "away_goals": 12,
+        "avg_total_goals": 1.6923076923076923,
+        "home_win_rate": 0.15384615384615385,
+        "away_win_rate": 0.3076923076923077,
+        "recent_matches": [
+          {
+            "away": "Banfield",
+            "date": "2026-02-08T01:15:00+00:00",
+            "home": "Club Atlético Belgrano",
+            "score": "1-0"
+          },
+          {
+            "away": "Banfield",
+            "date": "2025-08-09T23:45:00+00:00",
+            "home": "Club Atlético Belgrano",
+            "score": "2-1"
+          },
+          {
+            "away": "Club Atlético Belgrano",
+            "date": "2025-02-07T20:45:00+00:00",
+            "home": "Banfield",
+            "score": "1-1"
+          },
+          {
+            "away": "Club Atlético Belgrano",
+            "date": "2024-11-06T20:00:00+00:00",
+            "home": "Banfield",
+            "score": "1-1"
+          },
+          {
+            "away": "Banfield",
+            "date": "2023-06-26T23:00:00+00:00",
+            "home": "Club Atlético Belgrano",
+            "score": "3-1"
+          },
+          {
+            "away": "Banfield",
+            "date": "2018-10-22T22:00:00+00:00",
+            "home": "Club Atlético Belgrano",
+            "score": "1-1"
+          },
+          {
+            "away": "Club Atlético Belgrano",
+            "date": "2017-08-26T00:05:00+00:00",
+            "home": "Banfield",
+            "score": "2-1"
+          },
+          {
+            "away": "Club Atlético Belgrano",
+            "date": "2017-04-09T17:00:00+00:00",
+            "home": "Banfield",
+            "score": "2-0"
+          },
+          {
+            "away": "Banfield",
+            "date": "2016-02-21T20:00:00+00:00",
+            "home": "Club Atlético Belgrano",
+            "score": "0-0"
+          },
+          {
+            "away": "Club Atlético Belgrano",
+            "date": "2015-07-18T00:30:00+00:00",
+            "home": "Banfield",
+            "score": "1-2"
+          }
+        ]
+      },
+      "has_xg": false,
+      "previous_leg_event_id": null,
+      "event_id": 223537,
+      "minute": 15,
+      "league_name": null,
+      "last_updated": null,
+      "image_assets": {
+        "home_team_logo": "https://sports.bzzoiro.com/img/team/4994/",
+        "away_team_logo": "https://sports.bzzoiro.com/img/team/3299/",
+        "league_logo": "https://sports.bzzoiro.com/img/league/85/"
+      },
+      "_backfilled": true
+    }
+  ],
   "notes": [
     "Conform BSD v2, live window ignoră date_from/date_to/status.",
-    "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env."
+    "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env.",
+    "Backfill: 1 eveniment(e) adăugate via /events/{id}/ pentru meciuri ratate de /events/live/."
   ]
 }
