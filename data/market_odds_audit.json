@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10T09:27:58.242271+00:00",
+  "updated_at": "2026-08-10T11:18:20.379288+00:00",
   "source": "market_odds_audit_v1",
   "summary": {
     "predictions_count": 357,
@@ -19,11 +19,11 @@
     "events_with_1x2": 32,
     "events_with_over_under_25": 32,
     "events_with_btts": 32,
-    "avg_bookmakers_count": 4.09,
+    "avg_bookmakers_count": 4.59,
     "movement_counts": {
-      "SHORTENING": 230,
-      "DRIFTING": 289,
-      "UNKNOWN": 147
+      "SHORTENING": 275,
+      "DRIFTING": 329,
+      "UNKNOWN": 139
     },
     "file_presence": {
       "predictions.json": true,
@@ -41,7 +41,7 @@
   "sample_value_bets": [
     {
       "source": "local_disciplined",
-      "confidence": 88.2,
+      "confidence": 91.6,
       "tier": "strong",
       "market": "under35",
       "market_label": "Under 3.5G",
@@ -65,23 +65,124 @@
       "odds_source": "bookmaker",
       "odds_market": "over_under_35",
       "league_strength": {
-        "available": false,
+        "available": true,
+        "source": "league_metadata.standings.rows",
         "league_id": 33,
-        "reason": "missing_team_standings_or_probabilities",
-        "context_summary": {
-          "leagues": 3,
-          "teams_by_id": 50,
-          "teams_by_name": 50,
-          "meta_updated_at": "2026-08-10T09:21:36.263414+00:00"
+        "league_name": "Club Friendlies",
+        "country": "World",
+        "season_id": 1552,
+        "season_name": "Club Friendly Games 2026",
+        "league_size": 2449,
+        "home": {
+          "team_id": 780,
+          "team_name": "Boca Juniors",
+          "position": 598,
+          "played": 3,
+          "pts": 7.0,
+          "ppg": 2.333,
+          "gf": 3.0,
+          "ga": 1.0,
+          "gd": 2.0,
+          "gd_pg": 0.667,
+          "xgd_pg": 1.0,
+          "form": "WWD",
+          "form_score": 83.3,
+          "rank_score": 75.6,
+          "strength_score": 77.0,
+          "attack_score": 75.0,
+          "defense_score": 60.5,
+          "league_id": 79,
+          "league_name": "Club Friendlies",
+          "country": "World",
+          "season_id": 1552,
+          "season_name": "Club Friendly Games 2026",
+          "league_size": 2449,
+          "source": "league_metadata.standings.rows"
+        },
+        "away": {
+          "team_id": 741,
+          "team_name": "Recoleta FC",
+          "position": 1,
+          "played": 6,
+          "pts": 8.0,
+          "ppg": 1.333,
+          "gf": 6.0,
+          "ga": 5.0,
+          "gd": 1.0,
+          "gd_pg": 0.167,
+          "xgd_pg": -0.967,
+          "form": "WDDDD",
+          "form_score": 60.0,
+          "rank_score": 100.0,
+          "strength_score": 64.2,
+          "attack_score": 69.5,
+          "defense_score": 42.5,
+          "league_id": 33,
+          "league_name": "Copa Sudamericana",
+          "country": "South America",
+          "season_id": 114,
+          "season_name": "CONMEBOL Sudamericana 2026",
+          "league_size": 32,
+          "source": "league_metadata.standings.rows"
+        },
+        "home_strength": 77.0,
+        "away_strength": 64.2,
+        "delta_strength": 15.8,
+        "adjustment_pp": {
+          "home": 0.0,
+          "draw": 0.0,
+          "away": 0.0
+        },
+        "raw_adjustment_pp": {
+          "home": 2.46,
+          "draw": -0.71,
+          "away": -1.75
+        },
+        "calibration": {
+          "version": "league_strength_safety_v1",
+          "updated_at": "2026-08-10T11:18:17.383996+00:00",
+          "idempotent_from": "pre_league_home/pre_league_draw/pre_league_away",
+          "scale": 0.0,
+          "reason": "competition_unreliable_type",
+          "caps_pp": {
+            "home": 4.0,
+            "draw": 2.0,
+            "away": 4.0
+          },
+          "competition_text": "Copa Sudamericana Copa Sudamericana Club Friendlies Club Friendly Games 2026 World",
+          "home_played": 3.0,
+          "away_played": 6.0,
+          "sample_min": 3.0,
+          "raw_adjustment_pp": {
+            "home": 2.46,
+            "draw": -0.71,
+            "away": -1.75
+          },
+          "capped_adjustment_pp": {
+            "home": 2.46,
+            "draw": -0.71,
+            "away": -1.75
+          },
+          "weighted_before_rebalance_pp": {
+            "home": 0.0,
+            "draw": -0.0,
+            "away": -0.0
+          },
+          "final_adjustment_pp": {
+            "home": 0.0,
+            "draw": 0.0,
+            "away": 0.0
+          },
+          "capped": false
         }
       },
-      "league_strength_delta": null,
+      "league_strength_delta": 15.8,
       "league_strength_bonus": 0.0,
       "risk_note": "cote reale + standings strength + edge controlat"
     },
     {
       "source": "local_disciplined",
-      "confidence": 72.0,
+      "confidence": 76.4,
       "tier": "neutral",
       "market": "under35",
       "market_label": "Under 3.5G",
@@ -100,28 +201,129 @@
       "league_id": 7,
       "event_date": "2026-08-11T18:00:00Z",
       "kelly_pct": "5.0%",
-      "quality_grade": "B",
+      "quality_grade": "B+",
       "edge_nv_pp": 17.91,
       "odds_source": "bookmaker",
       "odds_market": "over_under_35",
       "league_strength": {
-        "available": false,
+        "available": true,
+        "source": "league_metadata.standings.rows",
         "league_id": 7,
-        "reason": "missing_team_standings_or_probabilities",
-        "context_summary": {
-          "leagues": 3,
-          "teams_by_id": 50,
-          "teams_by_name": 50,
-          "meta_updated_at": "2026-08-10T09:21:36.263414+00:00"
+        "league_name": "Club Friendlies",
+        "country": "World",
+        "season_id": 1552,
+        "season_name": "Club Friendly Games 2026",
+        "league_size": 2449,
+        "home": {
+          "team_id": 131,
+          "team_name": "FK Crvena zvezda",
+          "position": 181,
+          "played": 8,
+          "pts": 14.0,
+          "ppg": 1.75,
+          "gf": 15.0,
+          "ga": 11.0,
+          "gd": 4.0,
+          "gd_pg": 0.5,
+          "xgd_pg": 1.2,
+          "form": "LDDWL",
+          "form_score": 40.0,
+          "rank_score": 92.6,
+          "strength_score": 73.1,
+          "attack_score": 94.8,
+          "defense_score": 39.6,
+          "league_id": 79,
+          "league_name": "Club Friendlies",
+          "country": "World",
+          "season_id": 1552,
+          "season_name": "Club Friendly Games 2026",
+          "league_size": 2449,
+          "source": "league_metadata.standings.rows"
+        },
+        "away": {
+          "team_id": 416,
+          "team_name": "Hapoel Be'er Sheva",
+          "position": 952,
+          "played": 3,
+          "pts": 4.0,
+          "ppg": 1.333,
+          "gf": 6.0,
+          "ga": 7.0,
+          "gd": -1.0,
+          "gd_pg": -0.333,
+          "xgd_pg": 0.0,
+          "form": "",
+          "form_score": null,
+          "rank_score": 61.2,
+          "strength_score": 50.2,
+          "attack_score": 81.0,
+          "defense_score": 28.0,
+          "league_id": 79,
+          "league_name": "Club Friendlies",
+          "country": "World",
+          "season_id": 1552,
+          "season_name": "Club Friendly Games 2026",
+          "league_size": 2449,
+          "source": "league_metadata.standings.rows"
+        },
+        "home_strength": 73.1,
+        "away_strength": 50.2,
+        "delta_strength": 25.9,
+        "adjustment_pp": {
+          "home": 0.0,
+          "draw": 0.0,
+          "away": 0.0
+        },
+        "raw_adjustment_pp": {
+          "home": 3.96,
+          "draw": -1.15,
+          "away": -2.81
+        },
+        "calibration": {
+          "version": "league_strength_safety_v1",
+          "updated_at": "2026-08-10T11:18:17.383852+00:00",
+          "idempotent_from": "pre_league_home/pre_league_draw/pre_league_away",
+          "scale": 0.0,
+          "reason": "competition_unreliable_type",
+          "caps_pp": {
+            "home": 4.0,
+            "draw": 2.0,
+            "away": 4.0
+          },
+          "competition_text": "Champions League Champions League Club Friendlies Club Friendly Games 2026 World",
+          "home_played": 8.0,
+          "away_played": 3.0,
+          "sample_min": 3.0,
+          "raw_adjustment_pp": {
+            "home": 3.96,
+            "draw": -1.15,
+            "away": -2.81
+          },
+          "capped_adjustment_pp": {
+            "home": 3.96,
+            "draw": -1.15,
+            "away": -2.81
+          },
+          "weighted_before_rebalance_pp": {
+            "home": 0.0,
+            "draw": -0.0,
+            "away": -0.0
+          },
+          "final_adjustment_pp": {
+            "home": 0.0,
+            "draw": 0.0,
+            "away": 0.0
+          },
+          "capped": false
         }
       },
-      "league_strength_delta": null,
+      "league_strength_delta": 25.9,
       "league_strength_bonus": 0.0,
       "risk_note": "semnal moderat, verifică contextul/standings"
     },
     {
       "source": "local_disciplined",
-      "confidence": 70.5,
+      "confidence": 70.7,
       "tier": "neutral",
       "market": "under35",
       "market_label": "Under 3.5G",
@@ -145,23 +347,124 @@
       "odds_source": "bookmaker",
       "odds_market": "over_under_35",
       "league_strength": {
-        "available": false,
+        "available": true,
+        "source": "league_metadata.standings.rows",
         "league_id": 80,
-        "reason": "missing_team_standings_or_probabilities",
-        "context_summary": {
-          "leagues": 3,
-          "teams_by_id": 50,
-          "teams_by_name": 50,
-          "meta_updated_at": "2026-08-10T09:21:36.263414+00:00"
+        "league_name": "Copa Libertadores",
+        "country": "South America",
+        "season_id": 96,
+        "season_name": "CONMEBOL Libertadores 2026",
+        "league_size": 32,
+        "home": {
+          "team_id": 789,
+          "team_name": "Junior Barranquilla",
+          "position": 4,
+          "played": 6,
+          "pts": 4.0,
+          "ppg": 0.667,
+          "gf": 5.0,
+          "ga": 11.0,
+          "gd": -6.0,
+          "gd_pg": -1.0,
+          "xgd_pg": -0.317,
+          "form": "LWLLL",
+          "form_score": 20.0,
+          "rank_score": 90.3,
+          "strength_score": 46.0,
+          "attack_score": 69.7,
+          "defense_score": 26.3,
+          "league_id": 32,
+          "league_name": "Copa Libertadores",
+          "country": "South America",
+          "season_id": 96,
+          "season_name": "CONMEBOL Libertadores 2026",
+          "league_size": 32,
+          "source": "league_metadata.standings.rows"
+        },
+        "away": {
+          "team_id": 4780,
+          "team_name": "Deportivo Pereira",
+          "position": 1,
+          "played": 4,
+          "pts": 8.0,
+          "ppg": 2.0,
+          "gf": 4.0,
+          "ga": 2.0,
+          "gd": 2.0,
+          "gd_pg": 0.5,
+          "xgd_pg": -0.2,
+          "form": "WDWDW",
+          "form_score": 80.0,
+          "rank_score": 100.0,
+          "strength_score": 76.8,
+          "attack_score": 75.6,
+          "defense_score": 48.4,
+          "league_id": 81,
+          "league_name": "Copa Colombia",
+          "country": "Colombia",
+          "season_id": 1586,
+          "season_name": "Copa Colombia 2026",
+          "league_size": 20,
+          "source": "league_metadata.standings.rows"
+        },
+        "home_strength": 46.0,
+        "away_strength": 76.8,
+        "delta_strength": -27.8,
+        "adjustment_pp": {
+          "home": 0.0,
+          "draw": 0.0,
+          "away": 0.0
+        },
+        "raw_adjustment_pp": {
+          "home": -2.29,
+          "draw": -1.23,
+          "away": 3.45
+        },
+        "calibration": {
+          "version": "league_strength_safety_v1",
+          "updated_at": "2026-08-10T11:18:17.383622+00:00",
+          "idempotent_from": "pre_league_home/pre_league_draw/pre_league_away",
+          "scale": 0.0,
+          "reason": "competition_unreliable_type",
+          "caps_pp": {
+            "home": 4.0,
+            "draw": 2.0,
+            "away": 4.0
+          },
+          "competition_text": "Categoría Primera A Categoría Primera A Copa Libertadores CONMEBOL Libertadores 2026 South America",
+          "home_played": 6.0,
+          "away_played": 4.0,
+          "sample_min": 4.0,
+          "raw_adjustment_pp": {
+            "home": -2.29,
+            "draw": -1.23,
+            "away": 3.45
+          },
+          "capped_adjustment_pp": {
+            "home": -2.29,
+            "draw": -1.23,
+            "away": 3.45
+          },
+          "weighted_before_rebalance_pp": {
+            "home": -0.0,
+            "draw": -0.0,
+            "away": 0.0
+          },
+          "final_adjustment_pp": {
+            "home": 0.0,
+            "draw": 0.0,
+            "away": 0.0
+          },
+          "capped": false
         }
       },
-      "league_strength_delta": null,
+      "league_strength_delta": -27.8,
       "league_strength_bonus": 0.0,
       "risk_note": "semnal moderat, verifică contextul/standings"
     },
     {
       "source": "local_disciplined",
-      "confidence": 61.6,
+      "confidence": 61.7,
       "tier": "neutral",
       "market": "under35",
       "market_label": "Under 3.5G",
@@ -180,22 +483,123 @@
       "league_id": 85,
       "event_date": "2026-08-11T00:15:00Z",
       "kelly_pct": "5.0%",
-      "quality_grade": "E",
+      "quality_grade": "D",
       "edge_nv_pp": 3.82,
       "odds_source": "bookmaker",
       "odds_market": "over_under_35",
       "league_strength": {
-        "available": false,
+        "available": true,
+        "source": "league_metadata.standings.rows",
         "league_id": 85,
-        "reason": "missing_team_standings_or_probabilities",
-        "context_summary": {
-          "leagues": 3,
-          "teams_by_id": 50,
-          "teams_by_name": 50,
-          "meta_updated_at": "2026-08-10T09:21:36.263414+00:00"
+        "league_name": "Club Friendlies",
+        "country": "World",
+        "season_id": 1552,
+        "season_name": "Club Friendly Games 2026",
+        "league_size": 2449,
+        "home": {
+          "team_id": 4620,
+          "team_name": "Club Atlético Unión de Santa Fe",
+          "position": 909,
+          "played": 2,
+          "pts": 4.0,
+          "ppg": 2.0,
+          "gf": 3.0,
+          "ga": 2.0,
+          "gd": 1.0,
+          "gd_pg": 0.5,
+          "xgd_pg": 0.0,
+          "form": "DW",
+          "form_score": 75.0,
+          "rank_score": 62.9,
+          "strength_score": 64.4,
+          "attack_score": 72.0,
+          "defense_score": 52.0,
+          "league_id": 79,
+          "league_name": "Club Friendlies",
+          "country": "World",
+          "season_id": 1552,
+          "season_name": "Club Friendly Games 2026",
+          "league_size": 2449,
+          "source": "league_metadata.standings.rows"
+        },
+        "away": {
+          "team_id": 4995,
+          "team_name": "Central Córdoba",
+          "position": 13,
+          "played": 19,
+          "pts": 19.0,
+          "ppg": 1.0,
+          "gf": 12.0,
+          "ga": 24.0,
+          "gd": -12.0,
+          "gd_pg": -0.632,
+          "xgd_pg": -0.753,
+          "form": "WLLLD",
+          "form_score": 30.0,
+          "rank_score": 58.6,
+          "strength_score": 39.9,
+          "attack_score": 62.7,
+          "defense_score": 36.4,
+          "league_id": 85,
+          "league_name": "Liga Profesional de Fútbol",
+          "country": "Argentina",
+          "season_id": 1635,
+          "season_name": "Primera LPF 2026",
+          "league_size": 30,
+          "source": "league_metadata.standings.rows"
+        },
+        "home_strength": 64.4,
+        "away_strength": 39.9,
+        "delta_strength": 27.5,
+        "adjustment_pp": {
+          "home": 0.0,
+          "draw": 0.0,
+          "away": 0.0
+        },
+        "raw_adjustment_pp": {
+          "home": 4.09,
+          "draw": -1.14,
+          "away": -2.96
+        },
+        "calibration": {
+          "version": "league_strength_safety_v1",
+          "updated_at": "2026-08-10T11:18:17.383598+00:00",
+          "idempotent_from": "pre_league_home/pre_league_draw/pre_league_away",
+          "scale": 0.0,
+          "reason": "competition_unreliable_type",
+          "caps_pp": {
+            "home": 4.0,
+            "draw": 2.0,
+            "away": 4.0
+          },
+          "competition_text": "Liga Profesional de Fútbol Liga Profesional de Fútbol Club Friendlies Club Friendly Games 2026 World",
+          "home_played": 2.0,
+          "away_played": 19.0,
+          "sample_min": 2.0,
+          "raw_adjustment_pp": {
+            "home": 4.09,
+            "draw": -1.14,
+            "away": -2.96
+          },
+          "capped_adjustment_pp": {
+            "home": 4.0,
+            "draw": -1.14,
+            "away": -2.96
+          },
+          "weighted_before_rebalance_pp": {
+            "home": 0.0,
+            "draw": -0.0,
+            "away": -0.0
+          },
+          "final_adjustment_pp": {
+            "home": 0.0,
+            "draw": 0.0,
+            "away": 0.0
+          },
+          "capped": true
         }
       },
-      "league_strength_delta": null,
+      "league_strength_delta": 27.5,
       "league_strength_bonus": 0.0,
       "risk_note": "semnal moderat, verifică contextul/standings"
     }
