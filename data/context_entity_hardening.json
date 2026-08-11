@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-08-11T22:48:45.897898+00:00",
+  "updated_at": "2026-08-11T23:50:36.807890+00:00",
   "source": "context_entity_hardening_v1",
   "count": 345,
   "summary": {
     "total_predictions": 345,
     "context_events_indexed": 24,
-    "available_predictions": 23,
-    "strong_reliability_predictions": 8,
-    "warnings_total": 349,
+    "available_predictions": 24,
+    "strong_reliability_predictions": 9,
+    "warnings_total": 350,
     "score_impact": "none_safe_audit_only"
   },
   "results": [
@@ -1421,14 +1421,20 @@
     },
     {
       "event_id": "212198",
-      "match": "— vs —",
-      "available": false,
-      "coverage_score": 0,
-      "reliability": 0.0,
-      "confidence_note": null,
-      "deltas": null,
+      "match": "Kashima Antlers vs Nagoya Grampus",
+      "available": true,
+      "coverage_score": 3,
+      "reliability": 0.838,
+      "confidence_note": "strong",
+      "deltas": {
+        "manager_win_pct": 30.8,
+        "manager_attack_index": 0.004,
+        "venue_home_edge": 0.0,
+        "referee_goal_drag": 0.0
+      },
       "warnings": [
-        "missing_context_entities"
+        "referee_missing",
+        "neutral_or_uncertain_venue"
       ]
     },
     {
