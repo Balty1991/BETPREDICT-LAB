@@ -1,43 +1,59 @@
 {
-  "updated_at": "2026-08-11T23:53:25.254125+00:00",
+  "updated_at": "2026-08-12T00:44:43.640195+00:00",
   "limit": 18,
   "params": {},
   "summary": {
-    "live_events": 2,
-    "enriched_events": 2,
-    "with_stats": 2,
-    "with_incidents": 2,
-    "with_lineups": 2,
-    "strong_signals": 1,
+    "live_events": 3,
+    "enriched_events": 3,
+    "with_stats": 3,
+    "with_incidents": 3,
+    "with_lineups": 3,
+    "strong_signals": 0,
     "reused_cache": 0,
-    "refetched": 2
+    "refetched": 3
   },
   "events": [
     {
-      "event_id": 223423,
-      "score": "3-1",
-      "minute": 92,
-      "last_updated": "2026-08-11T23:52:21Z",
+      "event_id": 223424,
+      "score": "0-0",
+      "minute": 11,
+      "last_updated": "2026-08-12T00:43:14Z",
       "cache_status": "refetched",
-      "pressure_side": "home",
-      "pressure_score": 178.6,
+      "pressure_side": "balanced",
+      "pressure_score": 0.8,
       "resources": {
         "stats": 1,
-        "incidents": 23,
+        "incidents": 1,
+        "lineups": 1
+      },
+      "signals": [
+        {
+          "type": "lineups",
+          "level": "info",
+          "label": "lineup confirmed",
+          "note": "Status lineup disponibil pentru context live."
+        }
+      ]
+    },
+    {
+      "event_id": 223540,
+      "score": "0-0",
+      "minute": 42,
+      "last_updated": null,
+      "cache_status": "refetched",
+      "pressure_side": "away",
+      "pressure_score": -26.8,
+      "resources": {
+        "stats": 1,
+        "incidents": 3,
         "lineups": 1
       },
       "signals": [
         {
           "type": "momentum",
-          "level": "strong",
-          "label": "presiune acasă",
-          "note": "Momentum home: xG 4.25-0.47, SOT 8-3."
-        },
-        {
-          "type": "cards",
-          "level": "watch",
-          "label": "meci tensionat",
-          "note": "5 cartonașe detectate în timeline."
+          "level": "medium",
+          "label": "presiune deplasare",
+          "note": "Momentum away: xG 0.16-1.05, SOT 2-1."
         },
         {
           "type": "lineups",
@@ -48,25 +64,19 @@
       ]
     },
     {
-      "event_id": 207958,
-      "score": "0-0",
-      "minute": 93,
-      "last_updated": "2026-08-11T23:52:16Z",
+      "event_id": 207961,
+      "score": "1-0",
+      "minute": 13,
+      "last_updated": "2026-08-12T00:44:12Z",
       "cache_status": "refetched",
       "pressure_side": "home",
-      "pressure_score": 9.9,
+      "pressure_score": 15.0,
       "resources": {
         "stats": 1,
-        "incidents": 18,
+        "incidents": 3,
         "lineups": 1
       },
       "signals": [
-        {
-          "type": "late_game",
-          "level": "watch",
-          "label": "final strâns",
-          "note": "Minut 93, diferență mică de scor; volatilitate live crescută."
-        },
         {
           "type": "lineups",
           "level": "info",
@@ -82,56 +92,84 @@
       "url": "https://sports.bzzoiro.com/api/v2/events/live/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 386
+      "elapsed_ms": 303
     },
     {
       "label": "backfill_event_223540",
       "url": "https://sports.bzzoiro.com/api/v2/events/223540/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 196
+      "elapsed_ms": 168
     },
     {
-      "label": "live_incidents_223423",
-      "url": "https://sports.bzzoiro.com/api/v2/events/223423/incidents/",
+      "label": "backfill_event_207960",
+      "url": "https://sports.bzzoiro.com/api/v2/events/207960/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 274
+      "elapsed_ms": 166
     },
     {
-      "label": "live_stats_223423",
-      "url": "https://sports.bzzoiro.com/api/v2/events/223423/stats/",
+      "label": "live_incidents_223540",
+      "url": "https://sports.bzzoiro.com/api/v2/events/223540/incidents/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 280
+      "elapsed_ms": 300
     },
     {
-      "label": "live_stats_207958",
-      "url": "https://sports.bzzoiro.com/api/v2/events/207958/stats/",
+      "label": "live_lineups_207961",
+      "url": "https://sports.bzzoiro.com/api/v2/events/207961/lineups/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 286
+      "elapsed_ms": 314
     },
     {
-      "label": "live_incidents_207958",
-      "url": "https://sports.bzzoiro.com/api/v2/events/207958/incidents/",
+      "label": "live_stats_207961",
+      "url": "https://sports.bzzoiro.com/api/v2/events/207961/stats/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 292
+      "elapsed_ms": 320
     },
     {
-      "label": "live_lineups_223423",
-      "url": "https://sports.bzzoiro.com/api/v2/events/223423/lineups/",
+      "label": "live_stats_223424",
+      "url": "https://sports.bzzoiro.com/api/v2/events/223424/stats/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 333
+      "elapsed_ms": 319
     },
     {
-      "label": "live_lineups_207958",
-      "url": "https://sports.bzzoiro.com/api/v2/events/207958/lineups/",
+      "label": "live_lineups_223424",
+      "url": "https://sports.bzzoiro.com/api/v2/events/223424/lineups/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 1077
+      "elapsed_ms": 317
+    },
+    {
+      "label": "live_lineups_223540",
+      "url": "https://sports.bzzoiro.com/api/v2/events/223540/lineups/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 312
+    },
+    {
+      "label": "live_incidents_223424",
+      "url": "https://sports.bzzoiro.com/api/v2/events/223424/incidents/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 325
+    },
+    {
+      "label": "live_stats_223540",
+      "url": "https://sports.bzzoiro.com/api/v2/events/223540/stats/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 327
+    },
+    {
+      "label": "live_incidents_207961",
+      "url": "https://sports.bzzoiro.com/api/v2/events/207961/incidents/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 348
     }
   ],
   "warnings": []
