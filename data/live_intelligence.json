@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-15T21:39:51.493123+00:00",
+  "updated_at": "2026-08-15T21:40:37.405211+00:00",
   "source": "live_intelligence_v23",
   "endpoint": "/api/v2/events/live/",
   "params": {},
@@ -10,9 +10,9 @@
     "with_stats": 3,
     "with_incidents": 3,
     "with_lineups": 3,
-    "strong_signals": 0,
-    "reused_cache": 0,
-    "refetched": 3
+    "strong_signals": 1,
+    "reused_cache": 1,
+    "refetched": 2
   },
   "events": [
     {
@@ -1065,7 +1065,7 @@
         }
       ],
       "coverage_score": 3,
-      "cache_status": "refetched"
+      "cache_status": "reused_last_updated"
     },
     {
       "event_id": 10069,
@@ -1078,7 +1078,7 @@
       "event_date": "2026-08-15T21:30:00+00:00",
       "status": "1st_half",
       "period": "1T",
-      "current_minute": 6,
+      "current_minute": 7,
       "home_score": 0,
       "away_score": 0,
       "last_updated": null,
@@ -1101,7 +1101,7 @@
         "round_name": "",
         "group_name": null,
         "period": "1T",
-        "current_minute": 6,
+        "current_minute": 7,
         "home_score": 0,
         "away_score": 0,
         "home_score_ht": 0,
@@ -1180,7 +1180,7 @@
         "has_xg": false,
         "previous_leg_event_id": null,
         "event_id": 10069,
-        "minute": 6,
+        "minute": 7,
         "league_name": null,
         "last_updated": null,
         "image_assets": {
@@ -1433,22 +1433,74 @@
       },
       "phase": "early",
       "pressure_side": "home",
-      "pressure_score": 29.0,
+      "pressure_score": 54.8,
       "stats_summary": {
-        "xg_home": 0.58,
+        "xg_home": 0.89,
         "xg_away": null,
-        "shots_on_target_home": 1.0,
+        "shots_on_target_home": 3.0,
         "shots_on_target_away": null,
-        "shots_home": 3.0,
+        "shots_home": 5.0,
         "shots_away": null,
-        "possession_home": 62.0,
-        "possession_away": 38.0,
+        "possession_home": 64.0,
+        "possession_away": 36.0,
         "dangerous_attacks_home": null,
         "dangerous_attacks_away": null,
-        "momentum_points": 7,
-        "xg_per_minute_points": 3,
-        "shotmap_count": 3,
+        "momentum_points": 9,
+        "xg_per_minute_points": 5,
+        "shotmap_count": 5,
         "shotmap": [
+          {
+            "gm": {
+              "x": 0,
+              "y": 47.8,
+              "z": 3.2
+            },
+            "xg": 0.2146,
+            "gml": "low-right",
+            "min": 8,
+            "pos": {
+              "x": 5.5,
+              "y": 56.2,
+              "z": 0
+            },
+            "sit": "assisted",
+            "body": "right-foot",
+            "home": true,
+            "type": "save",
+            "xgot": 0.2708,
+            "block": {
+              "x": 0.3,
+              "y": 53.1,
+              "z": 0
+            },
+            "player_id": 12249
+          },
+          {
+            "gm": {
+              "x": 0,
+              "y": 53.3,
+              "z": 2.5
+            },
+            "xg": 0.096,
+            "gml": "low-left",
+            "min": 7,
+            "pos": {
+              "x": 12.5,
+              "y": 45.9,
+              "z": 0
+            },
+            "sit": "assisted",
+            "body": "left-foot",
+            "home": true,
+            "type": "save",
+            "xgot": 0.5974,
+            "block": {
+              "x": 2.3,
+              "y": 49.8,
+              "z": 0
+            },
+            "player_id": 110
+          },
           {
             "gm": {
               "x": 0,
@@ -1525,6 +1577,58 @@
         ]
       },
       "shotmap": [
+        {
+          "gm": {
+            "x": 0,
+            "y": 47.8,
+            "z": 3.2
+          },
+          "xg": 0.2146,
+          "gml": "low-right",
+          "min": 8,
+          "pos": {
+            "x": 5.5,
+            "y": 56.2,
+            "z": 0
+          },
+          "sit": "assisted",
+          "body": "right-foot",
+          "home": true,
+          "type": "save",
+          "xgot": 0.2708,
+          "block": {
+            "x": 0.3,
+            "y": 53.1,
+            "z": 0
+          },
+          "player_id": 12249
+        },
+        {
+          "gm": {
+            "x": 0,
+            "y": 53.3,
+            "z": 2.5
+          },
+          "xg": 0.096,
+          "gml": "low-left",
+          "min": 7,
+          "pos": {
+            "x": 12.5,
+            "y": 45.9,
+            "z": 0
+          },
+          "sit": "assisted",
+          "body": "left-foot",
+          "home": true,
+          "type": "save",
+          "xgot": 0.5974,
+          "block": {
+            "x": 2.3,
+            "y": 49.8,
+            "z": 0
+          },
+          "player_id": 110
+        },
         {
           "gm": {
             "x": 0,
@@ -1619,9 +1723,9 @@
       "live_signals": [
         {
           "type": "momentum",
-          "level": "medium",
+          "level": "strong",
           "label": "presiune acasă",
-          "note": "Momentum home: xG 0.58-0.00, SOT 1-0."
+          "note": "Momentum home: xG 0.89-0.00, SOT 3-0."
         },
         {
           "type": "lineups",
