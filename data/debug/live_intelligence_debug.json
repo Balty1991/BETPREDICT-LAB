@@ -1,29 +1,29 @@
 {
-  "updated_at": "2026-08-15T21:56:38.588449+00:00",
+  "updated_at": "2026-08-15T22:01:01.593083+00:00",
   "limit": 18,
   "params": {},
   "summary": {
-    "live_events": 2,
-    "enriched_events": 2,
-    "with_stats": 2,
-    "with_incidents": 2,
-    "with_lineups": 2,
+    "live_events": 1,
+    "enriched_events": 1,
+    "with_stats": 1,
+    "with_incidents": 0,
+    "with_lineups": 1,
     "strong_signals": 1,
     "reused_cache": 0,
-    "refetched": 2
+    "refetched": 1
   },
   "events": [
     {
-      "event_id": 7214,
+      "event_id": 10069,
       "score": "0-0",
-      "minute": 24,
+      "minute": 27,
       "last_updated": null,
       "cache_status": "refetched",
       "pressure_side": "home",
-      "pressure_score": 51.4,
+      "pressure_score": 32.1,
       "resources": {
         "stats": 1,
-        "incidents": 1,
+        "incidents": 0,
         "lineups": 1
       },
       "signals": [
@@ -31,30 +31,8 @@
           "type": "momentum",
           "level": "strong",
           "label": "presiune acasă",
-          "note": "Momentum home: xG 0.86-0.06, SOT 3-0."
+          "note": "Momentum home: xG 1.14-0.11, SOT 0-1."
         },
-        {
-          "type": "lineups",
-          "level": "info",
-          "label": "lineup confirmed",
-          "note": "Status lineup disponibil pentru context live."
-        }
-      ]
-    },
-    {
-      "event_id": 10069,
-      "score": "0-0",
-      "minute": 24,
-      "last_updated": null,
-      "cache_status": "refetched",
-      "pressure_side": "home",
-      "pressure_score": 13.1,
-      "resources": {
-        "stats": 1,
-        "incidents": 1,
-        "lineups": 1
-      },
-      "signals": [
         {
           "type": "lineups",
           "level": "info",
@@ -69,79 +47,123 @@
       "label": "events_live",
       "url": "https://sports.bzzoiro.com/api/v2/events/live/",
       "params": {},
-      "status": 200,
-      "elapsed_ms": 290
+      "status": 502,
+      "elapsed_ms": 180
+    },
+    {
+      "label": "events_live",
+      "url": "https://sports.bzzoiro.com/api/v2/events/live/",
+      "params": {},
+      "status": null,
+      "elapsed_ms": 180,
+      "error": "502 Server Error: Bad Gateway for url: https://sports.bzzoiro.com/api/v2/events/live/"
     },
     {
       "label": "backfill_event_7214",
       "url": "https://sports.bzzoiro.com/api/v2/events/7214/",
       "params": {},
-      "status": 200,
-      "elapsed_ms": 263
+      "status": 502,
+      "elapsed_ms": 155
+    },
+    {
+      "label": "backfill_event_7214",
+      "url": "https://sports.bzzoiro.com/api/v2/events/7214/",
+      "params": {},
+      "status": null,
+      "elapsed_ms": 155,
+      "error": "502 Server Error: Bad Gateway for url: https://sports.bzzoiro.com/api/v2/events/7214/"
     },
     {
       "label": "backfill_event_10069",
       "url": "https://sports.bzzoiro.com/api/v2/events/10069/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 272
+      "elapsed_ms": 153
     },
     {
       "label": "backfill_event_223569",
       "url": "https://sports.bzzoiro.com/api/v2/events/223569/",
       "params": {},
-      "status": 200,
-      "elapsed_ms": 262
+      "status": 502,
+      "elapsed_ms": 151
+    },
+    {
+      "label": "backfill_event_223569",
+      "url": "https://sports.bzzoiro.com/api/v2/events/223569/",
+      "params": {},
+      "status": null,
+      "elapsed_ms": 151,
+      "error": "502 Server Error: Bad Gateway for url: https://sports.bzzoiro.com/api/v2/events/223569/"
     },
     {
       "label": "backfill_event_223574",
       "url": "https://sports.bzzoiro.com/api/v2/events/223574/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 247
+      "elapsed_ms": 152
     },
     {
-      "label": "live_stats_7214",
-      "url": "https://sports.bzzoiro.com/api/v2/events/7214/stats/",
+      "label": "live_incidents_10069",
+      "url": "https://sports.bzzoiro.com/api/v2/events/10069/incidents/",
       "params": {},
-      "status": 200,
-      "elapsed_ms": 283
+      "status": 502,
+      "elapsed_ms": 173
+    },
+    {
+      "label": "live_incidents_10069",
+      "url": "https://sports.bzzoiro.com/api/v2/events/10069/incidents/",
+      "params": {},
+      "status": null,
+      "elapsed_ms": 173,
+      "error": "502 Server Error: Bad Gateway for url: https://sports.bzzoiro.com/api/v2/events/10069/incidents/"
     },
     {
       "label": "live_lineups_10069",
       "url": "https://sports.bzzoiro.com/api/v2/events/10069/lineups/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 302
-    },
-    {
-      "label": "live_incidents_7214",
-      "url": "https://sports.bzzoiro.com/api/v2/events/7214/incidents/",
-      "params": {},
-      "status": 200,
-      "elapsed_ms": 321
-    },
-    {
-      "label": "live_lineups_7214",
-      "url": "https://sports.bzzoiro.com/api/v2/events/7214/lineups/",
-      "params": {},
-      "status": 200,
-      "elapsed_ms": 320
+      "elapsed_ms": 195
     },
     {
       "label": "live_stats_10069",
       "url": "https://sports.bzzoiro.com/api/v2/events/10069/stats/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 321
-    },
-    {
-      "label": "live_incidents_10069",
-      "url": "https://sports.bzzoiro.com/api/v2/events/10069/incidents/",
-      "params": {},
-      "status": 200,
-      "elapsed_ms": 340
+      "elapsed_ms": 309
     }
   ],
-  "warnings": []
+  "warnings": [
+    {
+      "message": "Request live eșuat",
+      "context": {
+        "label": "events_live",
+        "error": "502 Server Error: Bad Gateway for url: https://sports.bzzoiro.com/api/v2/events/live/"
+      },
+      "time": "2026-08-15T22:01:00.629814+00:00"
+    },
+    {
+      "message": "Request live eșuat",
+      "context": {
+        "label": "backfill_event_7214",
+        "error": "502 Server Error: Bad Gateway for url: https://sports.bzzoiro.com/api/v2/events/7214/"
+      },
+      "time": "2026-08-15T22:01:00.818945+00:00"
+    },
+    {
+      "message": "Request live eșuat",
+      "context": {
+        "label": "backfill_event_223569",
+        "error": "502 Server Error: Bad Gateway for url: https://sports.bzzoiro.com/api/v2/events/223569/"
+      },
+      "time": "2026-08-15T22:01:01.125370+00:00"
+    },
+    {
+      "message": "Request live eșuat",
+      "context": {
+        "label": "live_incidents_10069",
+        "error": "502 Server Error: Bad Gateway for url: https://sports.bzzoiro.com/api/v2/events/10069/incidents/"
+      },
+      "time": "2026-08-15T22:01:01.455844+00:00"
+    }
+  ]
 }
