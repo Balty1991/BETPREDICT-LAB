@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-08-15T14:52:09.522070+00:00",
+  "updated_at": "2026-08-15T15:34:14.230487+00:00",
   "source": "market_odds_audit_v1",
   "summary": {
-    "predictions_count": 314,
+    "predictions_count": 313,
     "signals_count": 23,
     "value_bets_count": 8,
-    "unique_prediction_events": 314,
+    "unique_prediction_events": 313,
     "unique_signal_events": 23,
     "unique_value_events": 8,
     "signals_with_value_bet_overlap": 8,
@@ -19,11 +19,11 @@
     "events_with_1x2": 32,
     "events_with_over_under_25": 32,
     "events_with_btts": 32,
-    "avg_bookmakers_count": 21.59,
+    "avg_bookmakers_count": 19.34,
     "movement_counts": {
-      "UNKNOWN": 643,
-      "SHORTENING": 624,
-      "DRIFTING": 903
+      "SHORTENING": 573,
+      "DRIFTING": 796,
+      "UNKNOWN": 652
     },
     "file_presence": {
       "predictions.json": true,
@@ -102,7 +102,7 @@
         "away": {
           "team_id": 191,
           "team_name": "Eyüpspor",
-          "position": 713,
+          "position": 716,
           "played": 2,
           "pts": 6.0,
           "ppg": 3.0,
@@ -113,8 +113,8 @@
           "xgd_pg": 0.0,
           "form": "WW",
           "form_score": 100.0,
-          "rank_score": 72.6,
-          "strength_score": 85.3,
+          "rank_score": 72.5,
+          "strength_score": 85.2,
           "attack_score": 72.0,
           "defense_score": 70.0,
           "league_id": 79,
@@ -126,21 +126,21 @@
           "source": "league_metadata.standings.rows"
         },
         "home_strength": 65.0,
-        "away_strength": 85.3,
-        "delta_strength": -17.3,
+        "away_strength": 85.2,
+        "delta_strength": -17.2,
         "adjustment_pp": {
           "home": 0.0,
           "draw": 0.0,
           "away": 0.0
         },
         "raw_adjustment_pp": {
-          "home": -1.32,
-          "draw": -0.76,
-          "away": 2.14
+          "home": -1.31,
+          "draw": -0.75,
+          "away": 2.13
         },
         "calibration": {
           "version": "league_strength_safety_v1",
-          "updated_at": "2026-08-15T14:52:06.782665+00:00",
+          "updated_at": "2026-08-15T15:34:10.410712+00:00",
           "idempotent_from": "pre_league_home/pre_league_draw/pre_league_away",
           "scale": 0.0,
           "reason": "competition_unreliable_type",
@@ -154,14 +154,14 @@
           "away_played": 2.0,
           "sample_min": 2.0,
           "raw_adjustment_pp": {
-            "home": -1.32,
-            "draw": -0.76,
-            "away": 2.14
+            "home": -1.31,
+            "draw": -0.75,
+            "away": 2.13
           },
           "capped_adjustment_pp": {
-            "home": -1.32,
-            "draw": -0.76,
-            "away": 2.14
+            "home": -1.31,
+            "draw": -0.75,
+            "away": 2.13
           },
           "weighted_before_rebalance_pp": {
             "home": -0.0,
@@ -176,7 +176,148 @@
           "capped": false
         }
       },
-      "league_strength_delta": -17.3,
+      "league_strength_delta": -17.2,
+      "league_strength_bonus": 0.0,
+      "risk_note": "cote reale + standings strength + edge controlat"
+    },
+    {
+      "source": "local_disciplined",
+      "confidence": 83.1,
+      "tier": "strong",
+      "market": "under35",
+      "market_label": "Under 3.5G",
+      "market_odds": 1.48,
+      "model_probability": 74.9,
+      "market_probability": 67.6,
+      "edge": 0.1087,
+      "edge_pct": "+10.9%",
+      "fair_odd": 1.31,
+      "event_id": 215506,
+      "home_team": "Rio Ave",
+      "away_team": "FC Porto",
+      "home_team_id": 38,
+      "away_team_id": 35,
+      "league": "Liga Portugal Betclic",
+      "league_id": 2,
+      "event_date": "2026-08-15T19:30:00Z",
+      "kelly_pct": "5.0%",
+      "quality_grade": "A",
+      "edge_nv_pp": 7.34,
+      "odds_source": "bookmaker",
+      "odds_market": "over_under_35",
+      "league_strength": {
+        "available": true,
+        "source": "league_metadata.standings.rows",
+        "league_id": 2,
+        "league_name": "Club Friendlies",
+        "country": "World",
+        "season_id": 1552,
+        "season_name": "Club Friendly Games 2026",
+        "league_size": 2598,
+        "home": {
+          "team_id": 38,
+          "team_name": "Rio Ave",
+          "position": 208,
+          "played": 5,
+          "pts": 13.0,
+          "ppg": 2.6,
+          "gf": 15.0,
+          "ga": 6.0,
+          "gd": 9.0,
+          "gd_pg": 1.8,
+          "xgd_pg": 0.0,
+          "form": "WWDWW",
+          "form_score": 90.0,
+          "rank_score": 92.0,
+          "strength_score": 87.8,
+          "attack_score": 99.0,
+          "defense_score": 48.4,
+          "league_id": 79,
+          "league_name": "Club Friendlies",
+          "country": "World",
+          "season_id": 1552,
+          "season_name": "Club Friendly Games 2026",
+          "league_size": 2598,
+          "source": "league_metadata.standings.rows"
+        },
+        "away": {
+          "team_id": 35,
+          "team_name": "FC Porto",
+          "position": 1264,
+          "played": 2,
+          "pts": 3.0,
+          "ppg": 1.5,
+          "gf": 2.0,
+          "ga": 2.0,
+          "gd": 0,
+          "gd_pg": 0.0,
+          "xgd_pg": 0.0,
+          "form": "WL",
+          "form_score": 50.0,
+          "rank_score": 51.4,
+          "strength_score": 50.5,
+          "attack_score": 63.0,
+          "defense_score": 52.0,
+          "league_id": 79,
+          "league_name": "Club Friendlies",
+          "country": "World",
+          "season_id": 1552,
+          "season_name": "Club Friendly Games 2026",
+          "league_size": 2598,
+          "source": "league_metadata.standings.rows"
+        },
+        "home_strength": 87.8,
+        "away_strength": 50.5,
+        "delta_strength": 40.3,
+        "adjustment_pp": {
+          "home": 0.0,
+          "draw": 0.0,
+          "away": 0.0
+        },
+        "raw_adjustment_pp": {
+          "home": 5.04,
+          "draw": -1.77,
+          "away": -3.26
+        },
+        "calibration": {
+          "version": "league_strength_safety_v1",
+          "updated_at": "2026-08-15T15:34:10.407049+00:00",
+          "idempotent_from": "pre_league_home/pre_league_draw/pre_league_away",
+          "scale": 0.0,
+          "reason": "competition_unreliable_type",
+          "caps_pp": {
+            "home": 4.0,
+            "draw": 2.0,
+            "away": 4.0
+          },
+          "competition_text": "Liga Portugal Betclic Liga Portugal Betclic Club Friendlies Club Friendly Games 2026 World",
+          "home_played": 5.0,
+          "away_played": 2.0,
+          "sample_min": 2.0,
+          "raw_adjustment_pp": {
+            "home": 5.04,
+            "draw": -1.77,
+            "away": -3.26
+          },
+          "capped_adjustment_pp": {
+            "home": 4.0,
+            "draw": -1.77,
+            "away": -3.26
+          },
+          "weighted_before_rebalance_pp": {
+            "home": 0.0,
+            "draw": -0.0,
+            "away": -0.0
+          },
+          "final_adjustment_pp": {
+            "home": 0.0,
+            "draw": 0.0,
+            "away": 0.0
+          },
+          "capped": true
+        }
+      },
+      "league_strength_delta": 40.3,
       "league_strength_bonus": 0.0,
       "risk_note": "cote reale + standings strength + edge controlat"
     },
@@ -281,7 +422,7 @@
         },
         "calibration": {
           "version": "league_strength_safety_v1",
-          "updated_at": "2026-08-15T14:52:06.782207+00:00",
+          "updated_at": "2026-08-15T15:34:10.410063+00:00",
           "idempotent_from": "pre_league_home/pre_league_draw/pre_league_away",
           "scale": 0.0,
           "reason": "competition_unreliable_type",
@@ -323,148 +464,7 @@
     },
     {
       "source": "local_disciplined",
-      "confidence": 79.6,
-      "tier": "strong",
-      "market": "under35",
-      "market_label": "Under 3.5G",
-      "market_odds": 1.48,
-      "model_probability": 74.9,
-      "market_probability": 67.6,
-      "edge": 0.1087,
-      "edge_pct": "+10.9%",
-      "fair_odd": 1.31,
-      "event_id": 215506,
-      "home_team": "Rio Ave",
-      "away_team": "FC Porto",
-      "home_team_id": 38,
-      "away_team_id": 35,
-      "league": "Liga Portugal Betclic",
-      "league_id": 2,
-      "event_date": "2026-08-15T19:30:00Z",
-      "kelly_pct": "5.0%",
-      "quality_grade": "B+",
-      "edge_nv_pp": 7.34,
-      "odds_source": "bookmaker",
-      "odds_market": "over_under_35",
-      "league_strength": {
-        "available": true,
-        "source": "league_metadata.standings.rows",
-        "league_id": 2,
-        "league_name": "Club Friendlies",
-        "country": "World",
-        "season_id": 1552,
-        "season_name": "Club Friendly Games 2026",
-        "league_size": 2598,
-        "home": {
-          "team_id": 38,
-          "team_name": "Rio Ave",
-          "position": 208,
-          "played": 5,
-          "pts": 13.0,
-          "ppg": 2.6,
-          "gf": 15.0,
-          "ga": 6.0,
-          "gd": 9.0,
-          "gd_pg": 1.8,
-          "xgd_pg": 0.0,
-          "form": "WWDWW",
-          "form_score": 90.0,
-          "rank_score": 92.0,
-          "strength_score": 87.8,
-          "attack_score": 99.0,
-          "defense_score": 48.4,
-          "league_id": 79,
-          "league_name": "Club Friendlies",
-          "country": "World",
-          "season_id": 1552,
-          "season_name": "Club Friendly Games 2026",
-          "league_size": 2598,
-          "source": "league_metadata.standings.rows"
-        },
-        "away": {
-          "team_id": 35,
-          "team_name": "FC Porto",
-          "position": 1264,
-          "played": 2,
-          "pts": 3.0,
-          "ppg": 1.5,
-          "gf": 2.0,
-          "ga": 2.0,
-          "gd": 0,
-          "gd_pg": 0.0,
-          "xgd_pg": 0.0,
-          "form": "WL",
-          "form_score": 50.0,
-          "rank_score": 51.4,
-          "strength_score": 50.5,
-          "attack_score": 63.0,
-          "defense_score": 52.0,
-          "league_id": 79,
-          "league_name": "Club Friendlies",
-          "country": "World",
-          "season_id": 1552,
-          "season_name": "Club Friendly Games 2026",
-          "league_size": 2598,
-          "source": "league_metadata.standings.rows"
-        },
-        "home_strength": 87.8,
-        "away_strength": 50.5,
-        "delta_strength": 40.3,
-        "adjustment_pp": {
-          "home": 0.0,
-          "draw": 0.0,
-          "away": 0.0
-        },
-        "raw_adjustment_pp": {
-          "home": 5.04,
-          "draw": -1.77,
-          "away": -3.26
-        },
-        "calibration": {
-          "version": "league_strength_safety_v1",
-          "updated_at": "2026-08-15T14:52:06.780224+00:00",
-          "idempotent_from": "pre_league_home/pre_league_draw/pre_league_away",
-          "scale": 0.0,
-          "reason": "competition_unreliable_type",
-          "caps_pp": {
-            "home": 4.0,
-            "draw": 2.0,
-            "away": 4.0
-          },
-          "competition_text": "Liga Portugal Betclic Liga Portugal Betclic Club Friendlies Club Friendly Games 2026 World",
-          "home_played": 5.0,
-          "away_played": 2.0,
-          "sample_min": 2.0,
-          "raw_adjustment_pp": {
-            "home": 5.04,
-            "draw": -1.77,
-            "away": -3.26
-          },
-          "capped_adjustment_pp": {
-            "home": 4.0,
-            "draw": -1.77,
-            "away": -3.26
-          },
-          "weighted_before_rebalance_pp": {
-            "home": 0.0,
-            "draw": -0.0,
-            "away": -0.0
-          },
-          "final_adjustment_pp": {
-            "home": 0.0,
-            "draw": 0.0,
-            "away": 0.0
-          },
-          "capped": true
-        }
-      },
-      "league_strength_delta": 40.3,
-      "league_strength_bonus": 0.0,
-      "risk_note": "cote reale + standings strength + edge controlat"
-    },
-    {
-      "source": "local_disciplined",
-      "confidence": 72.2,
+      "confidence": 71.2,
       "tier": "neutral",
       "market": "under35",
       "market_label": "Under 3.5G",
@@ -525,7 +525,7 @@
         "away": {
           "team_id": 134,
           "team_name": "Fenerbahçe",
-          "position": 421,
+          "position": 423,
           "played": 3,
           "pts": 9.0,
           "ppg": 3.0,
@@ -563,7 +563,7 @@
         },
         "calibration": {
           "version": "league_strength_safety_v1",
-          "updated_at": "2026-08-15T14:52:06.779910+00:00",
+          "updated_at": "2026-08-15T15:34:10.406570+00:00",
           "idempotent_from": "pre_league_home/pre_league_draw/pre_league_away",
           "scale": 0.0,
           "reason": "competition_unreliable_type",
@@ -640,7 +640,7 @@
         "home": {
           "team_id": 194,
           "team_name": "Başakşehir FK",
-          "position": 486,
+          "position": 489,
           "played": 7,
           "pts": 9.0,
           "ppg": 1.286,
@@ -651,7 +651,7 @@
           "xgd_pg": 0.0,
           "form": "WWLDL",
           "form_score": 50.0,
-          "rank_score": 81.3,
+          "rank_score": 81.2,
           "strength_score": 58.8,
           "attack_score": 68.1,
           "defense_score": 46.9,
@@ -704,7 +704,7 @@
         },
         "calibration": {
           "version": "league_strength_safety_v1",
-          "updated_at": "2026-08-15T14:52:06.782232+00:00",
+          "updated_at": "2026-08-15T15:34:10.410101+00:00",
           "idempotent_from": "pre_league_home/pre_league_draw/pre_league_away",
           "scale": 0.0,
           "reason": "competition_unreliable_type",
@@ -845,7 +845,7 @@
         },
         "calibration": {
           "version": "league_strength_safety_v1",
-          "updated_at": "2026-08-15T14:52:06.779859+00:00",
+          "updated_at": "2026-08-15T15:34:10.406464+00:00",
           "idempotent_from": "pre_league_home/pre_league_draw/pre_league_away",
           "scale": 0.0,
           "reason": "competition_unreliable_type",
@@ -906,7 +906,7 @@
       "league_id": 57,
       "event_date": "2026-08-15T23:00:00Z",
       "kelly_pct": "5.0%",
-      "quality_grade": "E",
+      "quality_grade": "D",
       "edge_nv_pp": 7.36,
       "odds_source": "bookmaker",
       "odds_market": "over_under_35",
@@ -922,7 +922,7 @@
         "home": {
           "team_id": 2243,
           "team_name": "Detroit City FC",
-          "position": 952,
+          "position": 953,
           "played": 3,
           "pts": 4.0,
           "ppg": 1.333,
@@ -933,7 +933,7 @@
           "xgd_pg": 0.0,
           "form": "LWD",
           "form_score": 50.0,
-          "rank_score": 63.4,
+          "rank_score": 63.3,
           "strength_score": 53.1,
           "attack_score": 69.0,
           "defense_score": 46.0,
@@ -948,7 +948,7 @@
         "away": {
           "team_id": 2224,
           "team_name": "Loudoun United FC",
-          "position": 965,
+          "position": 966,
           "played": 5,
           "pts": 4.0,
           "ppg": 0.8,
@@ -959,7 +959,7 @@
           "xgd_pg": 0.0,
           "form": "LLLWD",
           "form_score": 30.0,
-          "rank_score": 62.9,
+          "rank_score": 62.8,
           "strength_score": 45.0,
           "attack_score": 77.4,
           "defense_score": 34.0,
@@ -986,7 +986,7 @@
         },
         "calibration": {
           "version": "league_strength_safety_v1",
-          "updated_at": "2026-08-15T14:52:06.780522+00:00",
+          "updated_at": "2026-08-15T15:34:10.407519+00:00",
           "idempotent_from": "pre_league_home/pre_league_draw/pre_league_away",
           "scale": 0.0,
           "reason": "competition_unreliable_type",
@@ -1047,22 +1047,123 @@
       "league_id": 57,
       "event_date": "2026-08-16T01:00:00Z",
       "kelly_pct": "5.0%",
-      "quality_grade": "E",
+      "quality_grade": "D",
       "edge_nv_pp": 7.23,
       "odds_source": "bookmaker",
       "odds_market": "over_under_35",
       "league_strength": {
-        "available": false,
+        "available": true,
+        "source": "league_metadata.standings.rows",
         "league_id": 57,
-        "reason": "missing_team_standings_or_probabilities",
-        "context_summary": {
-          "leagues": 52,
-          "teams_by_id": 2961,
-          "teams_by_name": 3831,
-          "meta_updated_at": "2026-08-15T14:30:50.053267+00:00"
+        "league_name": "Club Friendlies",
+        "country": "World",
+        "season_id": 1552,
+        "season_name": "Club Friendly Games 2026",
+        "league_size": 2598,
+        "home": {
+          "team_id": 2234,
+          "team_name": "Colorado Springs Switchbacks FC",
+          "position": 586,
+          "played": 3,
+          "pts": 7.0,
+          "ppg": 2.333,
+          "gf": 5.0,
+          "ga": 0,
+          "gd": 5.0,
+          "gd_pg": 1.667,
+          "xgd_pg": 0.0,
+          "form": "WWD",
+          "form_score": 83.3,
+          "rank_score": 77.5,
+          "strength_score": 79.9,
+          "attack_score": 75.0,
+          "defense_score": 70.0,
+          "league_id": 79,
+          "league_name": "Club Friendlies",
+          "country": "World",
+          "season_id": 1552,
+          "season_name": "Club Friendly Games 2026",
+          "league_size": 2598,
+          "source": "league_metadata.standings.rows"
+        },
+        "away": {
+          "team_id": 2229,
+          "team_name": "Birmingham Legion FC",
+          "position": 22,
+          "played": 17,
+          "pts": 17.0,
+          "ppg": 1.0,
+          "gf": 18.0,
+          "ga": 21.0,
+          "gd": -3.0,
+          "gd_pg": -0.176,
+          "xgd_pg": -0.288,
+          "form": "WLDLD",
+          "form_score": 40.0,
+          "rank_score": 12.5,
+          "strength_score": 29.8,
+          "attack_score": 75.2,
+          "defense_score": 36.0,
+          "league_id": 57,
+          "league_name": "USL Championship",
+          "country": "USA",
+          "season_id": 1435,
+          "season_name": "USL Championship 2026",
+          "league_size": 25,
+          "source": "league_metadata.standings.rows"
+        },
+        "home_strength": 79.9,
+        "away_strength": 29.8,
+        "delta_strength": 53.1,
+        "adjustment_pp": {
+          "home": 0.0,
+          "draw": 0.0,
+          "away": 0.0
+        },
+        "raw_adjustment_pp": {
+          "home": 7.96,
+          "draw": -2.29,
+          "away": -5.67
+        },
+        "calibration": {
+          "version": "league_strength_safety_v1",
+          "updated_at": "2026-08-15T15:34:10.408047+00:00",
+          "idempotent_from": "pre_league_home/pre_league_draw/pre_league_away",
+          "scale": 0.0,
+          "reason": "competition_unreliable_type",
+          "caps_pp": {
+            "home": 4.0,
+            "draw": 2.0,
+            "away": 4.0
+          },
+          "competition_text": "USL Championship USL Championship Club Friendlies Club Friendly Games 2026 World",
+          "home_played": 3.0,
+          "away_played": 17.0,
+          "sample_min": 3.0,
+          "raw_adjustment_pp": {
+            "home": 7.96,
+            "draw": -2.29,
+            "away": -5.67
+          },
+          "capped_adjustment_pp": {
+            "home": 4.0,
+            "draw": -2.0,
+            "away": -4.0
+          },
+          "weighted_before_rebalance_pp": {
+            "home": 0.0,
+            "draw": -0.0,
+            "away": -0.0
+          },
+          "final_adjustment_pp": {
+            "home": 0.0,
+            "draw": 0.0,
+            "away": 0.0
+          },
+          "capped": true
         }
       },
-      "league_strength_delta": null,
+      "league_strength_delta": 53.1,
       "league_strength_bonus": 0.0,
       "risk_note": "semnal moderat, verifică contextul/standings"
     }
