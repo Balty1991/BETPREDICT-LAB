@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-08-15T22:56:50.379999+00:00",
+  "updated_at": "2026-08-15T23:01:02.620917+00:00",
   "source": "bsd_v2_events_live+backfill",
   "endpoint": "/api/v2/events/live/",
   "params": {},
-  "count": 1,
-  "backfill_count": 1,
+  "count": 2,
+  "backfill_count": 2,
   "events": [
     {
       "id": 216410,
@@ -25,7 +25,7 @@
       "round_name": "",
       "group_name": null,
       "period": "1T",
-      "current_minute": 23,
+      "current_minute": 27,
       "home_score": 0,
       "away_score": 0,
       "home_score_ht": 0,
@@ -50,7 +50,7 @@
       "has_xg": false,
       "previous_leg_event_id": null,
       "event_id": 216410,
-      "minute": 23,
+      "minute": 27,
       "league_name": null,
       "last_updated": null,
       "image_assets": {
@@ -59,11 +59,95 @@
         "league_logo": "https://sports.bzzoiro.com/img/league/72/"
       },
       "_backfilled": true
+    },
+    {
+      "id": 211525,
+      "league_id": 19,
+      "season_id": 1309,
+      "home_team_id": 3840,
+      "home_team": "Atlante FC",
+      "away_team_id": 310,
+      "away_team": "CD Toluca",
+      "home_coach_id": 1910,
+      "away_coach_id": 328,
+      "referee_id": 2364,
+      "venue_id": 295,
+      "event_date": "2026-08-15T23:00:00+00:00",
+      "status": "1st_half",
+      "replaced_by": null,
+      "round_number": 4,
+      "round_name": "",
+      "group_name": null,
+      "period": "1T",
+      "current_minute": 0,
+      "home_score": 0,
+      "away_score": 0,
+      "home_score_ht": 0,
+      "away_score_ht": 0,
+      "penalty_shootout": null,
+      "extra_time_score": null,
+      "is_local_derby": false,
+      "is_neutral_ground": false,
+      "travel_distance_km": 52,
+      "weather": {
+        "code": 53,
+        "description": null,
+        "wind_speed": 11.5,
+        "temperature_c": 17
+      },
+      "pitch_condition": null,
+      "attendance": null,
+      "live_websocket": true,
+      "websocket_plus": true,
+      "highlights": [],
+      "head_to_head": {
+        "total_matches": 3,
+        "home_wins": 1,
+        "draws": 0,
+        "away_wins": 2,
+        "home_goals": 2,
+        "away_goals": 4,
+        "avg_total_goals": 2.0,
+        "home_win_rate": 0.3333333333333333,
+        "away_win_rate": 0.6666666666666666,
+        "recent_matches": [
+          {
+            "away": "CD Toluca",
+            "date": "2014-03-23T23:00:00+00:00",
+            "home": "Atlante FC",
+            "score": "2-1"
+          },
+          {
+            "away": "CD Toluca",
+            "date": "2013-03-04T00:00:00+00:00",
+            "home": "Atlante FC",
+            "score": "0-1"
+          },
+          {
+            "away": "CD Toluca",
+            "date": "2012-02-12T03:00:00+00:00",
+            "home": "Atlante FC",
+            "score": "0-2"
+          }
+        ]
+      },
+      "has_xg": false,
+      "previous_leg_event_id": null,
+      "event_id": 211525,
+      "minute": 0,
+      "league_name": null,
+      "last_updated": null,
+      "image_assets": {
+        "home_team_logo": "https://sports.bzzoiro.com/img/team/3840/",
+        "away_team_logo": "https://sports.bzzoiro.com/img/team/310/",
+        "league_logo": "https://sports.bzzoiro.com/img/league/19/"
+      },
+      "_backfilled": true
     }
   ],
   "notes": [
     "Conform BSD v2, live window ignoră date_from/date_to/status.",
     "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env.",
-    "Backfill: 1 eveniment(e) adăugate via /events/{id}/ pentru meciuri ratate de /events/live/."
+    "Backfill: 2 eveniment(e) adăugate via /events/{id}/ pentru meciuri ratate de /events/live/."
   ]
 }
