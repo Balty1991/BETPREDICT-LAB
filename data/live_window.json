@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-08-16T20:56:39.210744+00:00",
-  "source": "bsd_v2_events_live",
+  "updated_at": "2026-08-16T21:09:53.817757+00:00",
+  "source": "bsd_v2_events_live+backfill",
   "endpoint": "/api/v2/events/live/",
   "params": {},
-  "count": 1,
-  "backfill_count": 0,
+  "count": 2,
+  "backfill_count": 1,
   "events": [
     {
       "id": 215505,
@@ -17,7 +17,7 @@
       "event_date": "2026-08-16T19:30:00Z",
       "status": "inprogress",
       "period": "2nd_half",
-      "current_minute": 67,
+      "current_minute": 79,
       "home_score": 1,
       "away_score": 1,
       "penalty_shootout": null,
@@ -26,18 +26,145 @@
       "away_score_ht": 1,
       "live_websocket": false,
       "websocket_plus": true,
-      "last_updated": "2026-08-16T20:56:22Z",
+      "last_updated": "2026-08-16T21:08:27Z",
       "event_id": 215505,
-      "minute": 67,
+      "minute": 79,
       "image_assets": {
         "home_team_logo": "https://sports.bzzoiro.com/img/team/27/",
         "away_team_logo": "https://sports.bzzoiro.com/img/team/1311/",
         "league_logo": "https://sports.bzzoiro.com/img/league/2/"
       }
+    },
+    {
+      "id": 223576,
+      "league_id": 85,
+      "season_id": 1635,
+      "home_team_id": 755,
+      "home_team": "River Plate",
+      "away_team_id": 806,
+      "away_team": "Argentinos Juniors",
+      "home_coach_id": 522,
+      "away_coach_id": 727,
+      "referee_id": 2401,
+      "venue_id": 445,
+      "event_date": "2026-08-16T21:00:00+00:00",
+      "status": "1st_half",
+      "replaced_by": null,
+      "round_number": 5,
+      "round_name": "",
+      "group_name": "Group B",
+      "period": "1T",
+      "current_minute": 7,
+      "home_score": 0,
+      "away_score": 0,
+      "home_score_ht": 0,
+      "away_score_ht": 0,
+      "penalty_shootout": null,
+      "extra_time_score": null,
+      "is_local_derby": false,
+      "is_neutral_ground": false,
+      "travel_distance_km": 7,
+      "weather": {
+        "code": 3,
+        "description": "rain",
+        "wind_speed": 8.9,
+        "temperature_c": 19
+      },
+      "pitch_condition": null,
+      "attendance": null,
+      "live_websocket": true,
+      "websocket_plus": true,
+      "highlights": [],
+      "head_to_head": {
+        "total_matches": 19,
+        "home_wins": 5,
+        "draws": 3,
+        "away_wins": 2,
+        "home_goals": 14,
+        "away_goals": 6,
+        "avg_total_goals": 1.0526315789473684,
+        "home_win_rate": 0.2631578947368421,
+        "away_win_rate": 0.10526315789473684,
+        "recent_matches": [
+          {
+            "away": "River Plate",
+            "date": "2026-02-13T00:15:00+00:00",
+            "home": "Argentinos Juniors",
+            "score": "1-0"
+          },
+          {
+            "away": "River Plate",
+            "date": "2024-05-25T18:00:00+00:00",
+            "home": "Argentinos Juniors",
+            "score": "1-0"
+          },
+          {
+            "away": "Argentinos Juniors",
+            "date": "2023-02-12T22:15:00+00:00",
+            "home": "River Plate",
+            "score": "2-1"
+          },
+          {
+            "away": "River Plate",
+            "date": "2022-10-02T23:30:00+00:00",
+            "home": "Argentinos Juniors",
+            "score": "0-3"
+          },
+          {
+            "away": "Argentinos Juniors",
+            "date": "2021-10-25T22:00:00+00:00",
+            "home": "River Plate",
+            "score": "3-0"
+          },
+          {
+            "away": "River Plate",
+            "date": "2019-07-27T23:00:00+00:00",
+            "home": "Argentinos Juniors",
+            "score": "1-1"
+          },
+          {
+            "away": "Argentinos Juniors",
+            "date": "2018-08-25T23:00:00+00:00",
+            "home": "River Plate",
+            "score": "0-0"
+          },
+          {
+            "away": "Argentinos Juniors",
+            "date": "2017-09-24T21:05:00+00:00",
+            "home": "River Plate",
+            "score": "1-1"
+          },
+          {
+            "away": "River Plate",
+            "date": "2015-04-13T00:30:00+00:00",
+            "home": "Argentinos Juniors",
+            "score": "1-2"
+          },
+          {
+            "away": "River Plate",
+            "date": "2014-05-12T00:30:00+00:00",
+            "home": "Argentinos Juniors",
+            "score": "0-2"
+          }
+        ]
+      },
+      "has_xg": false,
+      "previous_leg_event_id": null,
+      "event_id": 223576,
+      "minute": 7,
+      "league_name": null,
+      "last_updated": null,
+      "image_assets": {
+        "home_team_logo": "https://sports.bzzoiro.com/img/team/755/",
+        "away_team_logo": "https://sports.bzzoiro.com/img/team/806/",
+        "league_logo": "https://sports.bzzoiro.com/img/league/85/"
+      },
+      "_backfilled": true
     }
   ],
   "notes": [
     "Conform BSD v2, live window ignoră date_from/date_to/status.",
-    "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env."
+    "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env.",
+    "Backfill: 1 eveniment(e) adăugate via /events/{id}/ pentru meciuri ratate de /events/live/."
   ]
 }
