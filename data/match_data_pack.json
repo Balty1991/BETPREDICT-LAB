@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-16T14:49:24.198568+00:00",
+  "updated_at": "2026-08-16T16:06:53.908137+00:00",
   "source": "bsd_v2_match_data_pack_exact",
   "endpoints": [
     "/api/v2/events/{id}/stats/",
@@ -13,14 +13,14 @@
     "events_requested": 32,
     "events_saved": 32,
     "with_stats": 32,
-    "with_incidents": 0,
+    "with_incidents": 2,
     "with_lineups": 32,
     "with_metadata": 32,
     "with_player_stats": 0,
     "with_ai_preview": 6,
     "with_xa": 0,
-    "with_shotmap": 0,
-    "with_xg_per_minute": 0
+    "with_shotmap": 1,
+    "with_xg_per_minute": 1
   },
   "results": [
     {
@@ -1303,9 +1303,32 @@
         }
       },
       "incidents": {
-        "available": false,
-        "count": 0,
-        "timeline": [],
+        "available": true,
+        "count": 1,
+        "timeline": [
+          {
+            "type": "period",
+            "minute": 45,
+            "player": null,
+            "player_id": null,
+            "player_in": null,
+            "player_in_id": null,
+            "player_out": null,
+            "player_out_id": null,
+            "card_type": null,
+            "is_home": null,
+            "is_live": true,
+            "sequence": null,
+            "raw": {
+              "text": "First half",
+              "type": "period",
+              "minute": 45,
+              "is_live": true,
+              "away_score": 0,
+              "home_score": 0
+            }
+          }
+        ],
         "goals": [],
         "cards": [],
         "substitutions": [],
@@ -1313,13 +1336,13 @@
       },
       "lineups": {
         "available": true,
-        "lineup_status": "predicted",
-        "beta": true,
+        "lineup_status": "confirmed",
+        "beta": false,
         "home": {
           "team_id": 345,
           "team_name": "CSKA Sofia",
-          "formation": "4-3-3",
-          "confidence": 0.477,
+          "formation": "4-1-4-1",
+          "confidence": null,
           "players": [
             {
               "id": 10772,
@@ -1328,7 +1351,7 @@
               "short_name": "F. Lapoukhov",
               "position": "G",
               "jersey_number": 21,
-              "ai_score": 0.045,
+              "ai_score": null,
               "image_url": "https://sports.bzzoiro.com/img/player/10772/",
               "raw": {
                 "id": 10772,
@@ -1336,297 +1359,8 @@
                 "short_name": "F. Lapoukhov",
                 "position": "G",
                 "jersey_number": 21,
-                "ai_score": 0.045
-              }
-            },
-            {
-              "id": 10778,
-              "player_id": 10778,
-              "name": "Ángelo Martino",
-              "short_name": "Á. Martino",
-              "position": "D",
-              "jersey_number": 17,
-              "ai_score": 0.045,
-              "image_url": "https://sports.bzzoiro.com/img/player/10778/",
-              "raw": {
-                "id": 10778,
-                "name": "Ángelo Martino",
-                "short_name": "Á. Martino",
-                "position": "D",
-                "jersey_number": 17,
-                "ai_score": 0.045
-              }
-            },
-            {
-              "id": 11374,
-              "player_id": 11374,
-              "name": "Aleks Tunchev",
-              "short_name": "A. Tunchev",
-              "position": "D",
-              "jersey_number": 15,
-              "ai_score": 0.05,
-              "image_url": "https://sports.bzzoiro.com/img/player/11374/",
-              "raw": {
-                "id": 11374,
-                "name": "Aleks Tunchev",
-                "short_name": "A. Tunchev",
-                "position": "D",
-                "jersey_number": 15,
-                "ai_score": 0.05
-              }
-            },
-            {
-              "id": 10776,
-              "player_id": 10776,
-              "name": "Teodor Ivanov",
-              "short_name": "T. Ivanov",
-              "position": "D",
-              "jersey_number": 14,
-              "ai_score": 0.05,
-              "image_url": "https://sports.bzzoiro.com/img/player/10776/",
-              "raw": {
-                "id": 10776,
-                "name": "Teodor Ivanov",
-                "short_name": "T. Ivanov",
-                "position": "D",
-                "jersey_number": 14,
-                "ai_score": 0.05
-              }
-            },
-            {
-              "id": 10797,
-              "player_id": 10797,
-              "name": "Pastor",
-              "short_name": "Pastor",
-              "position": "D",
-              "jersey_number": 2,
-              "ai_score": 0.05,
-              "image_url": "https://sports.bzzoiro.com/img/player/10797/",
-              "raw": {
-                "id": 10797,
-                "name": "Pastor",
-                "short_name": "Pastor",
-                "position": "D",
-                "jersey_number": 2,
-                "ai_score": 0.05
-              }
-            },
-            {
-              "id": 10784,
-              "player_id": 10784,
-              "name": "Isaac Solet",
-              "short_name": "I. Solet",
-              "position": "M",
-              "jersey_number": 94,
-              "ai_score": 0.05,
-              "image_url": "https://sports.bzzoiro.com/img/player/10784/",
-              "raw": {
-                "id": 10784,
-                "name": "Isaac Solet",
-                "short_name": "I. Solet",
-                "position": "M",
-                "jersey_number": 94,
-                "ai_score": 0.05
-              }
-            },
-            {
-              "id": 10800,
-              "player_id": 10800,
-              "name": "Petko Panayotov",
-              "short_name": "P. Panayotov",
-              "position": "M",
-              "jersey_number": 30,
-              "ai_score": 0.05,
-              "image_url": "https://sports.bzzoiro.com/img/player/10800/",
-              "raw": {
-                "id": 10800,
-                "name": "Petko Panayotov",
-                "short_name": "P. Panayotov",
-                "position": "M",
-                "jersey_number": 30,
-                "ai_score": 0.05
-              }
-            },
-            {
-              "id": 10779,
-              "player_id": 10779,
-              "name": "Bruno Jordão",
-              "short_name": "B. Jordão",
-              "position": "M",
-              "jersey_number": 6,
-              "ai_score": 0.05,
-              "image_url": "https://sports.bzzoiro.com/img/player/10779/",
-              "raw": {
-                "id": 10779,
-                "name": "Bruno Jordão",
-                "short_name": "B. Jordão",
-                "position": "M",
-                "jersey_number": 6,
-                "ai_score": 0.05
-              }
-            },
-            {
-              "id": 52076,
-              "player_id": 52076,
-              "name": "Vasil Kaymakanov",
-              "short_name": "V. Kaymakanov",
-              "position": "M",
-              "jersey_number": 34,
-              "ai_score": 0.05,
-              "image_url": "https://sports.bzzoiro.com/img/player/52076/",
-              "raw": {
-                "id": 52076,
-                "name": "Vasil Kaymakanov",
-                "short_name": "V. Kaymakanov",
-                "position": "M",
-                "jersey_number": 34,
-                "ai_score": 0.05
-              }
-            },
-            {
-              "id": 11529,
-              "player_id": 11529,
-              "name": "Georgi Chorbadzhiyski",
-              "short_name": "G. B. Chorbadzhiyski",
-              "position": "M",
-              "jersey_number": 80,
-              "ai_score": 0.035,
-              "image_url": "https://sports.bzzoiro.com/img/player/11529/",
-              "raw": {
-                "id": 11529,
-                "name": "Georgi Chorbadzhiyski",
-                "short_name": "G. B. Chorbadzhiyski",
-                "position": "M",
-                "jersey_number": 80,
-                "ai_score": 0.035
-              }
-            },
-            {
-              "id": 10786,
-              "player_id": 10786,
-              "name": "Ioannis Pittas",
-              "short_name": "I. Pittas",
-              "position": "F",
-              "jersey_number": 28,
-              "ai_score": 0.05,
-              "image_url": "https://sports.bzzoiro.com/img/player/10786/",
-              "raw": {
-                "id": 10786,
-                "name": "Ioannis Pittas",
-                "short_name": "I. Pittas",
-                "position": "F",
-                "jersey_number": 28,
-                "ai_score": 0.05
-              }
-            }
-          ],
-          "substitutes": [
-            {
-              "id": 10787,
-              "player_id": 10787,
-              "name": "Andrey Yordanov",
-              "short_name": "A. Yordanov",
-              "position": "D",
-              "jersey_number": 19,
-              "ai_score": 0.05,
-              "image_url": "https://sports.bzzoiro.com/img/player/10787/",
-              "raw": {
-                "id": 10787,
-                "name": "Andrey Yordanov",
-                "short_name": "A. Yordanov",
-                "position": "D",
-                "jersey_number": 19,
-                "ai_score": 0.05
-              }
-            },
-            {
-              "id": 10796,
-              "player_id": 10796,
-              "name": "Dimitar Evtimov",
-              "short_name": "D. Evtimov",
-              "position": "G",
-              "jersey_number": 25,
-              "ai_score": 0.05,
-              "image_url": "https://sports.bzzoiro.com/img/player/10796/",
-              "raw": {
-                "id": 10796,
-                "name": "Dimitar Evtimov",
-                "short_name": "D. Evtimov",
-                "position": "G",
-                "jersey_number": 25,
-                "ai_score": 0.05
-              }
-            },
-            {
-              "id": 2783,
-              "player_id": 2783,
-              "name": "Jean-Philippe Gbamin",
-              "short_name": "J. Gbamin",
-              "position": "D",
-              "jersey_number": 5,
-              "ai_score": 0.05,
-              "image_url": "https://sports.bzzoiro.com/img/player/2783/",
-              "raw": {
-                "id": 2783,
-                "name": "Jean-Philippe Gbamin",
-                "short_name": "J. Gbamin",
-                "position": "D",
-                "jersey_number": 5,
-                "ai_score": 0.05
-              }
-            },
-            {
-              "id": 12035,
-              "player_id": 12035,
-              "name": "Joël Zwarts",
-              "short_name": "J. Zwarts",
-              "position": "F",
-              "jersey_number": 10,
-              "ai_score": 0.05,
-              "image_url": "https://sports.bzzoiro.com/img/player/12035/",
-              "raw": {
-                "id": 12035,
-                "name": "Joël Zwarts",
-                "short_name": "J. Zwarts",
-                "position": "F",
-                "jersey_number": 10,
-                "ai_score": 0.05
-              }
-            },
-            {
-              "id": 10793,
-              "player_id": 10793,
-              "name": "Leandro Godoy",
-              "short_name": "L. Godoy",
-              "position": "F",
-              "jersey_number": 9,
-              "ai_score": 0.05,
-              "image_url": "https://sports.bzzoiro.com/img/player/10793/",
-              "raw": {
-                "id": 10793,
-                "name": "Leandro Godoy",
-                "short_name": "L. Godoy",
-                "position": "F",
-                "jersey_number": 9,
-                "ai_score": 0.05
-              }
-            },
-            {
-              "id": 2681,
-              "player_id": 2681,
-              "name": "Léo Pereira",
-              "short_name": "L. Pereira",
-              "position": "M",
-              "jersey_number": 38,
-              "ai_score": 0.05,
-              "image_url": "https://sports.bzzoiro.com/img/player/2681/",
-              "raw": {
-                "id": 2681,
-                "name": "Léo Pereira",
-                "short_name": "L. Pereira",
-                "position": "M",
-                "jersey_number": 38,
-                "ai_score": 0.05
+                "captain": false,
+                "ai_score": null
               }
             },
             {
@@ -1636,7 +1370,7 @@
               "short_name": "M. Brahimi",
               "position": "M",
               "jersey_number": 11,
-              "ai_score": 0.05,
+              "ai_score": null,
               "image_url": "https://sports.bzzoiro.com/img/player/10781/",
               "raw": {
                 "id": 10781,
@@ -1644,43 +1378,103 @@
                 "short_name": "M. Brahimi",
                 "position": "M",
                 "jersey_number": 11,
-                "ai_score": 0.05
+                "captain": false,
+                "ai_score": null
               }
             },
             {
-              "id": 63762,
-              "player_id": 63762,
-              "name": "Stefano Sensi",
-              "short_name": "S. Sensi",
-              "position": "M",
-              "jersey_number": 8,
-              "ai_score": 0.05,
-              "image_url": "https://sports.bzzoiro.com/img/player/63762/",
-              "raw": {
-                "id": 63762,
-                "name": "Stefano Sensi",
-                "short_name": "S. Sensi",
-                "position": "M",
-                "jersey_number": 8,
-                "ai_score": 0.05
-              }
-            },
-            {
-              "id": 13521,
-              "player_id": 13521,
-              "name": "Facundo Rodríguez",
-              "short_name": "F. Rodríguez",
+              "id": 2783,
+              "player_id": 2783,
+              "name": "Jean-Philippe Gbamin",
+              "short_name": "J. Gbamin",
               "position": "D",
-              "jersey_number": 32,
-              "ai_score": 0.045,
-              "image_url": "https://sports.bzzoiro.com/img/player/13521/",
+              "jersey_number": 5,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/2783/",
               "raw": {
-                "id": 13521,
-                "name": "Facundo Rodríguez",
-                "short_name": "F. Rodríguez",
+                "id": 2783,
+                "name": "Jean-Philippe Gbamin",
+                "short_name": "J. Gbamin",
                 "position": "D",
-                "jersey_number": 32,
-                "ai_score": 0.045
+                "jersey_number": 5,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 10776,
+              "player_id": 10776,
+              "name": "Teodor Ivanov",
+              "short_name": "T. Ivanov",
+              "position": "D",
+              "jersey_number": 14,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/10776/",
+              "raw": {
+                "id": 10776,
+                "name": "Teodor Ivanov",
+                "short_name": "T. Ivanov",
+                "position": "D",
+                "jersey_number": 14,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 10787,
+              "player_id": 10787,
+              "name": "Andrey Yordanov",
+              "short_name": "A. Yordanov",
+              "position": "D",
+              "jersey_number": 19,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/10787/",
+              "raw": {
+                "id": 10787,
+                "name": "Andrey Yordanov",
+                "short_name": "A. Yordanov",
+                "position": "D",
+                "jersey_number": 19,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 10779,
+              "player_id": 10779,
+              "name": "Bruno Jordão",
+              "short_name": "B. Jordão",
+              "position": "M",
+              "jersey_number": 6,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/10779/",
+              "raw": {
+                "id": 10779,
+                "name": "Bruno Jordão",
+                "short_name": "B. Jordão",
+                "position": "M",
+                "jersey_number": 6,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 11005,
+              "player_id": 11005,
+              "name": "Cătălin Itu",
+              "short_name": "C. Itu",
+              "position": "M",
+              "jersey_number": 94,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/11005/",
+              "raw": {
+                "id": 11005,
+                "name": "Cătălin Itu",
+                "short_name": "C. Itu",
+                "position": "M",
+                "jersey_number": 94,
+                "captain": false,
+                "ai_score": null
               }
             },
             {
@@ -1690,7 +1484,7 @@
               "short_name": "J. Eto'o",
               "position": "M",
               "jersey_number": 99,
-              "ai_score": 0.045,
+              "ai_score": null,
               "image_url": "https://sports.bzzoiro.com/img/player/10782/",
               "raw": {
                 "id": 10782,
@@ -1698,7 +1492,143 @@
                 "short_name": "J. Eto'o",
                 "position": "M",
                 "jersey_number": 99,
-                "ai_score": 0.045
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 10784,
+              "player_id": 10784,
+              "name": "Isaac Solet",
+              "short_name": "I. Solet",
+              "position": "M",
+              "jersey_number": 94,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/10784/",
+              "raw": {
+                "id": 10784,
+                "name": "Isaac Solet",
+                "short_name": "I. Solet",
+                "position": "M",
+                "jersey_number": 94,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 10800,
+              "player_id": 10800,
+              "name": "Petko Panayotov",
+              "short_name": "P. Panayotov",
+              "position": "M",
+              "jersey_number": 30,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/10800/",
+              "raw": {
+                "id": 10800,
+                "name": "Petko Panayotov",
+                "short_name": "P. Panayotov",
+                "position": "M",
+                "jersey_number": 30,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 12035,
+              "player_id": 12035,
+              "name": "Joël Zwarts",
+              "short_name": "J. Zwarts",
+              "position": "F",
+              "jersey_number": 10,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/12035/",
+              "raw": {
+                "id": 12035,
+                "name": "Joël Zwarts",
+                "short_name": "J. Zwarts",
+                "position": "F",
+                "jersey_number": 10,
+                "captain": false,
+                "ai_score": null
+              }
+            }
+          ],
+          "substitutes": [
+            {
+              "id": 10796,
+              "player_id": 10796,
+              "name": "Dimitar Evtimov",
+              "short_name": "D. Evtimov",
+              "position": "G",
+              "jersey_number": 25,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/10796/",
+              "raw": {
+                "id": 10796,
+                "name": "Dimitar Evtimov",
+                "short_name": "D. Evtimov",
+                "position": "G",
+                "jersey_number": 25,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 10797,
+              "player_id": 10797,
+              "name": "Pastor",
+              "short_name": "Pastor",
+              "position": "D",
+              "jersey_number": 2,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/10797/",
+              "raw": {
+                "id": 10797,
+                "name": "Pastor",
+                "short_name": "Pastor",
+                "position": "D",
+                "jersey_number": 2,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 13521,
+              "player_id": 13521,
+              "name": "Facundo Rodríguez",
+              "short_name": "F. Rodríguez",
+              "position": "D",
+              "jersey_number": 32,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/13521/",
+              "raw": {
+                "id": 13521,
+                "name": "Facundo Rodríguez",
+                "short_name": "F. Rodríguez",
+                "position": "D",
+                "jersey_number": 32,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 11529,
+              "player_id": 11529,
+              "name": "Georgi Chorbadzhiyski",
+              "short_name": "G. B. Chorbadzhiyski",
+              "position": "M",
+              "jersey_number": 80,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/11529/",
+              "raw": {
+                "id": 11529,
+                "name": "Georgi Chorbadzhiyski",
+                "short_name": "G. B. Chorbadzhiyski",
+                "position": "M",
+                "jersey_number": 80,
+                "captain": false,
+                "ai_score": null
               }
             },
             {
@@ -1708,7 +1638,7 @@
               "short_name": "M. Ebong",
               "position": "M",
               "jersey_number": 7,
-              "ai_score": 0.04,
+              "ai_score": null,
               "image_url": "https://sports.bzzoiro.com/img/player/10789/",
               "raw": {
                 "id": 10789,
@@ -1716,25 +1646,103 @@
                 "short_name": "M. Ebong",
                 "position": "M",
                 "jersey_number": 7,
-                "ai_score": 0.04
+                "captain": false,
+                "ai_score": null
               }
             },
             {
-              "id": 10790,
-              "player_id": 10790,
-              "name": "Alejandro Piedrahita",
-              "short_name": "A. Piedrahita",
+              "id": 52076,
+              "player_id": 52076,
+              "name": "Vasil Kaymakanov",
+              "short_name": "V. Kaymakanov",
               "position": "M",
-              "jersey_number": 77,
-              "ai_score": 0.035,
-              "image_url": "https://sports.bzzoiro.com/img/player/10790/",
+              "jersey_number": 34,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/52076/",
               "raw": {
-                "id": 10790,
-                "name": "Alejandro Piedrahita",
-                "short_name": "A. Piedrahita",
+                "id": 52076,
+                "name": "Vasil Kaymakanov",
+                "short_name": "V. Kaymakanov",
                 "position": "M",
-                "jersey_number": 77,
-                "ai_score": 0.035
+                "jersey_number": 34,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 2681,
+              "player_id": 2681,
+              "name": "Léo Pereira",
+              "short_name": "L. Pereira",
+              "position": "M",
+              "jersey_number": 38,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/2681/",
+              "raw": {
+                "id": 2681,
+                "name": "Léo Pereira",
+                "short_name": "L. Pereira",
+                "position": "M",
+                "jersey_number": 38,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 63762,
+              "player_id": 63762,
+              "name": "Stefano Sensi",
+              "short_name": "S. Sensi",
+              "position": "M",
+              "jersey_number": 8,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/63762/",
+              "raw": {
+                "id": 63762,
+                "name": "Stefano Sensi",
+                "short_name": "S. Sensi",
+                "position": "M",
+                "jersey_number": 8,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 10793,
+              "player_id": 10793,
+              "name": "Leandro Godoy",
+              "short_name": "L. Godoy",
+              "position": "F",
+              "jersey_number": 9,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/10793/",
+              "raw": {
+                "id": 10793,
+                "name": "Leandro Godoy",
+                "short_name": "L. Godoy",
+                "position": "F",
+                "jersey_number": 9,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 10786,
+              "player_id": 10786,
+              "name": "Ioannis Pittas",
+              "short_name": "I. Pittas",
+              "position": "F",
+              "jersey_number": 28,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/10786/",
+              "raw": {
+                "id": 10786,
+                "name": "Ioannis Pittas",
+                "short_name": "I. Pittas",
+                "position": "F",
+                "jersey_number": 28,
+                "captain": false,
+                "ai_score": null
               }
             }
           ]
@@ -1743,7 +1751,7 @@
           "team_id": 347,
           "team_name": "Botev Vratsa",
           "formation": "4-2-3-1",
-          "confidence": 0.368,
+          "confidence": null,
           "players": [
             {
               "id": 11315,
@@ -1752,7 +1760,7 @@
               "short_name": "L. Vasilev",
               "position": "G",
               "jersey_number": 98,
-              "ai_score": 0.035,
+              "ai_score": null,
               "image_url": "https://sports.bzzoiro.com/img/player/11315/",
               "raw": {
                 "id": 11315,
@@ -1760,43 +1768,8 @@
                 "short_name": "L. Vasilev",
                 "position": "G",
                 "jersey_number": 98,
-                "ai_score": 0.035
-              }
-            },
-            {
-              "id": 11293,
-              "player_id": 11293,
-              "name": "Sainey Sanyang",
-              "short_name": "S. Sanyang",
-              "position": "D",
-              "jersey_number": 3,
-              "ai_score": 0.035,
-              "image_url": "https://sports.bzzoiro.com/img/player/11293/",
-              "raw": {
-                "id": 11293,
-                "name": "Sainey Sanyang",
-                "short_name": "S. Sanyang",
-                "position": "D",
-                "jersey_number": 3,
-                "ai_score": 0.035
-              }
-            },
-            {
-              "id": 11319,
-              "player_id": 11319,
-              "name": "Lazar Boyanov",
-              "short_name": "L. Boyanov",
-              "position": "D",
-              "jersey_number": 88,
-              "ai_score": 0.045,
-              "image_url": "https://sports.bzzoiro.com/img/player/11319/",
-              "raw": {
-                "id": 11319,
-                "name": "Lazar Boyanov",
-                "short_name": "L. Boyanov",
-                "position": "D",
-                "jersey_number": 88,
-                "ai_score": 0.045
+                "captain": false,
+                "ai_score": null
               }
             },
             {
@@ -1806,7 +1779,7 @@
               "short_name": "A. Stoyanov",
               "position": "M",
               "jersey_number": 8,
-              "ai_score": 0.04,
+              "ai_score": null,
               "image_url": "https://sports.bzzoiro.com/img/player/11309/",
               "raw": {
                 "id": 11309,
@@ -1814,297 +1787,27 @@
                 "short_name": "A. Stoyanov",
                 "position": "M",
                 "jersey_number": 8,
-                "ai_score": 0.04
+                "captain": false,
+                "ai_score": null
               }
             },
             {
-              "id": 11311,
-              "player_id": 11311,
-              "name": "Kassim Hadji",
-              "short_name": "K. Hadji",
-              "position": "M",
-              "jersey_number": 81,
-              "ai_score": 0.045,
-              "image_url": "https://sports.bzzoiro.com/img/player/11311/",
-              "raw": {
-                "id": 11311,
-                "name": "Kassim Hadji",
-                "short_name": "K. Hadji",
-                "position": "M",
-                "jersey_number": 81,
-                "ai_score": 0.045
-              }
-            },
-            {
-              "id": 11295,
-              "player_id": 11295,
-              "name": "Iliya Yurukov",
-              "short_name": "I. Yurukov",
-              "position": "M",
-              "jersey_number": 12,
-              "ai_score": 0.045,
-              "image_url": "https://sports.bzzoiro.com/img/player/11295/",
-              "raw": {
-                "id": 11295,
-                "name": "Iliya Yurukov",
-                "short_name": "I. Yurukov",
-                "position": "M",
-                "jersey_number": 12,
-                "ai_score": 0.045
-              }
-            },
-            {
-              "id": 11418,
-              "player_id": 11418,
-              "name": "Martin Smolenski",
-              "short_name": "M. Smolenski",
-              "position": "M",
-              "jersey_number": 24,
-              "ai_score": 0.045,
-              "image_url": "https://sports.bzzoiro.com/img/player/11418/",
-              "raw": {
-                "id": 11418,
-                "name": "Martin Smolenski",
-                "short_name": "M. Smolenski",
-                "position": "M",
-                "jersey_number": 24,
-                "ai_score": 0.045
-              }
-            },
-            {
-              "id": 11305,
-              "player_id": 11305,
-              "name": "Martin Petkov",
-              "short_name": "M. Petkov",
-              "position": "F",
-              "jersey_number": 79,
-              "ai_score": 0.04,
-              "image_url": "https://sports.bzzoiro.com/img/player/11305/",
-              "raw": {
-                "id": 11305,
-                "name": "Martin Petkov",
-                "short_name": "M. Petkov",
-                "position": "F",
-                "jersey_number": 79,
-                "ai_score": 0.04
-              }
-            },
-            {
-              "id": 11307,
-              "player_id": 11307,
-              "name": "Daniel Genov",
-              "short_name": "D. Genov",
-              "position": "M",
-              "jersey_number": 9,
-              "ai_score": 0.04,
-              "image_url": "https://sports.bzzoiro.com/img/player/11307/",
-              "raw": {
-                "id": 11307,
-                "name": "Daniel Genov",
-                "short_name": "D. Genov",
-                "position": "M",
-                "jersey_number": 9,
-                "ai_score": 0.04
-              }
-            },
-            {
-              "id": 28438,
-              "player_id": 28438,
-              "name": "Preslav Borukov",
-              "short_name": "P. Borukov",
-              "position": "F",
-              "jersey_number": 99,
-              "ai_score": 0.025,
-              "image_url": "https://sports.bzzoiro.com/img/player/28438/",
-              "raw": {
-                "id": 28438,
-                "name": "Preslav Borukov",
-                "short_name": "P. Borukov",
-                "position": "F",
-                "jersey_number": 99,
-                "ai_score": 0.025
-              }
-            },
-            {
-              "id": 12065,
-              "player_id": 12065,
-              "name": "Mitchy Ntelo",
-              "short_name": "M. Ntelo",
-              "position": "F",
-              "jersey_number": 21,
-              "ai_score": 0.01,
-              "image_url": "https://sports.bzzoiro.com/img/player/12065/",
-              "raw": {
-                "id": 12065,
-                "name": "Mitchy Ntelo",
-                "short_name": "M. Ntelo",
-                "position": "F",
-                "jersey_number": 21,
-                "ai_score": 0.01
-              }
-            }
-          ],
-          "substitutes": [
-            {
-              "id": 11291,
-              "player_id": 11291,
-              "name": "Ivan Goranov",
-              "short_name": "I. Goranov",
+              "id": 11319,
+              "player_id": 11319,
+              "name": "Lazar Boyanov",
+              "short_name": "L. Boyanov",
               "position": "D",
-              "jersey_number": 4,
-              "ai_score": 0.045,
-              "image_url": "https://sports.bzzoiro.com/img/player/11291/",
+              "jersey_number": 88,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/11319/",
               "raw": {
-                "id": 11291,
-                "name": "Ivan Goranov",
-                "short_name": "I. Goranov",
+                "id": 11319,
+                "name": "Lazar Boyanov",
+                "short_name": "L. Boyanov",
                 "position": "D",
-                "jersey_number": 4,
-                "ai_score": 0.045
-              }
-            },
-            {
-              "id": 11284,
-              "player_id": 11284,
-              "name": "Marin Orlinov",
-              "short_name": "M. Orlinov",
-              "position": "G",
-              "jersey_number": 94,
-              "ai_score": 0.045,
-              "image_url": "https://sports.bzzoiro.com/img/player/11284/",
-              "raw": {
-                "id": 11284,
-                "name": "Marin Orlinov",
-                "short_name": "M. Orlinov",
-                "position": "G",
-                "jersey_number": 94,
-                "ai_score": 0.045
-              }
-            },
-            {
-              "id": 11289,
-              "player_id": 11289,
-              "name": "Milen Stoev",
-              "short_name": "M. Stoev",
-              "position": "D",
-              "jersey_number": 36,
-              "ai_score": 0.045,
-              "image_url": "https://sports.bzzoiro.com/img/player/11289/",
-              "raw": {
-                "id": 11289,
-                "name": "Milen Stoev",
-                "short_name": "M. Stoev",
-                "position": "D",
-                "jersey_number": 36,
-                "ai_score": 0.045
-              }
-            },
-            {
-              "id": 11298,
-              "player_id": 11298,
-              "name": "Vladislav Naydenov",
-              "short_name": "V. Naydenov",
-              "position": "M",
-              "jersey_number": 97,
-              "ai_score": 0.035,
-              "image_url": "https://sports.bzzoiro.com/img/player/11298/",
-              "raw": {
-                "id": 11298,
-                "name": "Vladislav Naydenov",
-                "short_name": "V. Naydenov",
-                "position": "M",
-                "jersey_number": 97,
-                "ai_score": 0.035
-              }
-            },
-            {
-              "id": 11303,
-              "player_id": 11303,
-              "name": "José Gallegos",
-              "short_name": "J. Gallegos",
-              "position": "M",
-              "jersey_number": 10,
-              "ai_score": 0.03,
-              "image_url": "https://sports.bzzoiro.com/img/player/11303/",
-              "raw": {
-                "id": 11303,
-                "name": "José Gallegos",
-                "short_name": "J. Gallegos",
-                "position": "M",
-                "jersey_number": 10,
-                "ai_score": 0.03
-              }
-            },
-            {
-              "id": 11825,
-              "player_id": 11825,
-              "name": "Martin Achkov",
-              "short_name": "M. Achkov",
-              "position": "D",
-              "jersey_number": 11,
-              "ai_score": 0.03,
-              "image_url": "https://sports.bzzoiro.com/img/player/11825/",
-              "raw": {
-                "id": 11825,
-                "name": "Martin Achkov",
-                "short_name": "M. Achkov",
-                "position": "D",
-                "jersey_number": 11,
-                "ai_score": 0.03
-              }
-            },
-            {
-              "id": 53458,
-              "player_id": 53458,
-              "name": "Luboslav Stoyanov",
-              "short_name": "L. S. Marinov",
-              "position": "G",
-              "jersey_number": 23,
-              "ai_score": 0.025,
-              "image_url": "https://sports.bzzoiro.com/img/player/53458/",
-              "raw": {
-                "id": 53458,
-                "name": "Luboslav Stoyanov",
-                "short_name": "L. S. Marinov",
-                "position": "G",
-                "jersey_number": 23,
-                "ai_score": 0.025
-              }
-            },
-            {
-              "id": 65721,
-              "player_id": 65721,
-              "name": "Abdullah Kichukov",
-              "short_name": "A. Kichukov",
-              "position": "M",
-              "jersey_number": 6,
-              "ai_score": 0.02,
-              "image_url": "https://sports.bzzoiro.com/img/player/65721/",
-              "raw": {
-                "id": 65721,
-                "name": "Abdullah Kichukov",
-                "short_name": "A. Kichukov",
-                "position": "M",
-                "jersey_number": 6,
-                "ai_score": 0.02
-              }
-            },
-            {
-              "id": 74055,
-              "player_id": 74055,
-              "name": "Samuil Mechev",
-              "short_name": "S. Mechev",
-              "position": "M",
-              "jersey_number": 17,
-              "ai_score": 0.02,
-              "image_url": "https://sports.bzzoiro.com/img/player/74055/",
-              "raw": {
-                "id": 74055,
-                "name": "Samuil Mechev",
-                "short_name": "S. Mechev",
-                "position": "M",
-                "jersey_number": 17,
-                "ai_score": 0.02
+                "jersey_number": 88,
+                "captain": false,
+                "ai_score": null
               }
             },
             {
@@ -2114,7 +1817,7 @@
               "short_name": "Đ. Jovičić",
               "position": "D",
               "jersey_number": 55,
-              "ai_score": 0.015,
+              "ai_score": null,
               "image_url": "https://sports.bzzoiro.com/img/player/13517/",
               "raw": {
                 "id": 13517,
@@ -2122,43 +1825,238 @@
                 "short_name": "Đ. Jovičić",
                 "position": "D",
                 "jersey_number": 55,
-                "ai_score": 0.015
+                "captain": false,
+                "ai_score": null
               }
             },
             {
-              "id": 35431,
-              "player_id": 35431,
-              "name": "Emil Petrov",
-              "short_name": "E. Petrov",
+              "id": 11298,
+              "player_id": 11298,
+              "name": "Vladislav Naydenov",
+              "short_name": "V. Naydenov",
+              "position": "M",
+              "jersey_number": 97,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/11298/",
+              "raw": {
+                "id": 11298,
+                "name": "Vladislav Naydenov",
+                "short_name": "V. Naydenov",
+                "position": "M",
+                "jersey_number": 97,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 11418,
+              "player_id": 11418,
+              "name": "Martin Smolenski",
+              "short_name": "M. Smolenski",
+              "position": "M",
+              "jersey_number": 24,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/11418/",
+              "raw": {
+                "id": 11418,
+                "name": "Martin Smolenski",
+                "short_name": "M. Smolenski",
+                "position": "M",
+                "jersey_number": 24,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 11295,
+              "player_id": 11295,
+              "name": "Iliya Yurukov",
+              "short_name": "I. Yurukov",
+              "position": "M",
+              "jersey_number": 12,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/11295/",
+              "raw": {
+                "id": 11295,
+                "name": "Iliya Yurukov",
+                "short_name": "I. Yurukov",
+                "position": "M",
+                "jersey_number": 12,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 11311,
+              "player_id": 11311,
+              "name": "Kassim Hadji",
+              "short_name": "K. Hadji",
+              "position": "M",
+              "jersey_number": 81,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/11311/",
+              "raw": {
+                "id": 11311,
+                "name": "Kassim Hadji",
+                "short_name": "K. Hadji",
+                "position": "M",
+                "jersey_number": 81,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 11303,
+              "player_id": 11303,
+              "name": "José Gallegos",
+              "short_name": "J. Gallegos",
+              "position": "M",
+              "jersey_number": 10,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/11303/",
+              "raw": {
+                "id": 11303,
+                "name": "José Gallegos",
+                "short_name": "J. Gallegos",
+                "position": "M",
+                "jersey_number": 10,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 11307,
+              "player_id": 11307,
+              "name": "Daniel Genov",
+              "short_name": "D. Genov",
+              "position": "M",
+              "jersey_number": 9,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/11307/",
+              "raw": {
+                "id": 11307,
+                "name": "Daniel Genov",
+                "short_name": "D. Genov",
+                "position": "M",
+                "jersey_number": 9,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 28438,
+              "player_id": 28438,
+              "name": "Preslav Borukov",
+              "short_name": "P. Borukov",
+              "position": "F",
+              "jersey_number": 99,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/28438/",
+              "raw": {
+                "id": 28438,
+                "name": "Preslav Borukov",
+                "short_name": "P. Borukov",
+                "position": "F",
+                "jersey_number": 99,
+                "captain": false,
+                "ai_score": null
+              }
+            }
+          ],
+          "substitutes": [
+            {
+              "id": 53458,
+              "player_id": 53458,
+              "name": "Luboslav Stoyanov",
+              "short_name": "L. S. Marinov",
+              "position": "G",
+              "jersey_number": 23,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/53458/",
+              "raw": {
+                "id": 53458,
+                "name": "Luboslav Stoyanov",
+                "short_name": "L. S. Marinov",
+                "position": "G",
+                "jersey_number": 23,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 142085,
+              "player_id": 142085,
+              "name": "Martin Dimitrov",
+              "short_name": "M. Dimitrov",
+              "position": "D",
+              "jersey_number": 48,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/142085/",
+              "raw": {
+                "id": 142085,
+                "name": "Martin Dimitrov",
+                "short_name": "M. Dimitrov",
+                "position": "D",
+                "jersey_number": 48,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 13606,
+              "player_id": 13606,
+              "name": "Miroslav Tsonev",
+              "short_name": "M. Tsonev",
               "position": "M",
               "jersey_number": 2,
-              "ai_score": 0.015,
-              "image_url": "https://sports.bzzoiro.com/img/player/35431/",
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/13606/",
               "raw": {
-                "id": 35431,
-                "name": "Emil Petrov",
-                "short_name": "E. Petrov",
+                "id": 13606,
+                "name": "Miroslav Tsonev",
+                "short_name": "M. Tsonev",
                 "position": "M",
                 "jersey_number": 2,
-                "ai_score": 0.015
+                "captain": false,
+                "ai_score": null
               }
             },
             {
-              "id": 91543,
-              "player_id": 91543,
-              "name": "Abdula Kichukov",
-              "short_name": "A. Kichukov",
-              "position": "M",
-              "jersey_number": 6,
-              "ai_score": 0.005,
-              "image_url": "https://sports.bzzoiro.com/img/player/91543/",
+              "id": 74055,
+              "player_id": 74055,
+              "name": "Samuil Mechev",
+              "short_name": "S. Mechev",
+              "position": "F",
+              "jersey_number": 17,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/74055/",
               "raw": {
-                "id": 91543,
-                "name": "Abdula Kichukov",
-                "short_name": "A. Kichukov",
-                "position": "M",
-                "jersey_number": 6,
-                "ai_score": 0.005
+                "id": 74055,
+                "name": "Samuil Mechev",
+                "short_name": "S. Mechev",
+                "position": "F",
+                "jersey_number": 17,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 11305,
+              "player_id": 11305,
+              "name": "Martin Petkov",
+              "short_name": "M. Petkov",
+              "position": "F",
+              "jersey_number": 79,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/11305/",
+              "raw": {
+                "id": 11305,
+                "name": "Martin Petkov",
+                "short_name": "M. Petkov",
+                "position": "F",
+                "jersey_number": 79,
+                "captain": false,
+                "ai_score": null
               }
             }
           ]
@@ -2167,17 +2065,17 @@
           "home": [],
           "away": []
         },
-        "updated_at": "2026-08-16T14:32:13Z",
+        "updated_at": "2026-08-16T16:04:20Z",
         "raw": {
           "event_id": 211680,
-          "lineup_status": "predicted",
-          "beta": true,
+          "lineup_status": "confirmed",
+          "beta": false,
           "lineups": {
             "home": {
               "team_id": 345,
               "team_name": "CSKA Sofia",
-              "formation": "4-3-3",
-              "confidence": 0.477,
+              "formation": "4-1-4-1",
+              "confidence": null,
               "players": [
                 {
                   "id": 10772,
@@ -2185,137 +2083,8 @@
                   "short_name": "F. Lapoukhov",
                   "position": "G",
                   "jersey_number": 21,
-                  "ai_score": 0.045
-                },
-                {
-                  "id": 10778,
-                  "name": "Ángelo Martino",
-                  "short_name": "Á. Martino",
-                  "position": "D",
-                  "jersey_number": 17,
-                  "ai_score": 0.045
-                },
-                {
-                  "id": 11374,
-                  "name": "Aleks Tunchev",
-                  "short_name": "A. Tunchev",
-                  "position": "D",
-                  "jersey_number": 15,
-                  "ai_score": 0.05
-                },
-                {
-                  "id": 10776,
-                  "name": "Teodor Ivanov",
-                  "short_name": "T. Ivanov",
-                  "position": "D",
-                  "jersey_number": 14,
-                  "ai_score": 0.05
-                },
-                {
-                  "id": 10797,
-                  "name": "Pastor",
-                  "short_name": "Pastor",
-                  "position": "D",
-                  "jersey_number": 2,
-                  "ai_score": 0.05
-                },
-                {
-                  "id": 10784,
-                  "name": "Isaac Solet",
-                  "short_name": "I. Solet",
-                  "position": "M",
-                  "jersey_number": 94,
-                  "ai_score": 0.05
-                },
-                {
-                  "id": 10800,
-                  "name": "Petko Panayotov",
-                  "short_name": "P. Panayotov",
-                  "position": "M",
-                  "jersey_number": 30,
-                  "ai_score": 0.05
-                },
-                {
-                  "id": 10779,
-                  "name": "Bruno Jordão",
-                  "short_name": "B. Jordão",
-                  "position": "M",
-                  "jersey_number": 6,
-                  "ai_score": 0.05
-                },
-                {
-                  "id": 52076,
-                  "name": "Vasil Kaymakanov",
-                  "short_name": "V. Kaymakanov",
-                  "position": "M",
-                  "jersey_number": 34,
-                  "ai_score": 0.05
-                },
-                {
-                  "id": 11529,
-                  "name": "Georgi Chorbadzhiyski",
-                  "short_name": "G. B. Chorbadzhiyski",
-                  "position": "M",
-                  "jersey_number": 80,
-                  "ai_score": 0.035
-                },
-                {
-                  "id": 10786,
-                  "name": "Ioannis Pittas",
-                  "short_name": "I. Pittas",
-                  "position": "F",
-                  "jersey_number": 28,
-                  "ai_score": 0.05
-                }
-              ],
-              "substitutes": [
-                {
-                  "id": 10787,
-                  "name": "Andrey Yordanov",
-                  "short_name": "A. Yordanov",
-                  "position": "D",
-                  "jersey_number": 19,
-                  "ai_score": 0.05
-                },
-                {
-                  "id": 10796,
-                  "name": "Dimitar Evtimov",
-                  "short_name": "D. Evtimov",
-                  "position": "G",
-                  "jersey_number": 25,
-                  "ai_score": 0.05
-                },
-                {
-                  "id": 2783,
-                  "name": "Jean-Philippe Gbamin",
-                  "short_name": "J. Gbamin",
-                  "position": "D",
-                  "jersey_number": 5,
-                  "ai_score": 0.05
-                },
-                {
-                  "id": 12035,
-                  "name": "Joël Zwarts",
-                  "short_name": "J. Zwarts",
-                  "position": "F",
-                  "jersey_number": 10,
-                  "ai_score": 0.05
-                },
-                {
-                  "id": 10793,
-                  "name": "Leandro Godoy",
-                  "short_name": "L. Godoy",
-                  "position": "F",
-                  "jersey_number": 9,
-                  "ai_score": 0.05
-                },
-                {
-                  "id": 2681,
-                  "name": "Léo Pereira",
-                  "short_name": "L. Pereira",
-                  "position": "M",
-                  "jersey_number": 38,
-                  "ai_score": 0.05
+                  "captain": false,
+                  "ai_score": null
                 },
                 {
                   "id": 10781,
@@ -2323,23 +2092,53 @@
                   "short_name": "M. Brahimi",
                   "position": "M",
                   "jersey_number": 11,
-                  "ai_score": 0.05
+                  "captain": false,
+                  "ai_score": null
                 },
                 {
-                  "id": 63762,
-                  "name": "Stefano Sensi",
-                  "short_name": "S. Sensi",
-                  "position": "M",
-                  "jersey_number": 8,
-                  "ai_score": 0.05
-                },
-                {
-                  "id": 13521,
-                  "name": "Facundo Rodríguez",
-                  "short_name": "F. Rodríguez",
+                  "id": 2783,
+                  "name": "Jean-Philippe Gbamin",
+                  "short_name": "J. Gbamin",
                   "position": "D",
-                  "jersey_number": 32,
-                  "ai_score": 0.045
+                  "jersey_number": 5,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 10776,
+                  "name": "Teodor Ivanov",
+                  "short_name": "T. Ivanov",
+                  "position": "D",
+                  "jersey_number": 14,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 10787,
+                  "name": "Andrey Yordanov",
+                  "short_name": "A. Yordanov",
+                  "position": "D",
+                  "jersey_number": 19,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 10779,
+                  "name": "Bruno Jordão",
+                  "short_name": "B. Jordão",
+                  "position": "M",
+                  "jersey_number": 6,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 11005,
+                  "name": "Cătălin Itu",
+                  "short_name": "C. Itu",
+                  "position": "M",
+                  "jersey_number": 94,
+                  "captain": false,
+                  "ai_score": null
                 },
                 {
                   "id": 10782,
@@ -2347,7 +2146,73 @@
                   "short_name": "J. Eto'o",
                   "position": "M",
                   "jersey_number": 99,
-                  "ai_score": 0.045
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 10784,
+                  "name": "Isaac Solet",
+                  "short_name": "I. Solet",
+                  "position": "M",
+                  "jersey_number": 94,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 10800,
+                  "name": "Petko Panayotov",
+                  "short_name": "P. Panayotov",
+                  "position": "M",
+                  "jersey_number": 30,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 12035,
+                  "name": "Joël Zwarts",
+                  "short_name": "J. Zwarts",
+                  "position": "F",
+                  "jersey_number": 10,
+                  "captain": false,
+                  "ai_score": null
+                }
+              ],
+              "substitutes": [
+                {
+                  "id": 10796,
+                  "name": "Dimitar Evtimov",
+                  "short_name": "D. Evtimov",
+                  "position": "G",
+                  "jersey_number": 25,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 10797,
+                  "name": "Pastor",
+                  "short_name": "Pastor",
+                  "position": "D",
+                  "jersey_number": 2,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 13521,
+                  "name": "Facundo Rodríguez",
+                  "short_name": "F. Rodríguez",
+                  "position": "D",
+                  "jersey_number": 32,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 11529,
+                  "name": "Georgi Chorbadzhiyski",
+                  "short_name": "G. B. Chorbadzhiyski",
+                  "position": "M",
+                  "jersey_number": 80,
+                  "captain": false,
+                  "ai_score": null
                 },
                 {
                   "id": 10789,
@@ -2355,15 +2220,53 @@
                   "short_name": "M. Ebong",
                   "position": "M",
                   "jersey_number": 7,
-                  "ai_score": 0.04
+                  "captain": false,
+                  "ai_score": null
                 },
                 {
-                  "id": 10790,
-                  "name": "Alejandro Piedrahita",
-                  "short_name": "A. Piedrahita",
+                  "id": 52076,
+                  "name": "Vasil Kaymakanov",
+                  "short_name": "V. Kaymakanov",
                   "position": "M",
-                  "jersey_number": 77,
-                  "ai_score": 0.035
+                  "jersey_number": 34,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 2681,
+                  "name": "Léo Pereira",
+                  "short_name": "L. Pereira",
+                  "position": "M",
+                  "jersey_number": 38,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 63762,
+                  "name": "Stefano Sensi",
+                  "short_name": "S. Sensi",
+                  "position": "M",
+                  "jersey_number": 8,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 10793,
+                  "name": "Leandro Godoy",
+                  "short_name": "L. Godoy",
+                  "position": "F",
+                  "jersey_number": 9,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 10786,
+                  "name": "Ioannis Pittas",
+                  "short_name": "I. Pittas",
+                  "position": "F",
+                  "jersey_number": 28,
+                  "captain": false,
+                  "ai_score": null
                 }
               ]
             },
@@ -2371,7 +2274,7 @@
               "team_id": 347,
               "team_name": "Botev Vratsa",
               "formation": "4-2-3-1",
-              "confidence": 0.368,
+              "confidence": null,
               "players": [
                 {
                   "id": 11315,
@@ -2379,23 +2282,8 @@
                   "short_name": "L. Vasilev",
                   "position": "G",
                   "jersey_number": 98,
-                  "ai_score": 0.035
-                },
-                {
-                  "id": 11293,
-                  "name": "Sainey Sanyang",
-                  "short_name": "S. Sanyang",
-                  "position": "D",
-                  "jersey_number": 3,
-                  "ai_score": 0.035
-                },
-                {
-                  "id": 11319,
-                  "name": "Lazar Boyanov",
-                  "short_name": "L. Boyanov",
-                  "position": "D",
-                  "jersey_number": 88,
-                  "ai_score": 0.045
+                  "captain": false,
+                  "ai_score": null
                 },
                 {
                   "id": 11309,
@@ -2403,137 +2291,17 @@
                   "short_name": "A. Stoyanov",
                   "position": "M",
                   "jersey_number": 8,
-                  "ai_score": 0.04
+                  "captain": false,
+                  "ai_score": null
                 },
                 {
-                  "id": 11311,
-                  "name": "Kassim Hadji",
-                  "short_name": "K. Hadji",
-                  "position": "M",
-                  "jersey_number": 81,
-                  "ai_score": 0.045
-                },
-                {
-                  "id": 11295,
-                  "name": "Iliya Yurukov",
-                  "short_name": "I. Yurukov",
-                  "position": "M",
-                  "jersey_number": 12,
-                  "ai_score": 0.045
-                },
-                {
-                  "id": 11418,
-                  "name": "Martin Smolenski",
-                  "short_name": "M. Smolenski",
-                  "position": "M",
-                  "jersey_number": 24,
-                  "ai_score": 0.045
-                },
-                {
-                  "id": 11305,
-                  "name": "Martin Petkov",
-                  "short_name": "M. Petkov",
-                  "position": "F",
-                  "jersey_number": 79,
-                  "ai_score": 0.04
-                },
-                {
-                  "id": 11307,
-                  "name": "Daniel Genov",
-                  "short_name": "D. Genov",
-                  "position": "M",
-                  "jersey_number": 9,
-                  "ai_score": 0.04
-                },
-                {
-                  "id": 28438,
-                  "name": "Preslav Borukov",
-                  "short_name": "P. Borukov",
-                  "position": "F",
-                  "jersey_number": 99,
-                  "ai_score": 0.025
-                },
-                {
-                  "id": 12065,
-                  "name": "Mitchy Ntelo",
-                  "short_name": "M. Ntelo",
-                  "position": "F",
-                  "jersey_number": 21,
-                  "ai_score": 0.01
-                }
-              ],
-              "substitutes": [
-                {
-                  "id": 11291,
-                  "name": "Ivan Goranov",
-                  "short_name": "I. Goranov",
+                  "id": 11319,
+                  "name": "Lazar Boyanov",
+                  "short_name": "L. Boyanov",
                   "position": "D",
-                  "jersey_number": 4,
-                  "ai_score": 0.045
-                },
-                {
-                  "id": 11284,
-                  "name": "Marin Orlinov",
-                  "short_name": "M. Orlinov",
-                  "position": "G",
-                  "jersey_number": 94,
-                  "ai_score": 0.045
-                },
-                {
-                  "id": 11289,
-                  "name": "Milen Stoev",
-                  "short_name": "M. Stoev",
-                  "position": "D",
-                  "jersey_number": 36,
-                  "ai_score": 0.045
-                },
-                {
-                  "id": 11298,
-                  "name": "Vladislav Naydenov",
-                  "short_name": "V. Naydenov",
-                  "position": "M",
-                  "jersey_number": 97,
-                  "ai_score": 0.035
-                },
-                {
-                  "id": 11303,
-                  "name": "José Gallegos",
-                  "short_name": "J. Gallegos",
-                  "position": "M",
-                  "jersey_number": 10,
-                  "ai_score": 0.03
-                },
-                {
-                  "id": 11825,
-                  "name": "Martin Achkov",
-                  "short_name": "M. Achkov",
-                  "position": "D",
-                  "jersey_number": 11,
-                  "ai_score": 0.03
-                },
-                {
-                  "id": 53458,
-                  "name": "Luboslav Stoyanov",
-                  "short_name": "L. S. Marinov",
-                  "position": "G",
-                  "jersey_number": 23,
-                  "ai_score": 0.025
-                },
-                {
-                  "id": 65721,
-                  "name": "Abdullah Kichukov",
-                  "short_name": "A. Kichukov",
-                  "position": "M",
-                  "jersey_number": 6,
-                  "ai_score": 0.02
-                },
-                {
-                  "id": 74055,
-                  "name": "Samuil Mechev",
-                  "short_name": "S. Mechev",
-                  "position": "M",
-                  "jersey_number": 17,
-                  "ai_score": 0.02
+                  "jersey_number": 88,
+                  "captain": false,
+                  "ai_score": null
                 },
                 {
                   "id": 13517,
@@ -2541,23 +2309,118 @@
                   "short_name": "Đ. Jovičić",
                   "position": "D",
                   "jersey_number": 55,
-                  "ai_score": 0.015
+                  "captain": false,
+                  "ai_score": null
                 },
                 {
-                  "id": 35431,
-                  "name": "Emil Petrov",
-                  "short_name": "E. Petrov",
+                  "id": 11298,
+                  "name": "Vladislav Naydenov",
+                  "short_name": "V. Naydenov",
+                  "position": "M",
+                  "jersey_number": 97,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 11418,
+                  "name": "Martin Smolenski",
+                  "short_name": "M. Smolenski",
+                  "position": "M",
+                  "jersey_number": 24,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 11295,
+                  "name": "Iliya Yurukov",
+                  "short_name": "I. Yurukov",
+                  "position": "M",
+                  "jersey_number": 12,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 11311,
+                  "name": "Kassim Hadji",
+                  "short_name": "K. Hadji",
+                  "position": "M",
+                  "jersey_number": 81,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 11303,
+                  "name": "José Gallegos",
+                  "short_name": "J. Gallegos",
+                  "position": "M",
+                  "jersey_number": 10,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 11307,
+                  "name": "Daniel Genov",
+                  "short_name": "D. Genov",
+                  "position": "M",
+                  "jersey_number": 9,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 28438,
+                  "name": "Preslav Borukov",
+                  "short_name": "P. Borukov",
+                  "position": "F",
+                  "jersey_number": 99,
+                  "captain": false,
+                  "ai_score": null
+                }
+              ],
+              "substitutes": [
+                {
+                  "id": 53458,
+                  "name": "Luboslav Stoyanov",
+                  "short_name": "L. S. Marinov",
+                  "position": "G",
+                  "jersey_number": 23,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 142085,
+                  "name": "Martin Dimitrov",
+                  "short_name": "M. Dimitrov",
+                  "position": "D",
+                  "jersey_number": 48,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 13606,
+                  "name": "Miroslav Tsonev",
+                  "short_name": "M. Tsonev",
                   "position": "M",
                   "jersey_number": 2,
-                  "ai_score": 0.015
+                  "captain": false,
+                  "ai_score": null
                 },
                 {
-                  "id": 91543,
-                  "name": "Abdula Kichukov",
-                  "short_name": "A. Kichukov",
-                  "position": "M",
-                  "jersey_number": 6,
-                  "ai_score": 0.005
+                  "id": 74055,
+                  "name": "Samuil Mechev",
+                  "short_name": "S. Mechev",
+                  "position": "F",
+                  "jersey_number": 17,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 11305,
+                  "name": "Martin Petkov",
+                  "short_name": "M. Petkov",
+                  "position": "F",
+                  "jersey_number": 79,
+                  "captain": false,
+                  "ai_score": null
                 }
               ]
             }
@@ -2566,7 +2429,7 @@
             "home": [],
             "away": []
           },
-          "updated_at": "2026-08-16T14:32:13Z"
+          "updated_at": "2026-08-16T16:04:20Z"
         }
       },
       "metadata": {
@@ -2672,7 +2535,7 @@
       },
       "coverage": {
         "stats": true,
-        "incidents": false,
+        "incidents": true,
         "lineups": true,
         "metadata": true,
         "player_stats": false,
@@ -14912,71 +14775,548 @@
       "stats": {
         "available": true,
         "home": {
-          "total_shots": null,
-          "ball_possession": null,
+          "total_shots": 0,
+          "ball_possession": 42,
           "crosses": null,
-          "dribbles": null,
-          "long_balls": null,
+          "dribbles": {
+            "value": 0,
+            "total": 0,
+            "pct": 0
+          },
+          "long_balls": {
+            "value": 1,
+            "total": 4,
+            "pct": 25
+          },
           "attack": null,
           "ball_safe": null,
           "dangerous_attack": null,
-          "pass_accuracy_pct": null,
+          "pass_accuracy_pct": 72.0,
           "xg": null,
           "raw": {
+            "duels": 57,
+            "fouls": 1,
+            "passes": 25,
+            "tackles": 2,
+            "dribbles": {
+              "value": 0,
+              "total": 0,
+              "pct": 0
+            },
+            "offsides": 0,
+            "throw_ins": 2,
+            "clearances": 1,
+            "free_kicks": 0,
+            "goal_kicks": 0,
+            "long_balls": {
+              "value": 1,
+              "total": 4,
+              "pct": 25
+            },
+            "recoveries": 3,
+            "tackles_won": 0,
+            "total_shots": 0,
+            "aerial_duels": {
+              "value": 2,
+              "total": 3,
+              "pct": 67
+            },
+            "dispossessed": 0,
+            "ground_duels": {
+              "value": 2,
+              "total": 4,
+              "pct": 50
+            },
+            "hit_woodwork": 0,
+            "blocked_shots": 0,
+            "interceptions": 0,
+            "total_tackles": 2,
+            "expected_goals": 0.0,
+            "accurate_passes": 18,
+            "ball_possession": 42,
+            "goals_prevented": 0.21,
+            "shots_on_target": 0,
+            "shots_inside_box": 0,
+            "shots_off_target": 0,
+            "final_third_phase": {
+              "value": 0,
+              "total": 2,
+              "pct": 0
+            },
+            "shots_outside_box": 0,
+            "final_third_entries": 1,
+            "expected_goals_on_target": 0.0,
+            "pass_accuracy_pct": 72.0,
             "xg": {
               "actual": null
             }
           }
         },
         "away": {
-          "total_shots": null,
-          "ball_possession": null,
+          "total_shots": 0,
+          "ball_possession": 58,
           "crosses": null,
-          "dribbles": null,
-          "long_balls": null,
+          "dribbles": {
+            "value": 1,
+            "total": 1,
+            "pct": 100
+          },
+          "long_balls": {
+            "value": 2,
+            "total": 4,
+            "pct": 50
+          },
           "attack": null,
           "ball_safe": null,
           "dangerous_attack": null,
-          "pass_accuracy_pct": null,
-          "xg": null,
+          "pass_accuracy_pct": 80.0,
+          "xg": 0.04,
           "raw": {
+            "duels": 43,
+            "fouls": 0,
+            "passes": 35,
+            "tackles": 0,
+            "dribbles": {
+              "value": 1,
+              "total": 1,
+              "pct": 100
+            },
+            "offsides": 1,
+            "throw_ins": 0,
+            "clearances": 2,
+            "free_kicks": 1,
+            "goal_kicks": 2,
+            "long_balls": {
+              "value": 2,
+              "total": 4,
+              "pct": 50
+            },
+            "recoveries": 4,
+            "tackles_won": 0,
+            "total_shots": 0,
+            "aerial_duels": {
+              "value": 1,
+              "total": 3,
+              "pct": 33
+            },
+            "dispossessed": 2,
+            "ground_duels": {
+              "value": 2,
+              "total": 4,
+              "pct": 50
+            },
+            "hit_woodwork": 0,
+            "blocked_shots": 0,
+            "interceptions": 1,
+            "total_tackles": 0,
+            "expected_goals": 0.04,
+            "accurate_passes": 28,
+            "ball_possession": 58,
+            "goals_prevented": 0.0,
+            "shots_on_target": 0,
+            "shots_inside_box": 0,
+            "shots_off_target": 0,
+            "final_third_phase": {
+              "value": 4,
+              "total": 10,
+              "pct": 40
+            },
+            "shots_outside_box": 0,
+            "final_third_entries": 7,
+            "expected_goals_on_target": 0.21,
+            "pass_accuracy_pct": 80.0,
             "xg": {
-              "actual": null
+              "actual": 0.04
             }
           }
         },
-        "shotmap": [],
-        "shotmap_count": 0,
-        "momentum": [],
-        "momentum_count": 0,
+        "shotmap": [
+          {
+            "gm": {
+              "x": 0,
+              "y": 51.9,
+              "z": 34.2
+            },
+            "xg": 0.0404,
+            "gml": "high-left",
+            "min": 5,
+            "pos": {
+              "x": 20.2,
+              "y": 55,
+              "z": 0
+            },
+            "sit": "assisted",
+            "body": "left-foot",
+            "home": false,
+            "type": "save",
+            "xgot": 0.2089,
+            "block": {
+              "x": 1.6,
+              "y": 49.3,
+              "z": 0
+            },
+            "player_id": 11290
+          }
+        ],
+        "shotmap_count": 1,
+        "momentum": [
+          {
+            "m": 1,
+            "v": -2
+          },
+          {
+            "m": 2,
+            "v": -2
+          },
+          {
+            "m": 3,
+            "v": -3
+          },
+          {
+            "m": 4,
+            "v": -2
+          },
+          {
+            "m": 5,
+            "v": -9
+          },
+          {
+            "m": 6,
+            "v": -9
+          }
+        ],
+        "momentum_count": 6,
         "average_positions": {},
         "average_positions_count": 0,
-        "xg_per_minute": [],
-        "xg_per_minute_count": 0,
+        "xg_per_minute": [
+          {
+            "m": 5,
+            "xg_home": 0.0,
+            "xg_away": 0.04,
+            "cum_home": 0.0,
+            "cum_away": 0.04
+          }
+        ],
+        "xg_per_minute_count": 1,
         "raw": {
           "event_id": 215953,
           "stats": {
             "home": {
+              "duels": 57,
+              "fouls": 1,
+              "passes": 25,
+              "tackles": 2,
+              "dribbles": {
+                "value": 0,
+                "total": 0,
+                "pct": 0
+              },
+              "offsides": 0,
+              "throw_ins": 2,
+              "clearances": 1,
+              "free_kicks": 0,
+              "goal_kicks": 0,
+              "long_balls": {
+                "value": 1,
+                "total": 4,
+                "pct": 25
+              },
+              "recoveries": 3,
+              "tackles_won": 0,
+              "total_shots": 0,
+              "aerial_duels": {
+                "value": 2,
+                "total": 3,
+                "pct": 67
+              },
+              "dispossessed": 0,
+              "ground_duels": {
+                "value": 2,
+                "total": 4,
+                "pct": 50
+              },
+              "hit_woodwork": 0,
+              "blocked_shots": 0,
+              "interceptions": 0,
+              "total_tackles": 2,
+              "expected_goals": 0.0,
+              "accurate_passes": 18,
+              "ball_possession": 42,
+              "goals_prevented": 0.21,
+              "shots_on_target": 0,
+              "shots_inside_box": 0,
+              "shots_off_target": 0,
+              "final_third_phase": {
+                "value": 0,
+                "total": 2,
+                "pct": 0
+              },
+              "shots_outside_box": 0,
+              "final_third_entries": 1,
+              "expected_goals_on_target": 0.0,
+              "pass_accuracy_pct": 72.0,
               "xg": {
                 "actual": null
               }
             },
             "away": {
+              "duels": 43,
+              "fouls": 0,
+              "passes": 35,
+              "tackles": 0,
+              "dribbles": {
+                "value": 1,
+                "total": 1,
+                "pct": 100
+              },
+              "offsides": 1,
+              "throw_ins": 0,
+              "clearances": 2,
+              "free_kicks": 1,
+              "goal_kicks": 2,
+              "long_balls": {
+                "value": 2,
+                "total": 4,
+                "pct": 50
+              },
+              "recoveries": 4,
+              "tackles_won": 0,
+              "total_shots": 0,
+              "aerial_duels": {
+                "value": 1,
+                "total": 3,
+                "pct": 33
+              },
+              "dispossessed": 2,
+              "ground_duels": {
+                "value": 2,
+                "total": 4,
+                "pct": 50
+              },
+              "hit_woodwork": 0,
+              "blocked_shots": 0,
+              "interceptions": 1,
+              "total_tackles": 0,
+              "expected_goals": 0.04,
+              "accurate_passes": 28,
+              "ball_possession": 58,
+              "goals_prevented": 0.0,
+              "shots_on_target": 0,
+              "shots_inside_box": 0,
+              "shots_off_target": 0,
+              "final_third_phase": {
+                "value": 4,
+                "total": 10,
+                "pct": 40
+              },
+              "shots_outside_box": 0,
+              "final_third_entries": 7,
+              "expected_goals_on_target": 0.21,
+              "pass_accuracy_pct": 80.0,
               "xg": {
-                "actual": null
+                "actual": 0.04
+              }
+            },
+            "first_half": {
+              "home": {
+                "duels": 57,
+                "fouls": 1,
+                "passes": 25,
+                "tackles": 2,
+                "dribbles": {
+                  "value": 0,
+                  "total": 0,
+                  "pct": 0
+                },
+                "offsides": 0,
+                "throw_ins": 2,
+                "clearances": 1,
+                "free_kicks": 0,
+                "goal_kicks": 0,
+                "long_balls": {
+                  "value": 1,
+                  "total": 4,
+                  "pct": 25
+                },
+                "recoveries": 3,
+                "tackles_won": 0,
+                "total_shots": 0,
+                "aerial_duels": {
+                  "value": 2,
+                  "total": 3,
+                  "pct": 67
+                },
+                "dispossessed": 0,
+                "ground_duels": {
+                  "value": 2,
+                  "total": 4,
+                  "pct": 50
+                },
+                "hit_woodwork": 0,
+                "blocked_shots": 0,
+                "interceptions": 0,
+                "total_tackles": 2,
+                "expected_goals": 0.0,
+                "accurate_passes": 18,
+                "ball_possession": 42,
+                "shots_on_target": 0,
+                "shots_inside_box": 0,
+                "shots_off_target": 0,
+                "shots_outside_box": 0,
+                "final_third_entries": 1,
+                "expected_goals_on_target": 0.0,
+                "pass_accuracy_pct": 72.0,
+                "xg": {
+                  "actual": null
+                }
+              },
+              "away": {
+                "duels": 43,
+                "fouls": 0,
+                "passes": 35,
+                "tackles": 0,
+                "dribbles": {
+                  "value": 1,
+                  "total": 1,
+                  "pct": 100
+                },
+                "offsides": 1,
+                "throw_ins": 0,
+                "clearances": 2,
+                "free_kicks": 1,
+                "goal_kicks": 2,
+                "long_balls": {
+                  "value": 2,
+                  "total": 4,
+                  "pct": 50
+                },
+                "recoveries": 4,
+                "tackles_won": 0,
+                "total_shots": 0,
+                "aerial_duels": {
+                  "value": 1,
+                  "total": 3,
+                  "pct": 33
+                },
+                "dispossessed": 2,
+                "ground_duels": {
+                  "value": 2,
+                  "total": 4,
+                  "pct": 50
+                },
+                "hit_woodwork": 0,
+                "blocked_shots": 0,
+                "interceptions": 1,
+                "total_tackles": 0,
+                "expected_goals": 0.04,
+                "accurate_passes": 28,
+                "ball_possession": 58,
+                "shots_on_target": 0,
+                "shots_inside_box": 0,
+                "shots_off_target": 0,
+                "shots_outside_box": 0,
+                "final_third_entries": 7,
+                "expected_goals_on_target": 0.21,
+                "pass_accuracy_pct": 80.0,
+                "xg": {
+                  "actual": 0.04
+                }
               }
             }
           },
-          "shotmap": [],
-          "momentum": [],
+          "shotmap": [
+            {
+              "gm": {
+                "x": 0,
+                "y": 51.9,
+                "z": 34.2
+              },
+              "xg": 0.0404,
+              "gml": "high-left",
+              "min": 5,
+              "pos": {
+                "x": 20.2,
+                "y": 55,
+                "z": 0
+              },
+              "sit": "assisted",
+              "body": "left-foot",
+              "home": false,
+              "type": "save",
+              "xgot": 0.2089,
+              "block": {
+                "x": 1.6,
+                "y": 49.3,
+                "z": 0
+              },
+              "player_id": 11290
+            }
+          ],
+          "momentum": [
+            {
+              "m": 1,
+              "v": -2
+            },
+            {
+              "m": 2,
+              "v": -2
+            },
+            {
+              "m": 3,
+              "v": -3
+            },
+            {
+              "m": 4,
+              "v": -2
+            },
+            {
+              "m": 5,
+              "v": -9
+            },
+            {
+              "m": 6,
+              "v": -9
+            }
+          ],
           "average_positions": {},
-          "xg_per_minute": []
+          "xg_per_minute": [
+            {
+              "m": 5,
+              "xg_home": 0.0,
+              "xg_away": 0.04,
+              "cum_home": 0.0,
+              "cum_away": 0.04
+            }
+          ]
         }
       },
       "incidents": {
-        "available": false,
-        "count": 0,
-        "timeline": [],
+        "available": true,
+        "count": 1,
+        "timeline": [
+          {
+            "type": "period",
+            "minute": 45,
+            "player": null,
+            "player_id": null,
+            "player_in": null,
+            "player_in_id": null,
+            "player_out": null,
+            "player_out_id": null,
+            "card_type": null,
+            "is_home": null,
+            "is_live": true,
+            "sequence": null,
+            "raw": {
+              "text": "First half",
+              "type": "period",
+              "minute": 45,
+              "is_live": true,
+              "away_score": 0,
+              "home_score": 0
+            }
+          }
+        ],
         "goals": [],
         "cards": [],
         "substitutions": [],
@@ -15026,7 +15366,7 @@
                 "short_name": "Ö. A. Şahiner",
                 "position": "D",
                 "jersey_number": 42,
-                "captain": false,
+                "captain": true,
                 "ai_score": null
               }
             },
@@ -15069,39 +15409,20 @@
               }
             },
             {
-              "id": 41315,
-              "player_id": 41315,
-              "name": "Michał Karbownik",
-              "short_name": "M. Karbownik",
+              "id": 6639,
+              "player_id": 6639,
+              "name": "Christopher Operi",
+              "short_name": "C. Operi",
               "position": "D",
-              "jersey_number": 33,
+              "jersey_number": 21,
               "ai_score": null,
-              "image_url": "https://sports.bzzoiro.com/img/player/41315/",
+              "image_url": "https://sports.bzzoiro.com/img/player/6639/",
               "raw": {
-                "id": 41315,
-                "name": "Michał Karbownik",
-                "short_name": "M. Karbownik",
+                "id": 6639,
+                "name": "Christopher Operi",
+                "short_name": "C. Operi",
                 "position": "D",
-                "jersey_number": 33,
-                "captain": false,
-                "ai_score": null
-              }
-            },
-            {
-              "id": 6641,
-              "player_id": 6641,
-              "name": "Umut Güneş",
-              "short_name": "U. Güneş",
-              "position": "M",
-              "jersey_number": 20,
-              "ai_score": null,
-              "image_url": "https://sports.bzzoiro.com/img/player/6641/",
-              "raw": {
-                "id": 6641,
-                "name": "Umut Güneş",
-                "short_name": "U. Güneş",
-                "position": "M",
-                "jersey_number": 20,
+                "jersey_number": 21,
                 "captain": false,
                 "ai_score": null
               }
@@ -15126,20 +15447,39 @@
               }
             },
             {
-              "id": 6901,
-              "player_id": 6901,
-              "name": "Yusuf Sarı",
-              "short_name": "Y. Sarı",
+              "id": 6652,
+              "player_id": 6652,
+              "name": "Jakub Kałuziński",
+              "short_name": "J. Kałuziński",
               "position": "M",
-              "jersey_number": 7,
+              "jersey_number": 18,
               "ai_score": null,
-              "image_url": "https://sports.bzzoiro.com/img/player/6901/",
+              "image_url": "https://sports.bzzoiro.com/img/player/6652/",
               "raw": {
-                "id": 6901,
-                "name": "Yusuf Sarı",
-                "short_name": "Y. Sarı",
+                "id": 6652,
+                "name": "Jakub Kałuziński",
+                "short_name": "J. Kałuziński",
                 "position": "M",
-                "jersey_number": 7,
+                "jersey_number": 18,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 1384,
+              "player_id": 1384,
+              "name": "Andreas Skov Olsen",
+              "short_name": "A. Skov Olsen",
+              "position": "M",
+              "jersey_number": 70,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/1384/",
+              "raw": {
+                "id": 1384,
+                "name": "Andreas Skov Olsen",
+                "short_name": "A. Skov Olsen",
+                "position": "M",
+                "jersey_number": 70,
                 "captain": false,
                 "ai_score": null
               }
@@ -15149,7 +15489,7 @@
               "player_id": 6643,
               "name": "Eldor Shomurodov",
               "short_name": "E. Shomurodov",
-              "position": "F",
+              "position": "M",
               "jersey_number": 14,
               "ai_score": null,
               "image_url": "https://sports.bzzoiro.com/img/player/6643/",
@@ -15157,8 +15497,181 @@
                 "id": 6643,
                 "name": "Eldor Shomurodov",
                 "short_name": "E. Shomurodov",
-                "position": "F",
+                "position": "M",
                 "jersey_number": 14,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 6642,
+              "player_id": 6642,
+              "name": "Abbosbek Fayzullaev",
+              "short_name": "A. Fayzullaev",
+              "position": "M",
+              "jersey_number": 11,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/6642/",
+              "raw": {
+                "id": 6642,
+                "name": "Abbosbek Fayzullaev",
+                "short_name": "A. Fayzullaev",
+                "position": "M",
+                "jersey_number": 11,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 4786,
+              "player_id": 4786,
+              "name": "Bertuğ Yıldırım",
+              "short_name": "B. Yıldırım",
+              "position": "F",
+              "jersey_number": 91,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/4786/",
+              "raw": {
+                "id": 4786,
+                "name": "Bertuğ Yıldırım",
+                "short_name": "B. Yıldırım",
+                "position": "F",
+                "jersey_number": 91,
+                "captain": false,
+                "ai_score": null
+              }
+            }
+          ],
+          "substitutes": [
+            {
+              "id": 7055,
+              "player_id": 7055,
+              "name": "Deniz Dilmen",
+              "short_name": "D. Dilmen",
+              "position": "G",
+              "jersey_number": 98,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/7055/",
+              "raw": {
+                "id": 7055,
+                "name": "Deniz Dilmen",
+                "short_name": "D. Dilmen",
+                "position": "G",
+                "jersey_number": 98,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 6822,
+              "player_id": 6822,
+              "name": "Hamza Güreler",
+              "short_name": "H. Güreler",
+              "position": "D",
+              "jersey_number": 15,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/6822/",
+              "raw": {
+                "id": 6822,
+                "name": "Hamza Güreler",
+                "short_name": "H. Güreler",
+                "position": "D",
+                "jersey_number": 15,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 41315,
+              "player_id": 41315,
+              "name": "Michał Karbownik",
+              "short_name": "M. Karbownik",
+              "position": "D",
+              "jersey_number": 33,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/41315/",
+              "raw": {
+                "id": 41315,
+                "name": "Michał Karbownik",
+                "short_name": "M. Karbownik",
+                "position": "D",
+                "jersey_number": 33,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 6901,
+              "player_id": 6901,
+              "name": "Yusuf Sarı",
+              "short_name": "Y. Sarı",
+              "position": "F",
+              "jersey_number": 7,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/6901/",
+              "raw": {
+                "id": 6901,
+                "name": "Yusuf Sarı",
+                "short_name": "Y. Sarı",
+                "position": "F",
+                "jersey_number": 7,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 6641,
+              "player_id": 6641,
+              "name": "Umut Güneş",
+              "short_name": "U. Güneş",
+              "position": "M",
+              "jersey_number": 20,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/6641/",
+              "raw": {
+                "id": 6641,
+                "name": "Umut Güneş",
+                "short_name": "U. Güneş",
+                "position": "M",
+                "jersey_number": 20,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 5816,
+              "player_id": 5816,
+              "name": "Berkay Özcan",
+              "short_name": "B. Özcan",
+              "position": "M",
+              "jersey_number": 19,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/5816/",
+              "raw": {
+                "id": 5816,
+                "name": "Berkay Özcan",
+                "short_name": "B. Özcan",
+                "position": "M",
+                "jersey_number": 19,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 6648,
+              "player_id": 6648,
+              "name": "Onur Ergün",
+              "short_name": "O. Ergün",
+              "position": "M",
+              "jersey_number": 4,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/6648/",
+              "raw": {
+                "id": 6648,
+                "name": "Onur Ergün",
+                "short_name": "O. Ergün",
+                "position": "M",
+                "jersey_number": 4,
                 "captain": false,
                 "ai_score": null
               }
@@ -15183,6 +15696,25 @@
               }
             },
             {
+              "id": 6350,
+              "player_id": 6350,
+              "name": "Umut Bozok",
+              "short_name": "U. Bozok",
+              "position": "F",
+              "jersey_number": 17,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/6350/",
+              "raw": {
+                "id": 6350,
+                "name": "Umut Bozok",
+                "short_name": "U. Bozok",
+                "position": "F",
+                "jersey_number": 17,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
               "id": 6644,
               "player_id": 6644,
               "name": "Davie Selke",
@@ -15201,13 +15733,12 @@
                 "ai_score": null
               }
             }
-          ],
-          "substitutes": []
+          ]
         },
         "away": {
           "team_id": 198,
           "team_name": "Kocaelispor",
-          "formation": "4-3-3",
+          "formation": "4-2-3-1",
           "confidence": null,
           "players": [
             {
@@ -15235,7 +15766,7 @@
               "name": "Uğur Kaan Yıldız",
               "short_name": "U. K. Yıldız",
               "position": "D",
-              "jersey_number": 89,
+              "jersey_number": 22,
               "ai_score": null,
               "image_url": "https://sports.bzzoiro.com/img/player/6881/",
               "raw": {
@@ -15243,7 +15774,7 @@
                 "name": "Uğur Kaan Yıldız",
                 "short_name": "U. K. Yıldız",
                 "position": "D",
-                "jersey_number": 89,
+                "jersey_number": 22,
                 "captain": false,
                 "ai_score": null
               }
@@ -15273,7 +15804,7 @@
               "name": "Tanguy Zoukrou",
               "short_name": "T. Zoukrou",
               "position": "D",
-              "jersey_number": 87,
+              "jersey_number": 4,
               "ai_score": null,
               "image_url": "https://sports.bzzoiro.com/img/player/3196/",
               "raw": {
@@ -15281,7 +15812,7 @@
                 "name": "Tanguy Zoukrou",
                 "short_name": "T. Zoukrou",
                 "position": "D",
-                "jersey_number": 87,
+                "jersey_number": 4,
                 "captain": false,
                 "ai_score": null
               }
@@ -15301,26 +15832,7 @@
                 "short_name": "M. Haïdara",
                 "position": "D",
                 "jersey_number": 21,
-                "captain": false,
-                "ai_score": null
-              }
-            },
-            {
-              "id": 4219,
-              "player_id": 4219,
-              "name": "Berkan Kutlu",
-              "short_name": "B. Kutlu",
-              "position": "M",
-              "jersey_number": 77,
-              "ai_score": null,
-              "image_url": "https://sports.bzzoiro.com/img/player/4219/",
-              "raw": {
-                "id": 4219,
-                "name": "Berkan Kutlu",
-                "short_name": "B. Kutlu",
-                "position": "M",
-                "jersey_number": 77,
-                "captain": false,
+                "captain": true,
                 "ai_score": null
               }
             },
@@ -15339,6 +15851,44 @@
                 "short_name": "Show",
                 "position": "M",
                 "jersey_number": 14,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 4219,
+              "player_id": 4219,
+              "name": "Berkan Kutlu",
+              "short_name": "B. Kutlu",
+              "position": "M",
+              "jersey_number": 10,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/4219/",
+              "raw": {
+                "id": 4219,
+                "name": "Berkan Kutlu",
+                "short_name": "B. Kutlu",
+                "position": "M",
+                "jersey_number": 10,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 11290,
+              "player_id": 11290,
+              "name": "Makana Baku",
+              "short_name": "M. Baku",
+              "position": "M",
+              "jersey_number": 32,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/11290/",
+              "raw": {
+                "id": 11290,
+                "name": "Makana Baku",
+                "short_name": "M. Baku",
+                "position": "M",
+                "jersey_number": 32,
                 "captain": false,
                 "ai_score": null
               }
@@ -15363,30 +15913,11 @@
               }
             },
             {
-              "id": 6571,
-              "player_id": 6571,
-              "name": "Rigoberto Rivas",
-              "short_name": "R. Rivas",
-              "position": "M",
-              "jersey_number": 99,
-              "ai_score": null,
-              "image_url": "https://sports.bzzoiro.com/img/player/6571/",
-              "raw": {
-                "id": 6571,
-                "name": "Rigoberto Rivas",
-                "short_name": "R. Rivas",
-                "position": "M",
-                "jersey_number": 99,
-                "captain": false,
-                "ai_score": null
-              }
-            },
-            {
               "id": 6567,
               "player_id": 6567,
               "name": "Dan Agyei",
               "short_name": "D. Agyei",
-              "position": "F",
+              "position": "M",
               "jersey_number": 7,
               "ai_score": null,
               "image_url": "https://sports.bzzoiro.com/img/player/6567/",
@@ -15394,33 +15925,224 @@
                 "id": 6567,
                 "name": "Dan Agyei",
                 "short_name": "D. Agyei",
-                "position": "F",
+                "position": "M",
                 "jersey_number": 7,
                 "captain": false,
                 "ai_score": null
               }
             },
             {
-              "id": 11290,
-              "player_id": 11290,
-              "name": "Makana Baku",
-              "short_name": "M. Baku",
-              "position": "M",
-              "jersey_number": 81,
+              "id": 6571,
+              "player_id": 6571,
+              "name": "Rigoberto Rivas",
+              "short_name": "R. Rivas",
+              "position": "F",
+              "jersey_number": 99,
               "ai_score": null,
-              "image_url": "https://sports.bzzoiro.com/img/player/11290/",
+              "image_url": "https://sports.bzzoiro.com/img/player/6571/",
               "raw": {
-                "id": 11290,
-                "name": "Makana Baku",
-                "short_name": "M. Baku",
-                "position": "M",
-                "jersey_number": 81,
+                "id": 6571,
+                "name": "Rigoberto Rivas",
+                "short_name": "R. Rivas",
+                "position": "F",
+                "jersey_number": 99,
                 "captain": false,
                 "ai_score": null
               }
             }
           ],
-          "substitutes": []
+          "substitutes": [
+            {
+              "id": 6515,
+              "player_id": 6515,
+              "name": "Onurcan Piri",
+              "short_name": "O. Piri",
+              "position": "G",
+              "jersey_number": 23,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/6515/",
+              "raw": {
+                "id": 6515,
+                "name": "Onurcan Piri",
+                "short_name": "O. Piri",
+                "position": "G",
+                "jersey_number": 23,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 7103,
+              "player_id": 7103,
+              "name": "Onur Öztonga",
+              "short_name": "O. Öztonga",
+              "position": "D",
+              "jersey_number": 41,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/7103/",
+              "raw": {
+                "id": 7103,
+                "name": "Onur Öztonga",
+                "short_name": "O. Öztonga",
+                "position": "D",
+                "jersey_number": 41,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 6343,
+              "player_id": 6343,
+              "name": "Emir Ortakaya",
+              "short_name": "E. Ortakaya",
+              "position": "D",
+              "jersey_number": 5,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/6343/",
+              "raw": {
+                "id": 6343,
+                "name": "Emir Ortakaya",
+                "short_name": "E. Ortakaya",
+                "position": "D",
+                "jersey_number": 5,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 6578,
+              "player_id": 6578,
+              "name": "Muharrem Cinan",
+              "short_name": "M. Cinan",
+              "position": "D",
+              "jersey_number": 3,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/6578/",
+              "raw": {
+                "id": 6578,
+                "name": "Muharrem Cinan",
+                "short_name": "M. Cinan",
+                "position": "D",
+                "jersey_number": 3,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 6360,
+              "player_id": 6360,
+              "name": "Metehan Altunbaş",
+              "short_name": "M. Altunbaş",
+              "position": "F",
+              "jersey_number": 26,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/6360/",
+              "raw": {
+                "id": 6360,
+                "name": "Metehan Altunbaş",
+                "short_name": "M. Altunbaş",
+                "position": "F",
+                "jersey_number": 26,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 5945,
+              "player_id": 5945,
+              "name": "Mahamadou Susoho",
+              "short_name": "M. Susoho",
+              "position": "M",
+              "jersey_number": 20,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/5945/",
+              "raw": {
+                "id": 5945,
+                "name": "Mahamadou Susoho",
+                "short_name": "M. Susoho",
+                "position": "M",
+                "jersey_number": 20,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 6991,
+              "player_id": 6991,
+              "name": "Ege Bilim",
+              "short_name": "E. Bilim",
+              "position": "M",
+              "jersey_number": 27,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/6991/",
+              "raw": {
+                "id": 6991,
+                "name": "Ege Bilim",
+                "short_name": "E. Bilim",
+                "position": "M",
+                "jersey_number": 27,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 64124,
+              "player_id": 64124,
+              "name": "Bedirhan Yıldız",
+              "short_name": "B. Yıldız",
+              "position": "F",
+              "jersey_number": 89,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/64124/",
+              "raw": {
+                "id": 64124,
+                "name": "Bedirhan Yıldız",
+                "short_name": "B. Yıldız",
+                "position": "F",
+                "jersey_number": 89,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 3425,
+              "player_id": 3425,
+              "name": "Haydar Karataş",
+              "short_name": "H. Karataş",
+              "position": "M",
+              "jersey_number": 19,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/3425/",
+              "raw": {
+                "id": 3425,
+                "name": "Haydar Karataş",
+                "short_name": "H. Karataş",
+                "position": "M",
+                "jersey_number": 19,
+                "captain": false,
+                "ai_score": null
+              }
+            },
+            {
+              "id": 13618,
+              "player_id": 13618,
+              "name": "Arda Ozyar",
+              "short_name": "A. Özyar",
+              "position": "F",
+              "jersey_number": 17,
+              "ai_score": null,
+              "image_url": "https://sports.bzzoiro.com/img/player/13618/",
+              "raw": {
+                "id": 13618,
+                "name": "Arda Ozyar",
+                "short_name": "A. Özyar",
+                "position": "F",
+                "jersey_number": 17,
+                "captain": false,
+                "ai_score": null
+              }
+            }
+          ]
         },
         "unavailable_players": {
           "home": [],
@@ -15434,7 +16156,7 @@
             }
           ]
         },
-        "updated_at": "2026-08-16T00:42:10Z",
+        "updated_at": "2026-08-16T16:04:26Z",
         "raw": {
           "event_id": 215953,
           "lineup_status": "confirmed",
@@ -15461,7 +16183,7 @@
                   "short_name": "Ö. A. Şahiner",
                   "position": "D",
                   "jersey_number": 42,
-                  "captain": false,
+                  "captain": true,
                   "ai_score": null
                 },
                 {
@@ -15483,20 +16205,11 @@
                   "ai_score": null
                 },
                 {
-                  "id": 41315,
-                  "name": "Michał Karbownik",
-                  "short_name": "M. Karbownik",
+                  "id": 6639,
+                  "name": "Christopher Operi",
+                  "short_name": "C. Operi",
                   "position": "D",
-                  "jersey_number": 33,
-                  "captain": false,
-                  "ai_score": null
-                },
-                {
-                  "id": 6641,
-                  "name": "Umut Güneş",
-                  "short_name": "U. Güneş",
-                  "position": "M",
-                  "jersey_number": 20,
+                  "jersey_number": 21,
                   "captain": false,
                   "ai_score": null
                 },
@@ -15510,11 +16223,20 @@
                   "ai_score": null
                 },
                 {
-                  "id": 6901,
-                  "name": "Yusuf Sarı",
-                  "short_name": "Y. Sarı",
+                  "id": 6652,
+                  "name": "Jakub Kałuziński",
+                  "short_name": "J. Kałuziński",
                   "position": "M",
-                  "jersey_number": 7,
+                  "jersey_number": 18,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 1384,
+                  "name": "Andreas Skov Olsen",
+                  "short_name": "A. Skov Olsen",
+                  "position": "M",
+                  "jersey_number": 70,
                   "captain": false,
                   "ai_score": null
                 },
@@ -15522,8 +16244,91 @@
                   "id": 6643,
                   "name": "Eldor Shomurodov",
                   "short_name": "E. Shomurodov",
-                  "position": "F",
+                  "position": "M",
                   "jersey_number": 14,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 6642,
+                  "name": "Abbosbek Fayzullaev",
+                  "short_name": "A. Fayzullaev",
+                  "position": "M",
+                  "jersey_number": 11,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 4786,
+                  "name": "Bertuğ Yıldırım",
+                  "short_name": "B. Yıldırım",
+                  "position": "F",
+                  "jersey_number": 91,
+                  "captain": false,
+                  "ai_score": null
+                }
+              ],
+              "substitutes": [
+                {
+                  "id": 7055,
+                  "name": "Deniz Dilmen",
+                  "short_name": "D. Dilmen",
+                  "position": "G",
+                  "jersey_number": 98,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 6822,
+                  "name": "Hamza Güreler",
+                  "short_name": "H. Güreler",
+                  "position": "D",
+                  "jersey_number": 15,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 41315,
+                  "name": "Michał Karbownik",
+                  "short_name": "M. Karbownik",
+                  "position": "D",
+                  "jersey_number": 33,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 6901,
+                  "name": "Yusuf Sarı",
+                  "short_name": "Y. Sarı",
+                  "position": "F",
+                  "jersey_number": 7,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 6641,
+                  "name": "Umut Güneş",
+                  "short_name": "U. Güneş",
+                  "position": "M",
+                  "jersey_number": 20,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 5816,
+                  "name": "Berkay Özcan",
+                  "short_name": "B. Özcan",
+                  "position": "M",
+                  "jersey_number": 19,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 6648,
+                  "name": "Onur Ergün",
+                  "short_name": "O. Ergün",
+                  "position": "M",
+                  "jersey_number": 4,
                   "captain": false,
                   "ai_score": null
                 },
@@ -15537,6 +16342,15 @@
                   "ai_score": null
                 },
                 {
+                  "id": 6350,
+                  "name": "Umut Bozok",
+                  "short_name": "U. Bozok",
+                  "position": "F",
+                  "jersey_number": 17,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
                   "id": 6644,
                   "name": "Davie Selke",
                   "short_name": "D. Selke",
@@ -15545,13 +16359,12 @@
                   "captain": false,
                   "ai_score": null
                 }
-              ],
-              "substitutes": []
+              ]
             },
             "away": {
               "team_id": 198,
               "team_name": "Kocaelispor",
-              "formation": "4-3-3",
+              "formation": "4-2-3-1",
               "confidence": null,
               "players": [
                 {
@@ -15568,7 +16381,7 @@
                   "name": "Uğur Kaan Yıldız",
                   "short_name": "U. K. Yıldız",
                   "position": "D",
-                  "jersey_number": 89,
+                  "jersey_number": 22,
                   "captain": false,
                   "ai_score": null
                 },
@@ -15586,7 +16399,7 @@
                   "name": "Tanguy Zoukrou",
                   "short_name": "T. Zoukrou",
                   "position": "D",
-                  "jersey_number": 87,
+                  "jersey_number": 4,
                   "captain": false,
                   "ai_score": null
                 },
@@ -15596,16 +16409,7 @@
                   "short_name": "M. Haïdara",
                   "position": "D",
                   "jersey_number": 21,
-                  "captain": false,
-                  "ai_score": null
-                },
-                {
-                  "id": 4219,
-                  "name": "Berkan Kutlu",
-                  "short_name": "B. Kutlu",
-                  "position": "M",
-                  "jersey_number": 77,
-                  "captain": false,
+                  "captain": true,
                   "ai_score": null
                 },
                 {
@@ -15614,6 +16418,24 @@
                   "short_name": "Show",
                   "position": "M",
                   "jersey_number": 14,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 4219,
+                  "name": "Berkan Kutlu",
+                  "short_name": "B. Kutlu",
+                  "position": "M",
+                  "jersey_number": 10,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 11290,
+                  "name": "Makana Baku",
+                  "short_name": "M. Baku",
+                  "position": "M",
+                  "jersey_number": 32,
                   "captain": false,
                   "ai_score": null
                 },
@@ -15627,34 +16449,116 @@
                   "ai_score": null
                 },
                 {
-                  "id": 6571,
-                  "name": "Rigoberto Rivas",
-                  "short_name": "R. Rivas",
-                  "position": "M",
-                  "jersey_number": 99,
-                  "captain": false,
-                  "ai_score": null
-                },
-                {
                   "id": 6567,
                   "name": "Dan Agyei",
                   "short_name": "D. Agyei",
-                  "position": "F",
+                  "position": "M",
                   "jersey_number": 7,
                   "captain": false,
                   "ai_score": null
                 },
                 {
-                  "id": 11290,
-                  "name": "Makana Baku",
-                  "short_name": "M. Baku",
-                  "position": "M",
-                  "jersey_number": 81,
+                  "id": 6571,
+                  "name": "Rigoberto Rivas",
+                  "short_name": "R. Rivas",
+                  "position": "F",
+                  "jersey_number": 99,
                   "captain": false,
                   "ai_score": null
                 }
               ],
-              "substitutes": []
+              "substitutes": [
+                {
+                  "id": 6515,
+                  "name": "Onurcan Piri",
+                  "short_name": "O. Piri",
+                  "position": "G",
+                  "jersey_number": 23,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 7103,
+                  "name": "Onur Öztonga",
+                  "short_name": "O. Öztonga",
+                  "position": "D",
+                  "jersey_number": 41,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 6343,
+                  "name": "Emir Ortakaya",
+                  "short_name": "E. Ortakaya",
+                  "position": "D",
+                  "jersey_number": 5,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 6578,
+                  "name": "Muharrem Cinan",
+                  "short_name": "M. Cinan",
+                  "position": "D",
+                  "jersey_number": 3,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 6360,
+                  "name": "Metehan Altunbaş",
+                  "short_name": "M. Altunbaş",
+                  "position": "F",
+                  "jersey_number": 26,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 5945,
+                  "name": "Mahamadou Susoho",
+                  "short_name": "M. Susoho",
+                  "position": "M",
+                  "jersey_number": 20,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 6991,
+                  "name": "Ege Bilim",
+                  "short_name": "E. Bilim",
+                  "position": "M",
+                  "jersey_number": 27,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 64124,
+                  "name": "Bedirhan Yıldız",
+                  "short_name": "B. Yıldız",
+                  "position": "F",
+                  "jersey_number": 89,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 3425,
+                  "name": "Haydar Karataş",
+                  "short_name": "H. Karataş",
+                  "position": "M",
+                  "jersey_number": 19,
+                  "captain": false,
+                  "ai_score": null
+                },
+                {
+                  "id": 13618,
+                  "name": "Arda Ozyar",
+                  "short_name": "A. Özyar",
+                  "position": "F",
+                  "jersey_number": 17,
+                  "captain": false,
+                  "ai_score": null
+                }
+              ]
             }
           },
           "unavailable_players": {
@@ -15669,7 +16573,7 @@
               }
             ]
           },
-          "updated_at": "2026-08-16T00:42:10Z"
+          "updated_at": "2026-08-16T16:04:26Z"
         }
       },
       "metadata": {
@@ -15773,13 +16677,13 @@
       },
       "coverage": {
         "stats": true,
-        "incidents": false,
+        "incidents": true,
         "lineups": true,
         "metadata": true,
         "player_stats": false,
         "ai_preview": true,
-        "xg_per_minute": false,
-        "shotmap": false,
+        "xg_per_minute": true,
+        "shotmap": true,
         "average_positions": false,
         "expected_assists": false
       }
