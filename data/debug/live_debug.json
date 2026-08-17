@@ -1,6 +1,6 @@
 {
-  "started_at": "2026-08-16T23:59:03.530893+00:00",
-  "finished_at": "2026-08-16T23:59:04.132341+00:00",
+  "started_at": "2026-08-17T01:02:04.142762+00:00",
+  "finished_at": "2026-08-17T01:02:04.943523+00:00",
   "has_api_key": true,
   "requests": [
     {
@@ -8,54 +8,96 @@
       "url": "https://sports.bzzoiro.com/api/v2/events/live/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 258
+      "elapsed_ms": 223
     },
     {
-      "label": "live_incidents_5197",
-      "url": "https://sports.bzzoiro.com/api/v2/events/5197/incidents/",
+      "label": "backfill_event_216413",
+      "url": "https://sports.bzzoiro.com/api/v2/events/216413/",
       "params": {},
-      "status": 200,
-      "elapsed_ms": 235
+      "status": 429,
+      "elapsed_ms": 166
     },
     {
-      "label": "live_stats_5197",
-      "url": "https://sports.bzzoiro.com/api/v2/events/5197/stats/",
+      "label": "backfill_event_216413",
+      "url": "https://sports.bzzoiro.com/api/v2/events/216413/",
       "params": {},
-      "status": 200,
-      "elapsed_ms": 250
+      "status": null,
+      "elapsed_ms": 166,
+      "error": "429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/216413/"
     },
     {
-      "label": "live_lineups_5196",
-      "url": "https://sports.bzzoiro.com/api/v2/events/5196/lineups/",
+      "label": "backfill_event_211530",
+      "url": "https://sports.bzzoiro.com/api/v2/events/211530/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 255
+      "elapsed_ms": 165
     },
     {
-      "label": "live_lineups_5197",
-      "url": "https://sports.bzzoiro.com/api/v2/events/5197/lineups/",
+      "label": "live_stats_5191",
+      "url": "https://sports.bzzoiro.com/api/v2/events/5191/stats/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 260
+      "elapsed_ms": 169
     },
     {
-      "label": "live_incidents_5196",
-      "url": "https://sports.bzzoiro.com/api/v2/events/5196/incidents/",
+      "label": "live_incidents_5191",
+      "url": "https://sports.bzzoiro.com/api/v2/events/5191/incidents/",
       "params": {},
-      "status": 200,
-      "elapsed_ms": 268
+      "status": 429,
+      "elapsed_ms": 177
     },
     {
-      "label": "live_stats_5196",
-      "url": "https://sports.bzzoiro.com/api/v2/events/5196/stats/",
+      "label": "live_incidents_5191",
+      "url": "https://sports.bzzoiro.com/api/v2/events/5191/incidents/",
       "params": {},
-      "status": 200,
-      "elapsed_ms": 295
+      "status": null,
+      "elapsed_ms": 177,
+      "error": "429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/5191/incidents/"
+    },
+    {
+      "label": "live_lineups_5191",
+      "url": "https://sports.bzzoiro.com/api/v2/events/5191/lineups/",
+      "params": {},
+      "status": 429,
+      "elapsed_ms": 187
+    },
+    {
+      "label": "live_lineups_5191",
+      "url": "https://sports.bzzoiro.com/api/v2/events/5191/lineups/",
+      "params": {},
+      "status": null,
+      "elapsed_ms": 187,
+      "error": "429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/5191/lineups/"
     }
   ],
-  "warnings": [],
+  "warnings": [
+    {
+      "message": "Request live eșuat",
+      "context": {
+        "label": "backfill_event_216413",
+        "error": "429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/216413/"
+      },
+      "time": "2026-08-17T01:02:04.583162+00:00"
+    },
+    {
+      "message": "Request live eșuat",
+      "context": {
+        "label": "live_incidents_5191",
+        "error": "429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/5191/incidents/"
+      },
+      "time": "2026-08-17T01:02:04.929613+00:00"
+    },
+    {
+      "message": "Request live eșuat",
+      "context": {
+        "label": "live_lineups_5191",
+        "error": "429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/5191/lineups/"
+      },
+      "time": "2026-08-17T01:02:04.941048+00:00"
+    }
+  ],
   "cache": {
     "reused": 0,
-    "refetched": 2
+    "refetched": 1
   }
 }
