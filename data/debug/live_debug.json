@@ -1,52 +1,62 @@
 {
-  "started_at": "2026-08-17T23:10:23.679054+00:00",
-  "finished_at": "2026-08-17T23:10:34.990416+00:00",
+  "started_at": "2026-08-17T23:33:00.752629+00:00",
+  "finished_at": "2026-08-17T23:33:12.805825+00:00",
   "has_api_key": true,
   "requests": [
     {
       "label": "events_live",
       "url": "https://sports.bzzoiro.com/api/v2/events/live/",
       "params": {},
-      "status": 200,
-      "elapsed_ms": 299
+      "status": null,
+      "elapsed_ms": 10076,
+      "error": "HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=10)"
     },
     {
       "label": "backfill_event_7219",
       "url": "https://sports.bzzoiro.com/api/v2/events/7219/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 229
+      "elapsed_ms": 218
     },
     {
       "label": "backfill_event_220042",
       "url": "https://sports.bzzoiro.com/api/v2/events/220042/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 9632
+      "elapsed_ms": 1022
     },
     {
       "label": "live_stats_7219",
       "url": "https://sports.bzzoiro.com/api/v2/events/7219/stats/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 238
-    },
-    {
-      "label": "live_lineups_7219",
-      "url": "https://sports.bzzoiro.com/api/v2/events/7219/lineups/",
-      "params": {},
-      "status": 200,
-      "elapsed_ms": 392
+      "elapsed_ms": 209
     },
     {
       "label": "live_incidents_7219",
       "url": "https://sports.bzzoiro.com/api/v2/events/7219/incidents/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 1099
+      "elapsed_ms": 209
+    },
+    {
+      "label": "live_lineups_7219",
+      "url": "https://sports.bzzoiro.com/api/v2/events/7219/lineups/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 685
     }
   ],
-  "warnings": [],
+  "warnings": [
+    {
+      "message": "Request live eșuat",
+      "context": {
+        "label": "events_live",
+        "error": "HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=10)"
+      },
+      "time": "2026-08-17T23:33:10.828382+00:00"
+    }
+  ],
   "cache": {
     "reused": 0,
     "refetched": 1
