@@ -1,13 +1,141 @@
 {
-  "updated_at": "2026-08-17T22:05:16.797911+00:00",
-  "source": "bsd_v2_events_live",
+  "updated_at": "2026-08-17T22:26:22.768129+00:00",
+  "source": "bsd_v2_events_live+backfill",
   "endpoint": "/api/v2/events/live/",
   "params": {},
-  "count": 0,
-  "backfill_count": 0,
-  "events": [],
+  "count": 1,
+  "backfill_count": 1,
+  "events": [
+    {
+      "id": 223579,
+      "league_id": 85,
+      "season_id": 1635,
+      "home_team_id": 2397,
+      "home_team": "Vélez Sarsfield",
+      "away_team_id": 3136,
+      "away_team": "Defensa y Justicia",
+      "home_coach_id": 3190,
+      "away_coach_id": 2845,
+      "referee_id": 2287,
+      "venue_id": 1766,
+      "event_date": "2026-08-17T22:15:00+00:00",
+      "status": "1st_half",
+      "replaced_by": null,
+      "round_number": 5,
+      "round_name": "",
+      "group_name": "Group A",
+      "period": "1T",
+      "current_minute": 9,
+      "home_score": 1,
+      "away_score": 0,
+      "home_score_ht": 1,
+      "away_score_ht": 0,
+      "penalty_shootout": null,
+      "extra_time_score": null,
+      "is_local_derby": false,
+      "is_neutral_ground": false,
+      "travel_distance_km": null,
+      "weather": {
+        "code": 51,
+        "description": null,
+        "wind_speed": 15.1,
+        "temperature_c": 15
+      },
+      "pitch_condition": null,
+      "attendance": null,
+      "live_websocket": false,
+      "websocket_plus": true,
+      "highlights": [],
+      "head_to_head": {
+        "total_matches": 11,
+        "home_wins": 4,
+        "draws": 4,
+        "away_wins": 2,
+        "home_goals": 12,
+        "away_goals": 8,
+        "avg_total_goals": 1.8181818181818181,
+        "home_win_rate": 0.36363636363636365,
+        "away_win_rate": 0.18181818181818182,
+        "recent_matches": [
+          {
+            "away": "Vélez Sarsfield",
+            "date": "2026-02-14T01:15:00+00:00",
+            "home": "Defensa y Justicia",
+            "score": "1-1"
+          },
+          {
+            "away": "Defensa y Justicia",
+            "date": "2024-08-03T18:00:00+00:00",
+            "home": "Vélez Sarsfield",
+            "score": "3-0"
+          },
+          {
+            "away": "Vélez Sarsfield",
+            "date": "2023-03-30T23:00:00+00:00",
+            "home": "Defensa y Justicia",
+            "score": "0-0"
+          },
+          {
+            "away": "Vélez Sarsfield",
+            "date": "2022-06-25T18:30:00+00:00",
+            "home": "Defensa y Justicia",
+            "score": "1-1"
+          },
+          {
+            "away": "Defensa y Justicia",
+            "date": "2021-07-28T19:30:00+00:00",
+            "home": "Vélez Sarsfield",
+            "score": "0-0"
+          },
+          {
+            "away": "Defensa y Justicia",
+            "date": "2019-09-29T18:30:00+00:00",
+            "home": "Vélez Sarsfield",
+            "score": "0-1"
+          },
+          {
+            "away": "Vélez Sarsfield",
+            "date": "2018-11-05T22:00:00+00:00",
+            "home": "Defensa y Justicia",
+            "score": "3-2"
+          },
+          {
+            "away": "Vélez Sarsfield",
+            "date": "2018-01-27T20:00:00+00:00",
+            "home": "Defensa y Justicia",
+            "score": "0-1"
+          },
+          {
+            "away": "Defensa y Justicia",
+            "date": "2016-11-13T19:00:00+00:00",
+            "home": "Vélez Sarsfield",
+            "score": "2-1"
+          },
+          {
+            "away": "Defensa y Justicia",
+            "date": "2015-08-29T23:30:00+00:00",
+            "home": "Vélez Sarsfield",
+            "score": "2-1"
+          }
+        ]
+      },
+      "has_xg": false,
+      "previous_leg_event_id": null,
+      "event_id": 223579,
+      "minute": 9,
+      "league_name": null,
+      "last_updated": null,
+      "image_assets": {
+        "home_team_logo": "https://sports.bzzoiro.com/img/team/2397/",
+        "away_team_logo": "https://sports.bzzoiro.com/img/team/3136/",
+        "league_logo": "https://sports.bzzoiro.com/img/league/85/"
+      },
+      "_backfilled": true
+    }
+  ],
   "notes": [
     "Conform BSD v2, live window ignoră date_from/date_to/status.",
-    "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env."
+    "Folosește league_id/season_id/team_id ca filtre API-side dacă sunt setate în env.",
+    "Backfill: 1 eveniment(e) adăugate via /events/{id}/ pentru meciuri ratate de /events/live/."
   ]
 }
