@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-17T15:58:44.094820+00:00",
+  "updated_at": "2026-08-17T16:02:17.553966+00:00",
   "limit": 18,
   "params": {},
   "summary": {
@@ -16,14 +16,14 @@
     {
       "event_id": 214561,
       "score": "0-0",
-      "minute": 22,
-      "last_updated": "2026-08-17T15:58:18Z",
+      "minute": 25,
+      "last_updated": "2026-08-17T16:01:23Z",
       "cache_status": "refetched",
       "pressure_side": "balanced",
       "pressure_score": 3.0,
       "resources": {
         "stats": 1,
-        "incidents": 1,
+        "incidents": 2,
         "lineups": 1
       },
       "signals": [
@@ -42,43 +42,53 @@
       "url": "https://sports.bzzoiro.com/api/v2/events/live/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 262
+      "elapsed_ms": 2952
     },
     {
       "label": "backfill_event_211682",
       "url": "https://sports.bzzoiro.com/api/v2/events/211682/",
       "params": {},
-      "status": 200,
-      "elapsed_ms": 240
+      "status": null,
+      "elapsed_ms": 10055,
+      "error": "HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=10)"
     },
     {
       "label": "backfill_event_215480",
       "url": "https://sports.bzzoiro.com/api/v2/events/215480/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 561
-    },
-    {
-      "label": "live_stats_214561",
-      "url": "https://sports.bzzoiro.com/api/v2/events/214561/stats/",
-      "params": {},
-      "status": 200,
-      "elapsed_ms": 257
+      "elapsed_ms": 323
     },
     {
       "label": "live_lineups_214561",
       "url": "https://sports.bzzoiro.com/api/v2/events/214561/lineups/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 277
+      "elapsed_ms": 250
     },
     {
       "label": "live_incidents_214561",
       "url": "https://sports.bzzoiro.com/api/v2/events/214561/incidents/",
       "params": {},
       "status": 200,
-      "elapsed_ms": 284
+      "elapsed_ms": 270
+    },
+    {
+      "label": "live_stats_214561",
+      "url": "https://sports.bzzoiro.com/api/v2/events/214561/stats/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 538
     }
   ],
-  "warnings": []
+  "warnings": [
+    {
+      "message": "Request live eșuat",
+      "context": {
+        "label": "backfill_event_211682",
+        "error": "HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=10)"
+      },
+      "time": "2026-08-17T16:02:16.688004+00:00"
+    }
+  ]
 }
