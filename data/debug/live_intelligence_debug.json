@@ -1,135 +1,194 @@
 {
-  "updated_at": "2026-08-20T23:58:52.035449+00:00",
+  "updated_at": "2026-08-21T01:02:36.961321+00:00",
   "limit": 18,
   "params": {},
   "summary": {
-    "live_events": 0,
-    "enriched_events": 0,
-    "with_stats": 0,
-    "with_incidents": 0,
-    "with_lineups": 0,
-    "strong_signals": 0,
+    "live_events": 3,
+    "enriched_events": 3,
+    "with_stats": 3,
+    "with_incidents": 3,
+    "with_lineups": 3,
+    "strong_signals": 2,
     "reused_cache": 0,
-    "refetched": 0
+    "refetched": 3
   },
-  "events": [],
+  "events": [
+    {
+      "event_id": 207965,
+      "score": "0-0",
+      "minute": 32,
+      "last_updated": "2026-08-21T01:02:12Z",
+      "cache_status": "refetched",
+      "pressure_side": "home",
+      "pressure_score": 17.0,
+      "resources": {
+        "stats": 1,
+        "incidents": 1,
+        "lineups": 1
+      },
+      "signals": [
+        {
+          "type": "lineups",
+          "level": "info",
+          "label": "lineup confirmed",
+          "note": "Status lineup disponibil pentru context live."
+        }
+      ]
+    },
+    {
+      "event_id": 10080,
+      "score": "1-0",
+      "minute": 71,
+      "last_updated": null,
+      "cache_status": "refetched",
+      "pressure_side": "home",
+      "pressure_score": 117.1,
+      "resources": {
+        "stats": 1,
+        "incidents": 13,
+        "lineups": 1
+      },
+      "signals": [
+        {
+          "type": "momentum",
+          "level": "strong",
+          "label": "presiune acasă",
+          "note": "Momentum home: xG 2.64-0.11, SOT 5-2."
+        },
+        {
+          "type": "late_game",
+          "level": "watch",
+          "label": "final strâns",
+          "note": "Minut 71, diferență mică de scor; volatilitate live crescută."
+        },
+        {
+          "type": "cards",
+          "level": "watch",
+          "label": "meci tensionat",
+          "note": "4 cartonașe detectate în timeline."
+        },
+        {
+          "type": "lineups",
+          "level": "info",
+          "label": "lineup confirmed",
+          "note": "Status lineup disponibil pentru context live."
+        }
+      ]
+    },
+    {
+      "event_id": 223326,
+      "score": "1-0",
+      "minute": 31,
+      "last_updated": "2026-08-21T01:01:17Z",
+      "cache_status": "refetched",
+      "pressure_side": "home",
+      "pressure_score": 67.5,
+      "resources": {
+        "stats": 1,
+        "incidents": 4,
+        "lineups": 1
+      },
+      "signals": [
+        {
+          "type": "momentum",
+          "level": "strong",
+          "label": "presiune acasă",
+          "note": "Momentum home: xG 1.09-0.05, SOT 4-0."
+        },
+        {
+          "type": "lineups",
+          "level": "info",
+          "label": "lineup confirmed",
+          "note": "Status lineup disponibil pentru context live."
+        }
+      ]
+    }
+  ],
   "requests": [
     {
       "label": "events_live",
       "url": "https://sports.bzzoiro.com/api/v2/events/live/",
       "params": {},
-      "status": 429,
-      "elapsed_ms": 282
-    },
-    {
-      "label": "events_live",
-      "url": "https://sports.bzzoiro.com/api/v2/events/live/",
-      "params": {},
-      "status": null,
-      "elapsed_ms": 282,
-      "error": "429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/live/"
-    },
-    {
-      "label": "backfill_event_10074",
-      "url": "https://sports.bzzoiro.com/api/v2/events/10074/",
-      "params": {},
-      "status": 429,
-      "elapsed_ms": 361
-    },
-    {
-      "label": "backfill_event_10074",
-      "url": "https://sports.bzzoiro.com/api/v2/events/10074/",
-      "params": {},
-      "status": null,
-      "elapsed_ms": 361,
-      "error": "429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/10074/"
-    },
-    {
-      "label": "backfill_event_223990",
-      "url": "https://sports.bzzoiro.com/api/v2/events/223990/",
-      "params": {},
-      "status": 429,
-      "elapsed_ms": 284
-    },
-    {
-      "label": "backfill_event_223990",
-      "url": "https://sports.bzzoiro.com/api/v2/events/223990/",
-      "params": {},
-      "status": null,
-      "elapsed_ms": 284,
-      "error": "429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/223990/"
-    },
-    {
-      "label": "backfill_event_223989",
-      "url": "https://sports.bzzoiro.com/api/v2/events/223989/",
-      "params": {},
-      "status": 429,
-      "elapsed_ms": 232
-    },
-    {
-      "label": "backfill_event_223989",
-      "url": "https://sports.bzzoiro.com/api/v2/events/223989/",
-      "params": {},
-      "status": null,
-      "elapsed_ms": 232,
-      "error": "429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/223989/"
+      "status": 200,
+      "elapsed_ms": 247
     },
     {
       "label": "backfill_event_10080",
       "url": "https://sports.bzzoiro.com/api/v2/events/10080/",
       "params": {},
-      "status": 429,
-      "elapsed_ms": 250
+      "status": 200,
+      "elapsed_ms": 214
     },
     {
-      "label": "backfill_event_10080",
-      "url": "https://sports.bzzoiro.com/api/v2/events/10080/",
+      "label": "backfill_event_223991",
+      "url": "https://sports.bzzoiro.com/api/v2/events/223991/",
       "params": {},
-      "status": null,
-      "elapsed_ms": 250,
-      "error": "429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/10080/"
+      "status": 200,
+      "elapsed_ms": 237
+    },
+    {
+      "label": "live_stats_207965",
+      "url": "https://sports.bzzoiro.com/api/v2/events/207965/stats/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 265
+    },
+    {
+      "label": "live_stats_223326",
+      "url": "https://sports.bzzoiro.com/api/v2/events/223326/stats/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 297
+    },
+    {
+      "label": "live_stats_10080",
+      "url": "https://sports.bzzoiro.com/api/v2/events/10080/stats/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 300
+    },
+    {
+      "label": "live_incidents_10080",
+      "url": "https://sports.bzzoiro.com/api/v2/events/10080/incidents/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 304
+    },
+    {
+      "label": "live_lineups_207965",
+      "url": "https://sports.bzzoiro.com/api/v2/events/207965/lineups/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 310
+    },
+    {
+      "label": "live_incidents_207965",
+      "url": "https://sports.bzzoiro.com/api/v2/events/207965/incidents/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 313
+    },
+    {
+      "label": "live_lineups_10080",
+      "url": "https://sports.bzzoiro.com/api/v2/events/10080/lineups/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 311
+    },
+    {
+      "label": "live_lineups_223326",
+      "url": "https://sports.bzzoiro.com/api/v2/events/223326/lineups/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 303
+    },
+    {
+      "label": "live_incidents_223326",
+      "url": "https://sports.bzzoiro.com/api/v2/events/223326/incidents/",
+      "params": {},
+      "status": 200,
+      "elapsed_ms": 308
     }
   ],
-  "warnings": [
-    {
-      "message": "Request live eșuat",
-      "context": {
-        "label": "events_live",
-        "error": "429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/live/"
-      },
-      "time": "2026-08-20T23:58:50.860603+00:00"
-    },
-    {
-      "message": "Request live eșuat",
-      "context": {
-        "label": "backfill_event_10074",
-        "error": "429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/10074/"
-      },
-      "time": "2026-08-20T23:58:51.267435+00:00"
-    },
-    {
-      "message": "Request live eșuat",
-      "context": {
-        "label": "backfill_event_223990",
-        "error": "429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/223990/"
-      },
-      "time": "2026-08-20T23:58:51.551645+00:00"
-    },
-    {
-      "message": "Request live eșuat",
-      "context": {
-        "label": "backfill_event_223989",
-        "error": "429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/223989/"
-      },
-      "time": "2026-08-20T23:58:51.783765+00:00"
-    },
-    {
-      "message": "Request live eșuat",
-      "context": {
-        "label": "backfill_event_10080",
-        "error": "429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/10080/"
-      },
-      "time": "2026-08-20T23:58:52.033767+00:00"
-    }
-  ]
+  "warnings": []
 }
