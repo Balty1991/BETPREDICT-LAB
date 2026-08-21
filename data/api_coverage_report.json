@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-21T10:37:22.502792+00:00",
+  "updated_at": "2026-08-21T11:33:50.772229+00:00",
   "source": "api_coverage_scanner_v1",
   "base_url": "https://sports.bzzoiro.com/api/v2",
   "sample": {
@@ -76,30 +76,30 @@
         "date_to": "2026-08-21",
         "limit": 3
       },
-      "status": null,
+      "status": 429,
       "ok": false,
       "count": 0,
       "shape": {
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 22049,
-      "note": "error: HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=22)"
+      "elapsed_ms": 254,
+      "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/?date_from=2026-08-21&date_to=2026-08-21&limit=3"
     },
     {
       "name": "events_live",
       "category": "core",
       "url": "https://sports.bzzoiro.com/api/v2/events/live/",
       "params": {},
-      "status": null,
+      "status": 429,
       "ok": false,
       "count": 0,
       "shape": {
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 22050,
-      "note": "error: HTTPSConnectionPool(host='sports.bzzoiro.com', port=443): Read timed out. (read timeout=22)"
+      "elapsed_ms": 278,
+      "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/live/"
     },
     {
       "name": "predictions",
@@ -115,7 +115,7 @@
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 164,
+      "elapsed_ms": 255,
       "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/predictions/?limit=3"
     },
     {
@@ -123,8 +123,8 @@
       "category": "core",
       "url": "https://sports.bzzoiro.com/api/v2/odds/best/",
       "params": {
-        "date_from": "2026-08-21T10:35:57Z",
-        "date_to": "2026-08-28T10:35:57Z",
+        "date_from": "2026-08-21T11:33:43Z",
+        "date_to": "2026-08-28T11:33:43Z",
         "market": "1x2",
         "limit": 3
       },
@@ -135,16 +135,16 @@
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 165,
-      "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/odds/best/?date_from=2026-08-21T10%3A35%3A57Z&date_to=2026-08-28T10%3A35%3A57Z&market=1x2&limit=3"
+      "elapsed_ms": 378,
+      "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/odds/best/?date_from=2026-08-21T11%3A33%3A43Z&date_to=2026-08-28T11%3A33%3A43Z&market=1x2&limit=3"
     },
     {
       "name": "odds_best_ou25",
       "category": "core",
       "url": "https://sports.bzzoiro.com/api/v2/odds/best/",
       "params": {
-        "date_from": "2026-08-21T10:35:57Z",
-        "date_to": "2026-08-28T10:35:57Z",
+        "date_from": "2026-08-21T11:33:43Z",
+        "date_to": "2026-08-28T11:33:43Z",
         "market": "over_under_25",
         "limit": 3
       },
@@ -155,8 +155,8 @@
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 161,
-      "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/odds/best/?date_from=2026-08-21T10%3A35%3A57Z&date_to=2026-08-28T10%3A35%3A57Z&market=over_under_25&l"
+      "elapsed_ms": 252,
+      "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/odds/best/?date_from=2026-08-21T11%3A33%3A43Z&date_to=2026-08-28T11%3A33%3A43Z&market=over_under_25&l"
     },
     {
       "name": "leagues",
@@ -165,15 +165,15 @@
       "params": {
         "limit": 5
       },
-      "status": 522,
+      "status": 429,
       "ok": false,
       "count": 0,
       "shape": {
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 19860,
-      "note": "server_error"
+      "elapsed_ms": 274,
+      "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/leagues/?limit=5"
     },
     {
       "name": "teams",
@@ -189,7 +189,7 @@
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 11502,
+      "elapsed_ms": 244,
       "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/teams/?limit=5"
     },
     {
@@ -206,7 +206,7 @@
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 1125,
+      "elapsed_ms": 290,
       "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/players/?limit=5"
     },
     {
@@ -223,7 +223,7 @@
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 2575,
+      "elapsed_ms": 252,
       "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/referees/?limit=5"
     },
     {
@@ -240,7 +240,7 @@
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 168,
+      "elapsed_ms": 266,
       "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/venues/?limit=5"
     },
     {
@@ -257,7 +257,7 @@
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 175,
+      "elapsed_ms": 246,
       "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/managers/?limit=5"
     },
     {
@@ -274,7 +274,7 @@
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 166,
+      "elapsed_ms": 262,
       "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/broadcasts/?limit=5"
     },
     {
@@ -291,7 +291,7 @@
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 177,
+      "elapsed_ms": 277,
       "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/tv-channels/?limit=5"
     },
     {
@@ -308,7 +308,7 @@
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 174,
+      "elapsed_ms": 272,
       "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/social/?limit=5"
     },
     {
@@ -325,7 +325,7 @@
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 190,
+      "elapsed_ms": 256,
       "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/value-bets/?limit=5"
     },
     {
@@ -342,7 +342,7 @@
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 1269,
+      "elapsed_ms": 258,
       "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/odds/value/?limit=5"
     },
     {
@@ -357,7 +357,7 @@
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 163,
+      "elapsed_ms": 253,
       "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/212205/"
     },
     {
@@ -372,7 +372,7 @@
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 197,
+      "elapsed_ms": 245,
       "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/212205/odds/"
     },
     {
@@ -387,7 +387,7 @@
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 592,
+      "elapsed_ms": 265,
       "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/212205/odds/comparison/"
     },
     {
@@ -402,7 +402,7 @@
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 181,
+      "elapsed_ms": 244,
       "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/212205/prediction/"
     },
     {
@@ -417,7 +417,7 @@
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 183,
+      "elapsed_ms": 243,
       "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/212205/stats/"
     },
     {
@@ -432,7 +432,7 @@
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 167,
+      "elapsed_ms": 235,
       "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/212205/incidents/"
     },
     {
@@ -447,7 +447,7 @@
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 169,
+      "elapsed_ms": 257,
       "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/212205/lineups/"
     },
     {
@@ -462,7 +462,7 @@
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 184,
+      "elapsed_ms": 253,
       "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/212205/player-stats/"
     },
     {
@@ -477,7 +477,7 @@
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 172,
+      "elapsed_ms": 250,
       "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/212205/shotmap/"
     },
     {
@@ -492,7 +492,7 @@
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 205,
+      "elapsed_ms": 347,
       "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/leagues/49/standings/"
     },
     {
@@ -507,7 +507,7 @@
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 167,
+      "elapsed_ms": 270,
       "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/teams/1945/"
     },
     {
@@ -522,7 +522,7 @@
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 203,
+      "elapsed_ms": 248,
       "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/teams/1945/squad/"
     },
     {
@@ -539,7 +539,7 @@
         "type": "unknown",
         "keys": []
       },
-      "elapsed_ms": 187,
+      "elapsed_ms": 246,
       "note": "error: 429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/teams/1945/fixtures/?limit=5"
     }
   ],
