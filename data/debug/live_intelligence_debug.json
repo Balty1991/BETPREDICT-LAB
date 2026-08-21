@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-21T15:23:08.474175+00:00",
+  "updated_at": "2026-08-21T15:52:23.878682+00:00",
   "limit": 18,
   "params": {},
   "summary": {
@@ -18,9 +18,72 @@
       "label": "events_live",
       "url": "https://sports.bzzoiro.com/api/v2/events/live/",
       "params": {},
-      "status": 200,
-      "elapsed_ms": 377
+      "status": 429,
+      "elapsed_ms": 322
+    },
+    {
+      "label": "events_live",
+      "url": "https://sports.bzzoiro.com/api/v2/events/live/",
+      "params": {},
+      "status": null,
+      "elapsed_ms": 322,
+      "error": "429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/live/"
+    },
+    {
+      "label": "backfill_event_222618",
+      "url": "https://sports.bzzoiro.com/api/v2/events/222618/",
+      "params": {},
+      "status": 429,
+      "elapsed_ms": 196
+    },
+    {
+      "label": "backfill_event_222618",
+      "url": "https://sports.bzzoiro.com/api/v2/events/222618/",
+      "params": {},
+      "status": null,
+      "elapsed_ms": 196,
+      "error": "429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/222618/"
+    },
+    {
+      "label": "backfill_event_207298",
+      "url": "https://sports.bzzoiro.com/api/v2/events/207298/",
+      "params": {},
+      "status": 429,
+      "elapsed_ms": 171
+    },
+    {
+      "label": "backfill_event_207298",
+      "url": "https://sports.bzzoiro.com/api/v2/events/207298/",
+      "params": {},
+      "status": null,
+      "elapsed_ms": 171,
+      "error": "429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/207298/"
     }
   ],
-  "warnings": []
+  "warnings": [
+    {
+      "message": "Request live eșuat",
+      "context": {
+        "label": "events_live",
+        "error": "429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/live/"
+      },
+      "time": "2026-08-21T15:52:23.460749+00:00"
+    },
+    {
+      "message": "Request live eșuat",
+      "context": {
+        "label": "backfill_event_222618",
+        "error": "429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/222618/"
+      },
+      "time": "2026-08-21T15:52:23.705548+00:00"
+    },
+    {
+      "message": "Request live eșuat",
+      "context": {
+        "label": "backfill_event_207298",
+        "error": "429 Client Error: Too Many Requests for url: https://sports.bzzoiro.com/api/v2/events/207298/"
+      },
+      "time": "2026-08-21T15:52:23.876837+00:00"
+    }
+  ]
 }
