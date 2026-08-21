@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-08-21T17:36:28.997102+00:00",
+  "updated_at": "2026-08-21T18:43:40.011039+00:00",
   "source": "api_coverage_final_v2",
   "summary": {
     "modules_total": 12,
-    "implemented_modules": 10,
-    "partial_modules": 2,
-    "missing_or_empty_modules": 0,
-    "warning_modules": 0,
+    "implemented_modules": 8,
+    "partial_modules": 3,
+    "missing_or_empty_modules": 1,
+    "warning_modules": 1,
     "disabled_files": [],
     "api_scanner_summary": {
       "total": 29,
@@ -30,32 +30,33 @@
     "league_strength": "ok",
     "context_engine": "ok",
     "teams_players": "ok",
-    "event_deep_data": "ok",
+    "event_deep_data": "partial_warning",
     "lineup_intelligence": "ok",
     "event_match_intelligence": "ok",
     "context_entities": "ok",
     "market_odds": "partial",
     "qa": "ok",
     "ml_v6": "partial",
-    "bsd_extended": "ok"
+    "bsd_extended": "missing_or_empty"
   },
   "implemented_modules": [
     "core_predictions",
     "league_strength",
     "context_engine",
     "teams_players",
-    "event_deep_data",
     "lineup_intelligence",
     "event_match_intelligence",
     "context_entities",
-    "qa",
-    "bsd_extended"
+    "qa"
   ],
   "partial_modules": [
+    "event_deep_data",
     "market_odds",
     "ml_v6"
   ],
-  "missing_or_empty_modules": [],
+  "missing_or_empty_modules": [
+    "bsd_extended"
+  ],
   "next_actions": [
     "market_intelligence este gol/parțial; păstrează market layer audit-only până există odds movement stabil",
     "afișează în UI doar modulele cu date pentru meciul curent; restul compact ca status"
